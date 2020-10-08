@@ -325,13 +325,13 @@ ReportDefinitions:
     type: epoch
     source: rent
     isMandatory: false
-    searchClause: AND receipt.createddate >= $fromDate
+    searchClause: AND payment.createdtime >= $fromDate
   - name: toDate
     label: reports.rp.toDate
     type: epoch
     source: rent
     isMandatory: false
-    searchClause: AND receipt.createddate  <= $toDate 
+    searchClause: AND payment.createdtime  <= $toDate 
   - name: transit_number
     label: report.rp.transitnumber
     type: string
@@ -531,7 +531,7 @@ ReportDefinitions:
     type: string
     source: due
     total: false
-  - name: remaining_principal
+  - name: remaining_pricipal
     label: report.rp.remainingpricipal
     type: string
     source: due
@@ -556,7 +556,7 @@ ReportDefinitions:
   - name: colony
     label: report.rp.colony
     type: singlevaluelist
-    pattern: http://localhost:8094/egov-mdms-service/v1/_get?tenantId=ch&moduleName=RentedProperties&masterName=colonies|$.MdmsRes.RentedProperties.colonies.*.code|$.MdmsRes.RentedProperties.colonies.*.code
+    pattern: http://localhost:8094/egov-mdms-service/v1/_get?tenantId=ch&moduleName=RentedProperties&masterName=colonies|$.MdmsRes.RentedProperties.colonies.*.name|$.MdmsRes.RentedProperties.colonies.*.name
     source: due
     wrapper: true
     isMandatory: false
