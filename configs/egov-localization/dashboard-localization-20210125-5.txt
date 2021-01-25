@@ -1,0 +1,35 @@
+
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby)
+SELECT '7dbfd410-e750-4ddashboard11-a0e7-53d577201d23','en_IN', 'DASHBOARD_1','PGR Dashboard','ch','rainmaker-common', '94'
+WHERE
+NOT EXISTS (
+	select * from message where code='DASHBOARD_1'
+);
+
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby)
+SELECT '03cb61e0-3eb1-4ddashboarda6-9409-2bdc9f0c143c','en_IN', 'DASHBOARD_TO_DATE_LABEL','To Date','ch','rainmaker-common', '94'
+WHERE
+NOT EXISTS (
+	select * from message where code='DASHBOARD_TO_DATE_LABEL'
+);
+
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby)
+SELECT '314985d7-c98c-46bdashboard8-b4d1-74e727e3e0b2','en_IN', 'DASHBOARD_FROM_DATE_LABEL','From Date','ch','rainmaker-common', '94'
+WHERE
+NOT EXISTS (
+	select * from message where code='DASHBOARD_FROM_DATE_LABEL'
+);
+
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby)
+SELECT '32db5b07-0914-46dashboard32-a95a-64fb2079c260','en_IN', 'DASHBOARD_DROPDOWN_REPORT_TYPE_LABEL','Report Type','ch','rainmaker-common', '94'
+WHERE
+NOT EXISTS (
+	select * from message where code='DASHBOARD_DROPDOWN_REPORT_TYPE_LABEL'
+);
+
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby)
+SELECT '5435bab1-73c0-47dashboardce-9e2a-50a160838ee7','en_IN', 'DASHBOARD_SEARCH_BTN_LABEL','Search','ch','rainmaker-common', '94'
+WHERE
+NOT EXISTS (
+	select * from message where code='DASHBOARD_SEARCH_BTN_LABEL'
+);
