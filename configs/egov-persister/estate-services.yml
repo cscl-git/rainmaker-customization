@@ -742,7 +742,7 @@ serviceMaps:
 
             - jsonPath: $.Properties.*.propertyDetails.estateAccount.auditDetails.lastModifiedTime
 
-        - query: INSERT INTO cs_ep_offline_payment_detail (id, property_details_id, demand_id, amount, bank_name, transaction_number, date_of_payment, type, comments, created_by, last_modified_by, created_time, last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)ON CONFLICT (id) DO UPDATE SET demand_id=?, amount=?, bank_name=?, transaction_number=?, date_of_payment=?, type=?, comments=?, last_modified_by=?, last_modified_time=?;
+        - query: INSERT INTO cs_ep_offline_payment_detail (id, property_details_id, demand_id, amount, bank_name, transaction_number, date_of_payment, type, comments,from_date,to_date, created_by, last_modified_by, created_time, last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)ON CONFLICT (id) DO UPDATE SET demand_id=?, amount=?, bank_name=?, transaction_number=?, date_of_payment=?, type=?, comments=?, from_date=?, to_date=?, last_modified_by=?, last_modified_time=?;
           basePath: $.Properties.*.propertyDetails.offlinePaymentDetails.*
           jsonMaps:
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.id
@@ -762,6 +762,10 @@ serviceMaps:
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.type
             
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.comments
+            
+            - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.fromDate
+            
+            - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.toDate
             
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.auditDetails.createdBy
 
@@ -784,6 +788,10 @@ serviceMaps:
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.type
             
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.comments
+            
+            - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.fromDate
+            
+            - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.toDate
             
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.auditDetails.lastModifiedBy
 
