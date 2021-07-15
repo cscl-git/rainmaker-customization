@@ -1484,4 +1484,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5921-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_TO_SDE_FLAT_RATE_APPLICATION','Verify and Forward to SDE Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5922-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_VERIFY_AND_FORWARD_TO_SDE_FLAT_RATE','Verify and Forward to SDE','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5923-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_CANCEL_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5924-ac6f-2bc063b75064e','en_IN','WF_CANCEL_APPLICATION_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5924-ac6f-2bc063b75064e','en_IN','WF_CANCEL_APPLICATION_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5925-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_CANCEL_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5926-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_RESUBMIT_APPLICATION','Re-Submit','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5927-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_SEND_BACK_TO_JE','Send Back to JE','ch','rainmaker-ws',24226,now(),NULL,NULL);
