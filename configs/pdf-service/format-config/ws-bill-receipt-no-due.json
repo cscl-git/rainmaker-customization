@@ -121,7 +121,52 @@
 	  "color": "#484848",
 	   "fontSize": 11,
 	  "alignment": "right"
-    }
+    },
+		{
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["100%"],
+            "body": [
+              [
+                {
+                  "text": "Note :",
+                  "border": [
+                    false,
+                    false,
+                    false,
+                    false
+                  ],
+				    "fontSize": 13,
+                  "style": "receipt-table-key"
+                }
+              ]
+            ]
+          },
+          "layout": {}
+        }  
+		,{
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["100%"],
+            "body": [
+              [
+                {
+                  "text": "1.This is computerized generated Receipt and need no signature.",
+                  "border": [
+                    false,
+                    false,
+                    false,
+                    false
+                  ],
+				    "fontSize": 11,
+					"bold": false,
+                  "style": "receipt-table-key"
+                }
+              ]
+            ]
+          },
+          "layout": {}
+        } 
 	],
   "styles": {
     "pt-reciept-citizen-subheader": {
