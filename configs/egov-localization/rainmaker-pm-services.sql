@@ -1330,7 +1330,7 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 --,( '42e17862-dbd8-4pm6-95f6-382ec3e10080','en_IN','NOC_PMT_RCPT_NO','Receipt No.','ch','rainmaker-pm', '94')
 --,( '42e17862-dbd8-4pm6-95f6-382ec3e10081','en_IN','NOC_CONFIRMATION_BUTTON_DOWNLOAD_RECEIPT','Download Receipt','ch','rainmaker-pm', '94')
 --,( '42e17862-dbd8-4pm6-95f6-382ec3e10082','en_IN','SELLMEAT_NOC_PAYMENT_SUCCESS_MESSAGE_SUB','Payment has been collected successfully!','ch','rainmaker-pm', '94');
-,( '42e17862-dbd8-4pm6-95f6-382ec3e10083','en_IN','SELLMEAT_ID_PROOF','Sell Meat ID Proof','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10083','en_IN','SELLMEAT_ID_PROOF','ID Proof','ch','rainmaker-pm', '94')
 ,( '42e17862-dbd8-4pm6-95f6-382ec3e10084','en_IN','SELLMEATNOC_FEE','Administrative charges(Non-refundable)','ch','rainmaker-pm', '94')
 ,( '42e17862-dbd8-4pm6-95f6-382ec3e10085','en_IN','SELLMEATNOC_UNDERTAKING_HEADING','No premises shall be issued NOC to obtain license for sale of meat, fsh and poultry unless:-','ch','rainmaker-pm', '94')
 ,( '42e17862-dbd8-4pm6-95f6-382ec3e10086','en_IN','SELLMEATNOC_UNDERTAKING_POINT1',' It has a foor made of impervious and non-slippery material.','ch','rainmaker-pm', '94')

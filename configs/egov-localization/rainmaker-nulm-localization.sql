@@ -1496,7 +1496,7 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66131e', 'en_IN', 'NULM_APPLICATION_FOR_SMID_DETAILS', 'SMID Details', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-nu6f-2bc063b66132e', 'en_IN', 'NULM_APPLICATION_SUCCESS_MESSAGE_SUB', 'A notification regarding Application Submission has been sent to the applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-nu6f-2bc063b66132e', 'en_IN', 'NULM_APPLICATION_SUCCESS_MESSAGE_SUB', 'A notification regarding application submission has been sent to the applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-nu6f-2bc063b66133e', 'en_IN', 'ERR_NULM_SELECT_CAST_APPLICANT', 'Please select caste of an applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
@@ -1563,4 +1563,5 @@ INSERT INTO public.message
 ,('5a491c5b-22e9-4407-878e-516b7ef94354', 'en_IN','NULM_ALF_CARD_TITLE','ALF Card Title','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('5895c1f1-c6a5-4fb4-a384-81d3f526294a', 'en_IN','NULM_APPLICATION_FOR_SMID_ALF_PROGRAM','Application for SMID ALF Program','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('9341b204-fb86-4bcd-8ce2-a5c7a30c29f6', 'en_IN','NULM_ALF_DOCUMENT','ALF Document','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
-,('fe53a75f-5d56-448d-b9c3-874c5e050260', 'en_IN','ERR_NULM_ALF_REQUIRED_VALIDATION','Please fill all mandatory fields!','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
+,('fe53a75f-5d56-448d-b9c3-874c5e050260', 'en_IN','ERR_NULM_ALF_REQUIRED_VALIDATION','Please fill all mandatory fields!','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('2ecbf4df-ce7c-4c24-b550-99384757e289', 'en_IN','NULM_PRINT_ALF','Print ALF','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
