@@ -1487,4 +1487,6 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5924-ac6f-2bc063b75064e','en_IN','WF_CANCEL_APPLICATION_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5925-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_CANCEL_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5926-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_RESUBMIT_APPLICATION','Re-Submit','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5927-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_SEND_BACK_TO_JE','Send Back to JE','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5927-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_SEND_BACK_TO_JE','Send Back to JE','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5928-ac6f-2bc063b75064e','en_IN','WS_APPROVAL_CALCELLED_MESSAGE_HEAD','Application cancelled successfully','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5929-ac6f-2bc063b75064e','en_IN','WS_DOWNLOAD_DATA_EXCHANGE_FILE','Date Exchange File','ch','rainmaker-ws',24226,now(),NULL,NULL);
