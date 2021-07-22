@@ -1365,5 +1365,5 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 --,('6dc98bdb-82b5-4585-b1a1-05942b0e4753','en_IN','NOC_CONFIRMATION_BUTTON_DOWNLOAD_RECEIPT','Download Receipt','ch','rainmaker-pm', '94')
 --,('f9b52cbc-33fe-4662-8f26-30d5fdeb63bc','en_IN','SELLMEAT_NOC_PAYMENT_SUCCESS_MESSAGE_SUB','A notification regarding Payment Collection has been sent to the applicant','ch','rainmaker-pm', '94')
 ,('2932d177-abb4-400e-be58-f0e9f361bbf3','en_IN','DROPDWON_COMBINATION',' Sellmeat NOC Drop-down Combinations','ch','rainmaker-pm', '94')
-,('83b66019-2017-4508-8b2d-29f4f7d082ae','en_IN','WF_SELLMEATNOC_PAID','Paid Sallmeat','ch','rainmaker-pm', '94')
+,('83b66019-2017-4508-8b2d-29f4f7d082ae','en_IN','WF_SELLMEATNOC_PAID','Paid Sellmeat','ch','rainmaker-pm', '94')
 ,('4537842a-ad89-4235-b3bf-88f2002299f5','en_IN','ERR_NOC_ROADCUT_LENGTH','Roadcut Length','ch','rainmaker-pm', '94');
