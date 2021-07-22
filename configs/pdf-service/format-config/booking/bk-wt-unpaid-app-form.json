@@ -296,15 +296,24 @@
                                 "text": "Time",
                                 "style": "app-table-label",
                                 "alignment": "left",
-                                "colSpan": 2,
+                                "border": [
+                                    false,
+                                    false,
+                                    false,
+                                    false
+                                ]
+                            },
+                            {
+                                "text": "Quantity",
+                                "style": "app-table-label",
+                                "alignment": "left",
                                 "border": [
                                     false,
                                     false,
                                     true,
                                     false
                                 ]
-                            },
-                            {}
+                            }
                         ],
                         [
                             {
@@ -322,15 +331,24 @@
                                 "text": "{{variable10}}",
                                 "style": "app-table-value",
                                 "alignment": "left",
-                                "colSpan": 2,
+                                "border": [
+                                    false,
+                                    false,
+                                    false,
+                                    true
+                                ]
+                            },
+                            {
+                                "text": "{{qty}}",
+                                "style": "app-table-value",
+                                "alignment": "left",
                                 "border": [
                                     false,
                                     false,
                                     true,
                                     true
                                 ]
-                            },
-                            {}
+                            }
                         ]
                     ]
                 }
