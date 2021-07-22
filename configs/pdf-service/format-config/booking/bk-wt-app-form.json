@@ -29,12 +29,12 @@
                 "style": "pdfsubheader",
                 "bold": true,
                 "margin": [
-                  0,
-                  20,
-                  0,
-                  20
+                    0,
+                    20,
+                    0,
+                    20
                 ]
-              },
+            },
             {
                 "text": "Application No. {{variable74}}",
                 "style": "pdfsubheader",
@@ -296,15 +296,24 @@
                                 "text": "Time",
                                 "style": "app-table-label",
                                 "alignment": "left",
-                                "colSpan": 2,
+                                "border": [
+                                    false,
+                                    false,
+                                    false,
+                                    false
+                                ]
+                            },
+                            {
+                                "text": "Quantity",
+                                "style": "app-table-label",
+                                "alignment": "left",
                                 "border": [
                                     false,
                                     false,
                                     true,
                                     false
                                 ]
-                            },
-                            {}
+                            }
                         ],
                         [
                             {
@@ -322,20 +331,28 @@
                                 "text": "{{variable62}}",
                                 "style": "app-table-value",
                                 "alignment": "left",
-                                "colSpan": 2,
+                                "border": [
+                                    false,
+                                    false,
+                                    false,
+                                    true
+                                ]
+                            },
+                            {
+                                "text": "{{qty}}",
+                                "style": "app-table-value",
+                                "alignment": "left",
                                 "border": [
                                     false,
                                     false,
                                     true,
                                     true
                                 ]
-                            },
-                            {}
+                            }
                         ]
                     ]
                 }
             },
-
             {
                 "style": "table-gap",
                 "table": {
@@ -363,7 +380,7 @@
                         ],
                         [
                             {
-                                "text": "Base Charges",
+                                "text": "Base Charges (Rs.)",
                                 "style": "app-table-label",
                                 "alignment": "left",
                                 "border": [
@@ -374,7 +391,7 @@
                                 ]
                             },
                             {
-                                "text": "Taxes",
+                                "text": "Quantity",
                                 "style": "app-table-label",
                                 "alignment": "left",
                                 "border": [
@@ -385,7 +402,7 @@
                                 ]
                             },
                             {
-                                "text": "Total Amount (Rs.)",
+                                "text": "Taxes",
                                 "style": "app-table-label",
                                 "alignment": "left",
                                 "border": [
@@ -405,7 +422,18 @@
                                     true,
                                     false,
                                     false,
-                                    true
+                                    false
+                                ]
+                            },
+                            {
+                                "text": "{{qty}}",
+                                "style": "app-table-value",
+                                "alignment": "left",
+                                "border": [
+                                    false,
+                                    false,
+                                    false,
+                                    false
                                 ]
                             },
                             {
@@ -415,21 +443,42 @@
                                 "border": [
                                     false,
                                     false,
+                                    true,
+                                    false
+                                ]
+                            }
+                        ],
+                        [
+                            {
+                                "text": "Total Amount (Rs.)",
+                                "style": "app-table-label",
+                                "alignment": "left",
+                                "colSpan": 3,
+                                "border": [
+                                    true,
                                     false,
-                                    true
+                                    true,
+                                    false
                                 ]
                             },
+                            {},
+                            {}
+                        ],
+                        [
                             {
                                 "text": "{{variable73}}",
                                 "style": "app-table-value",
                                 "alignment": "left",
+                                "colSpan": 3,
                                 "border": [
-                                    false,
+                                    true,
                                     false,
                                     true,
                                     true
                                 ]
-                            }
+                            },
+                            {},
+                            {}
                         ]
                     ]
                 }
@@ -460,8 +509,12 @@
                 "text": "NOTE: In case of any assistance regarding delivery of water tanker. Please contact 0172 - 2540200",
                 "alignment": "left",
                 "fontSize": "8",
-                "margin": [0, 30, 10, 0]
-
+                "margin": [
+                    0,
+                    30,
+                    10,
+                    0
+                ]
             }
         ],
         "footer": [
