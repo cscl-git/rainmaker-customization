@@ -70,7 +70,7 @@ as varchar), lpad(cast(pr.effective_end_month as varchar),2,'0')) as integer
         searchClause: "or (cast(concat($Year, lpad($Month,2,'0')) as integer)>=
 cast(concat(cast(pr.effective_start_year as varchar)
 , lpad(cast(pr.effective_start_month as varchar),2,'0')) as integer)
-and pr.effective_end_year is null and pr.effective_end_month is null)) order by cast(pp.pensioner_number as integer)"
+and pr.effective_end_year is null and pr.effective_end_month is null)) order by cast(TRIM (LEADING '0' FROM	CAST (pp.pensioner_number AS TEXT)) as integer)"
         source: eg_pension_revision
         type: singlevaluelist
         wrapper: true
