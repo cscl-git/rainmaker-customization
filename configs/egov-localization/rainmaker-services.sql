@@ -2495,6 +2495,15 @@ INSERT INTO public.message
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c523', 'en_IN', 'BK_ERR_VALUE_LESS_THAN_SIX_CHARACTERS', 'Enter valid application number', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('cff05721-c338-40fa-b5a3-e686145d1ec8', 'en_IN', 'BK_MYBK_EMP_WT_QUANTITY', 'Quantity', 'ch', 'rainmaker-services', 268, '2021-07-21 06:26:51.674', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('abc4b540-db02-4ec5-bf7e-bf4b0c727b55', 'en_IN', 'BK_MY_BK_ROOM_CREATED_DATE', 'Application Date', 'ch', 'rainmaker-services', 268, '2021-07-21 06:27:32.574', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('a22b4a0a-380c-4a55-ae79-15c6fafd9369', 'en_IN', 'BK_WF_PACC_INITIATED', 'Initiated', 'ch', 'rainmaker-services', 268, '2021-07-21 06:28:01.780', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4b9d9136-7f91-4b34-b96c-065d25f497bb', 'en_IN', 'BK_ERR_PACC_MCC_BOOKING_CANCEL', 'Please enter the reason for booking cancellation', 'ch', 'rainmaker-services', 101, '2021-04-19 05:39:34.586', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
@@ -2880,4 +2889,3 @@ VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c742', 'en_IN', 'BK_MYBK_FACILITATION_CH
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c743', 'en_IN', 'BK_MY_BK_APPLICATION_DETAILS_HEADER', 'Booking Details', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
-
