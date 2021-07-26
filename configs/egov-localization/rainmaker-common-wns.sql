@@ -1,3 +1,4 @@
+
 DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_REGULARWSCONNECTION' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_TEMPORARY_WSCONNECTION' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_TEMP_TEMP' and module='rainmaker-common' and tenantId='ch';
@@ -357,6 +358,31 @@ DELETE FROM public.message WHERE code ='WF_WS_CONVERSION_PENDING_FOR_SDE_APPROVA
 DELETE FROM public.message WHERE code ='WF_WS_CONVERSION_PENDING_FOR_DIV_SUPERITENDENT_APPROVAL_AFTER_EE'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WF_WS_CONVERSION_CANCELLED'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WF_WS_CONVERSION_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_JE_TARIFF'and tenantId='ch';
+DELETE FROM public.message WHERE code ='CS_COMMON_INBOX_TEMPORARY_WSCONNECTION_BILLING'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_INITIATED'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_CITIZEN_ACTION'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_DOCUMENT_VERIFICATION'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_REJECTED'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_CANCELLED'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_SITE_INSPECTION'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_SDE_ROADS_APPROVAL'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_ROADCUT_NOC_BY_CITIZEN'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_ROADCUT_NOC_APPROVAL_BY_SDE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_JE_TEMPBILLING' and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_JE_APPROVAL_AFTER_SUPERINTEDENT'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_SDE_APPROVAL'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_HDM_APPROVAL_AFTER_SDE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_EE_APPROVAL'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_SDE_APPROVAL_AFTER_EE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_SE_REVIEW'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_CHD_REVIEW'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_HDM_APPROVAL'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_CHD_APPROVAL'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_SE_APPROVAL'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_PAYMENT'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_CONNECTION_VERIFICATION_BY_JE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_CONNECTION_ACTIVATION_BY_SUPERINTENDENT'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_CONNECTION_ACTIVATED'and tenantId='ch';
 --insert
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 ('4d3b6355-1abb-6000-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_REGULARWSCONNECTION','Regular Water Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -690,5 +716,30 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6329-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_PENDING_FOR_SDE_APPROVAL_AFTER_DIV_SUPERITENDENT','Pending for SDE Approval after DIV Superintendent','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6330-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_PENDING_FOR_DIV_SUPERITENDENT_APPROVAL_AFTER_EE','Pending for DIV Superintendent Approval after EE','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6331-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_CANCELLED','Application Canceled','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6332-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_JE_TARIFF','Pending for Superintendent Approval After JE','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6332-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_JE_TARIFF','Pending for Superintendent Approval After JE','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6333-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_TEMPORARY_WSCONNECTION_BILLING','Temporary Billing Water Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6334-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_INITIATED','Initiated','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6335-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_CITIZEN_ACTION','Pending for Citizen Action','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6336-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_DOCUMENT_VERIFICATION','Pending for Document Verification','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6337-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_REJECTED','Rejected','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6338-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_CANCELLED','Cancelled','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6338-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_SITE_INSPECTION','Pending for Site Inspection','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6339-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_SDE_ROADS_APPROVAL','Pending for SDE Roads Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6340-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_ROADCUT_NOC_BY_CITIZEN',Pending for Roadcut NOC by Citizen','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6341-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_ROADCUT_NOC_APPROVAL_BY_SDE','Pending for Roadcut Approval by SDE','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6342-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_JE_TEMPBILLING','Pending for Superintendent Approval After JE','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6343-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_JE_APPROVAL_AFTER_SUPERINTEDENT', 'Pending for JE Approval After Superintendent','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6344-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_SDE_APPROVAL','Pending for SDE Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6345-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_HDM_APPROVAL_AFTER_SDE','Pending for HDM Approval After SDE','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6346-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_EE_APPROVAL','Pending for EE Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6347-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_SDE_APPROVAL_AFTER_EE','Pending for SDE Approval After EE','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6348-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_SE_REVIEW','Pending for SE Review','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6349-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_CHD_REVIEW','Pending for CHD Review','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6350-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_HDM_APPROVAL','Pending for HDM Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6351-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_CHD_APPROVAL','Pending for CHD Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6352-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_SE_APPROVAL','Pending for SE Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6353-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_PAYMENT','Pending for Payment','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6354-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_CONNECTION_VERIFICATION_BY_JE','Pending for Connection Verification by JE','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6355-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_CONNECTION_ACTIVATION_BY_SUPERINTENDENT','Pending for Connection Activation by Superintendent','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6356-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_CONNECTION_ACTIVATED','Connection Activation','ch','rainmaker-common',24226,now(),NULL,NULL);
 
