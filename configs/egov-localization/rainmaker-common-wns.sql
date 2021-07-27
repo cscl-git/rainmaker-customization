@@ -723,7 +723,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6336-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_DOCUMENT_VERIFICATION','Pending for Document Verification','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6337-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_REJECTED','Rejected','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6338-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_CANCELLED','Cancelled','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6338-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_SITE_INSPECTION','Pending for Site Inspection','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6338-ac7f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_SITE_INSPECTION','Pending for Site Inspection','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6339-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_SDE_ROADS_APPROVAL','Pending for SDE Roads Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6340-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_ROADCUT_NOC_BY_CITIZEN','Pending for Roadcut NOC by Citizen','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6341-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_ROADCUT_NOC_APPROVAL_BY_SDE','Pending for Roadcut Approval by SDE','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -742,4 +742,3 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6354-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_CONNECTION_VERIFICATION_BY_JE','Pending for Connection Verification by JE','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6355-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_CONNECTION_ACTIVATION_BY_SUPERINTENDENT','Pending for Connection Activation by Superintendent','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6356-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_CONNECTION_ACTIVATED','Connection Activated','ch','rainmaker-common',24226,now(),NULL,NULL);
-
