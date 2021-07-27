@@ -1,4 +1,3 @@
-
 delete from public.message  WHERE  module='rainmaker-ws';
 INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 	 ('5f98910d-52c2-400c-b8a4-0e1e05efcacf','en_IN','WS_OWNER.ADDRESSPROOF','Owner Address Proof','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
@@ -1498,7 +1497,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5934-ac6f-2bc063b75064e','en_IN','TEMPORARY_BILLING_ELECTRICITY_BILL','Electricity Bill','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5935-ac6f-2bc063b75064e','en_IN','TEMPORARY_BILLING','Temporary Billing','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5936-ac6f-2bc063b75064e','en_IN','TEMPORARY_WSCONNECTION_BILLING_DETAIL_HEADER','Apply for Temporary Billing Water Connection','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5937-ac6f-2bc063b75064e','en_IN',WF_TEMPORARY_WSCONNECTION_BILLING_VERIFY_AND_FORWARD_TO_SUPERINTEDENT','Verify and Forword to Superintendent','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5937-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_VERIFY_AND_FORWARD_TO_SUPERINTEDENT','Verify and Forword to Superintendent','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5938-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_VERIFY_AND_FORWARD_TO_SDER_ROADS','Verify and forward to PH 4 SDE','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5939-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_SEND_BACK_TO_CITIZEN','Send Back to Citizen','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5940-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_REJECT','Reject','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -1525,6 +1524,6 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5961-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_VERIFY_AND_FORWARD_TO_CHD','Verify and Forword to CHD','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5962-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_APPROVE_APPLICATION','Verify and Forword to CHD','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5963-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_VERIFY_AND_FORWARD_FOR_PAYMENT','Verify And Forward For Payment','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5964-ac6f-2bc063b75064e','en_IN','TEMPORARY_BILLING_TRIPLICATE_FORM','Triplicate water connection form','ch','rainmaker-ws',24226,now(),NULL,NULL);
-
+,('4d3b6355-1abb-5964-ac6f-2bc063b75064e','en_IN','TEMPORARY_BILLING_TRIPLICATE_FORM','Triplicate water connection form','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5965-ac6f-2bc063b75064e','en_IN','WS_APPROVAL_CALCELLED_MESSAGE_HEAD','Application cancelled successfully','ch','rainmaker-ws',24226,now(),NULL,NULL);
 
