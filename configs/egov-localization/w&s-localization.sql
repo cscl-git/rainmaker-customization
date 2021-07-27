@@ -1524,6 +1524,4 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5961-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_VERIFY_AND_FORWARD_TO_CHD','Verify and Forword to CHD','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5962-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_APPROVE_APPLICATION','Verify and Forword to CHD','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5963-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_VERIFY_AND_FORWARD_FOR_PAYMENT','Verify And Forward For Payment','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5964-ac6f-2bc063b75064e','en_IN','TEMPORARY_BILLING_TRIPLICATE_FORM','Triplicate water connection form','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5965-ac6f-2bc063b75064e','en_IN','WS_APPROVAL_CALCELLED_MESSAGE_HEAD','Application cancelled successfully','ch','rainmaker-ws',24226,now(),NULL,NULL);
-
+,('4d3b6355-1abb-5964-ac6f-2bc063b75064e','en_IN','TEMPORARY_BILLING_TRIPLICATE_FORM','Triplicate water connection form','ch','rainmaker-ws',24226,now(),NULL,NULL);
