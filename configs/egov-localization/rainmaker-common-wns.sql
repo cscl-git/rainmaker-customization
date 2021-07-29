@@ -383,6 +383,7 @@ DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDIN
 DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_CONNECTION_VERIFICATION_BY_JE'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_CONNECTION_ACTIVATION_BY_SUPERINTENDENT'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_CONNECTION_ACTIVATED'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_EE_APPROVAL_AFTER_SE' and tenantId='ch';
 --insert
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 ('4d3b6355-1abb-6000-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_REGULARWSCONNECTION','Regular Water Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -741,4 +742,5 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6353-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_PAYMENT','Pending for Payment','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6354-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_CONNECTION_VERIFICATION_BY_JE','Pending for Connection Verification by JE','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6355-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_CONNECTION_ACTIVATION_BY_SUPERINTENDENT','Pending for Connection Activation by Superintendent','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6356-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_CONNECTION_ACTIVATED','Connection Activated','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6356-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_CONNECTION_ACTIVATED','Connection Activated','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6357-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_PENDING_FOR_EE_APPROVAL_AFTER_SE','Pending for EE Approval After SE','ch','rainmaker-common',24226,now(),NULL,NULL);
