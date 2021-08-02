@@ -855,6 +855,7 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 	 ('ffd71afe-6ae0-4f49-b767-e324ad65193','en_IN','ADVERTISEMENTNOC_REMARK_DOCUMENT','Document','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324e65069e63','en_IN','SELLMEATNOC_REMARK_DOCUMENT','Document','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324pe65079','en_IN','NOC_REQ_PET_DOCS_HEADER','Undertaking from the owner of dog for registration','ch','rainmaker-pm',93,'2020-03-23 18:12:26.59293',NULL,NULL),
+	 ('45e31cad-69d0-4b75-8975-23c82caf0488','en_IN','NOC_REQ_SELLMEAT_DOCS_HEADER','Conditions for issue of No Objection Certifcate','ch','rainmaker-pm',93,'2020-03-23 18:12:26.59293',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324pe65135','en_IN','NOC_CERTIFICATE_PET','Certificate','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324pe65136','en_IN','NOC_CERTIFICATE_ADVERTISEMENT','Certificate','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324pe65137','en_IN','NOC_RECEIPT_ADVERTISEMENT','Receipt','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
@@ -1329,7 +1330,7 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 --,( '42e17862-dbd8-4pm6-95f6-382ec3e10080','en_IN','NOC_PMT_RCPT_NO','Receipt No.','ch','rainmaker-pm', '94')
 --,( '42e17862-dbd8-4pm6-95f6-382ec3e10081','en_IN','NOC_CONFIRMATION_BUTTON_DOWNLOAD_RECEIPT','Download Receipt','ch','rainmaker-pm', '94')
 --,( '42e17862-dbd8-4pm6-95f6-382ec3e10082','en_IN','SELLMEAT_NOC_PAYMENT_SUCCESS_MESSAGE_SUB','Payment has been collected successfully!','ch','rainmaker-pm', '94');
-,( '42e17862-dbd8-4pm6-95f6-382ec3e10083','en_IN','SELLMEAT_ID_PROOF','Sell Meat ID Proof','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10083','en_IN','SELLMEAT_ID_PROOF','ID Proof','ch','rainmaker-pm', '94')
 ,( '42e17862-dbd8-4pm6-95f6-382ec3e10084','en_IN','SELLMEATNOC_FEE','Administrative charges(Non-refundable)','ch','rainmaker-pm', '94')
 ,( '42e17862-dbd8-4pm6-95f6-382ec3e10085','en_IN','SELLMEATNOC_UNDERTAKING_HEADING','No premises shall be issued NOC to obtain license for sale of meat, fsh and poultry unless:-','ch','rainmaker-pm', '94')
 ,( '42e17862-dbd8-4pm6-95f6-382ec3e10086','en_IN','SELLMEATNOC_UNDERTAKING_POINT1',' It has a foor made of impervious and non-slippery material.','ch','rainmaker-pm', '94')
@@ -1343,10 +1344,11 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 ,( '42e17862-dbd8-4pm6-95f6-382ec3e10094','en_IN','SELLMEATNOC_UNDERTAKINGPOINT9','Washbasin made of stainless steel/porcelain shall be provided.','ch','rainmaker-pm', '94')
 ,( '42e17862-dbd8-4pm6-95f6-382ec3e10095','en_IN','SELLMEATNOC_UNDERTAKINGPOINT10','The premises shall be air conditioned.','ch','rainmaker-pm', '94')
 ,( '42e17862-dbd8-4pm6-95f6-382ec3e10096','en_IN','SELLMEATNOC_UNDERTAKINGPOINT11','A sign board indicating the type of meat sold shall be displayed prominently i.e.JhatkaMalal.','ch','rainmaker-pm', '94')
-,( '42e17862-dbd8-4pm6-95f6-382ec3e10097','en_IN','SELLMEATNOC_UNDERTAKINGPOINT12','Proof of possession (rent agreement to be submitted with application for NOC.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10097','en_IN','SELLMEATNOC_UNDERTAKINGPOINT12','Proof of possession / rent agreement to be submitted with application for NOC.','ch','rainmaker-pm', '94')
 ,( '42e17862-dbd8-4pm6-95f6-382ec3e10100','en_IN','SELLMEATNOC_UNDERTAKINGPOINT13','Failure to comply with any of these conditions or any other condition laid down by Licensing Authority may result in cancellation of NOC by the appropriate authority', 'ch','rainmaker-pm', '94')
 ,( '42e17862-dbd8-4pm6-95f6-382ec3e10101','en_IN','SELLMEATNOC_UNDERTAKINGPOINT14','Grant of NOC shall not protect the licensee for violation of provisions of the capital of Punjab Development and regulation Act, 1952 and rules framed thereunder or any other law.','ch','rainmaker-pm', '94')
-,('4532fde7-e11a-48d6-b47e-1ce369d515af','en_IN','SELLMEAT.ID_PROOF','Sellmeat Id Proof','ch','rainmaker-pm', '94')
+,( '2705ee6f-79bc-4354-8b65-942dafea3f2d','en_IN','SELLMEATNOC_UNDERTAKINGPOINT15','Gysier for sanitazing the equipment for slaughtering with hot water.','ch','rainmaker-pm', '94')
+,('4532fde7-e11a-48d6-b47e-1ce369d515af','en_IN','SELLMEAT.ID_PROOF','Id Proof','ch','rainmaker-pm', '94')
 ,('f32cbbf3-d850-4615-80ef-792271ea5c2a','en_IN','PET-NOC_NEW_APPLICATION','Pet New Application','ch','rainmaker-pm', '94')
 ,('cd812082-8fd3-44ab-a427-1ca46cc6ef86','en_IN','SELL-MEAT-NOC_NEW_APPLICATION','Sellmeat New Application','ch','rainmaker-pm', '94')
 ,('a5a6f4c5-7e2b-483c-ad83-5fc76cd5ab0f','en_IN','ADVERTISEMENT-NOC_NEW_APPLICATION','Advertisement New Application','ch','rainmaker-pm', '94')
@@ -1356,9 +1358,12 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 ,('691a67f1-bfed-4dd4-8d80-343c74e9d1e7','en_IN','DROPDOWN_POINT_2',' Halal(goat/sheep)+Fish +Frozen/Packed/Poultry','ch','rainmaker-pm', '94')
 ,('f0debb13-e6dc-4dcc-9931-0764a3b288d4','en_IN','DROPDOWN_POINT_3',' Pork+Fish+Packed/Frozen/Poultry','ch','rainmaker-pm', '94')
 ,('c99d2fa4-9824-40bd-8c05-391883350ccf','en_IN','DROPDOWN_POINT_4',' Pork(pig) can not be combined with Jhatka or Halal','ch','rainmaker-pm', '94')
+,('98bebe00-52eb-46af-8491-3011a1266c90','en_IN','DROPDOWN_POINT_5',' Note: I here confirm that my shop fall under commercial area','ch','rainmaker-pm', '94')
 --,('50298593-7a24-4d12-bee4-d026e75d13df','en_IN','NOC_PAYMENT_COLLECTION_SUCCESS_MESSAGE_MAIN',' Payment Collection Success)','ch','rainmaker-pm', '94')
 --,('500d77e9-e31b-4220-8f8d-8074d7ef8816','en_IN','NOC_PMT_RCPT_NO',' Payment Receipt No.','ch','rainmaker-pm', '94')
 --,('0b6aa549-0d14-4adb-bed2-80b2dce120bc','en_IN','PET_NOC_PAYMENT_SUCCESS_MESSAGE_SUB','A notification regarding Payment Collection has been sent to the applicant','ch','rainmaker-pm', '94')
 --,('6dc98bdb-82b5-4585-b1a1-05942b0e4753','en_IN','NOC_CONFIRMATION_BUTTON_DOWNLOAD_RECEIPT','Download Receipt','ch','rainmaker-pm', '94')
 --,('f9b52cbc-33fe-4662-8f26-30d5fdeb63bc','en_IN','SELLMEAT_NOC_PAYMENT_SUCCESS_MESSAGE_SUB','A notification regarding Payment Collection has been sent to the applicant','ch','rainmaker-pm', '94')
-,('2932d177-abb4-400e-be58-f0e9f361bbf3','en_IN','DROPDWON_COMBINATION',' Sellmeat NOC Drop-down Combinations','ch','rainmaker-pm', '94');
+,('2932d177-abb4-400e-be58-f0e9f361bbf3','en_IN','DROPDWON_COMBINATION',' Sellmeat NOC Drop-down Combinations','ch','rainmaker-pm', '94')
+,('83b66019-2017-4508-8b2d-29f4f7d082ae','en_IN','WF_SELLMEATNOC_PAID','Paid Sellmeat','ch','rainmaker-pm', '94')
+,('4537842a-ad89-4235-b3bf-88f2002299f5','en_IN','ERR_NOC_ROADCUT_LENGTH','Roadcut Length','ch','rainmaker-pm', '94');

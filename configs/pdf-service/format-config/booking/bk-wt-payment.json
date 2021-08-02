@@ -6,13 +6,22 @@
                 "image": "{{variable76}}",
                 "width": 65,
                 "height": 65,
-                "margin": [0, -5, 0, 0]
+                "margin": [
+                    0,
+                    -5,
+                    0,
+                    0
+                ]
             },
             {
                 "text": "Municipal Corporation, Chandigarh",
                 "style": "pdfheader",
-                "margin": [0, -55, 0, 0]
-
+                "margin": [
+                    0,
+                    -55,
+                    0,
+                    0
+                ]
             },
             {
                 "text": "Receipt Number",
@@ -29,9 +38,13 @@
             {
                 "text": "Payment Receipt",
                 "style": "pdfsubheader",
-                "margin": [0, -10, 0, 50]
+                "margin": [
+                    0,
+                    -10,
+                    0,
+                    50
+                ]
             },
-
             {
                 "columns": [
                     {
@@ -216,9 +229,11 @@
                 "table": {
                     "widths": [
                         "auto",
-                        200,
-                        175,
-                        100
+                        110,
+                        190,
+                        30,
+                        70,
+                        60
                     ],
                     "headerRows": 1,
                     "body": [
@@ -239,7 +254,17 @@
                                 "alignment": "center"
                             },
                             {
-                                "text": "AMOUNT",
+                                "text": "QTY.",
+                                "style": "horizontalcolumnsheader",
+                                "alignment": "center"
+                            },
+                            {
+                                "text": "BASE AMOUNT (Rs.)",
+                                "style": "horizontalcolumnsheader",
+                                "alignment": "center"
+                            },
+                            {
+                                "text": "AMOUNT (Rs.)",
                                 "style": "horizontalcolumnsheader",
                                 "alignment": "center"
                             }
@@ -261,21 +286,55 @@
                                 "alignment": "right"
                             },
                             {
+                                "text": "{{qty}}",
+                                "style": "horizontalcontentstyle",
+                                "alignment": "center"
+                            },
+                            {
                                 "text": "{{variable11}}",
+                                "style": "horizontalcontentstyle",
+                                "alignment": "center"
+                            },
+                            {
+                                "text": "{{wtT}}",
                                 "style": "horizontalcontentstyle",
                                 "alignment": "right"
                             }
                         ],
                         [
                             {
-                                "text": {},
+                                "text": " ",
                                 "colSpan": 2
                             },
                             {},
                             {
                                 "text": "GST @18%",
                                 "style": "horizontalcontentstyle",
-                                "alignment": "right"
+                                "alignment": "right",
+                                "border": [
+                                    false,
+                                    false,
+                                    false,
+                                    true
+                                ]
+                            },
+                            {
+                                "text": " ",
+                                "border": [
+                                    false,
+                                    false,
+                                    false,
+                                    true
+                                ]
+                            },
+                            {
+                                "text": " ",
+                                "border": [
+                                    false,
+                                    false,
+                                    false,
+                                    true
+                                ]
                             },
                             {
                                 "text": "{{variable12}}",
@@ -285,14 +344,38 @@
                         ],
                         [
                             {
-                                "text": {},
+                                "text": " ",
                                 "colSpan": 2
                             },
                             {},
                             {
                                 "text": "Total Paid Amount",
                                 "style": "horizontalcontentstyle",
-                                "alignment": "right"
+                                "alignment": "right",
+                                "border": [
+                                    false,
+                                    false,
+                                    false,
+                                    true
+                                ]
+                            },
+                            { 
+                                "text": " ",
+                                "border": [
+                                    false,
+                                    false,
+                                    false,
+                                    true
+                                ]
+                            },
+                            {
+                                "text": " ",
+                                "border": [
+                                    false,
+                                    false,
+                                    false,
+                                    true
+                                ]
                             },
                             {
                                 "text": "{{variable13}}",
@@ -304,10 +387,12 @@
                             {
                                 "text": "{{variable14}}",
                                 "style": "horizontalcontentstyle",
-                                "colSpan": 4,
+                                "colSpan": 6,
                                 "alignment": "left",
                                 "bold": true
                             },
+                            {},
+                            {},
                             {},
                             {},
                             {}
@@ -315,18 +400,40 @@
                     ]
                 }
             },
-            { "text": "Generated by", "alignment": "left", "fontSize": "10", "bold": true, "margin": [0, 50, 0, 0] },
-            { "text": "{{generatedBy}}", "alignment": "left", "fontSize": "10" },
-            { "text": "{{generatedDateTime}}", "alignment": "left", "fontSize": "8" },
+            {
+                "text": "Generated by",
+                "alignment": "left",
+                "fontSize": "10",
+                "bold": true,
+                "margin": [
+                    0,
+                    50,
+                    0,
+                    0
+                ]
+            },
+            {
+                "text": "{{generatedBy}}",
+                "alignment": "left",
+                "fontSize": "10"
+            },
+            {
+                "text": "{{generatedDateTime}}",
+                "alignment": "left",
+                "fontSize": "8"
+            },
             {
                 "text": "NOTE: In case of any assistance regarding delivery of water tanker. Please contact 0172 - 2540200",
                 "alignment": "left",
                 "fontSize": "8",
-                "margin": [0, 30, 10, 0]
-
+                "margin": [
+                    0,
+                    30,
+                    10,
+                    0
+                ]
             }
         ],
-
         "footer": [
             {
                 "text": "Note: 1.Payment received by cheque/demand draft shall be subject to realization. 2.This document is not a proof of Property Ownership. 3.This is a computer generated document, hence requires no signature.",
@@ -342,12 +449,22 @@
             "pdfsubheader": {
                 "fontSize": 15,
                 "alignment": "center",
-                "margin": [0, -15, 0, 20]
+                "margin": [
+                    0,
+                    -15,
+                    0,
+                    20
+                ]
             },
             "footerstyle": {
                 "alignment": "center",
                 "fontSize": "8",
-                "margin": [10, 0, 10, 0]
+                "margin": [
+                    10,
+                    0,
+                    10,
+                    0
+                ]
             },
             "verticalcolumnsheader": {
                 "fontSize": 10,
@@ -375,4 +492,4 @@
             }
         }
     }
-  }
+}
