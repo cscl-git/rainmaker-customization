@@ -1543,4 +1543,6 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5980-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_VERIFY_AND_FORWARD_TO_SE','Verify and Forword to SE','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5981-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_VERIFY_AND_FORWARD_TO_EE','Verify and Forword to EE','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5982-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_VERIFY_AND_FORWARD_TO_CITIZEN_FOR_NOC','Send Back to Citizen For Roadcut NOC','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5983-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_VERIFY_AND_FORWARD_TO_SUPERINTEDENT_FOR_ACTIVATION','Verify and Forword to Superintendent','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5983-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_VERIFY_AND_FORWARD_TO_SUPERINTEDENT_FOR_ACTIVATION','Verify and Forword to Superintendent','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5984-ac6f-2bc063b75064e','en_IN','WF_CLOSE_CONNECTION_APPLICATION','Close Connection Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5985-ac6f-2bc063b75064e','en_IN','WS_WATER_APPLICATION_REGULAR','Regular','ch','rainmaker-ws',24226,now(),NULL,NULL);
