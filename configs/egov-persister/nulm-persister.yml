@@ -1195,7 +1195,7 @@ serviceMaps:
       fromTopic: nulm-services-save-susvrenewapplication
       isTransaction: true      
       queryMaps:
-      -  query: INSERT INTO public.nulm_susv_renew_application_detail(application_uuid, application_id, application_status, looking_for, name_of_street_vendor, cov_no, residential_address, change_of_location, proposed_address,name_of_proposed_new_street_vendor ,tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time)VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?);
+      -  query: INSERT INTO public.nulm_susv_renew_application_detail(application_uuid, application_id, application_status, looking_for, name_of_street_vendor, cov_no, residential_address, change_of_location, proposed_address,name_of_proposed_new_street_vendor ,tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time,susv_applicaton_id)VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?);
          basePath: $.NulmSusvRenewRequest
          jsonMaps:
          -  jsonPath: $.NulmSusvRenewRequest.applicationUuId
@@ -1213,7 +1213,8 @@ serviceMaps:
          -  jsonPath: $.NulmSusvRenewRequest.auditDetails.createdBy
          -  jsonPath: $.NulmSusvRenewRequest.auditDetails.createdTime
          -  jsonPath: $.NulmSusvRenewRequest.auditDetails.lastModifiedBy
-         -  jsonPath: $.NulmSusvRenewRequest.auditDetails.lastModifiedTime         
+         -  jsonPath: $.NulmSusvRenewRequest.auditDetails.lastModifiedTime
+         -  jsonPath: $.NulmSusvRenewRequest.susvApplicationId         
       -  query: INSERT INTO public.nulm_susv_renew_familiy_detail(uuid, application_uuid, name, age, relation, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time)	VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
          basePath: $.NulmSusvRenewRequest.susvApplicationFamilyDetails.*
          jsonMaps:
