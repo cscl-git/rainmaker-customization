@@ -1192,7 +1192,7 @@ serviceMaps:
    -  version: 1.0
       name: Save susv Renew Application
       description: Request -save susv-renew-application
-      fromTopic: nulm-services-save-susvrenewapplication
+      fromTopic: nulm-services-save-susvrenew
       isTransaction: true      
       queryMaps:
       -  query: INSERT INTO public.nulm_susv_renew_application_detail(application_uuid, application_id, application_status, looking_for, name_of_street_vendor, cov_no, residential_address, change_of_location, proposed_address,name_of_proposed_new_street_vendor ,tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time,susv_applicaton_id)VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?);
