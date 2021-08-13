@@ -1534,7 +1534,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5971-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_VERIFY_AND_FORWARD_TO_EE','Verify And Forward to EE','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5972-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_TO_EE_APPLICATION','Verify And Forward Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5973-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_SUBMIT_ROADCUT_NOC','Submit Roadcut for NOC','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5974-ac6f-2bc063b75064e','en_IN','WS_COMMON_COMMENTS_SUB_HEADER_TEMP','Note: In case of NDC for Government house select, ''Government Houses'' in property sub usage type, then select Government Housing','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5974-ac6f-2bc063b75064e','en_IN','WS_COMMON_COMMENTS_SUB_HEADER_TEMP','Note: In case of NDC for Government house select, ''Government Houses'' in property sub usage type','ch','rainmaker-ws',24226,now(),NULL,NULL)
 --,('4d3b6355-1abb-5975-ac6f-2bc063b75064e','en_IN','WF_SUBMIT_APPLICATION_APPLICATION','Submit Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5976-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_CANCEL_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5977-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_SEND_BACK_TO_SUPERINTENDENT','Send Back to Superintendent','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -1545,4 +1545,10 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5982-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_VERIFY_AND_FORWARD_TO_CITIZEN_FOR_NOC','Send Back to Citizen For Roadcut NOC','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5983-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_VERIFY_AND_FORWARD_TO_SUPERINTEDENT_FOR_ACTIVATION','Verify and Forword to Superintendent','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5984-ac6f-2bc063b75064e','en_IN','WF_CLOSE_CONNECTION_APPLICATION','Close Connection Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5985-ac6f-2bc063b75064e','en_IN','WS_WATER_APPLICATION_REGULAR','Regular','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5985-ac6f-2bc063b75064e','en_IN','WS_WATER_APPLICATION_REGULAR','Regular','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5986-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_DISCONNECTION_SEND_BACK_TO_SUPERINTEDENT','Send Back to Superintendent','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5987-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_DISCONNECTION_SEND_BACK_TO_JE','Send Back to JE','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5988-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_DISCONNECTION_CANCEL_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5989-ac6f-2bc063b75064e','en_IN','WS_METER_UPDATE_CANCEL_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5990-ac6f-2bc063b75064e','en_IN','WS_TEMPORARY_WSCONNECTION_CANCEL_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5991-ac6f-2bc063b75064e','en_IN','WS_TEMPORARY_WSCONNECTION_BILLING_CANCEL_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL);
