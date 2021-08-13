@@ -391,6 +391,8 @@ DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_PENDING_FOR_SD
 DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_PENDING_ROADCUT_NOC_APPROVAL_BY_SDE' and tenantId='ch';
 DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_PENDING_FOR_CONNECTION_VERIFICATION_BY_JE' and tenantId='ch';
 DELETE FROM public.message WHERE code ='WF_TEMPORARY_WSCONNECTION_PENDING_FOR_CONNECTION_ACTIVATION_BY_SUPERINTENDENT' and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TEMP_DISCONNECTION_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_JE_STATE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TEMP_TEMP_PENDING_FOR_CONNECTION_HOLDER_CHANGE'and tenantId='ch';
 
 --insert
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
@@ -758,4 +760,6 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6361-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_PENDING_FOR_SDE_APPROVAL_AFTER_EE','Pending for SDE Approval After EE','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6362-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_PENDING_ROADCUT_NOC_APPROVAL_BY_SDE','Pending for Roadcut NOC Approval by SDE','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6363-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_PENDING_FOR_CONNECTION_VERIFICATION_BY_JE','Pending for Connection Verification by JE','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6364-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_PENDING_FOR_CONNECTION_ACTIVATION_BY_SUPERINTENDENT','Pending for Connection Activation by Superintendent','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6364-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_PENDING_FOR_CONNECTION_ACTIVATION_BY_SUPERINTENDENT','Pending for Connection Activation by Superintendent','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6365-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_TEMP_PENDING_FOR_CONNECTION_HOLDER_CHANGE','Pending for Connection Holder Change','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6366-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_DISCONNECTION_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_JE_STATE','Pending for Superintendent Approval','ch','rainmaker-common',24226,now(),NULL,NULL);
