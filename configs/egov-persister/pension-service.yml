@@ -3670,16 +3670,16 @@ serviceMaps:
     isTransaction: true
     queryMaps:
 
-    - query: UPDATE eg_pension_pensioner SET active=false, last_modified_by=?, last_modified_date=? WHERE pensioner_number=?;
+    # - query: UPDATE eg_pension_pensioner SET active=false, last_modified_by=?, last_modified_date=? WHERE pensioner_number=?;
 
-      basePath: ProcessInstances.*.pensioner
-      jsonMaps:                 
+    #   basePath: ProcessInstances.*.pensioner
+    #   jsonMaps:                 
 
-      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy             
+    #   - jsonPath: $.ProcessInstances.*.auditDetails.createdBy             
 
-      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
+    #   - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
 
-      - jsonPath: $.ProcessInstances.*.pensioner.pensionerNumber
+    #   - jsonPath: $.ProcessInstances.*.pensioner.pensionerNumber
       
     - query: UPDATE eg_pension_revision SET active=false, last_modified_by=?, last_modified_date=? WHERE pensioner_id=(SELECT uuid FROM eg_pension_pensioner WHERE pensioner_number=?) AND active=true;
 
