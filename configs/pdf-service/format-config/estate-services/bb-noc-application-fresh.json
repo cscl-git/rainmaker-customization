@@ -387,10 +387,10 @@
                   {
                     "table": {
                       "widths": [
-                        "25%",
-                        "25%",
-                        "25%",
-                        "25%"
+                        "40%",
+                        "20%",
+                        "20%",
+                        "20%"
                          ],
                        "body": [
                       [
@@ -616,7 +616,7 @@
                           "style": "receipt-table-value-cont"
                         },
                       {
-                        "text":"{{CP_NUMBER_LABEL}}",
+                        "text":"",
                         "border":[
                           false,
                           false,
@@ -656,7 +656,7 @@
                            "style": "receipt-table2"
                         },
                         {
-                          "text":"{{cpNumber}}",
+                          "text":"",
                           "border":[
                             false,
                             false,
