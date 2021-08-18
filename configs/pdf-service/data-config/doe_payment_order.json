@@ -1,406 +1,406 @@
 {
-  "key": "doe_payment_order",
+    "key": "doe_payment_order",
 
-  "DataConfigs": {
-    "serviceName": "pension",
-    "version": "1.0.0",
-    "baseKeyPath": "$.PaymentDetails",
-    "entityIdPath": "$.name",
-    "isCommonTableBorderRequired": true,
-    "mappings": [
-      {
-        "topic": "pension-pdf-generation",
+    "DataConfigs": {
+        "serviceName": "pension",
+        "version": "1.0.0",
+        "baseKeyPath": "$.PaymentDetails",
+        "entityIdPath": "$.name",
+        "isCommonTableBorderRequired": true,
         "mappings": [
-          {
-            "direct": [
-              {
-                "variable": "application_number",
-                "value": {
-                  "path": "$.businessId"
-                }
-              },
-              {
-                "variable": "date_today",
-                "value": {
-                  "path": "$.date"
-                }
-              },
-              {
-                "variable": "payment_order_number",
-                "value": {
-                  "path": "$.paymentOrderNumber"
-                }
-              },
-              {
-                "variable": "employee_name",
-                "value": {
-                  "path": "$.name"
-                }
-              },
-              {
-                "variable": "dob",
-                "value": {
-                  "path": "$.dob"
-                }
-              },
-              {
-                "variable": "dor",
-                "value": {
-                  "path": "$.dateOfRetirement"
-                }
-              },
-              {
-                "variable": "dod",
-                "value": {
-                  "path": "$.dateOfRetirement"
-                }
-              },
-              {
-                "variable": "permanent_address",
-                "value": {
-                  "path": "$.permanentAddress"
-                }
-              },
-              {
-                "variable": "permanent_city",
-                "value": {
-                  "path": "$.permanentCity"
-                }
-              },
-              {
-                "variable": "permanent_pincode",
-                "value": {
-                  "path": "$.permanentPinCode"
-                }
-              },
-              {
-                "variable": "father_name",
-                "value": {
-                  "path": "$.fatherOrHusbandName"
-                }
-              },
-              {
-                "variable": "claimant_name",
-                "value": {
-                  "path": "$.fatherOrHusbandName"
-                }
-              },
-              {
-                "variable": "service_start_date",
-                "value": {
-                  "path": "$.dateOfAppointment"
-                }
-              },
-              {
-                "variable": "reason_for_retirement",
-                "value": {
-                  "path": "$.reasonForRetirement"
-                }
-              },
-              {
-                "variable": "lpd",
-                "value": {
-                  "path": "$.lpd"
-                }
-              },
-              {
-                "variable": "gqs_year",
-                "value": {
-                  "path": "$.gqsYearVerified"
-                }
-              },
-              {
-                "variable": "gqs_month",
-                "value": {
-                  "path": "$.gqsMonthVerified"
-                }
-              },
-              {
-                "variable": "gqs_day",
-                "value": {
-                  "path": "$.gqsDayVerified"
-                }
-              },
-              {
-                "variable": "nonqs_year",
-                "value": {
-                  "path": "$.totalNoPayLeavesYears"
-                }
-              },
-              {
-                "variable": "nonqs_month",
-                "value": {
-                  "path": "$.totalNoPayLeavesMonths"
-                }
-              },
-              {
-                "variable": "nonqs_day",
-                "value": {
-                  "path": "$.totalNoPayLeavesDays"
-                }
-              },
-              {
-                "variable": "nqs_year",
-                "value": {
-                  "path": "$.nqsYearVerified"
-                }
-              },
-              {
-                "variable": "nqs_month",
-                "value": {
-                  "path": "$.nqsMonthVerified"
-                }
-              },
-              {
-                "variable": "nqs_day",
-                "value": {
-                  "path": "$.nqsDayVerified"
-                }
-              },
-              {
-                "variable": "bank_details",
-                "value": {
-                  "path": "$.bankAddress"
-                }
-              },
-              {
-                "variable": "bank_ifsc",
-                "value": {
-                  "path": "$.bankIfsc"
-                }
-              },
-              {
-                "variable": "acc_number",
-                "value": {
-                  "path": "$.accountNumber"
-                }
-              },
-              {
-                "variable": "designation",
-                "value": {
-                  "path": "$.designation"
-                }
-              },
-              {
-                "variable": "department",
-                "value": {
-                  "path": "$.department"
-                }
-              },
-              {
-                "variable": "IR_amount",
-                "value": {
-                  "path": "$.benefits[?(@.code=='IR')].value"
-                }
-              },
-              {
-                "variable": "IR_expression",
-                "value": {
-                  "path": "$.benefits[?(@.code=='IR')].expression"
-                }
-              },
-              {
-                "variable": "BASIC_PENSION_amount",
-                "value": {
-                  "path": "$.benefits[?(@.code=='BASIC_PENSION')].value"
-                }
-              },
-              {
-                "variable": "BASIC_PENSION_expression",
-                "value": {
-                  "path": "$.benefits[?(@.code=='BASIC_PENSION')].expression"
-                }
-              },
-              {
-                "variable": "WOUND_EXTRAORDINARY_PENSION_amount",
-                "value": {
-                  "path": "$.benefits[?(@.code=='WOUND_EXTRAORDINARY_PENSION')].value"
-                }
-              },
-              {
-                "variable": "WOUND_EXTRAORDINARY_PENSION_expression",
-                "value": {
-                  "path": "$.benefits[?(@.code=='WOUND_EXTRAORDINARY_PENSION')].expression"
-                }
-              },
-              {
-                "variable": "PENSION_IR_amount",
-                "value": {
-                  "path": "$.benefits[?(@.code=='PENSION_IR')].value"
-                }
-              },
-              {
-                "variable": "PENSION_IR_expression",
-                "value": {
-                  "path": "$.benefits[?(@.code=='PENSION_IR')].expression"
-                }
-              },
-              {
-                "variable": "PENSION_DA_amount",
-                "value": {
-                  "path": "$.benefits[?(@.code=='PENSION_DA')].value"
-                }
-              },
-              {
-                "variable": "PENSION_DA_expression",
-                "value": {
-                  "path": "$.benefits[?(@.code=='PENSION_DA')].expression"
-                }
-              },
-              {
-                "variable": "TOTAL_PENSION_amount",
-                "value": {
-                  "path": "$.benefits[?(@.code=='TOTAL_PENSION')].value"
-                }
-              },
-              {
-                "variable": "TOTAL_PENSION_expression",
-                "value": {
-                  "path": "$.benefits[?(@.code=='TOTAL_PENSION')].expression"
-                }
-              },
-              {
-                "variable": "PENSION_DEDUCTION_amount",
-                "value": {
-                  "path": "$.benefits[?(@.code=='PENSION_DEDUCTION')].value"
-                }
-              },
-              {
-                "variable": "PENSION_DEDUCTION_expression",
-                "value": {
-                  "path": "$.benefits[?(@.code=='PENSION_DEDUCTION')].expression"
-                }
-              },
-              {
-                "variable": "NET_DEDUCTION_amount",
-                "value": {
-                  "path": "$.benefits[?(@.code=='NET_DEDUCTION')].value"
-                }
-              },
-              {
-                "variable": "NET_DEDUCTION_expression",
-                "value": {
-                  "path": "$.benefits[?(@.code=='NET_DEDUCTION')].expression"
-                }
-              },
-              {
-                "variable": "FINAL_CALCULATED_PENSION_amount",
-                "value": {
-                  "path": "$.benefits[?(@.code=='FINAL_CALCULATED_PENSION')].value"
-                }
-              },
-              {
-                "variable": "FINAL_CALCULATED_PENSION_expression",
-                "value": {
-                  "path": "$.benefits[?(@.code=='FINAL_CALCULATED_PENSION')].expression"
-                }
-              },
-              {
-                "variable": "DA_amount",
-                "value": {
-                  "path": "$.benefits[?(@.code=='DA')].value"
-                }
-              },
-              {
-                "variable": "DA_expression",
-                "value": {
-                  "path": "$.benefits[?(@.code=='DA')].expression"
-                }
-              },
-              {
-                "variable": "DCRG_amount",
-                "value": {
-                  "path": "$.benefits[?(@.code=='DCRG')].value"
-                }
-              },
-              {
-                "variable": "DCRG_expression",
-                "value": {
-                  "path": "$.benefits[?(@.code=='DCRG')].expression"
-                }
-              },
-              {
-                "variable": "DCRG_DUES_DEDUCTION_amount",
-                "value": {
-                  "path": "$.benefits[?(@.code=='DCRG_DUES_DEDUCTION')].value"
-                }
-              },
-              {
-                "variable": "DCRG_DUES_DEDUCTION_expression",
-                "value": {
-                  "path": "$.benefits[?(@.code=='DCRG_DUES_DEDUCTION')].expression"
-                }
-              },
-              {
-                "variable": "FINAL_CALCULATED_GRATUITY_amount",
-                "value": {
-                  "path": "$.benefits[?(@.code=='FINAL_CALCULATED_GRATUITY')].value"
-                }
-              },
-              {
-                "variable": "FINAL_CALCULATED_GRATUITY_expression",
-                "value": {
-                  "path": "$.benefits[?(@.code=='FINAL_CALCULATED_GRATUITY')].expression"
-                }
-              },
-              {
-                "variable": "EX_GRATIA_amount",
-                "value": {
-                  "path": "$.benefits[?(@.code=='EX_GRATIA')].value"
-                }
-              },
-              {
-                "variable": "EX_GRATIA_expression",
-                "value": {
-                  "path": "$.benefits[?(@.code=='EX_GRATIA')].expression"
-                }
-              },
-              {
-                "variable": "FAMILY_PENSION_1_amount",
-                "value": {
-                  "path": "$.benefits[?(@.code=='FAMILY_PENSION_1')].value"
-                }
-              },
-              {
-                "variable": "FAMILY_PENSION_1_expression",
-                "value": {
-                  "path": "$.benefits[?(@.code=='FAMILY_PENSION_1')].expression"
-                }
-              },
-              {
-                "variable": "FAMILY_PENSION_2_amount",
-                "value": {
-                  "path": "$.benefits[?(@.code=='FAMILY_PENSION_2')].value"
-                }
-              },
-              {
-                "variable": "FAMILY_PENSION_2_expression",
-                "value": {
-                  "path": "$.benefits[?(@.code=='FAMILY_PENSION_2')].expression"
-                }
-              },
-              {
-                "variable": "family_pension_1_start_date",
-                "value": {
-                  "path": "$.benefits[?(@.code=='FAMILY_PENSION_1_START_DATE')].value"
-                }
-              },
-              {
-                "variable": "family_pension_1_end_date",
-                "value": {
-                  "path": "$.benefits[?(@.code=='FAMILY_PENSION_1_END_DATE')].expression"
-                }
-              },
-              {
-                "variable": "family_pension_2_start_date",
-                "value": {
-                  "path": "$.benefits[?(@.code=='FAMILY_PENSION_2_START_DATE')].value"
-                }
-              }
-            ]
-          }
+            {
+                "topic": "pension-pdf-generation",
+                "mappings": [
+                    {
+                        "direct": [	
+{
+                                "variable": "application_number",
+                                "value": {
+                                    "path": "$.businessId"
+                                }
+                            },						
+							{
+                                "variable": "date_today",
+                                "value": {
+                                    "path": "$.date"
+                                }
+                            },
+						{
+                                "variable": "payment_order_number",
+                                "value": {
+                                    "path": "$.paymentOrderNumber"
+                                }
+                            },
+							{
+                                "variable": "employee_name",
+                                "value": {
+                                    "path": "$.name"
+                                }
+                            },
+							{
+                                "variable": "dob",
+                                "value": {
+                                    "path": "$.dob"
+                                }
+                            },
+							{
+                                "variable": "dor",
+                                "value": {
+                                    "path": "$.dateOfRetirement"
+                                }
+                            },
+							{
+                                "variable": "dod",
+                                "value": {
+                                    "path": "$.dateOfRetirement"
+                                }
+                            },
+							{
+                                "variable": "permanent_address",
+                                "value": {
+                                    "path": "$.permanentAddress"
+                                }
+                            },
+{
+                                "variable": "permanent_city",
+                                "value": {
+                                    "path": "$.permanentCity"
+                                }
+                            },
+{
+                                "variable": "permanent_pincode",
+                                "value": {
+                                    "path": "$.permanentPinCode"
+                                }
+                            },
+							{
+                                "variable": "father_name",
+                                "value": {
+                                    "path": "$.fatherOrHusbandName"
+                                }
+                            },
+							{
+                                "variable": "claimant_name",
+                                "value": {
+                                    "path": "$.pensionEligibleDependentName"
+                                }
+                            },
+							{
+                                "variable": "service_start_date",
+                                "value": {
+                                    "path": "$.dateOfAppointment"
+                                }
+                            },
+							{
+                                "variable": "reason_for_retirement",
+                                "value": {
+                                    "path": "$.reasonForRetirement"
+                                }
+                            },
+{
+                                "variable": "lpd",
+                                "value": {
+                                    "path": "$.lpd"
+                                }
+                            },
+{
+                                "variable": "gqs_year",
+                                "value": {
+                                    "path": "$.gqsYearVerified"
+                                }
+                            },
+{
+                                "variable": "gqs_month",
+                                "value": {
+                                    "path": "$.gqsMonthVerified"
+                                }
+                            },
+{
+                                "variable": "gqs_day",
+                                "value": {
+                                    "path": "$.gqsDayVerified"
+                                }
+                            },
+							{
+                                "variable": "nonqs_year",
+                                "value": {
+                                    "path": "$.totalNoPayLeavesYears"
+                                }
+                            },
+{
+                                "variable": "nonqs_month",
+                                "value": {
+                                    "path": "$.totalNoPayLeavesMonths"
+                                }
+                            },
+{
+                                "variable": "nonqs_day",
+                                "value": {
+                                    "path": "$.totalNoPayLeavesDays"
+                                }
+                            },
+							{
+                                "variable": "nqs_year",
+                                "value": {
+                                    "path": "$.nqsYearVerified"
+                                }
+                            },
+{
+                                "variable": "nqs_month",
+                                "value": {
+                                    "path": "$.nqsMonthVerified"
+                                }
+                            },
+{
+                                "variable": "nqs_day",
+                                "value": {
+                                    "path": "$.nqsDayVerified"
+                                }
+                            },
+{
+                                "variable": "bank_details",
+                                "value": {
+                                    "path": "$.bankAddress"
+                                }
+                            },
+							{
+                                "variable": "bank_ifsc",
+                                "value": {
+                                    "path": "$.bankIfsc"
+                                }
+                            },
+{
+                                "variable": "acc_number",
+                                "value": {
+                                    "path": "$.accountNumber"
+                                }
+                            },
+							{
+                                "variable": "designation",
+                                "value": {
+                                    "path": "$.designation"
+                                }
+                            },
+							{
+                                "variable": "department",
+                                "value": {
+                                    "path": "$.department"
+                                }
+                            },
+							{
+                                "variable": "IR_amount",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='IR')].value"
+                                }
+                            },
+							{
+                                "variable": "IR_expression",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='IR')].expression"
+                                }
+                            },
+							{
+                                "variable": "BASIC_PENSION_amount",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='BASIC_PENSION')].value"
+                                }
+                            },
+							{
+                                "variable": "BASIC_PENSION_expression",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='BASIC_PENSION')].expression"
+                                }
+                            },
+							{
+                                "variable": "WOUND_EXTRAORDINARY_PENSION_amount",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='WOUND_EXTRAORDINARY_PENSION')].value"
+                                }
+                            },
+							{
+                                "variable": "WOUND_EXTRAORDINARY_PENSION_expression",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='WOUND_EXTRAORDINARY_PENSION')].expression"
+                                }
+                            },
+							{
+                                "variable": "PENSION_IR_amount",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='PENSION_IR')].value"
+                                }
+                            },
+							{
+                                "variable": "PENSION_IR_expression",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='PENSION_IR')].expression"
+                                }
+                            },
+							{
+                                "variable": "PENSION_DA_amount",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='PENSION_DA')].value"
+                                }
+                            },
+							{
+                                "variable": "PENSION_DA_expression",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='PENSION_DA')].expression"
+                                }
+                            },
+							{
+                                "variable": "TOTAL_PENSION_amount",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='TOTAL_PENSION')].value"
+                                }
+                            },
+							{
+                                "variable": "TOTAL_PENSION_expression",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='TOTAL_PENSION')].expression"
+                                }
+                            },
+							{
+                                "variable": "PENSION_DEDUCTION_amount",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='PENSION_DEDUCTION')].value"
+                                }
+                            },
+							{
+                                "variable": "PENSION_DEDUCTION_expression",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='PENSION_DEDUCTION')].expression"
+                                }
+                            },
+							{
+                                "variable": "NET_DEDUCTION_amount",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='NET_DEDUCTION')].value"
+                                }
+                            },
+							{
+                                "variable": "NET_DEDUCTION_expression",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='NET_DEDUCTION')].expression"
+                                }
+                            },
+							{
+                                "variable": "FINAL_CALCULATED_PENSION_amount",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='FINAL_CALCULATED_PENSION')].value"
+                                }
+                            },
+							{
+                                "variable": "FINAL_CALCULATED_PENSION_expression",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='FINAL_CALCULATED_PENSION')].expression"
+                                }
+                            },
+							{
+                                "variable": "DA_amount",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='DA')].value"
+                                }
+                            },
+							{
+                                "variable": "DA_expression",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='DA')].expression"
+                                }
+                            },
+							{
+                                "variable": "DCRG_amount",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='DCRG')].value"
+                                }
+                            },
+							{
+                                "variable": "DCRG_expression",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='DCRG')].expression"
+                                }
+                            },
+							{
+                                "variable": "DCRG_DUES_DEDUCTION_amount",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='DCRG_DUES_DEDUCTION')].value"
+                                }
+                            },
+							{
+                                "variable": "DCRG_DUES_DEDUCTION_expression",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='DCRG_DUES_DEDUCTION')].expression"
+                                }
+                            },
+							{
+                                "variable": "FINAL_CALCULATED_GRATUITY_amount",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='FINAL_CALCULATED_GRATUITY')].value"
+                                }
+                            },
+							{
+                                "variable": "FINAL_CALCULATED_GRATUITY_expression",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='FINAL_CALCULATED_GRATUITY')].expression"
+                                }
+                            },
+							{
+                                "variable": "EX_GRATIA_amount",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='EX_GRATIA')].value"
+                                }
+                            },
+							{
+                                "variable": "EX_GRATIA_expression",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='EX_GRATIA')].expression"
+                                }
+                            },
+							{
+                                "variable": "FAMILY_PENSION_1_amount",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='FAMILY_PENSION_1')].value"
+                                }
+                            },
+							{
+                                "variable": "FAMILY_PENSION_1_expression",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='FAMILY_PENSION_1')].expression"
+                                }
+                            },
+							{
+                                "variable": "FAMILY_PENSION_2_amount",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='FAMILY_PENSION_2')].value"
+                                }
+                            },
+							{
+                                "variable": "FAMILY_PENSION_2_expression",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='FAMILY_PENSION_2')].expression"
+                                }
+                            },
+							{
+                                "variable": "family_pension_1_start_date",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='FAMILY_PENSION_1_START_DATE')].value"
+                                }
+                            },
+							{
+                                "variable": "family_pension_1_end_date",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='FAMILY_PENSION_1_END_DATE')].value"
+                                }
+                            },
+							{
+                                "variable": "family_pension_2_start_date",
+                                "value": {
+                                    "path": "$.benefits[?(@.code=='FAMILY_PENSION_2_START_DATE')].value"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
         ]
-      }
-    ]
-  }
+    }
 }

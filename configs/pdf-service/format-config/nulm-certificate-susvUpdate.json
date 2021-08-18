@@ -1,0 +1,222 @@
+{
+      "key": "nulm-certificate-susvUpdate",
+    "config": {
+    "defaultStyle": {
+      "font": "Cambay"
+     },
+    "content": [
+      {
+        "table": {
+          "widths": [80, "*"],
+          "body": [
+            [
+              {
+                "image": "{{ulbLogo}}",
+                "width": 80,
+                "margin": [-6, 0, 0, 0]
+              },
+              {
+                "stack": [
+                  {
+                    "text": "{{corporation_name}}",
+                    "style": "receipt-logo-header",
+                    "margin": [0, 0, 0, 0]
+                  },
+                  {
+                    "text": "{{corporation_address}}",
+                    "style": "receipt-logo-sub-text",
+                    "margin": [0, 5, 0, 0]
+                  }
+                ],
+                "alignment": "center",
+                "margin": [-20, 0, 0, 0]
+              }
+            ]
+          ]
+        },
+        "margin": [0, -25, 0, 0],
+        "layout": "noBorders"
+      },
+      {
+        "table": {
+          "widths": ["80%", "20%"],
+          "body": [
+            [
+              {
+                "stack": [
+                 
+                  {
+                    "style": "nulm-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 250,
+                        "text": "Application No"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{applicationId}}"
+                      }
+                    ]
+                  },
+                  {
+                    "style": "nulm-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 250,
+                        "text": "Application Status"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{applicationStatus}}"
+                      }
+                    ]
+                  },
+                  {
+                    "style": "nulm-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 250,
+                        "text": "I am Looking for"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{lookingFor}}"
+                      }
+                    ]
+                  },
+                  {
+                    "style": "nulm-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 250,
+                        "text": "Name of Street Vendor"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{nameofNomineeofStreetVendor}}"
+                      }
+                    ]
+                  },
+                  {
+                    "style": "nulm-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 250,
+                        "text": "Certificate of Vending No (COV No.)"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{vendingNo}}"
+                      }
+                    ]
+                  },
+				  {
+					"style": "nulm-certificate-data-2",
+					"columns": [
+					  {
+						"width": 250,
+						"text": "Residential Address if Change from Last Given"
+					  },
+					  {
+						"width": "*",
+						"text": "{{residentialAddress}}"
+					  }
+					]
+				  },
+				  {
+					"style": "nulm-certificate-data-2",
+					"columns": [
+					  {
+						"width": 250,
+						"text": "Any Proposal in Change of location for street vending"
+					  },
+					  {
+						"width": "*",
+						"text": "{{vendingLocation}}"
+					  }
+					]
+				  }
+                ]
+              }
+            ]
+          ]
+        },
+        "margin": [0,0,0,0],
+        "layout": "noBorders"
+      }
+    ,
+	 {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+		  {
+            "width": 200,
+			 "style": "header",
+            "text": "Nominee Details"
+          }
+        ]
+      },
+ 	 {
+        "style": "payslip-table1",
+        "table": {
+          "widths": [
+            "100%"
+          ],
+          "body": [
+            [
+              {
+                "table": {
+                  "headerRows": 1,
+                  "widths": [
+                  "30%",
+                  "30.5%",
+				  "30.5%"
+                  ],
+                  "body": [
+				  [ "{ \"text\":\"Name\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Age\", \"border\":[  false, false, false, false ] ,\"style\": \"tm-sub-table\"},   { \"text\":\"Relation\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-sub-table\"}" ],
+				 "{{#variable1}}[ \"{ \"text\":\"{{nominee_name}}\", \"border\":[  false, false, false, false] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{nominee_age}}\", \"border\":[  false, false, false, false], \"style\": \"tm-sub-table-value\" }, { \"text\":\"{{nominee_relation}}\", \"border\":[  false, false, false, false ] ,\"style\": \"tm-sub-table-value\"}\" ]{{/variable1}}"
+                  ]
+                },
+                "border": [
+                  false,
+                  false,
+                  false,
+                  false
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": {}
+      }
+	  ],
+
+    "styles": {
+      "nulm-certificate-data-2": {
+        "margin": [0, 8, 0, 0]
+      },
+	"header": {
+        "color": "#1E1E1E",
+        "fontSize": 14,
+        "bold": true,
+        "letterSpacing": 0.74
+      },
+      "receipt-logo-header": {
+        "color": "#1E1E1E",
+        "fontSize": 18,
+        "bold": true,
+        "letterSpacing": 0.74
+      },
+	  "header": {
+        "color": "#1E1E1E",
+        "fontSize": 14,
+        "bold": true,
+        "letterSpacing": 0.74
+      },
+      "receipt-logo-sub-text": {
+        "color": "#656565",
+        "fontSize": 14,
+        "letterSpacing": 0.74
+      }
+    }
+  }
+}

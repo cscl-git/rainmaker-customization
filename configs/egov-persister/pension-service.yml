@@ -1308,7 +1308,7 @@ serviceMaps:
 
       - jsonPath: $.ProcessInstances.*.workflowHeader.workflowHeaderId
 
-    - query: INSERT INTO eg_pension_arrear(uuid, tenantid, workflow_header_id, effective_year, effective_month, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, net_pension, interim_relief, da, total_pension, pension_deductions, wound_extraordinary_pension, attendant_allowance, created_by,  created_date, active) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?, ?, ?, ?, ?, ?, true);
+    - query: INSERT INTO eg_pension_arrear(uuid, tenantid, workflow_header_id, effective_year, effective_month, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, net_pension, interim_relief, da, total_pension, pension_deductions, wound_extraordinary_pension, attendant_allowance, ltc, created_by,  created_date, active) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?, ?, ?, ?, ?, ?, ?, true);
 
       basePath: ProcessInstances.*.pensionArrears.*
       jsonMaps:
@@ -1334,6 +1334,7 @@ serviceMaps:
       - jsonPath: $.ProcessInstances.*.pensionArrears.*.pensionDeductions
       - jsonPath: $.ProcessInstances.*.pensionArrears.*.woundExtraordinaryPension
       - jsonPath: $.ProcessInstances.*.pensionArrears.*.attendantAllowance
+      - jsonPath: $.ProcessInstances.*.pensionArrears.*.ltc
       - jsonPath: $.ProcessInstances.*.pensionArrears.*.createdBy
       - jsonPath: $.ProcessInstances.*.pensionArrears.*.createdDate
 
@@ -2706,6 +2707,67 @@ serviceMaps:
       - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedDate  
 
       - jsonPath: $.ProcessInstances.*.employee.pensionEmployeeId
+
+    # - query: INSERT INTO eg_pension_employee_other_details(uuid, tenantid, workflow_header_id, workflow_state, ltc, lpd, pension_arrear, is_da_medical_admissible, fma, medical_relief, miscellaneous, over_payment, income_tax, cess, bank_address, account_number, claimant, wef, active, created_by, last_modified_by, created_date, last_modified_date, bank_code, bank_ifsc) select ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? where not exists (select uuid from eg_pension_workflow_header where workflow_type='RRP_SERVICE' and workflow_state='CLOSED' and pension_employee_id=? order by last_modified_date desc limit 1);
+    - query: INSERT INTO eg_pension_employee_other_details(uuid, tenantid, workflow_header_id, workflow_state, ltc, lpd, pension_arrear, is_da_medical_admissible, fma, medical_relief, miscellaneous, over_payment, income_tax, cess, bank_address, account_number, claimant, wef, active, created_by, last_modified_by, created_date, last_modified_date, bank_code, bank_ifsc, total_no_pay_leaves_years, total_no_pay_leaves_months, total_no_pay_leaves_days) select ?, ?, ?, ?, eppad.ltc, eppad.lpd, eppad.pension_arrear, eppad.is_da_medical_admissible, eppad.fma, eppad.medical_relief, eppad.miscellaneous, eppad.over_payment, eppad.income_tax, eppad.cess, eppad.bank_address, eppad.account_number, eppad.claimant, eppad.wef, true, ?, ?, ?, ?, eppad.bank_code, eppad.bank_ifsc, eppad.total_no_pay_leaves_years, eppad.total_no_pay_leaves_months, eppad.total_no_pay_leaves_days from eg_pension_pensioner_application_details eppad join eg_pension_pensioner epp on epp.uuid = eppad.pensioner_id where epp.pension_employee_id = ? and not exists (select uuid from eg_pension_workflow_header where workflow_type='RRP_SERVICE' and workflow_state='CLOSED' and pension_employee_id=? order by last_modified_date desc limit 1);
+        
+      basePath: ProcessInstances.*.employeeOtherDetails
+      jsonMaps:
+
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.employeeOtherDetailsId
+
+      - jsonPath: $.ProcessInstances.*.tenantId      
+
+      - jsonPath: $.ProcessInstances.*.workflowHeader.workflowHeaderId  
+      
+      - jsonPath: $.ProcessInstances.*.state.state 
+      
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.ltc
+      
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.lpd      
+
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.pensionArrear      
+
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.isDaMedicalAdmissible
+
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.fma
+
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.medicalRelief
+
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.miscellaneous
+
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.overPayment
+
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.incomeTax
+
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.cess
+
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.bankAddress
+
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.accountNumber
+
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.claimant
+
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.wef      
+
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.active      
+
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy
+
+      - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedBy
+
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
+
+      - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedDate  
+
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.bankCode  
+
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.bankIfsc
+
+      - jsonPath: $.ProcessInstances.*.employee.pensionEmployeeId
+
+      - jsonPath: $.ProcessInstances.*.employee.pensionEmployeeId
+    
     
     - query: INSERT INTO eg_pension_employee_other_details_audit(uuid, tenantid, employee_other_details_id, workflow_header_id, workflow_state, ltc, lpd, pension_arrear, is_da_medical_admissible, fma, medical_relief, miscellaneous, over_payment, income_tax, cess, bank_address, account_number, claimant, wef, active, created_by, last_modified_by, created_date, last_modified_date, total_no_pay_leaves_days, dues, is_employment_active, is_convicted_serious_crime_or_grave_misconduct, is_any_judicial_proceeding_is_continuing, is_any_misconduct_insolvency_inefficiency, is_employee_dies_in_terrorist_attack, is_employee_dies_in_accidental_death, is_commutation_opted, reason_for_retirement, is_eligible_for_pension, is_dues_present, is_dues_amount_decided, is_taken_monthly_pension_and_gratuity, is_taken_gratuity_commutation_terminal_benefit, is_taken_compensation_pension_and_gratuity, dies_in_extremists_dacoits_smuggler_antisocial_attack, is_compassionate_pension_granted, total_no_pay_leaves_months, total_no_pay_leaves_years, no_dues_for_avail_govt_accomodation, employee_group, date_of_contingent, bank_code, bank_ifsc) SELECT ?, tenantid, uuid, workflow_header_id, workflow_state, ltc, lpd, pension_arrear, is_da_medical_admissible, fma, medical_relief, miscellaneous, over_payment, income_tax, cess, bank_address, account_number, claimant, wef, active, ?, ?, ?, ?, total_no_pay_leaves_days, dues, is_employment_active, is_convicted_serious_crime_or_grave_misconduct, is_any_judicial_proceeding_is_continuing, is_any_misconduct_insolvency_inefficiency, is_employee_dies_in_terrorist_attack, is_employee_dies_in_accidental_death, is_commutation_opted, reason_for_retirement, is_eligible_for_pension, is_dues_present, is_dues_amount_decided, is_taken_monthly_pension_and_gratuity, is_taken_gratuity_commutation_terminal_benefit, is_taken_compensation_pension_and_gratuity, dies_in_extremists_dacoits_smuggler_antisocial_attack, is_compassionate_pension_granted, total_no_pay_leaves_months, total_no_pay_leaves_years, no_dues_for_avail_govt_accomodation, employee_group, date_of_contingent, bank_code, bank_ifsc FROM eg_pension_employee_other_details WHERE uuid=?; 
         
@@ -2856,7 +2918,7 @@ serviceMaps:
   - version: 1.0
     name: Save workflow data at CLOSED state
     description: Save workflow data at CLOSED state
-    fromTopic: SAVE_CLOSED
+    fromTopic: SAVE_CLOSED_DOP
     isTransaction: true
     queryMaps:  
     
@@ -2890,43 +2952,22 @@ serviceMaps:
 
       - jsonPath: $.ProcessInstances.*.workflowHeaderId
     
-    - query: UPDATE eg_pension_pensioner SET active=false, last_modified_by =?, last_modified_date =? WHERE pension_employee_id=?;
+    - query: UPDATE eg_pension_pensioner SET last_modified_by =?, last_modified_date =?, business_service = ?, dependent_id = ? WHERE pension_employee_id=?;
 
       basePath: ProcessInstances.*
       jsonMaps:
      
       - jsonPath: $.ProcessInstances.*.auditDetails.createdBy                
 
-      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate      
-
-      - jsonPath: $.ProcessInstances.*.pensionEmployeeId
-
-    - query: INSERT INTO eg_pension_pensioner(uuid, tenantid, pension_employee_id, active, created_by, last_modified_by, created_date, last_modified_date, business_service, dependent_id, pensioner_number) SELECT ?, ?, ? , true, ?, ?, ? ,?, ?, ?, ?;
-
-      basePath: ProcessInstances.*
-      jsonMaps:
-
-      - jsonPath: $.ProcessInstances.*.pensionerId   
-
-      - jsonPath: $.ProcessInstances.*.tenantId      
-
-      - jsonPath: $.ProcessInstances.*.pensionEmployeeId   
-
-      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy    
-      
-      - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedBy
-
-      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
-
-      - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedDate      
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate           
       
       - jsonPath: $.ProcessInstances.*.businessService  
 
       - jsonPath: $.ProcessInstances.*.dependentId
 
-      - jsonPath: $.ProcessInstances.*.pensionerNumber       
+      - jsonPath: $.ProcessInstances.*.pensionEmployeeId   
 
-    - query: INSERT INTO eg_pension_pensioner_audit(uuid, pensioner_id, tenantid, pension_employee_id, active, created_by, last_modified_by, created_date, last_modified_date, business_service, dependent_id, pensioner_number) SELECT ?, uuid, tenantid, pension_employee_id, true, ?, ?, ?, ?, business_service, dependent_id, pensioner_number FROM eg_pension_pensioner WHERE uuid =?;
+    - query: INSERT INTO eg_pension_pensioner_audit(uuid, pensioner_id, tenantid, pension_employee_id, active, created_by, last_modified_by, created_date, last_modified_date, business_service, dependent_id, pensioner_number) SELECT ?, uuid, tenantid, pension_employee_id, true, ?, ?, ?, ?, business_service, dependent_id, pensioner_number FROM eg_pension_pensioner WHERE pension_employee_id=? and active=true;
 
       basePath: ProcessInstances.*
       jsonMaps:
@@ -2941,7 +2982,7 @@ serviceMaps:
 
       - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedDate
 
-      - jsonPath: $.ProcessInstances.*.pensionerId   
+      - jsonPath: $.ProcessInstances.*.pensionEmployeeId   
 
     - query: INSERT INTO eg_pension_pensioner_final_calculated_benefit(uuid, tenantid, pensioner_id, basic_pension, pension_deductions, additional_pension, commuted_pension, commuted_value, family_pension_i, family_pension_ii, dcrg, net_deductions, final_calculated_pension, interim_relief, da, nqs_year, nqs_month, nqs_day, dues_deductions, compassionate_pension, compensation_pension, terminal_benefit, final_calculated_gratuity, family_pension_i_start_date, family_pension_i_end_date, family_pension_ii_start_date, ex_gratia, pensioner_family_pension, total_pension, provisional_pension, active, created_by, last_modified_by, created_date, last_modified_date, wound_extraordinary_pension, attendant_allowance, invalid_pension) SELECT ?, ?, ?, basic_pension_verified, pension_deductions_verified, additional_pension_verified, commuted_pension_verified, commuted_value_verified, family_pension_i_verified, family_pension_ii_verified, dcrg_verified, net_deductions_verified, final_calculated_pension_verified, interim_relief_verified, da_verified, nqs_year_verified, nqs_month_verified, nqs_day_verified, dues_deductions_verified, compassionate_pension_verified, compensation_pension_verified, terminal_benefit_verified, final_calculated_gratuity_verified, family_pension_i_start_date_verified, family_pension_i_end_date_verified, family_pension_ii_start_date_verified, ex_gratia_verified, pensioner_family_pension_verified, total_pension_verified, provisional_pension_verified, true, ?, ?, ?, ?, wound_extraordinary_pension_verified, attendant_allowance_verified, invalid_pension_verified FROM eg_pension_calculation_details WHERE workflow_header_id = ?;  
 
@@ -2964,6 +3005,17 @@ serviceMaps:
 
       - jsonPath: $.ProcessInstances.*.workflowHeaderId
 
+    - query: UPDATE eg_pension_pensioner_final_calculated_benefit set active = false, last_modified_by = ?, last_modified_date = ? WHERE uuid=?;
+
+      basePath: ProcessInstances.*
+      jsonMaps:
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
+  
+      - jsonPath: $.ProcessInstances.*.oldPensionerFinalCalculatedBenefitId    
+
     - query: INSERT INTO eg_pension_pensioner_application_details(uuid, tenantid, pensioner_id, ltc, lpd, pension_arrear, is_da_medical_admissible, fma, medical_relief, miscellaneous, over_payment, income_tax, cess, bank_address, account_number, claimant, wef, total_no_pay_leaves_days, total_no_pay_leaves_months, total_no_pay_leaves_years, dues, is_employment_active, is_convicted_serious_crime_or_grave_misconduct, is_any_judicial_proceeding_is_continuing, is_any_misconduct_insolvency_inefficiency, is_employee_dies_in_terrorist_attack, is_employee_dies_in_accidental_death, is_commutation_opted, reason_for_retirement, is_eligible_for_pension, is_dues_present, is_dues_amount_decided, is_taken_monthly_pension_and_gratuity, is_taken_gratuity_commutation_terminal_benefit, is_taken_compensation_pension_and_gratuity, dies_in_extremists_dacoits_smuggler_antisocial_attack, is_compassionate_pension_granted, no_dues_for_avail_govt_accomodation, employee_group, active, created_by, last_modified_by, created_date, last_modified_date, date_of_contingent, bank_code, bank_ifsc) SELECT ?, ?, ?, ltc, lpd, pension_arrear, is_da_medical_admissible, fma, medical_relief, miscellaneous, over_payment, income_tax, cess, bank_address, account_number, claimant, wef, total_no_pay_leaves_days, total_no_pay_leaves_months, total_no_pay_leaves_years, dues, is_employment_active, is_convicted_serious_crime_or_grave_misconduct, is_any_judicial_proceeding_is_continuing, is_any_misconduct_insolvency_inefficiency, is_employee_dies_in_terrorist_attack, is_employee_dies_in_accidental_death, is_commutation_opted, reason_for_retirement, is_eligible_for_pension, is_dues_present, is_dues_amount_decided, is_taken_monthly_pension_and_gratuity, is_taken_gratuity_commutation_terminal_benefit, is_taken_compensation_pension_and_gratuity, dies_in_extremists_dacoits_smuggler_antisocial_attack, is_compassionate_pension_granted, no_dues_for_avail_govt_accomodation, employee_group, true, ?, ?, ?, ?, date_of_contingent, bank_code, bank_ifsc FROM eg_pension_employee_other_details WHERE workflow_header_id=?;
 
       basePath: ProcessInstances.*
@@ -2984,6 +3036,17 @@ serviceMaps:
       - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedDate
 
       - jsonPath: $.ProcessInstances.*.workflowHeaderId
+
+    - query: UPDATE eg_pension_pensioner_application_details set active = false, last_modified_by = ?, last_modified_date = ? WHERE uuid=?;
+
+      basePath: ProcessInstances.*
+      jsonMaps:
+
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy
+
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
+
+      - jsonPath: $.ProcessInstances.*.oldPensionerApplicationDetailsId
 
     - query: INSERT INTO eg_pension_revision(uuid, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, active, created_by, last_modified_by, created_date, last_modified_date, interim_relief, da, total_pension, pension_deductions, pensioner_final_calculated_benefit_id, wound_extraordinary_pension, attendant_allowance) SELECT ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, additional_pension, commuted_pension, net_deductions, final_calculated_pension, true, ?, ?, ? ,?, interim_relief, da, total_pension, pension_deductions, uuid, wound_extraordinary_pension, attendant_allowance FROM eg_pension_pensioner_final_calculated_benefit WHERE uuid = ?;  
 
@@ -3041,7 +3104,196 @@ serviceMaps:
 
       - jsonPath: $.ProcessInstances.*.pensionRevisionId    
 
-    
+
+  
+  - version: 1.0
+    name: Save workflow data at CLOSED state
+    description: Save workflow data at CLOSED state
+    fromTopic: SAVE_CLOSED
+    isTransaction: true
+    queryMaps:  
+      
+    - query: UPDATE eg_pension_employee_other_details SET date_of_contingent=?, last_modified_by=?, last_modified_date=? WHERE workflow_header_id=?; 
+  
+      basePath: ProcessInstances.*
+      jsonMaps:
+       
+      - jsonPath: $.ProcessInstances.*.dateOfContingent
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy                
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate      
+  
+      - jsonPath: $.ProcessInstances.*.workflowHeaderId
+  
+    - query: INSERT INTO eg_pension_employee_other_details_audit(uuid, tenantid, employee_other_details_id, workflow_header_id, workflow_state, ltc, lpd, pension_arrear, is_da_medical_admissible, fma, medical_relief, miscellaneous, over_payment, income_tax, cess, bank_address, account_number, claimant, wef, active, created_by, last_modified_by, created_date, last_modified_date, total_no_pay_leaves_days, dues, is_employment_active, is_convicted_serious_crime_or_grave_misconduct, is_any_judicial_proceeding_is_continuing, is_any_misconduct_insolvency_inefficiency, is_employee_dies_in_terrorist_attack, is_employee_dies_in_accidental_death, is_commutation_opted, reason_for_retirement, is_eligible_for_pension, is_dues_present, is_dues_amount_decided, is_taken_monthly_pension_and_gratuity, is_taken_gratuity_commutation_terminal_benefit, is_taken_compensation_pension_and_gratuity, dies_in_extremists_dacoits_smuggler_antisocial_attack, is_compassionate_pension_granted, total_no_pay_leaves_months, total_no_pay_leaves_years, no_dues_for_avail_govt_accomodation, employee_group, date_of_contingent, bank_code, bank_ifsc) SELECT ?, tenantid, uuid, workflow_header_id, workflow_state, ltc, lpd, pension_arrear, is_da_medical_admissible, fma, medical_relief, miscellaneous, over_payment, income_tax, cess, bank_address, account_number, claimant, wef, active, ?, ?, ?, ?, total_no_pay_leaves_days, dues, is_employment_active, is_convicted_serious_crime_or_grave_misconduct, is_any_judicial_proceeding_is_continuing, is_any_misconduct_insolvency_inefficiency, is_employee_dies_in_terrorist_attack, is_employee_dies_in_accidental_death, is_commutation_opted, reason_for_retirement, is_eligible_for_pension, is_dues_present, is_dues_amount_decided, is_taken_monthly_pension_and_gratuity, is_taken_gratuity_commutation_terminal_benefit, is_taken_compensation_pension_and_gratuity, dies_in_extremists_dacoits_smuggler_antisocial_attack, is_compassionate_pension_granted, total_no_pay_leaves_months, total_no_pay_leaves_years, no_dues_for_avail_govt_accomodation, employee_group, date_of_contingent, bank_code, bank_ifsc FROM eg_pension_employee_other_details WHERE workflow_header_id=?;
+  
+      basePath: ProcessInstances.*
+      jsonMaps:
+       
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetailsAuditId
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy    
+        
+      - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedBy
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedDate  
+  
+      - jsonPath: $.ProcessInstances.*.workflowHeaderId
+      
+    - query: UPDATE eg_pension_pensioner SET active=false, last_modified_by =?, last_modified_date =? WHERE pension_employee_id=?;
+  
+      basePath: ProcessInstances.*
+      jsonMaps:
+       
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy                
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate      
+  
+      - jsonPath: $.ProcessInstances.*.pensionEmployeeId
+  
+    - query: INSERT INTO eg_pension_pensioner(uuid, tenantid, pension_employee_id, active, created_by, last_modified_by, created_date, last_modified_date, business_service, dependent_id, pensioner_number) SELECT ?, ?, ? , true, ?, ?, ? ,?, ?, ?, ?;
+  
+      basePath: ProcessInstances.*
+      jsonMaps:
+  
+      - jsonPath: $.ProcessInstances.*.pensionerId   
+  
+      - jsonPath: $.ProcessInstances.*.tenantId      
+  
+      - jsonPath: $.ProcessInstances.*.pensionEmployeeId   
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy    
+        
+      - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedBy
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedDate      
+        
+      - jsonPath: $.ProcessInstances.*.businessService  
+  
+      - jsonPath: $.ProcessInstances.*.dependentId
+  
+      - jsonPath: $.ProcessInstances.*.pensionerNumber       
+  
+    - query: INSERT INTO eg_pension_pensioner_audit(uuid, pensioner_id, tenantid, pension_employee_id, active, created_by, last_modified_by, created_date, last_modified_date, business_service, dependent_id, pensioner_number) SELECT ?, uuid, tenantid, pension_employee_id, true, ?, ?, ?, ?, business_service, dependent_id, pensioner_number FROM eg_pension_pensioner WHERE uuid =?;
+  
+      basePath: ProcessInstances.*
+      jsonMaps:
+  
+      - jsonPath: $.ProcessInstances.*.pensionerAuditId             
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy    
+        
+      - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedBy
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedDate
+  
+      - jsonPath: $.ProcessInstances.*.pensionerId   
+  
+    - query: INSERT INTO eg_pension_pensioner_final_calculated_benefit(uuid, tenantid, pensioner_id, basic_pension, pension_deductions, additional_pension, commuted_pension, commuted_value, family_pension_i, family_pension_ii, dcrg, net_deductions, final_calculated_pension, interim_relief, da, nqs_year, nqs_month, nqs_day, dues_deductions, compassionate_pension, compensation_pension, terminal_benefit, final_calculated_gratuity, family_pension_i_start_date, family_pension_i_end_date, family_pension_ii_start_date, ex_gratia, pensioner_family_pension, total_pension, provisional_pension, active, created_by, last_modified_by, created_date, last_modified_date, wound_extraordinary_pension, attendant_allowance, invalid_pension) SELECT ?, ?, ?, basic_pension_verified, pension_deductions_verified, additional_pension_verified, commuted_pension_verified, commuted_value_verified, family_pension_i_verified, family_pension_ii_verified, dcrg_verified, net_deductions_verified, final_calculated_pension_verified, interim_relief_verified, da_verified, nqs_year_verified, nqs_month_verified, nqs_day_verified, dues_deductions_verified, compassionate_pension_verified, compensation_pension_verified, terminal_benefit_verified, final_calculated_gratuity_verified, family_pension_i_start_date_verified, family_pension_i_end_date_verified, family_pension_ii_start_date_verified, ex_gratia_verified, pensioner_family_pension_verified, total_pension_verified, provisional_pension_verified, true, ?, ?, ?, ?, wound_extraordinary_pension_verified, attendant_allowance_verified, invalid_pension_verified FROM eg_pension_calculation_details WHERE workflow_header_id = ?;  
+  
+      basePath: ProcessInstances.*
+      jsonMaps:
+  
+      - jsonPath: $.ProcessInstances.*.pensionerFinalCalculatedBenefitId
+  
+      - jsonPath: $.ProcessInstances.*.tenantId
+  
+      - jsonPath: $.ProcessInstances.*.pensionerId            
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedBy
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedDate
+  
+      - jsonPath: $.ProcessInstances.*.workflowHeaderId
+  
+    - query: INSERT INTO eg_pension_pensioner_application_details(uuid, tenantid, pensioner_id, ltc, lpd, pension_arrear, is_da_medical_admissible, fma, medical_relief, miscellaneous, over_payment, income_tax, cess, bank_address, account_number, claimant, wef, total_no_pay_leaves_days, total_no_pay_leaves_months, total_no_pay_leaves_years, dues, is_employment_active, is_convicted_serious_crime_or_grave_misconduct, is_any_judicial_proceeding_is_continuing, is_any_misconduct_insolvency_inefficiency, is_employee_dies_in_terrorist_attack, is_employee_dies_in_accidental_death, is_commutation_opted, reason_for_retirement, is_eligible_for_pension, is_dues_present, is_dues_amount_decided, is_taken_monthly_pension_and_gratuity, is_taken_gratuity_commutation_terminal_benefit, is_taken_compensation_pension_and_gratuity, dies_in_extremists_dacoits_smuggler_antisocial_attack, is_compassionate_pension_granted, no_dues_for_avail_govt_accomodation, employee_group, active, created_by, last_modified_by, created_date, last_modified_date, date_of_contingent, bank_code, bank_ifsc) SELECT ?, ?, ?, ltc, lpd, pension_arrear, is_da_medical_admissible, fma, medical_relief, miscellaneous, over_payment, income_tax, cess, bank_address, account_number, claimant, wef, total_no_pay_leaves_days, total_no_pay_leaves_months, total_no_pay_leaves_years, dues, is_employment_active, is_convicted_serious_crime_or_grave_misconduct, is_any_judicial_proceeding_is_continuing, is_any_misconduct_insolvency_inefficiency, is_employee_dies_in_terrorist_attack, is_employee_dies_in_accidental_death, is_commutation_opted, reason_for_retirement, is_eligible_for_pension, is_dues_present, is_dues_amount_decided, is_taken_monthly_pension_and_gratuity, is_taken_gratuity_commutation_terminal_benefit, is_taken_compensation_pension_and_gratuity, dies_in_extremists_dacoits_smuggler_antisocial_attack, is_compassionate_pension_granted, no_dues_for_avail_govt_accomodation, employee_group, true, ?, ?, ?, ?, date_of_contingent, bank_code, bank_ifsc FROM eg_pension_employee_other_details WHERE workflow_header_id=?;
+  
+      basePath: ProcessInstances.*
+      jsonMaps:
+  
+      - jsonPath: $.ProcessInstances.*.pensionerApplicationDetailsId
+  
+      - jsonPath: $.ProcessInstances.*.tenantId
+  
+      - jsonPath: $.ProcessInstances.*.pensionerId            
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedBy
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedDate
+  
+      - jsonPath: $.ProcessInstances.*.workflowHeaderId
+  
+    - query: INSERT INTO eg_pension_revision(uuid, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, active, created_by, last_modified_by, created_date, last_modified_date, interim_relief, da, total_pension, pension_deductions, pensioner_final_calculated_benefit_id, wound_extraordinary_pension, attendant_allowance) SELECT ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, additional_pension, commuted_pension, net_deductions, final_calculated_pension, true, ?, ?, ? ,?, interim_relief, da, total_pension, pension_deductions, uuid, wound_extraordinary_pension, attendant_allowance FROM eg_pension_pensioner_final_calculated_benefit WHERE uuid = ?;  
+  
+      basePath: ProcessInstances.*
+      jsonMaps:
+  
+      - jsonPath: $.ProcessInstances.*.pensionRevisionId
+  
+      - jsonPath: $.ProcessInstances.*.tenantId
+  
+      - jsonPath: $.ProcessInstances.*.pensionerId      
+  
+      - jsonPath: $.ProcessInstances.*.effectiveStartYear  
+  
+      - jsonPath: $.ProcessInstances.*.effectiveStartMonth 
+  
+      - jsonPath: $.ProcessInstances.*.effectiveEndYear 
+  
+      - jsonPath: $.ProcessInstances.*.effectiveEndMonth 
+  
+      - jsonPath: $.ProcessInstances.*.pensionArrear 
+  
+      - jsonPath: $.ProcessInstances.*.fma
+  
+      - jsonPath: $.ProcessInstances.*.miscellaneous
+  
+      - jsonPath: $.ProcessInstances.*.overPayment
+  
+      - jsonPath: $.ProcessInstances.*.incomeTax
+  
+      - jsonPath: $.ProcessInstances.*.cess
+  
+      - jsonPath: $.ProcessInstances.*.basicPension
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedBy
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedDate
+  
+      - jsonPath: $.ProcessInstances.*.pensionerFinalCalculatedBenefitId   
+  
+    - query: INSERT INTO eg_pension_revision_audit(uuid, pension_revision_id, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, active, created_by, created_date, interim_relief, da, total_pension, pension_deductions, pensioner_final_calculated_benefit_id, wound_extraordinary_pension, attendant_allowance) SELECT ?, uuid, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, true, ?, ?, interim_relief, da, total_pension, pension_deductions, pensioner_final_calculated_benefit_id, wound_extraordinary_pension, attendant_allowance FROM eg_pension_revision WHERE uuid = ?;  
+  
+      basePath: ProcessInstances.*
+      jsonMaps:
+        
+      - jsonPath: $.ProcessInstances.*.pensionRevisionAuditId            
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy      
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate      
+  
+      - jsonPath: $.ProcessInstances.*.pensionRevisionId      
+
   - version: 1.0
     name: Update Revised Pension
     description: Update Revised Pension
@@ -3064,7 +3316,7 @@ serviceMaps:
 
       - jsonPath: $.ProcessInstances.*.lastPensionRevision.*.pensionRevisionId
 
-    - query: INSERT INTO eg_pension_revision_audit(uuid, pension_revision_id, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, active, created_by, created_date, interim_relief, da, total_pension, pension_deductions, pensioner_final_calculated_benefit_id, remarks, wound_extraordinary_pension, attendant_allowance) SELECT ?, uuid, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, true, ?, ?, interim_relief, da, total_pension, pension_deductions, pensioner_final_calculated_benefit_id, remarks, wound_extraordinary_pension, attendant_allowance FROM eg_pension_revision WHERE uuid = ?;  
+    - query: INSERT INTO eg_pension_revision_audit(uuid, pension_revision_id, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, active, created_by, created_date, interim_relief, da, total_pension, pension_deductions, pensioner_final_calculated_benefit_id, remarks, wound_extraordinary_pension, attendant_allowance, ltc) SELECT ?, uuid, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, true, ?, ?, interim_relief, da, total_pension, pension_deductions, pensioner_final_calculated_benefit_id, remarks, wound_extraordinary_pension, attendant_allowance, ltc FROM eg_pension_revision WHERE uuid = ?;  
 
       basePath: ProcessInstances.*.lastPensionRevision.*
       jsonMaps:
@@ -3077,7 +3329,7 @@ serviceMaps:
 
       - jsonPath: $.ProcessInstances.*.lastPensionRevision.*.pensionRevisionId
         
-    - query: UPDATE eg_pension_revision SET effective_start_year=?, effective_start_month=?, effective_end_year=?, effective_end_month=?, pension_arrear=?, fma=?, miscellaneous=?, over_payment=?, income_tax=?, cess=?, basic_pension=?, additional_pension=?, commuted_pension=?, net_deductions=?, final_calculated_pension=?, last_modified_by=?, last_modified_date=?, interim_relief=?, da=?, total_pension=?, pension_deductions =?, remarks =?, wound_extraordinary_pension=?, attendant_allowance=? WHERE uuid =?;    
+    - query: UPDATE eg_pension_revision SET effective_start_year=?, effective_start_month=?, effective_end_year=?, effective_end_month=?, pension_arrear=?, fma=?, miscellaneous=?, over_payment=?, income_tax=?, cess=?, basic_pension=?, additional_pension=?, commuted_pension=?, net_deductions=?, final_calculated_pension=?, last_modified_by=?, last_modified_date=?, interim_relief=?, da=?, total_pension=?, pension_deductions =?, remarks =?, wound_extraordinary_pension=?, attendant_allowance=?, ltc=? WHERE uuid =?;    
 
       basePath: ProcessInstances.*.pensionRevision.*
       jsonMaps:
@@ -3130,9 +3382,11 @@ serviceMaps:
 
       - jsonPath: $.ProcessInstances.*.pensionRevision.*.attendantAllowance
 
+      - jsonPath: $.ProcessInstances.*.pensionRevision.*.ltc
+
       - jsonPath: $.ProcessInstances.*.pensionRevision.*.pensionRevisionId
 
-    - query: INSERT INTO eg_pension_revision_audit(uuid, pension_revision_id, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, active, created_by, created_date, interim_relief, da, total_pension, pension_deductions, remarks, wound_extraordinary_pension, attendant_allowance) SELECT ?, uuid, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, true, ?, ?, interim_relief, da, total_pension, pension_deductions, remarks, wound_extraordinary_pension, attendant_allowance FROM eg_pension_revision WHERE uuid = ?;  
+    - query: INSERT INTO eg_pension_revision_audit(uuid, pension_revision_id, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, active, created_by, created_date, interim_relief, da, total_pension, pension_deductions, remarks, wound_extraordinary_pension, attendant_allowance, ltc) SELECT ?, uuid, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, true, ?, ?, interim_relief, da, total_pension, pension_deductions, remarks, wound_extraordinary_pension, attendant_allowance, ltc FROM eg_pension_revision WHERE uuid = ?;  
 
       basePath: ProcessInstances.*.pensionRevision.*
       jsonMaps:
@@ -3265,18 +3519,18 @@ serviceMaps:
     isTransaction: true
     queryMaps: 
       
-    - query: UPDATE eg_pension_register SET active=false, last_modified_by=?, last_modified_date=? WHERE effective_year=? AND effective_month=?;
+    # - query: UPDATE eg_pension_register SET active=false, last_modified_by=?, last_modified_date=? WHERE effective_year=? AND effective_month=?;
 
-      basePath: ProcessInstances.*.pensionRegister.*
-      jsonMaps:            
+    #   basePath: ProcessInstances.*.pensionRegister.*
+    #   jsonMaps:            
 
-      - jsonPath: $.ProcessInstances.*.pensionRegister.*.auditDetails.createdBy            
+    #   - jsonPath: $.ProcessInstances.*.pensionRegister.*.auditDetails.createdBy            
 
-      - jsonPath: $.ProcessInstances.*.pensionRegister.*.auditDetails.createdDate 
+    #   - jsonPath: $.ProcessInstances.*.pensionRegister.*.auditDetails.createdDate 
       
-      - jsonPath: $.ProcessInstances.*.pensionRegister.*.effectiveYear                  
+    #   - jsonPath: $.ProcessInstances.*.pensionRegister.*.effectiveYear                  
 
-      - jsonPath: $.ProcessInstances.*.pensionRegister.*.effectiveMonth      
+    #   - jsonPath: $.ProcessInstances.*.pensionRegister.*.effectiveMonth      
         
     - query: INSERT INTO eg_pension_register(uuid, tenantid, pensioner_id, effective_year, effective_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, interim_relief, da, total_pension, pension_deductions, active, created_by, last_modified_by, created_date, last_modified_date, wound_extraordinary_pension, attendant_allowance) SELECT ?, tenantid, pensioner_id, ?, ?, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, interim_relief, da, total_pension, pension_deductions, true, ?, ?, ?, ?, wound_extraordinary_pension, attendant_allowance FROM eg_pension_revision WHERE uuid=?; 
 
@@ -3416,16 +3670,16 @@ serviceMaps:
     isTransaction: true
     queryMaps:
 
-    - query: UPDATE eg_pension_pensioner SET active=false, last_modified_by=?, last_modified_date=? WHERE pensioner_number=?;
+    # - query: UPDATE eg_pension_pensioner SET active=false, last_modified_by=?, last_modified_date=? WHERE pensioner_number=?;
 
-      basePath: ProcessInstances.*.pensioner
-      jsonMaps:                 
+    #   basePath: ProcessInstances.*.pensioner
+    #   jsonMaps:                 
 
-      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy             
+    #   - jsonPath: $.ProcessInstances.*.auditDetails.createdBy             
 
-      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
+    #   - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
 
-      - jsonPath: $.ProcessInstances.*.pensioner.pensionerNumber
+    #   - jsonPath: $.ProcessInstances.*.pensioner.pensionerNumber
       
     - query: UPDATE eg_pension_revision SET active=false, last_modified_by=?, last_modified_date=? WHERE pensioner_id=(SELECT uuid FROM eg_pension_pensioner WHERE pensioner_number=?) AND active=true;
 
@@ -3437,6 +3691,36 @@ serviceMaps:
       - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
 
       - jsonPath: $.ProcessInstances.*.pensioner.pensionerNumber
+
+  - version: 1.0
+    name: Continue Pensioner Pension
+    description: Continue Pensioner Pension 
+    fromTopic: PENSIONER_PENSION_CONTINUATION
+    isTransaction: true
+    queryMaps:
+  
+    - query: UPDATE eg_pension_pensioner SET active=true, last_modified_by=?, last_modified_date=? WHERE pensioner_number=?;
+  
+      basePath: ProcessInstances.*.pensioner
+      jsonMaps:                 
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy             
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
+  
+      - jsonPath: $.ProcessInstances.*.pensioner.pensionerNumber
+        
+    - query: UPDATE eg_pension_revision SET active=true, last_modified_by=?, last_modified_date=? WHERE pensioner_id=(SELECT uuid FROM eg_pension_pensioner WHERE pensioner_number=?) AND active=false;
+  
+      basePath: ProcessInstances.*.pensioner
+      jsonMaps:     
+        
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy             
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
+  
+      - jsonPath: $.ProcessInstances.*.pensioner.pensionerNumber
+  
 
   - version: 1.0
     name: Update Workflow State
@@ -3822,14 +4106,14 @@ serviceMaps:
     isTransaction: true
     queryMaps:   
 
-    - query: DELETE from eg_pension_revision where effective_start_year>=? and effective_start_month>=?;
+    # - query: DELETE from eg_pension_revision where effective_start_year>=? and effective_start_month>=?;
 
-      basePath: Parameters
-      jsonMaps:      
+    #   basePath: Parameters
+    #   jsonMaps:      
 
-      - jsonPath: $.Parameters.effectiveYear      
+    #   - jsonPath: $.Parameters.effectiveYear      
 
-      - jsonPath: $.Parameters.effectiveMonth
+    #   - jsonPath: $.Parameters.effectiveMonth
         
     - query: UPDATE eg_pension_revision SET effective_end_year=?, effective_end_month=?, last_modified_by=?, last_modified_date=? WHERE uuid =?;
 
@@ -3859,7 +4143,7 @@ serviceMaps:
 
       - jsonPath: $.Parameters.oldPensionRevisions.*.pensionRevisionId
 
-    - query: INSERT INTO eg_pension_revision(uuid, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, active, created_by, last_modified_by, created_date, last_modified_date, interim_relief, da, total_pension, pension_deductions, pensioner_final_calculated_benefit_id, remarks, wound_extraordinary_pension, attendant_allowance) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, true, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    - query: INSERT INTO eg_pension_revision(uuid, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, active, created_by, last_modified_by, created_date, last_modified_date, interim_relief, da, total_pension, pension_deductions, pensioner_final_calculated_benefit_id, remarks, wound_extraordinary_pension, attendant_allowance, ltc) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, true, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 
       basePath: Parameters.newPensionRevisions.*
       jsonMaps:
@@ -3924,6 +4208,8 @@ serviceMaps:
 
       - jsonPath: $.Parameters.newPensionRevisions.*.attendantAllowance
 
+      - jsonPath: $.Parameters.newPensionRevisions.*.ltc
+
     - query: INSERT INTO eg_pension_revision_audit(uuid, pension_revision_id, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, active, created_by, created_date, interim_relief, da, total_pension, pension_deductions, pensioner_final_calculated_benefit_id, remarks, wound_extraordinary_pension, attendant_allowance) SELECT ?, uuid, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, true, ?, ?, interim_relief, da, total_pension, pension_deductions, pensioner_final_calculated_benefit_id, remarks, wound_extraordinary_pension, attendant_allowance FROM eg_pension_revision WHERE uuid = ?;  
 
       basePath: Parameters.newPensionRevisions.*
@@ -3936,3 +4222,218 @@ serviceMaps:
       - jsonPath: $.Parameters.newPensionRevisions.*.auditDetails.createdDate          
 
       - jsonPath: $.Parameters.newPensionRevisions.*.pensionRevisionId
+
+   
+  - version: 1.0
+    name: Update Pensioner Details
+    description: Update Pensioner Details
+    fromTopic: UPDATE_PENSIONER_DETAILS
+    isTransaction: true
+    queryMaps:  
+      
+    - query: update eg_pension_employee set "name" = ?, date_of_birth = ?, gender = ?, last_modified_by = ?, last_modified_date = ? from eg_pension_pensioner epp where epp.pension_employee_id = eg_pension_employee.uuid and epp.pensioner_number = ?;
+          
+      basePath: PensionerDetails
+      jsonMaps:               
+  
+      - jsonPath: $.PensionerDetails.name
+  
+      - jsonPath: $.PensionerDetails.dob
+  
+      - jsonPath: $.PensionerDetails.gender      
+  
+      - jsonPath: $.PensionerDetails.auditDetails.createdBy      
+  
+      - jsonPath: $.PensionerDetails.auditDetails.createdDate
+      
+      - jsonPath: $.PensionerDetails.pensionerNumber
+  
+    - query: INSERT INTO eg_pension_employee_audit (uuid, tenantid, pension_employee_id, employee_hrms_id, employee_hrms_code, name, date_of_birth, date_of_retirement, date_of_death, active, created_by, created_date) SELECT ?, epe.tenantid, epe.uuid, epe.employee_hrms_id, epe.employee_hrms_code, epe.name, epe.date_of_birth, epe.date_of_retirement, epe.date_of_death, epe.active, ?, ? FROM eg_pension_employee epe join eg_pension_pensioner epp on epp.pension_employee_id = epe.uuid WHERE epp.pensioner_number = ?;
+          
+      basePath: PensionerDetails
+      jsonMaps:
+  
+      - jsonPath: $.PensionerDetails.pensionEmployeeAuditId
+  
+      - jsonPath: $.PensionerDetails.auditDetails.createdBy      
+  
+      - jsonPath: $.PensionerDetails.auditDetails.createdDate
+  
+      - jsonPath: $.PensionerDetails.pensionerNumber
+  
+    # - query: update eg_pension_employee_contact_details set active = false, last_modified_by = ?, last_modified_date = ? from eg_pension_pensioner epp where epp.pension_employee_id = eg_pension_employee_contact_details.pension_employee_id and epp.pensioner_number = ?;
+          
+    #   basePath: PensionerDetails
+    #   jsonMaps:
+  
+    #   - jsonPath: $.PensionerDetails.auditDetails.createdBy      
+  
+    #   - jsonPath: $.PensionerDetails.auditDetails.createdDate
+  
+    #   - jsonPath: $.PensionerDetails.pensionerNumber
+      
+    # - query: INSERT INTO eg_pension_employee_contact_details (uuid, tenantid, pension_employee_id, mobile_number, email_id, alt_contact_number, pan, aadhaar_number, permanent_address, permanent_city, permanent_pin_code, correspondence_address, correspondence_city, correspondence_pin_code, father_or_husband_name, blood_group, identification_mark, active, created_by, created_date, last_modified_by, last_modified_date) SELECT ?, epecd.tenantid, epecd.pension_employee_id, ?, ?, epecd.alt_contact_number, epecd.pan, epecd.aadhaar_number, epecd.permanent_address, epecd.permanent_city, epecd.permanent_pin_code, ?, epecd.correspondence_city, epecd.correspondence_pin_code, epecd.father_or_husband_name, epecd.blood_group, epecd.identification_mark, true, epecd.created_by, epecd.created_date, ?, ? FROM eg_pension_employee_contact_details epecd join eg_pension_pensioner epp on epp.pension_employee_id = epecd.pension_employee_id where epp.active = true and epecd.active = true and epp.pensioner_number = ?;
+  
+    #   basePath: PensionerDetails
+    #   jsonMaps:
+  
+    #   - jsonPath: $.PensionerDetails.newEmployeeContactDetailsId
+  
+    #   - jsonPath: $.PensionerDetails.mobileNumber
+  
+    #   - jsonPath: $.PensionerDetails.email
+        
+    #   - jsonPath: $.PensionerDetails.address
+  
+    #   - jsonPath: $.PensionerDetails.auditDetails.createdBy      
+  
+    #   - jsonPath: $.PensionerDetails.auditDetails.createdDate  
+        
+    #   - jsonPath: $.PensionerDetails.pensionerNumber    
+  
+    - query: update eg_pension_employee_contact_details set mobile_number = ?, email_id = ?, correspondence_address = ?, last_modified_by = ?, last_modified_date = ? FROM eg_pension_pensioner epp where epp.pension_employee_id = eg_pension_employee_contact_details.pension_employee_id and epp.active = true and eg_pension_employee_contact_details.active = true and epp.pensioner_number = ?;
+  
+      basePath: PensionerDetails
+      jsonMaps:
+  
+      - jsonPath: $.PensionerDetails.mobileNumber
+  
+      - jsonPath: $.PensionerDetails.email
+        
+      - jsonPath: $.PensionerDetails.address
+  
+      - jsonPath: $.PensionerDetails.auditDetails.createdBy      
+  
+      - jsonPath: $.PensionerDetails.auditDetails.createdDate  
+        
+      - jsonPath: $.PensionerDetails.pensionerNumber    
+  
+    # - query: UPDATE eg_pension_pensioner_application_details set active = false, last_modified_by = ?, last_modified_date = ? from eg_pension_pensioner epp where epp.uuid = eg_pension_pensioner_application_details.pensioner_id and epp.pensioner_number = ?;
+  
+    #   basePath: PensionerDetails
+    #   jsonMaps:
+  
+    #   - jsonPath: $.PensionerDetails.auditDetails.createdBy      
+  
+    #   - jsonPath: $.PensionerDetails.auditDetails.createdDate  
+  
+    #   - jsonPath: $.PensionerDetails.pensionerNumber
+
+    # - query: INSERT INTO eg_pension_pensioner_application_details (uuid, tenantid, pensioner_id, ltc, lpd, pension_arrear, is_da_medical_admissible, fma, medical_relief, miscellaneous, over_payment, income_tax, cess, bank_address, account_number, claimant, wef, total_no_pay_leaves_days, total_no_pay_leaves_months, total_no_pay_leaves_years, dues, is_employment_active, is_convicted_serious_crime_or_grave_misconduct, is_any_judicial_proceeding_is_continuing, is_any_misconduct_insolvency_inefficiency, is_employee_dies_in_terrorist_attack, is_employee_dies_in_accidental_death, is_commutation_opted, reason_for_retirement, is_eligible_for_pension, is_dues_present, is_dues_amount_decided, is_taken_monthly_pension_and_gratuity, is_taken_gratuity_commutation_terminal_benefit, is_taken_compensation_pension_and_gratuity, dies_in_extremists_dacoits_smuggler_antisocial_attack, is_compassionate_pension_granted, no_dues_for_avail_govt_accomodation, employee_group, active, created_by, last_modified_by, created_date, last_modified_date, date_of_contingent, bank_code, bank_ifsc) SELECT ?, eppad.tenantid, eppad.pensioner_id, eppad.ltc, eppad.lpd, eppad.pension_arrear, eppad.is_da_medical_admissible, eppad.fma, eppad.medical_relief, eppad.miscellaneous, eppad.over_payment, eppad.income_tax, eppad.cess, ?, ?, eppad.claimant, ?, eppad.total_no_pay_leaves_days, eppad.total_no_pay_leaves_months, eppad.total_no_pay_leaves_years, eppad.dues, eppad.is_employment_active, eppad.is_convicted_serious_crime_or_grave_misconduct, eppad.is_any_judicial_proceeding_is_continuing, eppad.is_any_misconduct_insolvency_inefficiency, eppad.is_employee_dies_in_terrorist_attack, eppad.is_employee_dies_in_accidental_death, eppad.is_commutation_opted, eppad.reason_for_retirement, eppad.is_eligible_for_pension, eppad.is_dues_present, eppad.is_dues_amount_decided, eppad.is_taken_monthly_pension_and_gratuity, eppad.is_taken_gratuity_commutation_terminal_benefit, eppad.is_taken_compensation_pension_and_gratuity, eppad.dies_in_extremists_dacoits_smuggler_antisocial_attack, eppad.is_compassionate_pension_granted, eppad.no_dues_for_avail_govt_accomodation, eppad.employee_group, true, eppad.created_by, ?, eppad.created_date, ?, eppad.date_of_contingent, ?, ? FROM eg_pension_pensioner_application_details eppad join eg_pension_pensioner epp on epp.uuid = eppad.pensioner_id where epp.active = true and eppad.active = true and epp.pensioner_number = ?;
+  
+    #   basePath: PensionerDetails
+    #   jsonMaps:
+  
+    #   - jsonPath: $.PensionerDetails.newPensionerApplicationDetailsId
+  
+    #   - jsonPath: $.PensionerDetails.bankDetails
+  
+    #   - jsonPath: $.PensionerDetails.bankAccountNumber
+  
+    #   - jsonPath: $.PensionerDetails.wef
+  
+    #   - jsonPath: $.PensionerDetails.auditDetails.createdBy      
+  
+    #   - jsonPath: $.PensionerDetails.auditDetails.createdDate  
+      
+    #   - jsonPath: $.PensionerDetails.bankCode
+      
+    #   - jsonPath: $.PensionerDetails.bankIfsc
+  
+    #   - jsonPath: $.PensionerDetails.pensionerNumber
+
+    - query: update eg_pension_pensioner_application_details set bank_address = ?, account_number = ?, wef = ?, last_modified_by = ?, last_modified_date = ?, bank_code = ?, bank_ifsc = ? FROM eg_pension_pensioner epp where epp.uuid = eg_pension_pensioner_application_details.pensioner_id and epp.active = true and eg_pension_pensioner_application_details.active = true and epp.pensioner_number = ?;
+  
+      basePath: PensionerDetails
+      jsonMaps:
+  
+      - jsonPath: $.PensionerDetails.bankDetails
+  
+      - jsonPath: $.PensionerDetails.bankAccountNumber
+  
+      - jsonPath: $.PensionerDetails.wef
+  
+      - jsonPath: $.PensionerDetails.auditDetails.createdBy      
+  
+      - jsonPath: $.PensionerDetails.auditDetails.createdDate  
+      
+      - jsonPath: $.PensionerDetails.bankCode
+      
+      - jsonPath: $.PensionerDetails.bankIfsc
+  
+      - jsonPath: $.PensionerDetails.pensionerNumber
+
+    - query: INSERT INTO eg_pension_dependent (uuid, tenantid, pension_employee_id, name, dob, address, mobile_number, relationship, is_disabled, marital_status, is_holly_dependent, no_spouse_no_children, is_grandchild_from_deceased_son, is_eligible_for_gratuity, is_eligible_for_pension, active, created_by, created_date, gratuity_percentage, bank_account_number, bank_details, bank_code, bank_ifsc) values (?, ?, ?, ?, ?, ?, ?, ?, null, null, null, null, null, null, true, true, ?, ?, null, ?, ?, ?, ?);
+  
+      basePath: PensionerDetails.newClaimants.*
+      jsonMaps:
+  
+      - jsonPath: $.PensionerDetails.newClaimants.*.claimantId   
+  
+      - jsonPath: $.PensionerDetails.tenantId
+        
+      - jsonPath: $.PensionerDetails.pensionEmployeeId  
+        
+      - jsonPath: $.PensionerDetails.newClaimants.*.claimantName 
+        
+      - jsonPath: $.PensionerDetails.newClaimants.*.claimantDob
+  
+      - jsonPath: $.PensionerDetails.newClaimants.*.claimantAddress
+  
+      - jsonPath: $.PensionerDetails.newClaimants.*.claimantMobileNumber
+  
+      - jsonPath: $.PensionerDetails.newClaimants.*.claimantRelationship
+  
+      - jsonPath: $.PensionerDetails.auditDetails.createdBy      
+  
+      - jsonPath: $.PensionerDetails.auditDetails.createdDate 
+  
+      - jsonPath: $.PensionerDetails.newClaimants.*.claimantBankAccountNumber
+  
+      - jsonPath: $.PensionerDetails.newClaimants.*.claimantBankDetails
+  
+      - jsonPath: $.PensionerDetails.newClaimants.*.claimantBankCode
+  
+      - jsonPath: $.PensionerDetails.newClaimants.*.claimantBankIfsc
+
+    - query: update eg_pension_dependent set "name" = ?, dob = ?, address = ?, mobile_number = ?, relationship = ?, last_modified_by = ?, last_modified_date = ?, bank_account_number = ?, bank_details = ?, bank_code = ?, bank_ifsc = ? where active = true and is_eligible_for_pension = true and uuid = ? and pension_employee_id = ?;
+  
+      basePath: PensionerDetails
+      jsonMaps:
+        
+      - jsonPath: $.PensionerDetails.claimantName 
+        
+      - jsonPath: $.PensionerDetails.claimantDob
+  
+      - jsonPath: $.PensionerDetails.claimantAddress
+  
+      - jsonPath: $.PensionerDetails.claimantMobileNumber
+  
+      - jsonPath: $.PensionerDetails.claimantRelationship
+  
+      - jsonPath: $.PensionerDetails.auditDetails.createdBy      
+  
+      - jsonPath: $.PensionerDetails.auditDetails.createdDate 
+  
+      - jsonPath: $.PensionerDetails.claimantBankAccountNumber
+  
+      - jsonPath: $.PensionerDetails.claimantBankDetails
+  
+      - jsonPath: $.PensionerDetails.claimantBankCode
+  
+      - jsonPath: $.PensionerDetails.claimantBankIfsc
+  
+      - jsonPath: $.PensionerDetails.claimantId
+
+      - jsonPath: $.PensionerDetails.pensionEmployeeId
+        
+    - query: INSERT INTO eg_pension_dependent_audit (uuid, tenantid, dependent_id, pension_employee_id, name, dob, address, mobile_number, relationship, is_disabled, marital_status, is_holly_dependent, no_spouse_no_children, is_grandchild_from_deceased_son, is_eligible_for_gratuity, is_eligible_for_pension, active, created_by, created_date, gratuity_percentage, bank_account_number, bank_details, bank_code, bank_ifsc) select ?, tenantid, uuid, pension_employee_id, name, dob, address, mobile_number, relationship, is_disabled, marital_status, is_holly_dependent, no_spouse_no_children, is_grandchild_from_deceased_son, is_eligible_for_gratuity, is_eligible_for_pension, active, created_by, created_date, gratuity_percentage, bank_account_number, bank_details, bank_code, bank_ifsc from eg_pension_dependent where active = true and is_eligible_for_pension = true and uuid = ? and pension_employee_id = ?;
+  
+      basePath: PensionerDetails
+      jsonMaps:
+  
+      - jsonPath: $.PensionerDetails.dependentAuditId
+  
+      - jsonPath: $.PensionerDetails.claimantId
+
+      - jsonPath: $.PensionerDetails.pensionEmployeeId

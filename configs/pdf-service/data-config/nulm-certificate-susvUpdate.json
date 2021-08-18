@@ -1,0 +1,107 @@
+{
+    "key": "nulm-certificate-susvUpdate",
+    "DataConfigs": {
+      "serviceName": "rainmaker-nulm",
+      "version": "1.0.0",
+      "baseKeyPath": "$.SmidCitizenApplication.*",
+    "entityIdPath": "$.applicationId",
+      "isCommonTableBorderRequired": true,
+      "mappings": [
+        {
+          "mappings": [
+            {
+              "direct": [
+               {
+                "variable": "ulbLogo",                        
+                "url":"https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
+                "type":"image"
+                },
+              
+                 {
+                    "variable": "corporation_name",
+                    "value": {
+                        "path": "$.corporationName"
+                    }
+                },
+                 {
+                    "variable": "corporation_address",
+                    "value": {
+                        "path": "$.corporationAddress"
+                    }
+                },
+                   {
+                "variable": "applicationId",
+                "value": {
+                  "path": "$.applicationId"
+                }
+              },
+			  {
+                "variable": "applicationStatus",
+                "value": {
+                  "path": "$.applicationStatus"
+                }
+              },
+			  {
+                "variable": "lookingFor",
+                "value": {
+                  "path": "$.lookingFor"
+                }
+              },
+			  {
+                "variable": "nameofNomineeofStreetVendor",
+                "value": {
+                  "path": "$.nameOfStreetVendor"
+                }
+              },
+                 {
+                "variable": "vendingNo",
+                "value": {
+                  "path": "$.covNo"
+                }
+              },
+			  {
+                "variable": "residentialAddress",
+                "value": {
+                  "path": "$.residentialAddress"
+                }
+              },
+			  {
+                "variable": "vendingLocation",
+                "value": {
+                  "path": "$.changeOfLocation"
+                }
+              },
+			  {
+                "variable": "variable1",
+                "value": {
+                  "path": "$.susvApplicationFamilyDetails.*"
+                },
+                "type": "array",
+                "format": {
+                  "type": "string",
+                  "scema": [
+                     {
+                      "variable": "nominee_name",
+                      "value": "name"
+                    },
+					{
+                      "variable": "nominee_age",
+                      "value": "age"
+                    },
+					{
+                      "variable": "nominee_relation",
+                      "value": "relation"
+                    }
+                  ]
+                }
+              }
+			  
+			 
+			  
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }

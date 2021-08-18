@@ -50,6 +50,12 @@
                                 }
                             },
                             {
+                                "variable": "NomName",
+                                "value": {
+                                    "path": "$.bankInfo.nomName"
+                                }
+                            },
+                            {
                                 "variable": "pdfLogo",
                                 "url": "https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
                                 "type": "image"

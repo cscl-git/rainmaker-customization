@@ -1,0 +1,537 @@
+{
+    "key": "nulm-certificate-suh",
+    "DataConfigs": {
+      "serviceName": "rainmaker-nulm",
+      "version": "1.0.0",
+      "baseKeyPath": "$.SmidCitizenApplication.*",
+    "entityIdPath": "$.applicationId",
+      "isCommonTableBorderRequired": true,
+      "mappings": [
+        {
+          "mappings": [
+            {
+              "direct": [
+               {
+                "variable": "ulbLogo",                        
+                "url":"https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
+                "type":"image"
+                },
+              
+                 {
+                    "variable": "corporation_name",
+                    "value": {
+                        "path": "$.corporationName"
+                    }
+                },
+                 {
+                    "variable": "corporation_address",
+                    "value": {
+                        "path": "$.corporationAddress"
+                    }
+                },
+                   {
+                "variable": "applicationId",
+                "value": {
+                  "path": "$.suhId"
+                }
+              },
+			  {
+                "variable": "applicationStatus",
+                "value": {
+                  "path": "$.applicationStatus"
+                }
+              },
+			  {
+                "variable": "nameOfShelter",
+                "value": {
+                  "path": "$.nameOfShelter"
+                }
+              },
+			  {
+                "variable": "address",
+                "value": {
+                  "path": "$.address"
+                }
+              },
+                 {
+                "variable": "shelterBackground",
+                "value": {
+                  "path": "$.shelterBackground"
+                },
+				"localisation":{
+                           "required":true,
+                           "module":"rainmaker-nulm"
+                        }	
+              },
+			  {
+                "variable": "category",
+                "value": {
+                  "path": "$.category"
+                }
+              },
+			  {
+                "variable": "weatherCondition",
+                "value": {
+                  "path": "$.weatherCondition"
+                }
+              },
+			  {
+                "variable": "shelterClassification",
+                "value": {
+                  "path": "$.shelterClassification"
+                }
+              },
+			  {
+                "variable": "otherClassification",
+                "value": {
+                  "path": "$.otherClassification"
+                },
+				"localisation":{
+                           "required":true,
+                           "module":"rainmaker-nulm"
+                        }
+              },
+			  {
+                "variable": "ownership",
+                "value": {
+                  "path": "$.ownership"
+                }
+              },{
+                "variable": "operationAndManagementOfShelters",
+                "value": {
+                  "path": "$.operationAndManagementOfShelters"
+                },
+				"localisation":{
+                           "required":true,
+                           "module":"rainmaker-nulm"
+                        }
+              },
+			  {
+                "variable": "area",
+                "value": {
+                  "path": "$.area"
+                }
+              },
+			  {
+                "variable": "capacity",
+                "value": {
+                  "path": "$.capacity"
+                }
+              },{
+                "variable": "assignedTo",
+                "value": {
+                  "path": "$.assignedTo"
+                }
+              },
+			  {
+                "variable": "isBedding",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.isBedding"
+                }
+              },
+			  {
+                "variable": "beddingRemarks",
+                "value": {
+                  "path": "$.beddingRemark"
+                }
+              },{
+                "variable": "isWashingOfLinen",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.isWashingOfLinen"
+                }
+              },
+			  {
+                "variable": "washingOfLinenRemarks",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.washingOfLinenRemark"
+                }
+              },
+			  {
+                "variable": "isCleaningOfPremises",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.isCleaningOfPremises"
+                }
+              },{
+                "variable": "cleaningOfPremiseRemarks",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.cleaningOfPremiseRemark"
+                }
+              },
+			  {
+                "variable": "isRecreationfacilities",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.isRecreationfacilities"
+                }
+              },
+			  {
+                "variable": "recreationfacilitiesRemarks",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.recreationfacilitiesRemark"
+                }
+              },{
+                "variable": "isDrinkingWater",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.isDrinkingWater"
+                }
+              },
+			  {
+                "variable": "drinkingWaterRemarks",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.drinkingWaterRemark"
+                }
+              },
+			  {
+                "variable": "isMeals",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.isMeals"
+                }
+              },{
+                "variable": "mealsRemarks",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.mealsRemark"
+                }
+              },
+			  {
+                "variable": "isLockerForInmates",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.isLockerForInmates"
+                }
+              },
+			  {
+                "variable": "lockerForInmatetRemarks",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.lockerForInmatetRemark"
+                }
+              },{
+                "variable": "isFireSafetyMeasure",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.isFireSafetyMeasure"
+                }
+              },
+			  {
+                "variable": "fireSafetyMeasureRemarks",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.fireSafetyMeasureRemark"
+                }
+              },
+			  {
+                "variable": "isOfficeSetUp",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.isOfficeSetUp"
+                }
+              },{
+                "variable": "officeSetUpRemarks",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.officeSetUpRemark"
+                }
+              },
+			  {
+                "variable": "isFirstAidKitAndTrainingToStaff",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.isFirstAidKitAndTrainingToStaff"
+                }
+              },
+			  {
+                "variable": "firstAidKitAndTrainingToStaffRemarks",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.firstAidKitAndTrainingToStaffRemark"
+                }
+              },{
+                "variable": "isDisplayOfEmergencyNumbers",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.isDisplayOfEmergencyNumbers"
+                }
+              },
+			  {
+                "variable": "displayOfEmergencyNumbersRemarks",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.displayOfEmergencyNumbersRemark"
+                }
+              },
+			  {
+                "variable": "isToilet",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.isToilet"
+                }
+              },{
+                "variable": "toiletRemarks",
+                "value": {
+                  "path": "$.suhFacilitiesDetails.*.toiletRemark"
+                }
+              },
+			  {
+                "variable": "isAssetInventoryRegister",
+                "value": {
+                  "path": "$.suhRecordMaintenance.*.isAssetInventoryRegister"
+                }
+              },
+			  {
+                "variable": "assetInventoryRegisterRemarks",
+                "value": {
+                  "path": "$.suhRecordMaintenance.*.assetInventoryRegisterRemark"
+                }
+              },{
+                "variable": "isAccountRegister",
+                "value": {
+                  "path": "$.suhRecordMaintenance.*.isAccountRegister"
+                }
+              },
+			  {
+                "variable": "accountRegisterRemarks",
+                "value": {
+                  "path": "$.suhRecordMaintenance.*.accountRegisterRemark"
+                }
+              },
+			  {
+                "variable": "isAttendanceRegisterOfStaff",
+                "value": {
+                  "path": "$.suhRecordMaintenance.*.isAttendanceRegisterOfStaff"
+                }
+              },{
+                "variable": "attendanceRegisterOfStaffRemarks",
+                "value": {
+                  "path": "$.suhRecordMaintenance.*.attendanceRegisterOfStaffRemark"
+                }
+              },
+			  {
+                "variable": "isShelterManagementCommitteeRegister",
+                "value": {
+                  "path": "$.suhRecordMaintenance.*.isShelterManagementCommitteeRegister"
+                }
+              },
+			  {
+                "variable": "shelterManagementCommitteeRegisteRemarks",
+                "value": {
+                  "path": "$.suhRecordMaintenance.*.shelterManagementCommitteeRegisteRemark"
+                }
+              },{
+                "variable": "isPersonnelAndSalaryRegister",
+                "value": {
+                  "path": "$.suhRecordMaintenance.*.isPersonnelAndSalaryRegister"
+                }
+              },
+			  {
+                "variable": "personnelAndSalaryRegisterRemarks",
+                "value": {
+                  "path": "$.suhRecordMaintenance.*.personnelAndSalaryRegisterRemark"
+                }
+              },
+			  {
+                "variable": "isHousekeepingAndMaintenanceRegister",
+                "value": {
+                  "path": "$.suhRecordMaintenance.*.isHousekeepingAndMaintenanceRegister"
+                }
+              },{
+                "variable": "housekeepingAndMaintenanceRegisterRemarks",
+                "value": {
+                  "path": "$.suhRecordMaintenance.*.housekeepingAndMaintenanceRegisterRemark"
+                }
+              },
+			  {
+                "variable": "isComplaintAndSuggestionRegister",
+                "value": {
+                  "path": "$.suhRecordMaintenance.*.isComplaintAndSuggestionRegister"
+                }
+              },
+			  {
+                "variable": "complaintAndSuggestionRegisterRemarks",
+                "value": {
+                  "path": "$.suhRecordMaintenance.*.complaintAndSuggestionRegisterRemark"
+                }
+              },{
+                "variable": "isVisitorRegister",
+                "value": {
+                  "path": "$.suhRecordMaintenance.*.isVisitorRegister"
+                }
+              },
+			  {
+                "variable": "visitorRegisterRemarks",
+                "value": {
+                  "path": "$.suhRecordMaintenance.*.visitorRegisterRemark"
+                }
+              },
+			  {
+                "variable": "isProfileRegister",
+                "value": {
+                  "path": "$.suhRecordMaintenance.*.isProfileRegister"
+                }
+              },{
+                "variable": "profileRegisterRemarks",
+                "value": {
+                  "path": "$.suhRecordMaintenance.*.profileRegisterRemark"
+                }
+              },
+			  {
+                "variable": "isManager",
+                "value": {
+                  "path": "$.suhStaffMaintenance.*.isManager"
+                }
+              },
+			  {
+                "variable": "managerRemark",
+                "value": {
+                  "path": "$.suhStaffMaintenance.*.managerRemark"
+                }
+              },{
+                "variable": "isSecurityStaff",
+                "value": {
+                  "path": "$.suhStaffMaintenance.*.isSecurityStaff"
+                }
+              },
+			  {
+                "variable": "securityStaffRemark",
+                "value": {
+                  "path": "$.suhStaffMaintenance.*.securityStaffRemark"
+                }
+              },
+			  {
+                "variable": "isCleaner",
+                "value": {
+                  "path": "$.suhStaffMaintenance.*.isCleaner"
+                }
+              },
+			  {
+                "variable": "cleanerRemark",
+                "value": {
+                  "path": "$.suhStaffMaintenance.*.cleanerRemark"
+                }
+              },{
+                "variable": "isConstitutionOfShelterManagementCommittee",
+                "value": {
+                  "path": "$.isConstitutionOfShelterManagementCommittee"
+                }
+              },
+			  {
+                "variable": "constitutionOfShelterManagementCommitteeRemark",
+                "value": {
+                  "path": "$.constitutionOfShelterManagementCommitteeRemark"
+                }
+              },
+			  {
+                "variable": "isSocialAudit",
+                "value": {
+                  "path": "$.isSocialAudit"
+                }
+              },{
+                "variable": "socialAuditRemark",
+                "value": {
+                  "path": "$.socialAuditRemark"
+                }
+              },
+			  {
+                "variable": "isLinkageToCentralGovtWelfareSchemes",
+                "value": {
+                  "path": "$.isLinkageToCentralGovtWelfareSchemes"
+                }
+              },
+			  {
+                "variable": "linkageToCentralGovtWelfareSchemesRemark",
+                "value": {
+                  "path": "$.linkageToCentralGovtWelfareSchemesRemark"
+                }
+              },{
+                "variable": "isLinkageToPublicHealthInitiatives",
+                "value": {
+                  "path": "$.isLinkageToPublicHealthInitiatives"
+                }
+              },
+			  {
+                "variable": "linkageToPublicHealthInitiativesRemark",
+                "value": {
+                  "path": "$.linkageToPublicHealthInitiativesRemark"
+                }
+              },
+			  {
+                "variable": "isLinkageToOtherGovtSchemes",
+                "value": {
+                  "path": "$.isLinkageToOtherGovtSchemes"
+                }
+              },{
+                "variable": "linkageToOtherGovtSchemesRemark",
+                "value": {
+                  "path": "$.linkageToOtherGovtSchemesRemark"
+                }
+              },
+			  {
+                "variable": "isLinkageToLocalCommunity",
+                "value": {
+                  "path": "$.isLinkageToLocalCommunity"
+                }
+              },
+			  {
+                "variable": "linkageToLocalCommunityRemark",
+                "value": {
+                  "path": "$.linkageToLocalCommunityRemark"
+                }
+              },{
+                "variable": "isLinkageToSocialWorkersAndPhilanthropists",
+                "value": {
+                  "path": "$.isLinkageToSocialWorkersAndPhilanthropists"
+                }
+              },
+			  {
+                "variable": "linkageToSocialWorkersAndPhilanthropistsRemark",
+                "value": {
+                  "path": "$.linkageToSocialWorkersAndPhilanthropistsRemark"
+                }
+              },
+			  {
+                "variable": "isUserCharges",
+                "value": {
+                  "path": "$.isUserCharges"
+                }
+              },{
+                "variable": "userChargesRemark",
+                "value": {
+                  "path": "$.userChargesRemark"
+                }
+              },
+			  {
+                "variable": "isIECAndPromotionalInitiatives",
+                "value": {
+                  "path": "$.isIECAndPromotionalInitiatives"
+                }
+              },
+			  {
+                "variable": "iecAndPromotionalInitiativesRemark",
+                "value": {
+                  "path": "$.iecAndPromotionalInitiativesRemark"
+                }
+              },{
+                "variable": "iecAndPromotionalInitiativesRemark",
+                "value": {
+                  "path": "$.iecAndPromotionalInitiativesRemark"
+                }
+              },
+			  {
+                "variable": "isQuarterlyReporting",
+                "value": {
+                  "path": "$.isQuarterlyReporting"
+                }
+              },
+			  {
+                "variable": "quarterlyReportingRemark",
+                "value": {
+                  "path": "$.quarterlyReportingRemark"
+                }
+              },{
+                "variable": "isVisits",
+                "value": {
+                  "path": "$.isVisits"
+                }
+              },
+			  {
+                "variable": "visitsRemark",
+                "value": {
+                  "path": "$.visitsRemark"
+                }
+              }
+			 
+			  
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }

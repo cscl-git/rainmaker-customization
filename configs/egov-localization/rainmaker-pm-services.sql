@@ -855,6 +855,7 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 	 ('ffd71afe-6ae0-4f49-b767-e324ad65193','en_IN','ADVERTISEMENTNOC_REMARK_DOCUMENT','Document','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324e65069e63','en_IN','SELLMEATNOC_REMARK_DOCUMENT','Document','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324pe65079','en_IN','NOC_REQ_PET_DOCS_HEADER','Undertaking from the owner of dog for registration','ch','rainmaker-pm',93,'2020-03-23 18:12:26.59293',NULL,NULL),
+	 ('45e31cad-69d0-4b75-8975-23c82caf0488','en_IN','NOC_REQ_SELLMEAT_DOCS_HEADER','Conditions for issue of No Objection Certifcate','ch','rainmaker-pm',93,'2020-03-23 18:12:26.59293',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324pe65135','en_IN','NOC_CERTIFICATE_PET','Certificate','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324pe65136','en_IN','NOC_CERTIFICATE_ADVERTISEMENT','Certificate','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324pe65137','en_IN','NOC_RECEIPT_ADVERTISEMENT','Receipt','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
@@ -1178,3 +1179,191 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 ( '42e17862-dbd8-4pm6-95f6-382ec3e10005','en_IN', 'V5_PARKING_AND_INTERNAL_ROAD','V-5,Parking and Internal Road','ch','rainmaker-pm', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e10006','en_IN', 'MAN_HOLE_OR_CHAMBER','Man Hole/Chamber','ch','rainmaker-pm', '94');
+
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10007','en_IN', 'PM_APPLICATION_HEADER','Online Permission','ch','rainmaker-pm', '94');INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10008','en_IN', 'PM_FORWARD_SUCCESS_MESSAGE_MAIN','Application Forwarded Successfully','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10009','en_IN', 'PM_APP_NO_LABEL','Application ID','ch','rainmaker-pm', '94');INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10010','en_IN', 'PM_REASSIGN_SUCCESS_MESSAGE_MAIN','Application Reassigned Successfully','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10011','en_IN', 'PM_APPROVE_SUCCESS_MESSAGE_MAIN','Application Approved','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10012','en_IN', 'PM_COMPLETE_SUCCESS_MESSAGE_MAIN','Application Completed','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10013','en_IN', 'PM_REJECT_SUCCESS_MESSAGE_MAIN','Application Rejected','ch','rainmaker-pm', '94');
+
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10014','en_IN', 'PM_SEARCH_NOC','Search Applications','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10015','en_IN', 'NOC_PAYMENT_FAILURE_MESSAGE_MAIN','Payment has failed.','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10019','en_IN', 'NOC_PAYMENT_RETRY','Retry','ch','rainmaker-pm', '94');
+
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10020','en_IN', 'PET_PET_OWNER_ID_PROOF','Owner Id Proof','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10021','en_IN', 'ownerIdProof','Owner Id Proof','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10022','en_IN', 'PET_OWNER_ID_PROOF','Owner Id Proof','ch','rainmaker-pm', '94');
+
+
+
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10023','en_IN', 'ERR_NOC_APPLICANT_NAME_MSG','Please enter a valid Applicant Name','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10024','en_IN', 'ERR_NOC_HOUSE_NUMBER','Please enter a valid House No.','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10025','en_IN', 'ERR_NOC_PROPERTY_SECTOR','Please select a valid Sector','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10026','en_IN', 'ERR_NAME_OF_PET_DOG','Please enter a valid Name of Pet Dog','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10027','en_IN', 'ERR_DOG_AGE','Please select a valid Age','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10028','en_IN', 'ERR_DOG_SEX','Please select a valid value','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10029','en_IN', 'ERR_DOG_BREED','Please select a valid Breed','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10030','en_IN', 'ERR_DOG_COLOR','Please select a valid Color','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10031','en_IN', 'ERR_IDENTIFICATION_MARK_LABEL','Please enter a valid Identification Mark','ch','rainmaker-pm', '94');
+
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10032','en_IN', 'ERR_NOC_PET_DETAILS_NAME_OF_VETERINARY_DOCTOR','Please enter a valid Name of Veterinary Doctor','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10033','en_IN', 'ERR_NOC_PET_DETAILS_VETERINARY_COUNCIL_REGISTRATION_NO','Please enter a valid Veterinary Council Reg. No','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10034','en_IN', 'ERR_NOC_PET_DETAILS_VETERINARY_CONTACT_NO','Please enter a valid Contact Detail','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10035','en_IN', 'ERR_NOC_PET_DETAILS_VETERINARY_CLINIC_NO','Please enter a valid House/Clinic No.','ch','rainmaker-pm', '94');
+
+
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10036','en_IN', 'ERR_NOC_SELLMEAT_APPLICANT_NAME_LABEL','Please enter a valid Applicant Name','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10037','en_IN', 'ERR_NOC_SELLMEAT_FATHERHUSBANDNAME','Please enter a valid Father/Husband`s Name','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10038','en_IN', 'ERR_NOC_SELLMEAT_HOUSENO','Please enter a valid House No.','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10039','en_IN', 'ERR_NOC_SELLMEAT_SHOPNO','Please enter a valid Shop No.','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10040','en_IN', 'ERR_NOC_SELLMEAT_WARD','Please enter a valid Ward','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10041','en_IN', 'ERR_SELLMEAT_DIVISION','Please enter a valid Division','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10042','en_IN', 'ERR_SELLMEAT_SECTOR','Please select a valid Sector','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10043','en_IN', 'ERR_NOC_SELLMEAT_NOCSOUGHT_LABEL','Please select a valid Permission Sought For','ch','rainmaker-pm', '94');
+
+
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10044','en_IN', 'ERR_NOC_ROADCUT_APPLICANT_NAME','Please enter a valid Applicant Name/ Authorize Signatory','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10045','en_IN', 'ERR_NOC_ROADCUT_GSTIN_NOC','Please enter a valid GST Number','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10046','en_IN', 'ERR_NOC_ROADCUT_WARD','Please enter a valid Ward','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10047','en_IN', 'ERR_NOC_ROADCUT_REQUESTED_LOCATION','Please enter a valid Requested Location','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10048','en_IN', 'ERR_NOC_ROADCUT_LANDMARK','Please enter a valid Landmark','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10049','en_IN', 'ERR_NOC_ROADCUT_APPLICANT_TYPE','Please select a valid Type Of Applicant','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10050','en_IN', 'ERR_NOC_ROADCUT_PURPOSE_OF_ROAD_CUTTING','Please select a valid Purpose Of Road Cutting','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10051','en_IN', 'ERR_NOC_ROADCUT_ROAD_CUT_TYPE','Please select a valid Road Cut Type','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10052','en_IN', 'ERR_NOC_ROADCUT_SECTOR','Please select a valid Sector','ch','rainmaker-pm', '94');
+
+
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10053','en_IN', 'ERR_NOC_ADV_TYPE_OF_APPLICANT','Please select a valid Type Of Applicant','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10054','en_IN', 'ERR_NOC_ADV_NAME_OF_APPLICANT','Please enter a valid Name Of The Applicant','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10055','en_IN', 'ERR_NOC_ADV_PAN','Please enter a valid PAN','ch','rainmaker-pm', '94');
+
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10056','en_IN', 'ERR_NOC_ADV_TAN','Please enter a valid TAN','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10057','en_IN', 'ERR_NOC_ADV_CIN','Please enter a valid CIN','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10058','en_IN', 'ERR_NOC_ADV_GST','Please enter a valid GSTIN','ch','rainmaker-pm', '94');
+
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10059','en_IN', 'ERR_NOC_ADV_APPLICANTADDR','Please enter a valid Address','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10060','en_IN', 'ERR_NOC_ADV_LANDMARK','Please enter a valid Landmark','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10061','en_IN', 'ERR_NOC_ADV_APPLDIVISION','Please enter a valid Division','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10062','en_IN', 'ERR_NOC_ADV_WARD','Please enter a valid Ward','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10063','en_IN', 'ERR_NOC_ADV_SECTOR','Please select a valid Sector','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10064','en_IN', 'ERR_NOC_ADV_VILLAGE','Please enter a valid Village','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10065','en_IN', 'ERR_NOC_ADV_MOBILE','Please enter a valid Mobile No','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10066','en_IN', 'ERR_NOC_ADV_EMAILID','Please enter a valid Email Id','ch','rainmaker-pm', '94');
+
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10067','en_IN', 'ERR_NOC_ADV_TYPE_OF_ADVERTISEMENT','Please select a valid Type Of Advertisement','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10068','en_IN', 'ERR_NOC_ADV_SUB_TYPE_OF_ADVERTISEMENT','Please select a valid Sub-Type Of Advertisement','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10069','en_IN', 'ERR_NOC_ADV_FROM_DATE','Please select a valid From Date Period Of Display','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10070','en_IN', 'ERR_NOC_ADV_TO_DATE','Please select a valid To Date Period Of Display','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10071','en_IN', 'ERR_NOC_ADV_DURATION','Please select a valid Duration','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10073','en_IN', 'ERR_NOC_ADV_LOCATION_OF_ADVERTISEMENT','Please enter a valid Location of Advertisement','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10075','en_IN', 'ERR_NOC_ADV_SUB_SECTOR','Please enter a valid Sub Sector/Village','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10076','en_IN', 'ERR_NOC_ADV_SPACE','Please enter a valid Space(In Sq.ft.)','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10077','en_IN', 'ERR_NOC_ADV_ADVERTISEMENT_MATTER_DESCRIPTION','Please enter a valid Advertisement Matter Description','ch','rainmaker-pm', '94')
+--,( '42e17862-dbd8-4pm6-95f6-382ec3e10078','en_IN','NOC_PAYMENT_COLLECTION_SUCCESS_MESSAGE_MAIN','Payment has been collected successfully!','ch','rainmaker-pm', '94')
+--,( '42e17862-dbd8-4pm6-95f6-382ec3e10079','en_IN','PET_NOC_PAYMENT_SUCCESS_MESSAGE_SUB','A notification regarding Payment Collection has been sent to the applicant at registered Mobile No.','ch','rainmaker-pm', '94')
+--,( '42e17862-dbd8-4pm6-95f6-382ec3e10080','en_IN','NOC_PMT_RCPT_NO','Receipt No.','ch','rainmaker-pm', '94')
+--,( '42e17862-dbd8-4pm6-95f6-382ec3e10081','en_IN','NOC_CONFIRMATION_BUTTON_DOWNLOAD_RECEIPT','Download Receipt','ch','rainmaker-pm', '94')
+--,( '42e17862-dbd8-4pm6-95f6-382ec3e10082','en_IN','SELLMEAT_NOC_PAYMENT_SUCCESS_MESSAGE_SUB','Payment has been collected successfully!','ch','rainmaker-pm', '94');
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10083','en_IN','SELLMEAT_ID_PROOF','ID Proof','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10084','en_IN','SELLMEATNOC_FEE','Administrative charges(Non-refundable)','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10085','en_IN','SELLMEATNOC_UNDERTAKING_HEADING','No premises shall be issued NOC to obtain license for sale of meat, fsh and poultry unless:-','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10086','en_IN','SELLMEATNOC_UNDERTAKING_POINT1',' It has a foor made of impervious and non-slippery material.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10087','en_IN','SELLMEATNOC_UNDERTAKINGPOINT2','Its walls upto a height of minimum 5 feet from the foor level shall be made of Impervious concrete material (e.g.glazed tiles or hygienic panels etc.)and ceiling is properly plasted and lime washed.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10088','en_IN','SELLMEATNOC_UNDERTAKINGPOINT3',' It is provided with adequate light and ventillation.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10089','en_IN','SELLMEATNOC_UNDERTAKINGPOINT4',' Except in the case of packed or frozen meat, fsh and poultry,it is provided vith a drain and the whole foor is so sloped to allow all liquids to fow of by the drain to the city sewer.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10090','en_IN','SELLMEATNOC_UNDERTAKINGPOINT5','There should be provision of continous supply of potable water inside premises.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10091','en_IN','SELLMEATNOC_UNDERTAKINGPOINT6',' It has no direct communication between premises and any place used as a living or sleeping room.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10092','en_IN','SELLMEATNOC_UNDERTAKINGPOINT7','The minimum distance between the meat shop and any place of worship should not be less than 50mtrs.The condition of 100 rosters distance will apply in case the premises situated directly opposite to the entry gate of religious place of any community.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10093','en_IN','SELLMEATNOC_UNDERTAKINGPOINT8','All the fttings in the shop shall be non-corroding and non -rusting type.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10094','en_IN','SELLMEATNOC_UNDERTAKINGPOINT9','Washbasin made of stainless steel/porcelain shall be provided.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10095','en_IN','SELLMEATNOC_UNDERTAKINGPOINT10','The premises shall be air conditioned.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10096','en_IN','SELLMEATNOC_UNDERTAKINGPOINT11','A sign board indicating the type of meat sold shall be displayed prominently i.e.JhatkaMalal.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10097','en_IN','SELLMEATNOC_UNDERTAKINGPOINT12','Proof of possession / rent agreement to be submitted with application for NOC.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10100','en_IN','SELLMEATNOC_UNDERTAKINGPOINT13','Failure to comply with any of these conditions or any other condition laid down by Licensing Authority may result in cancellation of NOC by the appropriate authority', 'ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10101','en_IN','SELLMEATNOC_UNDERTAKINGPOINT14','Grant of NOC shall not protect the licensee for violation of provisions of the capital of Punjab Development and regulation Act, 1952 and rules framed thereunder or any other law.','ch','rainmaker-pm', '94')
+,( '2705ee6f-79bc-4354-8b65-942dafea3f2d','en_IN','SELLMEATNOC_UNDERTAKINGPOINT15','Gysier for sanitazing the equipment for slaughtering with hot water.','ch','rainmaker-pm', '94')
+,('4532fde7-e11a-48d6-b47e-1ce369d515af','en_IN','SELLMEAT.ID_PROOF','Id Proof','ch','rainmaker-pm', '94')
+,('f32cbbf3-d850-4615-80ef-792271ea5c2a','en_IN','PET-NOC_NEW_APPLICATION','Pet New Application','ch','rainmaker-pm', '94')
+,('cd812082-8fd3-44ab-a427-1ca46cc6ef86','en_IN','SELL-MEAT-NOC_NEW_APPLICATION','Sellmeat New Application','ch','rainmaker-pm', '94')
+,('a5a6f4c5-7e2b-483c-ad83-5fc76cd5ab0f','en_IN','ADVERTISEMENT-NOC_NEW_APPLICATION','Advertisement New Application','ch','rainmaker-pm', '94')
+,('02343e6b-a2a0-4d0b-a5e3-3782efa90423','en_IN','ROADCUT-NOC_NEW_APPLICATION','Roadcut New Application','ch','rainmaker-pm', '94')
+,('e91098de-7662-41cc-8fc8-31fa9b4e3934','en_IN','NOC_HOME_SEARCH_RESULTS_NEW_APP_BUTTON','Home Search Results New App','ch','rainmaker-pm', '94')
+,('7c251879-5ae2-44e3-8068-dcc15cecfaae','en_IN','DROPDOWN_POINT_1',' Jhatka(goat/sheep)+Fish+Frozen/Packed/Poultry','ch','rainmaker-pm', '94')
+,('691a67f1-bfed-4dd4-8d80-343c74e9d1e7','en_IN','DROPDOWN_POINT_2',' Halal(goat/sheep)+Fish +Frozen/Packed/Poultry','ch','rainmaker-pm', '94')
+,('f0debb13-e6dc-4dcc-9931-0764a3b288d4','en_IN','DROPDOWN_POINT_3',' Pork+Fish+Packed/Frozen/Poultry','ch','rainmaker-pm', '94')
+,('c99d2fa4-9824-40bd-8c05-391883350ccf','en_IN','DROPDOWN_POINT_4',' Pork(pig) can not be combined with Jhatka or Halal','ch','rainmaker-pm', '94')
+,('98bebe00-52eb-46af-8491-3011a1266c90','en_IN','DROPDOWN_POINT_5',' Note: I here confirm that my shop fall under commercial area','ch','rainmaker-pm', '94')
+--,('50298593-7a24-4d12-bee4-d026e75d13df','en_IN','NOC_PAYMENT_COLLECTION_SUCCESS_MESSAGE_MAIN',' Payment Collection Success)','ch','rainmaker-pm', '94')
+--,('500d77e9-e31b-4220-8f8d-8074d7ef8816','en_IN','NOC_PMT_RCPT_NO',' Payment Receipt No.','ch','rainmaker-pm', '94')
+--,('0b6aa549-0d14-4adb-bed2-80b2dce120bc','en_IN','PET_NOC_PAYMENT_SUCCESS_MESSAGE_SUB','A notification regarding Payment Collection has been sent to the applicant','ch','rainmaker-pm', '94')
+--,('6dc98bdb-82b5-4585-b1a1-05942b0e4753','en_IN','NOC_CONFIRMATION_BUTTON_DOWNLOAD_RECEIPT','Download Receipt','ch','rainmaker-pm', '94')
+--,('f9b52cbc-33fe-4662-8f26-30d5fdeb63bc','en_IN','SELLMEAT_NOC_PAYMENT_SUCCESS_MESSAGE_SUB','A notification regarding Payment Collection has been sent to the applicant','ch','rainmaker-pm', '94')
+,('2932d177-abb4-400e-be58-f0e9f361bbf3','en_IN','DROPDWON_COMBINATION',' Sellmeat NOC Drop-down Combinations','ch','rainmaker-pm', '94')
+,('83b66019-2017-4508-8b2d-29f4f7d082ae','en_IN','WF_SELLMEATNOC_PAID','Paid Sellmeat','ch','rainmaker-pm', '94')
+,('4537842a-ad89-4235-b3bf-88f2002299f5','en_IN','ERR_NOC_ROADCUT_LENGTH','Roadcut Length','ch','rainmaker-pm', '94');

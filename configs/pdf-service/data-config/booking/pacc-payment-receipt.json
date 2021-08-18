@@ -1,190 +1,189 @@
 {
-    "key": "pacc-payment-receipt",
-    "DataConfigs": {
-       "serviceName": "rainmaker-tl",
-       "version": "1.0.0",
-       "baseKeyPath": "$.BookingInfo.*",
-       "entityIdPath": "$.booking.bkApplicationNumber",
-       "isCommonTableBorderRequired": true,
-       "mappings": [
-          {
-             "topic": "tl-pdf-generation",
-             "staticConfigPath": "https://raw.githubusercontent.com/egovernments/egov-services/vishal-feature-filestore/core/egov-indexer/src/main/resources/rainmaker-pgr-indexer.yml",
-             "mappings": [
-                {
-                   "direct": [
-                      {
-                         "variable": "variable1",
-                         "value": {
-                            "path": "$.applicantDetail.name"
-                         }
-                      },
-                      {
-                         "variable": "variable2",
-                         "value": {
-                            "path": "$.applicantDetail.mobileNumber"
-                         }
-                      },
-                      {
-                         "variable": "variable3",
-                         "value": {
-                            "path": "$.applicantDetail.houseNo"
-                         }
-                      },
-                      {
-                         "variable": "variable4",
-                         "value": {
-                            "path": "$.applicantDetail.permanentAddress"
-                         }
-                      },
-                      {
-                         "variable": "variable5",
-                         "value": {
-                            "path": "$.applicantDetail.sector"
-                         }
-                      },
-                      {
-                         "variable": "variable6",
-                         "value": {
-                            "path": "$.booking.bkApplicationNumber"
-                         }
-                      },
-                      {
-                         "variable": "variable7",
-                         "value": {
-                            "path": "$.paymentInfo.paymentDate"
-                         }
-                      },
-                      {
-                         "variable": "variable8",
-                         "value": {
-                            "path": "$.paymentInfo.transactionId"
-                         }
-                      },
-                      {
-                         "variable": "variable8",
-                         "value": {
-                            "path": "$.paymentInfo.transactionId"
-                         }
-                      },
-                      {
-                         "variable": "variable9",
-                         "value": {
-                            "path": "$.paymentInfo.bookingPeriod"
-                         }
-                      },
-                      {
-                         "variable": "variable10",
-                         "value": {
-                            "path": "$.paymentInfo.bookingItem"
-                         }
-                      },
-                      {
-                         "variable": "variable11",
-                         "value": {
-                            "path": "$.paymentInfo.baseCharge"
-                         }
-                      },
-                      {
-                         "variable": "variable12",
-                         "value": {
-                            "path": "$.paymentInfo.gst"
-                         }
-                      },
-                      {
-                         "variable": "variable13",
-                         "value": {
-                            "path": "$.paymentInfo.totalAmount"
-                         }
-                      },
-                      {
-                         "variable": "variable14",
-                         "value": {
-                            "path": "$.paymentInfo.amountInWords"
-                         }
-                      },
-                      {
-                        "variable": "bankName",
+   "key": "pacc-payment-receipt",
+   "DataConfigs": {
+      "serviceName": "rainmaker-tl",
+      "version": "1.0.0",
+      "baseKeyPath": "$.BookingInfo.*",
+      "entityIdPath": "$.booking.bkApplicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [
+         {
+            "topic": "tl-pdf-generation",
+            "staticConfigPath": "https://raw.githubusercontent.com/egovernments/egov-services/vishal-feature-filestore/core/egov-indexer/src/main/resources/rainmaker-pgr-indexer.yml",
+            "mappings": [
+               {
+                  "direct": [
+                     {
+                        "variable": "variable1",
                         "value": {
-                           "path": "$.paymentInfo.bankName"
+                           "path": "$.applicantDetail.name"
                         }
                      },
-                      {
-                         "variable": "variable75",
-                         "value": {
-                            "path": "$.paymentInfo.paymentItemExtraColumnLabel"
-                         }
-                      },
-                      {
-                         "variable": "variable76",
-                         "url":"https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
-                         "type":"image"
-                      },
-                      {
-                         "variable": "receiptNo",
-                         "value": {
-                            "path": "$.paymentInfo.receiptNo"
-                         }
-                      },
-                      {
-                         "variable": "paymentMode",
-                         "value": {
-                            "path": "$.paymentInfo.paymentMode"
-                         }
-                      },
-                      {
-                         "variable": "cleaningCharges",
-                         "value": {
-                            "path": "$.paymentInfo.cleaningCharges"
-                         }
-                      },
-                      {
-                         "variable": "surcharges",
-                         "value": {
-                            "path": "$.paymentInfo.surcharges"
-                         }
-                      },
-                      {
-                         "variable": "facilitationCharge",
-                         "value": {
-                            "path": "$.paymentInfo.facilitationCharge"
-                         }
-                      },
-                      {
-                         "variable": "utgst",
-                         "value": {
-                            "path": "$.paymentInfo.utgst"
-                         }
-                      },
-                      {
-                         "variable": "cgst",
-                         "value": {
-                            "path": "$.paymentInfo.cgst"
-                         }
-                      },
-                      {
-                         "variable": "payerName",
-                         "value": {
-                            "path": "$.payerInfo.payerName"
-                         }
-                      },
-                      {
-                         "variable": "payerMobile",
-                         "value": {
-                            "path": "$.payerInfo.payerMobile"
-                         }
-                      },
-                      {
-                        "variable": "generatedBy",
+                     {
+                        "variable": "variable2",
                         "value": {
-                           "path": "$.generatedBy.generatedBy"
+                           "path": "$.applicantDetail.mobileNumber"
                         }
-                     }
-                   ]
-                }
-             ]
-          }
-       ]
-    }
- }
- 
+                     },
+                     {
+                        "variable": "variable3",
+                        "value": {
+                           "path": "$.applicantDetail.houseNo"
+                        }
+                     },
+                     {
+                        "variable": "variable4",
+                        "value": {
+                           "path": "$.applicantDetail.permanentAddress"
+                        }
+                     },
+                     {
+                        "variable": "variable5",
+                        "value": {
+                           "path": "$.applicantDetail.sector"
+                        }
+                     },
+                     {
+                        "variable": "variable6",
+                        "value": {
+                           "path": "$.booking.bkApplicationNumber"
+                        }
+                     },
+                     {
+                        "variable": "variable7",
+                        "value": {
+                           "path": "$.paymentInfo.paymentDate"
+                        }
+                     },
+                     {
+                        "variable": "variable8",
+                        "value": {
+                           "path": "$.paymentInfo.transactionId"
+                        }
+                     },
+                     {
+                        "variable": "variable8",
+                        "value": {
+                           "path": "$.paymentInfo.transactionId"
+                        }
+                     },
+                     {
+                        "variable": "variable9",
+                        "value": {
+                           "path": "$.paymentInfo.bookingPeriod"
+                        }
+                     },
+                     {
+                        "variable": "variable10",
+                        "value": {
+                           "path": "$.paymentInfo.bookingItem"
+                        }
+                     },
+                     {
+                        "variable": "variable11",
+                        "value": {
+                           "path": "$.paymentInfo.baseCharge"
+                        }
+                     },
+                     {
+                        "variable": "variable12",
+                        "value": {
+                           "path": "$.paymentInfo.gst"
+                        }
+                     },
+                     {
+                        "variable": "variable13",
+                        "value": {
+                           "path": "$.paymentInfo.totalAmount"
+                        }
+                     },
+                     {
+                        "variable": "variable14",
+                        "value": {
+                           "path": "$.paymentInfo.amountInWords"
+                        }
+                     },
+                     {
+                       "variable": "bankName",
+                       "value": {
+                          "path": "$.paymentInfo.bankName"
+                       }
+                    },
+                     {
+                        "variable": "variable75",
+                        "value": {
+                           "path": "$.paymentInfo.paymentItemExtraColumnLabel"
+                        }
+                     },
+                     {
+                        "variable": "variable76",
+                        "url":"https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
+                        "type":"image"
+                     },
+                     {
+                        "variable": "receiptNo",
+                        "value": {
+                           "path": "$.paymentInfo.receiptNo"
+                        }
+                     },
+                     {
+                        "variable": "paymentMode",
+                        "value": {
+                           "path": "$.paymentInfo.paymentMode"
+                        }
+                     },
+                     {
+                        "variable": "cleaningCharges",
+                        "value": {
+                           "path": "$.paymentInfo.cleaningCharges"
+                        }
+                     },
+                     {
+                        "variable": "surcharges",
+                        "value": {
+                           "path": "$.paymentInfo.surcharges"
+                        }
+                     },
+                     {
+                        "variable": "facilitationCharge",
+                        "value": {
+                           "path": "$.paymentInfo.facilitationCharge"
+                        }
+                     },
+                     {
+                        "variable": "utgst",
+                        "value": {
+                           "path": "$.paymentInfo.utgst"
+                        }
+                     },
+                     {
+                        "variable": "cgst",
+                        "value": {
+                           "path": "$.paymentInfo.cgst"
+                        }
+                     },
+                     {
+                        "variable": "payerName",
+                        "value": {
+                           "path": "$.payerInfo.payerName"
+                        }
+                     },
+                     {
+                        "variable": "payerMobile",
+                        "value": {
+                           "path": "$.payerInfo.payerMobile"
+                        }
+                     },
+                     {
+                       "variable": "generatedBy",
+                       "value": {
+                          "path": "$.generatedBy.generatedBy"
+                       }
+                    }
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}

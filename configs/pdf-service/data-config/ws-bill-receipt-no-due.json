@@ -1,0 +1,100 @@
+{
+   "key":"ws-bill-receipt-no-due",
+    "DataConfigs": {
+       "serviceName": "rainmaker-ws",
+       "version": "1.0.0",
+      "baseKeyPath": "$.WSReceiptRequest.*",
+       "entityIdPath":"$",
+       "isCommonTableBorderRequired":true,
+       "mappings": [
+          {
+             "topic": "tl-pdf-generation",
+             "staticConfigPath": "https://raw.githubusercontent.com/egovernments/egov-services/vishal-feature-filestore/core/egov-indexer/src/main/resources/rainmaker-pgr-indexer.yml",
+             "mappings": [
+                {
+                   "direct": [ 
+                     {
+                        "variable": "variable33",                        
+                        "url":"http://mcchandigarh.gov.in/sites/default/files/mc-chandigardh-logo.png",
+                        "type":"image"
+                     },
+                     {
+                        "variable": "applicationNo",
+                        "value": {
+                             "path":"$.applicationNo"                              
+                        }
+                     }, 
+                     {
+                        "variable": "dated",
+                        "value": {
+                             "path":"$.dated"                              
+                        }
+                     } , 					 
+                     {
+                        "variable": "applicantName",
+                        "value": {
+                             "path":"$.applicantName"                              
+                        }
+                     }, 
+                     {
+                        "variable": "houseNo",
+                        "value": {
+                             "path":"$.houseNo"                              
+                        }
+                     } , 
+                     {
+                        "variable": "plotNo",
+                        "value": {
+                             "path":"$.plotNo"                              
+                        }
+                     } , 
+                     {
+                        "variable": "sector",
+                        "value": {
+                             "path":"$.sector"                              
+                        } 
+                     },  
+                     {
+                        "variable": "upto",
+                        "value": {
+                             "path":"$.upto"                              
+                        }
+                     }, 
+					  {
+                        "variable": "rs",
+                        "value": {
+                             "path":"$.rs"                              
+                        }
+                     }, 
+                     {
+                        "variable": "accountNo",
+                        "value": {
+                             "path":"$.accountNo"                              
+                        }
+                     }, 
+                     {
+                        "variable": "receiptNo",
+                        "value": {
+                             "path":"$.receiptNo"                              
+                        }
+                     }, 
+                     {
+                        "variable": "date",
+                        "value": {
+                             "path":"$.date"                              
+                        }
+                     }, 
+                     {
+                        "variable": "division",
+                        "value": {
+                             "path":"$.division"                              
+                        }
+                     }
+                   ]
+                }
+               
+             ]
+          }
+       ]
+    }
+ }

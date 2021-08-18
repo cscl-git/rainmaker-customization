@@ -164,7 +164,19 @@
                         "variable": "pdfLogo",
                         "url":"https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
                         "type":"image"
-                     }
+                     },
+                     {
+                        "variable": "qty",
+                        "value": {
+                           "path": "$.feeDetail.wtQuantity"
+                        }
+                      },
+                      {
+                        "variable": "wtT",
+                        "value": {
+                           "path": "$.feeDetail.wtTotalPayment"
+                        }
+                      }
 
                   ]
                }

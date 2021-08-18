@@ -1,0 +1,109 @@
+{
+    "key": "nulm-certificate-alf",
+    "DataConfigs": {
+      "serviceName": "rainmaker-nulm",
+      "version": "1.0.0",
+      "baseKeyPath": "$.ALFApplication.*",
+    "entityIdPath": "$.applicationId",
+      "isCommonTableBorderRequired": true,
+      "mappings": [
+        {
+          "mappings": [
+            {
+              "direct": [
+               {
+                "variable": "ulbLogo",                        
+                "url":"https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
+                "type":"image"
+                },
+              
+                 {
+                    "variable": "corporation_name",
+                    "value": {
+                        "path": "$.corporationName"
+                    }
+                },
+                 {
+                    "variable": "corporation_address",
+                    "value": {
+                        "path": "$.corporationAddress"
+                    }
+                },
+                   {
+                "variable": "applicationId",
+                "value": {
+                  "path": "$.id"
+                }
+              },
+			  {
+                "variable": "applicationStatus",
+                "value": {
+                  "path": "$.applicationStatus"
+                }
+              },
+                 {
+                "variable": "name",
+                "value": {
+                  "path": "$.name"
+                }
+              },
+			  {
+                "variable": "date_of_formation",
+                "value": {
+                  "path": "$.date_of_formation"
+                }
+              },{
+                "variable": "address",
+                "value": {
+                  "path": "$.address"
+                }
+              },
+			  {
+                "variable": "contact_number",
+                "value": {
+                  "path": "$.contact_number"
+                }
+              },
+			  {
+                "variable": "bank_name",
+                "value": {
+                  "path": "$.bank_name"
+                }
+              },
+			   {
+                "variable": "branch_name",
+                "value": {
+                  "path": "$.branch_name"
+                }
+              }, {
+                "variable": "account_number",
+                "value": {
+                  "path": "$.account_number"
+                }
+              },
+			  {
+                "variable": "alf_formated_through",
+                "value": {
+                  "path": "$.alf_formated_through"
+                }
+              },
+			   {
+                "variable": "adhaar_number",
+                "value": {
+                  "path": "$.adhaar_number"
+                }
+              },
+			   {
+                "variable": "date_of_opening_account",
+                "value": {
+                  "path": "$.date_of_opening_account"
+                }
+              }
+			  
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }

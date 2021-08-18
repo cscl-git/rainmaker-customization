@@ -1,0 +1,1378 @@
+{
+      "key": "nulm-certificate-suh",
+    "config": {
+    "defaultStyle": {
+      "font": "Cambay"
+     },
+    "content": [
+      {
+        "table": {
+          "widths": [80, "*"],
+          "body": [
+            [
+              {
+                "image": "{{ulbLogo}}",
+                "width": 80,
+                "margin": [-6, 0, 0, 0]
+              },
+              {
+                "stack": [
+                  {
+                    "text": "{{corporation_name}}",
+                    "style": "receipt-logo-header",
+                    "margin": [0, 0, 0, 0]
+                  },
+                  {
+                    "text": "{{corporation_address}}",
+                    "style": "receipt-logo-sub-text",
+                    "margin": [0, 5, 0, 0]
+                  }
+                ],
+                "alignment": "center",
+                "margin": [-20, 0, 0, 0]
+              }
+            ]
+          ]
+        },
+        "margin": [0, -25, 0, 0],
+        "layout": "noBorders"
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Application No"
+          },
+		  {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+			"text": "{{applicationId}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text": "Application Status"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{applicationStatus}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Name of Shelter"
+          },
+		  {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+			"text": "{{nameOfShelter}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Address"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{address}}"
+          }
+        ]
+      },
+	   {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Shelter Background"
+          },
+		  {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+			"text":  "{{shelterBackground}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Category" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{category}}"
+          }
+        ]
+      },
+	  	   {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text":  "All Weather Conditioned Classification"
+          },
+		  {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+			"text":  "{{weatherCondition}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":"Classification of Shelter"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text":"{{shelterClassification}}"
+          }
+        ]
+      },
+	   {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Any Other Classification" 
+          },
+		  {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+			"text": "{{otherClassification}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Ownership"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{ownership}}"
+          },
+		   {
+            "width": 10,
+            "text": ""
+          }
+        ]
+      },
+    {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Operation & Management of Shelters" 
+          },
+		  {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+			"text": "{{operationAndManagementOfShelters}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Area (sq. Ft.)"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{area}}"
+          }
+        ]
+      },
+    {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Capacity (no. Of beds)" 
+          },
+		  {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+			"text": "{{capacity}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Assign To"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{assignedTo}}"
+          }
+        ]
+      },
+	 {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+		  {
+            "width": 150,
+			 "style": "header",
+            "text": "Facilities Available"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Bedding" 
+          },
+		  
+          {
+            "width": 100,
+			"text": "{{isBedding}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{beddingRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Washing of Linen" 
+          },
+          {
+            "width": 100,
+			"text": "{{isWashingOfLinen}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{washingOfLinenRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Cleaning of Premises on Regular Basis  " 
+          },
+		  
+          {
+            "width": 100,
+			"text": "{{isCleaningOfPremises}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{cleaningOfPremiseRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Recreation Facilities (Television, Indoor Sports, Newspapers, Books)" 
+          },
+          {
+            "width": 100,
+			"text": "{{isRecreationfacilities}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{recreationfacilitiesRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Drinking Water Fridge/Camphor/Dispenser" 
+          },
+		  
+          {
+            "width": 100,
+			"text": "{{isDrinkingWater}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{drinkingWaterRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Meals" 
+          },
+		  
+          {
+            "width": 100,
+			"text": "{{isMeals}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{mealsRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Locker for Inmates" 
+          },
+          {
+            "width": 100,
+			"text": "{{isLockerForInmates}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{lockerForInmatetRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Fire Safety Measure" 
+          },
+          {
+            "width": 100,
+			"text": "{{isFireSafetyMeasure}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{fireSafetyMeasureRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Office Set Up" 
+          },
+          {
+            "width": 100,
+			"text": "{{isOfficeSetUp}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{officeSetUpRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "First Aid Kit & Training to Staff" 
+          },
+          {
+            "width": 100,
+			"text": "{{isFirstAidKitAndTrainingToStaff}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{firstAidKitAndTrainingToStaffRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Display of Emergency Numbers" 
+          },
+          {
+            "width": 100,
+			"text": "{{isDisplayOfEmergencyNumbers}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{displayOfEmergencyNumbersRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Toilet" 
+          },
+          {
+            "width": 100,
+			"text": "{{isToilet}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{toiletRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+		  {
+            "width": 150,
+			 "style": "header",
+            "text": "Record Maintenance"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Asset Inventory Register" 
+          },
+          {
+            "width": 100,
+			"text": "{{isAssetInventoryRegister}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{assetInventoryRegisterRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 145,
+            "text": "Account Register/Cash Book of Receipts" 
+          },
+		  {
+            "width": 5,
+            "text": "" 
+          },
+          {
+            "width": 100,
+			"text": "{{isAccountRegister}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{accountRegisterRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 145,
+            "text": "Attendance Register of Staff" 
+          },
+		  {
+            "width": 5,
+            "text": "" 
+          },
+          {
+            "width": 100,
+			"text": "{{isAttendanceRegisterOfStaff}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{attendanceRegisterOfStaffRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Shelter Management Committee Register" 
+          },
+          {
+            "width": 100,
+			"text": "{{isShelterManagementCommitteeRegister}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{shelterManagementCommitteeRegisteRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Personnel Register and Salary Register" 
+          },
+          {
+            "width": 100,
+			"text": "{{isPersonnelAndSalaryRegister}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{personnelAndSalaryRegisterRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Housekeeping and Maintenance Register" 
+          },
+          {
+            "width": 100,
+			"text": "{{isHousekeepingAndMaintenanceRegister}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{housekeepingAndMaintenanceRegisterRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Complaint and Suggestion Register" 
+          },
+          {
+            "width": 100,
+			"text": "{{isComplaintAndSuggestionRegister}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{complaintAndSuggestionRegisterRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Visitor Register" 
+          },
+          {
+            "width": 100,
+			"text": "{{isVisitorRegister}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{visitorRegisterRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Profile Register" 
+          },
+          {
+            "width": 100,
+			"text": "{{isProfileRegister}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{profileRegisterRemarks}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+		  {
+            "width": 150,
+			 "style": "header",
+            "text": "Staff"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Manager" 
+          },
+          {
+            "width": 100,
+			"text": "{{isManager}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{managerRemark}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Security Staff" 
+          },
+          {
+            "width": 100,
+			"text": "{{isSecurityStaff}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{securityStaffRemark}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Cleaner" 
+          },
+          {
+            "width": 100,
+			"text": "{{isCleaner}}" 
+          },
+		    {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{cleanerRemark}}"
+          }
+        ]
+      },
+	  
+	   {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+		  {
+            "width": 150,
+			 "style": "header",
+            "text": "Other Details"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Constitution of Shelter Management Committee" 
+          },
+          {
+            "width": 100,
+			"text": "{{isConstitutionOfShelterManagementCommittee}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{constitutionOfShelterManagementCommitteeRemark}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Social Audit of Shelter" 
+          },
+          {
+            "width": 100,
+			"text": "{{isSocialAudit}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{socialAuditRemark}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Linkage to Central Govt. Welfare Schemes" 
+          },
+          {
+            "width": 100,
+			"text": "{{isLinkageToCentralGovtWelfareSchemes}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{linkageToCentralGovtWelfareSchemesRemark}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Linkage to Public Health Initiatives" 
+          },
+          {
+            "width": 100,
+			"text": "{{isLinkageToPublicHealthInitiatives}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{linkageToPublicHealthInitiativesRemark}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Linkage to Other Govt. Schemes on Education, Swachhata Abhiyan etc." 
+          },
+          {
+            "width": 100,
+			"text": "{{isLinkageToOtherGovtSchemes}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{linkageToOtherGovtSchemesRemark}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 145,
+            "text": "Linkage to Local Community" 
+          },
+		  {
+            "width": 5,
+            "text": "" 
+          },
+          {
+            "width": 100,
+			"text": "{{isLinkageToLocalCommunity}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{linkageToLocalCommunityRemark}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Linkage to Social Workers and Philanthropists" 
+          },
+          {
+            "width": 100,
+			"text": "{{isLinkageToSocialWorkersAndPhilanthropists}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{linkageToSocialWorkersAndPhilanthropistsRemark}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "User Charges" 
+          },
+          {
+            "width": 100,
+			"text": "{{isUserCharges}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{userChargesRemark}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "IEC and Promotional Initiatives" 
+          },
+          {
+            "width": 100,
+			"text": "{{isIECAndPromotionalInitiatives}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{iecAndPromotionalInitiativesRemark}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Quarterly Reporting" 
+          },
+          {
+            "width": 100,
+			"text": "{{isQuarterlyReporting}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{quarterlyReportingRemark}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 150,
+            "text": "Visits by local Ward Legislative Members/Administrative Officers" 
+          },
+          {
+            "width": 100,
+			"text": "{{isVisits}}" 
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{visitsRemark}}"
+          }
+        ]
+      }
+	  ],
+
+    "styles": {
+      "nulm-certificate-data-2": {
+        "margin": [0, 8, 0, 0]
+      },
+	"header": {
+        "color": "#1E1E1E",
+        "fontSize": 14,
+        "bold": true,
+        "letterSpacing": 0.74
+      },
+      "receipt-logo-header": {
+        "color": "#1E1E1E",
+        "fontSize": 18,
+        "bold": true,
+        "letterSpacing": 0.74
+      },
+	  "header": {
+        "color": "#1E1E1E",
+        "fontSize": 14,
+        "bold": true,
+        "letterSpacing": 0.74
+      },
+      "receipt-logo-sub-text": {
+        "color": "#656565",
+        "fontSize": 14,
+        "letterSpacing": 0.74
+      }
+    }
+  }
+}

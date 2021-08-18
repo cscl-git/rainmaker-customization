@@ -123,9 +123,9 @@
                             {
                                 "variable": "applicationNumber",
                                 "value": {
-                                    "path": "$.bookingDetails.applicationNumber"
+                                   "path": "$.bookingDetails.applicationNumber"
                                 }
-                            },
+                             },
                             {
                                 "variable": "clCharge",
                                 "value": {
@@ -267,6 +267,44 @@
                                 "variable": "rIFSCCode",
                                 "value": {
                                     "path": "$.bankInfo.rIFSCCode"
+                                }
+                            },
+                            {
+                                "variable": "NomName",
+                                "value": {
+                                    "path": "$.bankInfo.nomName"
+                                }
+                            },
+                            {
+                               "variable": "currentDate",
+                               "value": {
+                                  "path": "$.paymentInfo.currentDate"
+                               }
+                            }, {
+                               "variable": "chequeNo",
+                               "value": {
+                                  "path": "$.paymentInfo.chequeNo"
+                               }
+                            }, {
+                               "variable": "chequeDate",
+                               "value": {
+                                  "path": "$.paymentInfo.chequeDate"
+                               }
+                            }, {
+                               "variable": "demandDraftNo",
+                               "value": {
+                                  "path": "$.paymentInfo.demandDraftNo"
+                               }
+                            }, {
+                               "variable": "demandDraftDate",
+                               "value": {
+                                  "path": "$.paymentInfo.demandDraftDate"
+                               }
+                            },
+                             {
+                                "variable": "transactionId",
+                                "value": {
+                                    "path": "$.paymentInfo.transactionId"
                                 }
                             }
                         ]

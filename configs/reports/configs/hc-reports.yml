@@ -50,7 +50,7 @@ ReportDefinitions:
     source: hc
     total: true	
   query: |
-    SELECT service_request_id,createdtime as requestDate, owner_name, service_type, replace(cast(servicerequestsubtype -> 'subservicetype' as VARCHAR),'"','') as servicerequestsubtype, locality,  service_request_status as status, description,(case when current_assignee ~ '^[0-9\.]' then (SELECT username as name
+    SELECT service_request_id,createdtime as requestDate, owner_name, service_type, replace(cast(servicerequestsubtype -> 'subservicetype' as VARCHAR),'"','') as servicerequestsubtype, locality,  service_request_status as status, description,(case when current_assignee ~ '^[0-9\.]' then (SELECT name as name
       FROM eg_user  where id::varchar=current_assignee) else current_assignee end )  FROM public.eg_hc_service_request 
     WHERE  eg_hc_service_request.createdtime >= $fromDate AND eg_hc_service_request.createdtime <= $toDate	AND service_request_id=(case when $serviceRequestId  <>'' then $serviceRequestId  else service_request_id end)  
     and service_type=(case when $serviceType  <>'' then $serviceType  else service_type end) and      COALESCE( replace(cast(servicerequestsubtype -> 'subservicetype' as VARCHAR),'"','')::varchar, '')= 

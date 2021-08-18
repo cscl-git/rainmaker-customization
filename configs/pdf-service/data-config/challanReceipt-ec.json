@@ -9,7 +9,13 @@
 		"isCommonTableBorderRequired": true,
 		"mappings": [{			
 			"mappings": [{
-				"direct": [{
+				"direct": [
+					{
+					"variable": "ulbLogo",                        
+					"url":"https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
+					"type":"image"
+					},
+					{
 						"variable": "variable1",
 						"value": {
 							"path": "$.receiptNo"
@@ -50,7 +56,27 @@
 						"value": {
 							"path": "$.memoNo"
 						}
-					}
+					},
+					{
+                "variable": "variable8",
+                "value": {
+                  "path": "$.itemDetails.*"
+                },
+                "type": "array",
+                "format": {
+                  "type": "string",
+                  "scema": [
+                    {
+                      "variable": "itemName",
+                      "value": "itemName"
+                    },
+					{
+                      "variable": "quantity",
+                      "value": "quantity"
+                    }
+                  ]
+                }
+              }
 				]
 			}]
 		}]

@@ -9,7 +9,13 @@
 		"isCommonTableBorderRequired": true,
 		"mappings": [{			
 			"mappings": [{
-				"direct": [{
+				"direct": [
+					{
+					"variable": "ulbLogo",                        
+					"url":"https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
+					"type":"image"
+					},
+					{
 						"variable": "variable1",
 						"value": {
 							"path": "$.receiptNo"

@@ -101,7 +101,7 @@
                     },
                     {
                         "text": "{{paymentDate}}",
-                        "width": 85,
+                        "width": "auto",
                         "margin": [
                             2,
                             15,
@@ -644,10 +644,32 @@
                         "bold": true
                     },
                     {
-                        "text": "{{totalPayment}}",
+                        "text": " : ",
                         "width": "auto",
                         "margin": [
                             5,
+                            10,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "Rs. ",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            10,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{totalPayment}}",
+                        "width": "auto",
+                        "margin": [
+                            3,
                             10,
                             0,
                             0
@@ -734,7 +756,16 @@
                     {
                         "text": "{{rIFSCCode}}",
                         "width": "auto"
-                    }
+                    },
+                    {
+                       "text": "     Nominee Name : ",
+                       "width": "auto",
+                       "bold": true
+                   },
+                   {
+                       "text": "{{NomName}}",
+                       "width": "auto"
+                   }
                 ]
             }
         ],

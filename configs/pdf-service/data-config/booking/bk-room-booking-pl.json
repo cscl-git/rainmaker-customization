@@ -250,6 +250,12 @@
                                 "value": {
                                     "path": "$.bankInfo.rIFSCCode"
                                 }
+                            },
+                            {
+                                "variable": "NomName",
+                                "value": {
+                                    "path": "$.bankInfo.nomName"
+                                }
                             }
                         ]
                     }

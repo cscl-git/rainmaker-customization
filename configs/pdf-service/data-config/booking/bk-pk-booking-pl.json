@@ -1,242 +1,248 @@
 {
     "key": "bk-pk-booking-pl",
     "DataConfigs": {
-        "serviceName": "rainmaker-bk",
-        "version": "1.0.0",
-        "baseKeyPath": "$.BookingInfo.*",
-        "entityIdPath": "$.bookingDetail.applicationNumber",
-        "isCommonTableBorderRequired": true,
-        "mappings": [
-            {
-                "topic": "bk-pdf-generation",
-                "mappings": [
-                    {
-                        "direct": [
-                            {
-                                "variable": "dateVenueChangeCharges",
-                                "value": {
-                                    "path": "$.paymentInfo.dateVenueChangeCharges"
-                                }
-                            },
-                            {
-                                "variable": "municipalityName",
-                                "value": {
-                                    "path": "$.tenantInfo.municipalityName"
-                                }
-                            },
-                            {
-                                "variable": "municipalityAddress",
-                                "value": {
-                                    "path": "$.tenantInfo.address"
-                                }
-                            },
-                            {
-                                "variable": "municipalityContact",
-                                "value": {
-                                    "path": "$.tenantInfo.contactNumber"
-                                }
-                            },
-                            {
-                                "variable": "municipalityWebSite",
-                                "value": {
-                                    "path": "$.tenantInfo.webSite"
-                                }
-                            },
-                            {
-                                "variable": "applicantName",
-                                "value": {
-                                    "path": "$.applicantDetail.name"
-                                }
-                            },
-                            {
-                                "variable": "applicantAddress1",
-                                "value": {
-                                    "path": "$.applicantDetail.permanentAddress"
-                                }
-                            },
-                            {
-                                "variable": "applicantAddress2",
-                                "value": {
-                                    "path": "$.applicantDetail.permanentCity"
-                                }
-                            },
-                            {
-                                "variable": "receiptNo",
-                                "value": {
-                                    "path": "$.paymentInfo.receiptNo"
-                                }
-                            },
-                            {
-                                "variable": "venueName",
-                                "value": {
-                                    "path": "$.bookingDetail.venueName"
-                                }
-                            },
-                            {
-                                "variable": "bookingPurpose",
-                                "value": {
-                                    "path": "$.bookingDetail.bookingPurpose"
-                                }
-                            },
-                            {
-                                "variable": "venueSector",
-                                "value": {
-                                    "path": "$.bookingDetail.sector"
-                                }
-                            },
-                            {
-                                "variable": "applicationNumber",
-                                "value": {
-                                    "path": "$.bookingDetail.applicationNumber"
-                                }
-                            },
-                            {
-                                "variable": "clCharge",
-                                "value": {
-                                    "path": "$.paymentInfo.cleaningCharges"
-                                }
-                            },
-                            {
-                                "variable": "baseCharge",
-                                "value": {
-                                    "path": "$.paymentInfo.baseCharge"
-                                }
-                            },
-                            {
-                                "variable": "cgst",
-                                "value": {
-                                    "path": "$.paymentInfo.cgst"
-                                }
-                            },
-                            {
-                                "variable": "utgst",
-                                "value": {
-                                    "path": "$.paymentInfo.utgst"
-                                }
-                            },
-                            {
-                                "variable": "tgst",
-                                "value": {
-                                    "path": "$.paymentInfo.totalgst"
-                                }
-                            },
-                            {
-                                "variable": "refundableCharges",
-                                "value": {
-                                    "path": "$.paymentInfo.refundableCharges"
-                                }
-                            },
-                            {
-                                "variable": "custGSTN",
-                                "value": {
-                                    "path": "$.paymentInfo.custGSTN"
-                                }
-                            },
-                            {
-                                "variable": "mcGSTN",
-                                "value": {
-                                    "path": "$.paymentInfo.mcGSTN"
-                                }
-                            },
-                            {
-                                "variable": "placeOfService",
-                                "value": {
-                                    "path": "$.applicantDetail.placeOfService"
-                                }
-                            },
-                            {
-                                "variable": "stateCode",
-                                "value": {
-                                    "path": "$.bookingDetail.statecode"
-                                }
-                            },
-                            {
-                                "variable": "hsnCode",
-                                "value": {
-                                    "path": "$.bookingDetail.hsncode"
-                                }
-                            },
-                            {
-                                "variable": "totalPayment",
-                                "value": {
-                                    "path": "$.paymentInfo.totalPayment"
-                                }
-                            },
-                            {
-                                "variable": "paymentDate",
-                                "value": {
-                                    "path": "$.paymentInfo.paymentDate"
-                                }
-                            },
-                            {
-                                "variable": "applicationDate",
-                                "value": {
-                                    "path": "$.bookingDetail.applicationDate"
-                                }
-                            },
-                            {
-                                "variable": "bookingPeriod",
-                                "value": {
-                                    "path": "$.bookingDetail.bookingPeriod"
-                                }
-                            },
-                            {
-                                "variable": "bookingType",
-                                "value": {
-                                    "path": "$.bookingDetail.bookingType"
-                                }
-                            },
-                            {
-                                "variable": "generatedBy",
-                                "value": {
-                                    "path": "$.generatedBy.generatedBy"
-                                }
-                            },
-                            {
-                                "variable": "pdfLogo",
-                                "url": "https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
-                                "type": "image"
-                            },
-                            {
-                                "variable": "approvedBy",
-                                "value": {
-                                    "path": "$.approvedBy.approvedBy"
-                                }
-                            },
-                            {
-                                "variable": "approvedByRole",
-                                "value": {
-                                    "path": "$.approvedBy.role"
-                                }
-                            },
-                            {
-                                "variable": "accountholderName",
-                                "value": {
-                                    "path": "$.bankInfo.accountholderName"
-                                }
-                            },
-                            {
-                                "variable": "rBankName",
-                                "value": {
-                                    "path": "$.bankInfo.rBankName"
-                                }
-                            },
-                            {
-                                "variable": "rBankACNo",
-                                "value": {
-                                    "path": "$.bankInfo.rBankACNo"
-                                }
-                            },
-                            {
-                                "variable": "rIFSCCode",
-                                "value": {
-                                    "path": "$.bankInfo.rIFSCCode"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
+       "serviceName": "rainmaker-bk",
+       "version": "1.0.0",
+       "baseKeyPath": "$.BookingInfo.*",
+       "entityIdPath": "$.bookingDetail.applicationNumber",
+       "isCommonTableBorderRequired": true,
+       "mappings": [
+          {
+             "topic": "bk-pdf-generation",
+             "mappings": [
+                {
+                   "direct": [
+                      {
+                         "variable": "dateVenueChangeCharges",
+                         "value": {
+                            "path": "$.paymentInfo.dateVenueChangeCharges"
+                         }
+                      },
+                      {
+                         "variable": "municipalityName",
+                         "value": {
+                            "path": "$.tenantInfo.municipalityName"
+                         }
+                      },
+                      {
+                         "variable": "municipalityAddress",
+                         "value": {
+                            "path": "$.tenantInfo.address"
+                         }
+                      },
+                      {
+                         "variable": "municipalityContact",
+                         "value": {
+                            "path": "$.tenantInfo.contactNumber"
+                         }
+                      },
+                      {
+                         "variable": "municipalityWebSite",
+                         "value": {
+                            "path": "$.tenantInfo.webSite"
+                         }
+                      },
+                      {
+                         "variable": "applicantName",
+                         "value": {
+                            "path": "$.applicantDetail.name"
+                         }
+                      },
+                      {
+                         "variable": "applicantAddress1",
+                         "value": {
+                            "path": "$.applicantDetail.permanentAddress"
+                         }
+                      },
+                      {
+                         "variable": "applicantAddress2",
+                         "value": {
+                            "path": "$.applicantDetail.permanentCity"
+                         }
+                      },
+                      {
+                         "variable": "receiptNo",
+                         "value": {
+                            "path": "$.paymentInfo.receiptNo"
+                         }
+                      },
+                      {
+                         "variable": "venueName",
+                         "value": {
+                            "path": "$.bookingDetail.venueName"
+                         }
+                      },
+                      {
+                         "variable": "bookingPurpose",
+                         "value": {
+                            "path": "$.bookingDetail.bookingPurpose"
+                         }
+                      },
+                      {
+                         "variable": "venueSector",
+                         "value": {
+                            "path": "$.bookingDetail.sector"
+                         }
+                      },
+                      {
+                         "variable": "applicationNumber",
+                         "value": {
+                            "path": "$.bookingDetail.applicationNumber"
+                         }
+                      },
+                      {
+                         "variable": "clCharge",
+                         "value": {
+                            "path": "$.paymentInfo.cleaningCharges"
+                         }
+                      },
+                      {
+                         "variable": "baseCharge",
+                         "value": {
+                            "path": "$.paymentInfo.baseCharge"
+                         }
+                      },
+                      {
+                         "variable": "cgst",
+                         "value": {
+                            "path": "$.paymentInfo.cgst"
+                         }
+                      },
+                      {
+                         "variable": "utgst",
+                         "value": {
+                            "path": "$.paymentInfo.utgst"
+                         }
+                      },
+                      {
+                         "variable": "tgst",
+                         "value": {
+                            "path": "$.paymentInfo.totalgst"
+                         }
+                      },
+                      {
+                         "variable": "refundableCharges",
+                         "value": {
+                            "path": "$.paymentInfo.refundableCharges"
+                         }
+                      },
+                      {
+                         "variable": "custGSTN",
+                         "value": {
+                            "path": "$.paymentInfo.custGSTN"
+                         }
+                      },
+                      {
+                         "variable": "mcGSTN",
+                         "value": {
+                            "path": "$.paymentInfo.mcGSTN"
+                         }
+                      },
+                      {
+                         "variable": "placeOfService",
+                         "value": {
+                            "path": "$.applicantDetail.placeOfService"
+                         }
+                      },
+                      {
+                         "variable": "stateCode",
+                         "value": {
+                            "path": "$.bookingDetail.statecode"
+                         }
+                      },
+                      {
+                         "variable": "hsnCode",
+                         "value": {
+                            "path": "$.bookingDetail.hsncode"
+                         }
+                      },
+                      {
+                         "variable": "totalPayment",
+                         "value": {
+                            "path": "$.paymentInfo.totalPayment"
+                         }
+                      },
+                      {
+                         "variable": "paymentDate",
+                         "value": {
+                            "path": "$.paymentInfo.paymentDate"
+                         }
+                      },
+                      {
+                         "variable": "applicationDate",
+                         "value": {
+                            "path": "$.bookingDetail.applicationDate"
+                         }
+                      },
+                      {
+                         "variable": "bookingPeriod",
+                         "value": {
+                            "path": "$.bookingDetail.bookingPeriod"
+                         }
+                      },
+                      {
+                         "variable": "bookingType",
+                         "value": {
+                            "path": "$.bookingDetail.bookingType"
+                         }
+                      },
+                      {
+                         "variable": "generatedBy",
+                         "value": {
+                            "path": "$.generatedBy.generatedBy"
+                         }
+                      },
+                      {
+                         "variable": "pdfLogo",
+                         "url": "https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
+                         "type": "image"
+                      },
+                      {
+                         "variable": "approvedBy",
+                         "value": {
+                            "path": "$.approvedBy.approvedBy"
+                         }
+                      },
+                      {
+                         "variable": "approvedByRole",
+                         "value": {
+                            "path": "$.approvedBy.role"
+                         }
+                      },
+                      {
+                         "variable": "accountholderName",
+                         "value": {
+                            "path": "$.bankInfo.accountholderName"
+                         }
+                      },
+                      {
+                         "variable": "rBankName",
+                         "value": {
+                            "path": "$.bankInfo.rBankName"
+                         }
+                      },
+                      {
+                         "variable": "rBankACNo",
+                         "value": {
+                            "path": "$.bankInfo.rBankACNo"
+                         }
+                      },
+                      {
+                         "variable": "rIFSCCode",
+                         "value": {
+                            "path": "$.bankInfo.rIFSCCode"
+                         }
+                      },
+                      {
+                         "variable": "NomName",
+                         "value": {
+                             "path": "$.bankInfo.nomName"
+                         }
+                     }
+                   ]
+                }
+             ]
+          }
+       ]
     }
-}
+ }

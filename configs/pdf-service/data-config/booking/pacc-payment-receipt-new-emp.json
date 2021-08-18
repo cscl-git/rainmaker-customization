@@ -50,6 +50,12 @@
                         }
                      },
                      {
+                        "variable": "NomName",
+                        "value": {
+                           "path": "$.bankInfo.nomName"
+                        }
+                     },
+                     {
                         "variable": "samparkAdd",
                         "value": {
                            "path": "$.emp.address"
@@ -226,6 +232,36 @@
                         "variable": "currentDate",
                         "value": {
                            "path": "$.generated.date"
+                        }
+                     },
+                     {
+                        "variable": "currentDate",
+                        "value": {
+                           "path": "$.paymentInfo.currentDate"
+                        }
+                     },
+                     {
+                        "variable": "chequeNo",
+                        "value": {
+                           "path": "$.paymentInfo.chequeNo"
+                        }
+                     },
+                     {
+                        "variable": "chequeDate",
+                        "value": {
+                           "path": "$.paymentInfo.chequeDate"
+                        }
+                     },
+                     {
+                        "variable": "demandDraftNo",
+                        "value": {
+                           "path": "$.paymentInfo.demandDraftNo"
+                        }
+                     },
+                     {
+                        "variable": "demandDraftDate",
+                        "value": {
+                           "path": "$.paymentInfo.demandDraftDate"
                         }
                      }
                   ]

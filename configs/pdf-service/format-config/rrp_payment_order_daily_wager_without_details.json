@@ -1,0 +1,407 @@
+{
+	"key": "rrp_payment_order_daily_wager_without_details",
+
+
+	"config": {
+		"content": [
+
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "OFFICE OF COMMISSIONER, MUNICIPAL CORPORATION, CHANDIGARH",
+				"bold": true,
+				"alignment": "center"
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "No. {{application_number}}",
+				"bold": false,
+				"alignment": "left"
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Dated: {{date_today}}",
+				"bold": false,
+				"alignment": "right"
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "To",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "{{employee_name}}",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "{{permanent_address}}, {{permanent_city}}, {{permanent_pincode}}",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Pension Payment Order No. {{payment_order_number}}",
+				"bold": true,
+				"alignment": "center"
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Pension Payment Order in respect of {{employee_name}} S/o {{father_name}}, Ex-{{designation}}, Retired on: {{dor}}",
+				"bold": true,
+				"alignment": "center"
+			},
+
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "The date of birth as per office record of {{employee_name}} was {{dob}} and date of joining {{service_start_date}}. The qualifying period of service of {{employee_name}} has been approved for {{nqs_year}} years {{nqs_month}} months {{nqs_day}} days and the amount of DCRG not exceeding Rs.{{FINAL_CALCULATED_GRATUITY_amount}}/- on the basis of last pay drawn Rs.{{lpd}}/- and the amount of pension not exceeding to Rs.{{FINAL_CALCULATED_PENSION_amount}}/- are admissible under the Punjab revised pension rule 2009.",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Pension and all dues are/will be disbursed to Bank Account No. {{acc_number}} of {{bank_details}}.",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "P.P.O No. ____________________ may be referred in the future correspondence.",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Life pension certificate, employment/Non employment certificate may be submitted every year in the month of November.",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Account's Officer (P&PF)",
+				"bold": true,
+				"alignment": "right"
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Municipal Corporation",
+				"bold": true,
+				"alignment": "right"
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Chandigarh",
+				"bold": true,
+				"alignment": "right"
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Subject: Pension case of Shri/Smt. {{employee_name}} S/o {{father_name}} Designation: Ex-{{designation}} retired on {{dor}} from the {{department}} M.C. Chandigarh.",
+				"bold": true
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "The Pension case of {{employee_name}} S/o {{father_name}}, Ex-{{designation}}, Retired on {{dor}} has been received from the {{department}} on the subject cited above. ",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Brief history of the case that {{employee_name}} S/o {{father_name}} has joined in the Chandigarh Administration as Daily wage Ex-{{designation}} w.e.f. {{service_start_date}} and further he was transferred to the Municipal Corporation. He was retired on {{dor}} while working in the office of Municipal Corporation Chandigarh and {{employee_name}} has applied for Pension on the basis of judgement of Supreme Court That an appeal was also been filled in the Hon'ble Supreme court of India which was decided vide order dated 03-04-2014 and following orders were passed. In view of the judgement of Supreme Court of India the period of daily wage/work Charge service of the petitioner is required to be considered for the pensioner benefits in the old pension scheme prevailing before 01.01.2004.",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "However, we make it clear that if no post is available in the regular establishment, the employee may continue in the work charged establishment but they will be entitled to full salary which they are already drawing including dearness allowances and pensioner benefits to which they are entitled under the CPWD work charged establishment Manual and Rules. Those who have been already regularized in the regular establishment are entitle of the benefits of a regular employee of regular establishment including the gratuity and pension which they are entitle as per rules. Widows shall get the family pension. Those who have retired from service shall get pensionary benefits. The interim order dated 07-03-2005 passed by this court is vacated. The appellants are directed who have not yet been regularized and pay pension, if not yet made. The appeals are dismissed but with aforesaid directed to the appellants.",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "In view of the judgement of Supreme Court of India the period of daily wage/work Charge service of the petitioner is required to be considered for the pensioner benefits in the old pension scheme prevailing before 1.01.2004.",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Whereas the Finance. Department, Chandigarh Administration vide its letter dated 22-03-2013 has adopted the letter of Department of Finance (Finance pension policy and Coordination Branch), Govt. of Punjab letter No. 1/4/2011-4FPPC/154 dated 23-02-2012 regarding counting of daily wage service rendered before and after 01-01-2004 for pensioner benefits in favour of employees working in Chandigarh Administration on the same terms and Conditions.",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "The Chandigarh Administration, the department of Personnel, vide letter No. 25/64-IH(7)/2015/5459 dated 13-03-2015 and letter No. P2/015/824 dated 23-03-2015 forwarded a copy recommendation of the Committee Constituted under the Chairmanship of Finance Secretary-cum Secretary Engineering, held on 24-12-2014 for modification of existing instruction regarding regularization of daily wages/work charged employees which has been adopted by M.C Chandigarh.",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Further, As per office orders no 8726-31 dated 29-11-2018 the service of the retiree employee were deemed regularized on 29-11-2012 i.e. 1 day before his date of his death i.e. on 30-11-2012 . Sanction under section 79 (iii) (c) of the Punjab Municipal Corporation Act. 1976 (law extended to Chandigarh).",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Further the office dated 13-04-2018 issued by W/ Commissioner, Sh. Jitender Yadav, IAS Municipal Corporation Chandigarh vide Endst. No. CMC/Estt./E-IV/2018/3566 dated 19-04-2018. The decision taken at Sr. No. 27 of minutes of the meeting held under the Chairmanship of Secretary Personnel, Chandigarh Administration dated 08-08-2017 regarding Finance Secretary-cum-Secretary Engineering, U.T. Chandigarh on 19-06-2017 regarding demands raised by the employees, union federation, U. T Chandigarh issued vide Endst. No. 34/16/94-1H(11)-2017/22823 dated 19-09-2017, which is reproduced below:-",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "1. To release the pensionary benefits and other retiral benefits to the daily wage/work charge employees who were appointed before 01-01-2004 but their services have been regularized / to be regularized on or after 01-01-2004, subject to availability of funds and strictly in accordance with the policy guidelines of the Department of Personnel, Chandigarh Administration and to open their GPF accounts. ",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "2. The new pension scheme not be applicable to the such employees as referred in sub-para No.(i) above and therefore PRAN accounts of the employees already opened be got closed from NSDL and the amount be got transferred in the MC Bank Account. After that the employee share along with eamings thereon be got transferred to the employees GPF Accounts.",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "3. The leave salary contribution, gratuity contribution, pension contribution etc in respect of the service rendered by such employees as refer in sub-para No.(i) above in the Engineering Department of the Chandigarh Administration be claimed by the MC Chandigarh form the Engineering Department of the Chandigarh Administration.",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Accordingly, this office has prepared the case of Pension & Gratuity. However the pension to Daily wage is not concerned under pension rule, But to avoid litigation at later stage. If agreed, this office may have forwarded the pension case in respect of {{employee_name}} S/o {{father_name}}, Ex-{{designation}}, Retired on 30-11-2012.",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "In view of the facts explained to above, the following computation of Pension has been made as per calculation sheet placed below on the basis of Fifth pay Commission notifications issued by Punjab Government and further adopted by Chandigarh Administration and Municipal Corporation Chandigarh which is as under:",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Date of Birth: {{dob}}",
+				"bold": false
+
+
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Date of Joining: {{service_start_date}}",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Date of Retirement: {{dor}} ({{reason_for_retirement}})",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Gross Qualifying Service: {{gqs_year}}-{{gqs_month}}-{{gqs_day}}",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Non Qualifying Service: {{nonqs_year}}-{{nonqs_month}}-{{nonqs_day}}",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Net Qualifying Service: {{nqs_year}}-{{nqs_month}}-{{nqs_day}}",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Last Pay Drawn: Rs.{{lpd}}+{{IR_amount}} IR/-",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Basic Pension: Rs.{{BASIC_PENSION_amount}}/-",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Commutation (if opted): Rs.{{COMMUTED_PENSION_amount}}/-",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Final Calculated Pension: Rs.{{FINAL_CALCULATED_PENSION_amount}}/-",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Provisional Pension (in case of ongoing Judicial cases): Rs.{{PROVISIONAL_PENSION_amount}}/-",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Compassionate Pension (in case of misconduct): Rs.{{COMPASSIONATE_PENSION_amount}}/-",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Compensation Pension (in case of Abolition of post - if opted): Rs.{{COMPENSATION_PENSION_amount}}/-",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Invalid Pension (in case of disability): Rs.{{INVALID_PENSION_amount}}/-",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Wound or Extraordinary Pension (in case of disability): Rs.{{WOUND_EXTRAORDINARY_PENSION_amount}}/-",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Attendant Allowance (in case of disability): Rs.{{ATTENDANT_ALLOWANCE_amount}}/-",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Commutation Value (if opted): Rs.{{COMMUTATION_VALUE_amount}}/-",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "(Restoration after 15 years)",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Death-cum-retirement-gratuity: Rs.{{FINAL_CALCULATED_GRATUITY_amount}}/-",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Terminal Benefit (in case of Abolition of post - if opted): Rs.{{TERMINAL_BENEFIT_amount}}/-",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Ex-gratia (in case of disability): Rs.{{EX_GRATIA_amount}}/-",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Through Bank Details: {{bank_details}}, IFSC: {{bank_ifsc}}, A/c. No. {{acc_number}}",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "In view of the facts explained above the Additional Commissioner - III, MC may be requested to accord sanction to draw and disburse pension Rs.{{FINAL_CALCULATED_PENSION_amount}}/- from {{doc}}, Commutation (if opted) Rs.{{COMMUTATION_VALUE_amount}}/- and DCRG amounting Rs.{{FINAL_CALCULATED_GRATUITY_amount}}/- paid to {{employee_name}} & issue PPO order.",
+				"bold": false
+			},
+			{
+				"style": "pt-reciept-citizen-header",
+				"text": "Submitted for approval please.",
+				"bold": false
+			}
+		],
+		"footer": [{
+			"text": " ",
+			"style": "receipt-footer"
+		}],
+		"styles": {
+			"tl-head": {
+				"fillColor": "#F2F2F2",
+				"margin": [
+					-41,
+					-41,
+					-41,
+					0
+				]
+			},
+			"pt-reciept-citizen-header": {
+				"fontSize": 12,
+				"bold": true,
+				"margin": [
+					0,
+					8,
+					0,
+					0
+				],
+				"color": "#484848"
+			},
+			"pt-reciept-citizen-subheader": {
+				"fontSize": 10,
+				"bold": true,
+				"margin": [
+					0,
+					16,
+					0,
+					8
+				],
+				"color": "#484848"
+			},
+			"pt-reciept-citizen-table": {
+				"fontSize": 10,
+				"color": "#484848"
+			},
+			"receipt-assess-table": {
+				"fontSize": 10,
+				"color": "#484848",
+				"margin": [
+					0,
+					8,
+					0,
+					0
+				]
+			},
+			"receipt-assess-table-header": {
+				"bold": true,
+				"fillColor": "#D8D8D8",
+				"color": "#484848"
+			},
+			"receipt-header-details": {
+				"fontSize": 9,
+				"margin": [
+					0,
+					0,
+					0,
+					8
+				],
+				"color": "#484848"
+			},
+			"receipt-table-key": {
+				"color": "#484848",
+				"bold": true
+			},
+			"receipt-table-value": {
+				"color": "#484848"
+			},
+			"receipt-logo-header": {
+				"color": "#484848",
+				"fontFamily": "Roboto",
+				"fontSize": 16,
+				"bold": true,
+				"letterSpacing": 0.74
+			},
+			"receipt-logo-sub-header": {
+				"color": "#484848",
+				"fontFamily": "Roboto",
+				"fontSize": 13,
+				"letterSpacing": 1.6,
+				"margin": [
+					0,
+					6,
+					0,
+					0
+				]
+			},
+			"tableExample": {
+				"margin": [0, 5, 0, 5],
+				"fontSize": 12
+			},
+			"receipt-footer": {
+				"color": "#484848",
+				"fontSize": 8,
+				"margin": [
+					30,
+					-20,
+					0,
+					0
+				]
+			},
+			"receipt-no": {
+				"color": "#484848",
+				"fontSize": 10
+			},
+			"receipt-approver": {
+				"fontSize": 10,
+				"bold": true,
+				"margin": [
+					0,
+					60,
+					0,
+					8
+				],
+				"color": "#484848"
+			}
+		}
+	}
+}

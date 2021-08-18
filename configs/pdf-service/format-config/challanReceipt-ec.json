@@ -3,44 +3,52 @@
 	"config": {
 
 		"content": [
-			{
-				"text": "5161/MC Chd-Govt, Press, U.T., Chd.",
-				"alignment": "right",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					0,
-					0,
-					0
-				]
-			},
-			{
-				"text": "CHANDIGARH MUNICIPAL CORPORATION",
-				"alignment": "center",
-				"color": "#484848",
-				"fontSize": 12,
-				"bold": true,
-				"margin": [
-					0,
-					10,
-					0,
-					0
-				]
-			},
-			{
-				"text": "CHANDIGARH",
-				"alignment": "center",
-				"color": "#484848",
-				"fontSize": 12,
-				"bold": true,
-				"margin": [
-					0,
-					10,
-					0,
-					0
-				]
-			},
+		{
+        "table": {
+          "widths": [80, "*"],
+          "body": [
+            [
+              {
+                "image": "{{ulbLogo}}",
+                "width": 80,
+                "margin": [5,20, 0, 0]
+              },
+              {
+                "stack": [
+                  {
+                    "text": "5161/MC Chd-Govt, Press, U.T., Chd.",
+					"alignment": "right",
+					"color": "#484848",
+					"fontSize": 12,
+                    "margin": [0, 0, 0, 0]
+                  },
+                  {
+                  "text": "CHANDIGARH MUNICIPAL CORPORATION",
+					"alignment": "center",
+					"color": "#484848",
+					"fontSize": 12,
+					"bold": true,
+                    "margin": [0, 10, 0, 0]
+                  },
+				  {
+					 "text": "CHANDIGARH",
+					"alignment": "center",
+					"color": "#484848",
+					"fontSize": 12,
+					"bold": true,
+                    "margin": [0, 10, 0, 0]
+                  }
+                ],
+                "alignment": "center",
+                "margin": [-80,20, 0, 0]
+              }
+            ]
+          ]
+        },
+        "margin": [0, -25, 0, 0],
+        "layout": "noBorders"
+      },
+			
 			{
 				"text": "FINE AND REMOVING CHARGES",
 				"alignment": "center",
@@ -114,6 +122,56 @@
 					0
 				]
 			},
+			{
+			},
+			 {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+		  {
+            "width": 200,
+			"margin": [
+					0,
+					15,
+					0,
+					0
+				],
+			 "style": "header",
+            "text": "Seized Item Detail"
+          }
+        ]
+      },
+ 	 {
+        "style": "payslip-table1",
+        "table": {
+          "widths": [
+            "100%"
+          ],
+          "body": [
+            [
+              {
+                "table": {
+                  "headerRows": 1,
+                  "widths": [
+                  "50%",
+                  "48.5%"
+                  ],
+                  "body": [
+				  [ "{ \"text\":\"Item Name\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"},    { \"text\":\"Quantity\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}" ],
+				 "{{#variable8}}[ \"{ \"text\":\"{{itemName}}\", \"border\":[  true, true, true, true] ,\"style\": \"tm-sub-table-value\"},  { \"text\":\"{{quantity}}\", \"border\":[  true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}\" ]{{/variable8}}"
+                  ]
+                },
+                "border": [
+                  false,
+                  false,
+                  false,
+                  false
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": {}
+      },
 			{
 				"columns": [{
 						"width": 300,
@@ -208,6 +266,28 @@
 				"decoration": "underline",
 				"decorationColor": "#484848"
 			},
+			"tm-sub-table": {
+				"color": "#484848",
+				"fontSize": 13,
+				"alignment": "center"
+			},
+				"tm-sub-table-value": {
+				"color": "#484848",
+				"fontSize": 13,
+				"alignment": "center"
+			},
+			"header": {
+				"alignment": "left",
+				"color": "#484848",
+				"fontSize": 12,
+				"bold": false,
+				"margin": [
+					2,
+					1,
+					0,
+					0
+				]
+			  },
 			"receipt-footer": {
 				"color": "#484848",
 				"fontSize": 10,

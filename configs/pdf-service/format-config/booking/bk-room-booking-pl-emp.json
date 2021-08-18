@@ -71,12 +71,31 @@
                 ]
             },
             {
-                "text": "FROM"
+                "margin": [
+                    0,
+                    20,
+                    0,
+                    0
+                ],
+                "columns": [
+                    {
+                        "text": "FROM,",
+                        "width": 350
+                    },
+                    {
+                        "text": "Date : ",
+                        "width": "auto"
+                    },
+                    {
+                        "text": "{{paymentDate}}",
+                        "width": "auto"
+                    }
+                ]
             },
             {
                 "margin": [
                     40,
-                    5,
+                    -5,
                     0,
                     0
                 ],
@@ -376,6 +395,135 @@
                 ]
             },
             {
+                "columns": [
+                    {
+                        "text": "Transaction No : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            10,
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "text": "{{transactionId}}",
+                        "width": "auto",
+                        "bold": true,
+                        "margin": [
+                            5,
+                            10,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+               "columns": [
+                   {
+                       "text": "Cheque No : ",
+                       "width": "auto",
+                       "margin": [
+                           0,
+                           15,
+                           0,
+                           0
+                       ]
+                      
+                   },
+                   {
+                       "text": "{{chequeNo}}",
+                       "width": "auto",
+                       "bold": true,
+                       "margin": [
+                           5,
+                           15,
+                           0,
+                           0
+                       ]
+                   }
+               ]
+           },
+           {
+               "columns": [
+                   {
+                       "text": "Cheque Date : ",
+                       "width": "auto",
+                       "margin": [
+                           0,
+                           15,
+                           0,
+                           0
+                       ]
+                       
+                   },
+                   {
+                       "text": "{{chequeDate}}",
+                       "width": "auto",
+                        "bold": true,
+                       "margin": [
+                           5,
+                           15,
+                           0,
+                           0
+                       ]
+                   }
+               ]
+           },
+           {
+               "columns": [
+                   {
+                       "text": "DD No : ",
+                       "width": "auto",
+                       "margin": [
+                           0,
+                           15,
+                           0,
+                           0
+                       ]
+                       
+                   },
+                   {
+                       "text": "{{demandDraftNo}}",
+                       "width": "auto",
+                       "bold": true,
+                       "margin": [
+                           5,
+                           15,
+                           0,
+                           0
+                       ]
+                   }
+               ]
+           },
+           {
+               "columns": [
+                   {
+                       "text": "DD Date : ",
+                       "width": "auto",
+                       "margin": [
+                           0,
+                           15,
+                           0,
+                           0
+                       ]
+                       
+                   },
+                   {
+                       "text": "{{demandDraftDate}}",
+                       "width": "auto",
+                       "bold": true,
+                       "margin": [
+                           5,
+                           15,
+                           0,
+                           0
+                       ]
+                   }
+               ]
+           },
+            {
                 "margin": [
                     0,
                     10,
@@ -439,6 +587,15 @@
                     },
                     {
                         "text": "{{rIFSCCode}}",
+                        "width": "auto"
+                    },
+                    {
+                        "text": "     Nominee Name : ",
+                        "width": "auto",
+                        "bold": true
+                    },
+                    {
+                        "text": "{{NomName}}",
                         "width": "auto"
                     }
                 ]

@@ -80,7 +80,7 @@
                       },
                       {
                         "width": "*",
-                        "text": "{{nameOfApplicant}}"
+                        "text": "{{name}}"
                       }
                     ]
                   },
@@ -107,6 +107,19 @@
                       {
                         "width": "*",
                         "text": "{{dob}}"
+                      }
+                    ]
+                  },
+				   {
+                    "style": "nulm-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 200,
+                        "text": "Age"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{age}}"
                       }
                     ]
                   },

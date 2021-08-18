@@ -56,7 +56,7 @@
 					 {
                        "variable": "fathernameValue",
                        "value":{
-                            "path":"$.SewerageConnection.connectionHolders[0].fatherOrHusbandName"                           
+                            "path":"$.SewerageConnection.property.owners[0].fatherOrHusbandName"                           
                         } 
                      },
 					  {

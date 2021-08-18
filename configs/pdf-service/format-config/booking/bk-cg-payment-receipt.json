@@ -1,0 +1,419 @@
+{
+    "key": "bk-cg-payment-receipt",
+    "config": {
+        "content": [
+            {
+                "image": "{{variable76}}",
+                "width": 65,
+                "height": 65,
+                "margin": [
+                    0,
+                    -5,
+                    0,
+                    0
+                ]
+            },
+            {
+                "text": "Municipal Corporation, Chandigarh",
+                "style": "pdfheader",
+                "margin": [
+                    0,
+                    -55,
+                    0,
+                    0
+                ]
+            },
+            {
+                "text": "Receipt Number",
+                "alignment": "right",
+                "fontSize": "8",
+                "bold": true
+            },
+            {
+                "text": "{{receiptNo}}",
+                "alignment": "right",
+                "fontSize": "8",
+                "bold": true
+            },
+            {
+                "text": "Payment Receipt",
+                "style": "pdfsubheader",
+                "margin": [
+                    0,
+                    -10,
+                    0,
+                    50
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "width": "auto",
+                        "style": "tableExample",
+                        "table": {
+                            "widths": [
+                                100,
+                                100
+                            ],
+                            "headerRows": 2,
+                            "keepWithHeaderRows": 1,
+                            "body": [
+                                [
+                                    {
+                                        "text": "Applicant Details",
+                                        "style": "tableHeader",
+                                        "colSpan": 2,
+                                        "alignment": "center"
+                                    },
+                                    {}
+                                ],
+                                [
+                                    {
+                                        "text": "Applicant Name:",
+                                        "style": "verticalcolumnsheader"
+                                    },
+                                    {
+                                        "text": "{{variable1}}",
+                                        "style": "verticalcontentstyle"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Contact No:",
+                                        "style": "verticalcolumnsheader"
+                                    },
+                                    {
+                                        "text": "{{variable2}}",
+                                        "style": "verticalcontentstyle"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Address:",
+                                        "style": "verticalcolumnsheader"
+                                    },
+                                    {
+                                        "text": "{{variable4}}",
+                                        "style": "verticalcontentstyle"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Sector:",
+                                        "style": "verticalcolumnsheader"
+                                    },
+                                    {
+                                        "text": "{{variable5}}",
+                                        "style": "verticalcontentstyle"
+                                    }
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "width": "*",
+                        "style": "tableExample",
+                        "table": {
+                            "widths": [
+                                100,
+                                150
+                            ],
+                            "headerRows": 2,
+                            "body": [
+                                [
+                                    {
+                                        "text": "Payment Details",
+                                        "style": "tableHeader",
+                                        "colSpan": 2,
+                                        "alignment": "center"
+                                    },
+                                    {}
+                                ],
+                                [
+                                    {
+                                        "text": "Application No:",
+                                        "style": "verticalcolumnsheader"
+                                    },
+                                    {
+                                        "text": "{{variable6}}",
+                                        "style": "verticalcontentstyle"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Payment Date:",
+                                        "style": "verticalcolumnsheader"
+                                    },
+                                    {
+                                        "text": "{{variable7}}",
+                                        "style": "verticalcontentstyle"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Transaction Id:",
+                                        "style": "verticalcolumnsheader"
+                                    },
+                                    {
+                                        "text": "{{variable8}}",
+                                        "style": "verticalcontentstyle"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Payment Mode:",
+                                        "style": "verticalcolumnsheader"
+                                    },
+                                    {
+                                        "text": "{{paymentMode}}",
+                                        "style": "verticalcontentstyle"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Bank Name:",
+                                        "style": "verticalcolumnsheader"
+                                    },
+                                    {
+                                        "text": "{{bankName}}",
+                                        "style": "verticalcontentstyle"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Payer Details",
+                                        "style": "tableHeader",
+                                        "colSpan": 2,
+                                        "alignment": "center"
+                                    },
+                                    {}
+                                ],
+                                [
+                                    {
+                                        "text": "Name:",
+                                        "style": "verticalcolumnsheader"
+                                    },
+                                    {
+                                        "text": "{{payerName}}",
+                                        "style": "verticalcontentstyle"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Mobile:",
+                                        "style": "verticalcolumnsheader"
+                                    },
+                                    {
+                                        "text": "{{payerMobile}}",
+                                        "style": "verticalcontentstyle"
+                                    }
+                                ]
+                            ]
+                        }
+                    }
+                ],
+                "columnGap": 30
+            },
+            {
+                "style": "tableExample",
+                "table": {
+                    "widths": [
+                        "auto",
+                        200,
+                        175,
+                        100
+                    ],
+                    "headerRows": 1,
+                    "body": [
+                        [
+                            {
+                                "text": "#",
+                                "style": "horizontalcolumnsheader",
+                                "alignment": "center"
+                            },
+                            {
+                                "text": "{{variable75}}",
+                                "style": "horizontalcolumnsheader",
+                                "alignment": "center"
+                            },
+                            {
+                                "text": "PARTICULARS OF PAYMENT",
+                                "style": "horizontalcolumnsheader",
+                                "alignment": "center"
+                            },
+                            {
+                                "text": "AMOUNT",
+                                "style": "horizontalcolumnsheader",
+                                "alignment": "center"
+                            }
+                        ],
+                        [
+                            {
+                                "text": "1",
+                                "style": "horizontalcontentstyle",
+                                "alignment": "center"
+                            },
+                            {
+                                "text": "{{variable9}}",
+                                "style": "horizontalcontentstyle",
+                                "alignment": "center"
+                            },
+                            {
+                                "text": "{{variable10}}",
+                                "style": "horizontalcontentstyle",
+                                "alignment": "right"
+                            },
+                            {
+                                "text": "{{variable11}}",
+                                "style": "horizontalcontentstyle",
+                                "alignment": "right"
+                            }
+                        ],
+                        [
+                            {
+                                "text": {},
+                                "colSpan": 2
+                            },
+                            {},
+                            {
+                                "text": "Refundable Security",
+                                "style": "horizontalcontentstyle",
+                                "alignment": "right"
+                            },
+                            {
+                                "text": "{{variable15}}",
+                                "style": "horizontalcontentstyle",
+                                "alignment": "right"
+                            }
+                        ],
+                        [
+                            {
+                                "text": {},
+                                "colSpan": 2
+                            },
+                            {},
+                            {
+                                "text": "GST @18%",
+                                "style": "horizontalcontentstyle",
+                                "alignment": "right"
+                            },
+                            {
+                                "text": "{{variable12}}",
+                                "style": "horizontalcontentstyle",
+                                "alignment": "right"
+                            }
+                        ],
+                        [
+                            {
+                                "text": {},
+                                "colSpan": 2
+                            },
+                            {},
+                            {
+                                "text": "Total Paid Amount",
+                                "style": "horizontalcontentstyle",
+                                "alignment": "right"
+                            },
+                            {
+                                "text": "{{variable13}}",
+                                "style": "horizontalcontentstyle",
+                                "alignment": "right"
+                            }
+                        ],
+                        [
+                            {
+                                "text": "{{variable14}}",
+                                "style": "horizontalcontentstyle",
+                                "colSpan": 4,
+                                "alignment": "left",
+                                "bold": true
+                            },
+                            {},
+                            {},
+                            {}
+                        ]
+                    ]
+                }
+            },
+            {
+                "text": "Generated by",
+                "alignment": "left",
+                "fontSize": "10",
+                "bold": true,
+                "margin": [
+                    0,
+                    50,
+                    0,
+                    0
+                ]
+            },
+            {
+                "text": "{{generatedBy}}",
+                "alignment": "left",
+                "fontSize": "10"
+            },
+            {
+                "text": "{{generatedDateTime}}",
+                "alignment": "left",
+                "fontSize": "8"
+            }
+        ],
+        "footer": [
+            {
+                "text": "Note: 1.Payment received by cheque/demand draft shall be subject to realization. 2.This document is not a proof of Property Ownership. 3.The receipt and permission letter are electronically generated and need no official signature or stamp",
+                "style": "footerstyle"
+            }
+        ],
+        "styles": {
+            "pdfheader": {
+                "fontSize": 15,
+                "alignment": "center",
+                "bold": true
+            },
+            "pdfsubheader": {
+                "fontSize": 15,
+                "alignment": "center",
+                "margin": [
+                    0,
+                    -15,
+                    0,
+                    20
+                ]
+            },
+            "footerstyle": {
+                "alignment": "center",
+                "fontSize": "8",
+                "margin": [
+                    10,
+                    0,
+                    10,
+                    0
+                ]
+            },
+            "verticalcolumnsheader": {
+                "fontSize": 10,
+                "bold": true,
+                "alignment": "left"
+            },
+            "verticalcontentstyle": {
+                "fontSize": 10,
+                "alignment": "left"
+            },
+            "horizontalcolumnsheader": {
+                "fontSize": 10,
+                "bold": true
+            },
+            "horizontalcontentstyle": {
+                "fontSize": 10
+            },
+            "tableExample": {
+                "margin": [
+                    0,
+                    5,
+                    0,
+                    15
+                ]
+            }
+        }
+    }
+}

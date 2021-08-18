@@ -1,0 +1,245 @@
+{
+    "key": "nulm-certificate-smid",
+    "DataConfigs": {
+      "serviceName": "rainmaker-nulm",
+      "version": "1.0.0",
+      "baseKeyPath": "$.SmidCitizenApplication.*",
+    "entityIdPath": "$.applicationId",
+      "isCommonTableBorderRequired": true,
+      "mappings": [
+        {
+          "mappings": [
+            {
+              "direct": [
+               {
+                "variable": "ulbLogo",                        
+                "url":"https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
+                "type":"image"
+                },
+               {
+                  "variable": "ownerPhoto",
+                  "value": {
+                    "path": "$.applicantPhoto"
+                  },
+                  "type": "image"
+               },
+                 {
+                    "variable": "corporation_name",
+                    "value": {
+                        "path": "$.corporationName"
+                    }
+                },
+                 {
+                    "variable": "corporation_address",
+                    "value": {
+                        "path": "$.corporationAddress"
+                    }
+                },
+                   {
+                "variable": "applicationId",
+                "value": {
+                  "path": "$.applicationId"
+                }
+              },
+			  {
+                "variable": "applicationStatus",
+                "value": {
+                  "path": "$.applicationStatus"
+                }
+              },
+			  {
+                "variable": "qualification",
+                "value": {
+                  "path": "$.qualification"
+                }
+              },
+			  {
+                "variable": "casteofApplicant",
+                "value": {
+                  "path": "$.casteofApplicant"
+                }
+              },
+                 {
+                "variable": "nameOfApplicant",
+                "value": {
+                  "path": "$.name"
+                }
+              },
+			  {
+                "variable": "gender",
+                "value": {
+                  "path": "$.gender"
+                }
+              },{
+                "variable": "dob",
+                "value": {
+                  "path": "$.dob"
+                }
+              },
+			  {
+                "variable": "address",
+                "value": {
+                  "path": "$.address"
+                }
+              },
+			  {
+                "variable": "sector",
+                "value": {
+                  "path": "$.wardNo"
+                }
+              },
+			   {
+                "variable": "fatherOrHusbandName",
+                "value": {
+                  "path": "$.fatherOrHusbandName"
+                }
+              }, {
+                "variable": "motherName",
+                "value": {
+                  "path": "$.motherName"
+                }
+              },
+			  {
+                "variable": "age",
+                "value": {
+                  "path": "$.age"
+                }
+              },
+			   {
+                "variable": "email",
+                "value": {
+                  "path": "$.emailId"
+                }
+              },
+			   {
+                "variable": "mobileNumber",
+                "value": {
+                  "path": "$.mobileNo"
+                }
+              },
+			  {
+                "variable": "mobileNumber2",
+                "value": {
+                  "path": "$.phoneNo"
+                }
+              },
+			  {
+                "variable": "adharNo",
+                "value": {
+                  "path": "$.adharNo"
+                }
+              },
+			  {
+                "variable": "nameAsPerAdhar",
+                "value": {
+                  "path": "$.nameAsPerAdhar"
+                }
+              }, {
+                "variable": "casteofApplicant",
+                "value": {
+                  "path": "$.caste"
+                }
+              },
+			  {
+                "variable": "PWD",
+                "value": {
+                  "path": "$.isPwd"
+                }
+              },
+			  {
+                "variable": "isUrbanPoor",
+                "value": {
+                  "path": "$.isUrbanPoor"
+                }
+              },
+			  {
+                "variable": "rationCardNo",
+                "value": {
+                  "path": "$.bplNo"
+                }
+              },
+			  {
+                "variable": "isMinority",
+                "value": {
+                  "path": "$.isMinority"
+                }
+              },
+			  {
+                "variable": "minority",
+                "value": {
+                  "path": "$.minority"
+                }
+              },
+			  {
+                "variable": "insurance",
+                "value": {
+                  "path": "$.isInsurance"
+                }
+              },
+			  {
+                "variable": "streetVendor",
+                "value": {
+                  "path": "$.isStreetVendor"
+                }
+              },
+			  {
+                "variable": "homeLess",
+                "value": {
+                  "path": "$.isHomeless"
+                }
+              },
+			  {
+                "variable": "accountName",
+                "value": {
+                  "path": "$.accountName"
+                }
+              },
+			  {
+                "variable": "proposedTimeofVending",
+                "value": {
+                  "path": "$.proposedTimeofVending"
+                }
+              },
+			  {
+                "variable": "governmentScheme",
+                "value": {
+                  "path": "$.governmentScheme"
+                }
+              },
+			  {
+                "variable": "nameofNomineeofStreetVendor",
+                "value": {
+                  "path": "$.nameofNomineeofStreetVendor"
+                }
+              },
+			  {
+                "variable": "isLoanFromBankinginstitute",
+                "value": {
+                  "path": "$.isLoanFromBankinginstitute"
+                }
+              },
+			  {
+                "variable": "isRepaymentMade",
+                "value": {
+                  "path": "$.isRepaymentMade"
+                }
+              },
+			  {
+                "variable": "representativeName",
+                "value": {
+                  "path": "$.representativeName"
+                }
+              },
+			  {
+                "variable": "representativeAddress",
+                "value": {
+                  "path": "$.representativeAddress"
+                }
+              }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }

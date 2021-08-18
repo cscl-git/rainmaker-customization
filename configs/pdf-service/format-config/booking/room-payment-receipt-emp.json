@@ -67,7 +67,7 @@
                 ],
                 "columns": [
                     {
-                        "text": "(e-Smpark ",
+                        "text": "(e-Sampark ",
                         "width": 70
                     },
                     {
@@ -144,7 +144,7 @@
                     },
                     {
                         "text": "{{paymentDate}}",
-                        "width": 85,
+                        "width": "auto",
                         "margin": [
                             2,
                             15,
@@ -676,6 +676,106 @@
             {
                 "columns": [
                     {
+                        "text": "Cheque No : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{chequeNo}}",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            15,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Cheque Date : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{chequeDate}}",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            15,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "text": "DD No : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{demandDraftNo}}",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            15,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "text": "DD Date : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{demandDraftDate}}",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            15,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
                         "text": "Card No : ",
                         "width": "auto",
                         "margin": [
@@ -712,10 +812,32 @@
                         "bold": true
                     },
                     {
-                        "text": "{{totalPayment}}",
+                        "text": " : ",
                         "width": "auto",
                         "margin": [
                             5,
+                            10,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "Rs. ",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            10,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{totalPayment}}",
+                        "width": "auto",
+                        "margin": [
+                            3,
                             10,
                             0,
                             0
@@ -801,7 +923,16 @@
                     {
                         "text": "{{rIFSCCode}}",
                         "width": "auto"
-                    }
+                    },
+                    {
+                       "text": "     Nominee Name : ",
+                       "width": "auto",
+                       "bold": true
+                   },
+                   {
+                       "text": "{{NomName}}",
+                       "width": "auto"
+                   }
                 ]
             },
             {

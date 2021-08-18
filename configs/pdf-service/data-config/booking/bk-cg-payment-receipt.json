@@ -1,0 +1,176 @@
+{
+    "key": "bk-cg-payment-receipt",
+    "DataConfigs": {
+       "serviceName": "rainmaker-bk",
+       "version": "1.0.0",
+       "baseKeyPath": "$.BookingInfo.*",
+       "entityIdPath": "$.booking.bkApplicationNumber",
+       "isCommonTableBorderRequired": true,
+       "mappings": [
+          {
+             "topic": "bk-pdf-generation",
+             "mappings": [
+                {
+                   "direct": [
+                      {
+                         "variable": "variable1",
+                         "value": {
+                            "path": "$.applicantDetail.name"
+                         }
+                      },
+                      {
+                         "variable": "variable2",
+                         "value": {
+                            "path": "$.applicantDetail.mobileNumber"
+                         }
+                      },
+                      {
+                         "variable": "variable3",
+                         "value": {
+                            "path": "$.applicantDetail.houseNo"
+                         }
+                      },
+                      {
+                         "variable": "variable4",
+                         "value": {
+                            "path": "$.applicantDetail.permanentAddress"
+                         }
+                      },
+                      {
+                         "variable": "variable5",
+                         "value": {
+                            "path": "$.applicantDetail.sector"
+                         }
+                      },
+                      {
+                         "variable": "variable6",
+                         "value": {
+                            "path": "$.booking.bkApplicationNumber"
+                         }
+                      },
+                      {
+                        "variable": "paymentreceiptfor",
+                        "value": {
+                           "path": "$.booking.paymentreceiptfor"
+                        }
+                     },
+                      {
+                         "variable": "variable7",
+                         "value": {
+                            "path": "$.paymentInfo.paymentDate"
+                         }
+                      },
+                      {
+                         "variable": "variable8",
+                         "value": {
+                            "path": "$.paymentInfo.transactionId"
+                         }
+                      },
+                      {
+                         "variable": "variable8",
+                         "value": {
+                            "path": "$.paymentInfo.transactionId"
+                         }
+                      },
+                      {
+                         "variable": "variable9",
+                         "value": {
+                            "path": "$.paymentInfo.bookingPeriod"
+                         }
+                      },
+                      {
+                         "variable": "variable10",
+                         "value": {
+                            "path": "$.paymentInfo.bookingItem"
+                         }
+                      },
+                      {
+                         "variable": "variable11",
+                         "value": {
+                            "path": "$.paymentInfo.amount"
+                         }
+                      },
+                      {
+                         "variable": "variable12",
+                         "value": {
+                            "path": "$.paymentInfo.tax"
+                         }
+                      },
+                      {
+                         "variable": "variable13",
+                         "value": {
+                            "path": "$.paymentInfo.grandTotal"
+                         }
+                      },
+                      {
+                         "variable": "variable14",
+                         "value": {
+                            "path": "$.paymentInfo.amountInWords"
+                         }
+                      },
+                      {
+                        "variable": "variable15",
+                        "value": {
+                           "path": "$.paymentInfo.refundableSecurity"
+                        }
+                     },
+                      {
+                        "variable": "bankName",
+                        "value": {
+                           "path": "$.paymentInfo.bankName"
+                        }
+                     },
+                      {
+                         "variable": "variable75",
+                         "value": {
+                            "path": "$.paymentInfo.paymentItemExtraColumnLabel"
+                         }
+                      },
+                      {
+                         "variable": "variable76",
+                         "url":"https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
+                         "type":"image"
+                      },
+                      {
+                         "variable": "receiptNo",
+                         "value": {
+                            "path": "$.paymentInfo.receiptNo"
+                         }
+                      },
+                      {
+                         "variable": "paymentMode",
+                         "value": {
+                            "path": "$.paymentInfo.paymentMode"
+                         }
+                      },
+                      {
+                         "variable": "payerName",
+                         "value": {
+                            "path": "$.payerInfo.payerName"
+                         }
+                      },
+                      {
+                         "variable": "payerMobile",
+                         "value": {
+                            "path": "$.payerInfo.payerMobile"
+                         }
+                      },
+                      {
+                        "variable": "generatedBy",
+                        "value": {
+                           "path": "$.generatedBy.generatedBy"
+                        }
+                     },
+                     {
+                        "variable": "generatedDateTime",
+                        "value": {
+                           "path": "$.generatedBy.generatedDateTime"
+                        }
+                     }
+                   ]
+                }
+             ]
+          }
+       ]
+    }
+ }

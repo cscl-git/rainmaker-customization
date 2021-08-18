@@ -178,6 +178,7 @@
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/booking/pacc-payment-receipt.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/booking/bk-cg-pl.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/booking/bk-cg-app-form.json",
+      "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/booking/bk-cg-payment-receipt.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/booking/bk-oswmcc-booking-pl.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/booking/oswmcc-booking-app-form.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/booking/bk-cc-booking-pl-emp.json",
@@ -197,6 +198,19 @@
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/withoutrehri-ec.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/rented-properties/rp-payment-history-receipt.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/ws-bill-receipt.json"
+	  ,
+	   "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/nulm-certificate-sep.json",
+	  "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/nulm-certificate-smid.json",
+	  "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/nulm-certificate-susv.json",
+	  "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/nulm-certificate-susvUpdate.json",
+	   "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/nulm-certificate-suh.json",
+	   "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/sellMeat-receipt.json",
+	   "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/ws-bill-receipt-no-due.json",
+	   "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/doe_payment_order_without_details.json",
+	   "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/dop_payment_order_without_details.json",
+	   "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/rrp_payment_order_without_details.json",
+	   "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/rrp_payment_order_daily_wager_without_details.json",
+	   "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/nulm-certificate-alf.json"
    ],
    "formatconfig": [
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/firenoc-receipt.json",
@@ -377,6 +391,7 @@
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/booking/pacc-payment-receipt.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/booking/bk-cg-pl.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/booking/bk-cg-app-form.json",
+      "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/booking/bk-cg-payment-receipt.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/booking/bk-oswmcc-booking-pl.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/booking/oswmcc-booking-app-form.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/booking/bk-cc-booking-pl-emp.json",
@@ -396,5 +411,18 @@
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/withoutrehri-ec.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/rented-properties/rp-payment-history-receipt.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/ws-bill-receipt.json"
+	  ,
+	   "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/nulm-certificate-sep.json",
+	"file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/nulm-certificate-smid.json",
+	"file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/nulm-certificate-susv.json",
+	"file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/nulm-certificate-susvUpdate.json",
+	"file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/nulm-certificate-suh.json",
+	"file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/sellMeat-receipt.json",
+	"file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/ws-bill-receipt-no-due.json",
+	"file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/doe_payment_order_without_details.json",
+	"file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/dop_payment_order_without_details.json",
+	"file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/rrp_payment_order_without_details.json",
+	"file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/rrp_payment_order_daily_wager_without_details.json",
+	"file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/nulm-certificate-alf.json"
    ]
 }

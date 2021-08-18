@@ -1,0 +1,230 @@
+{
+      "key": "nulm-certificate-alf",
+    "config": {
+    "defaultStyle": {
+      "font": "Cambay"
+     },
+    "content": [
+      {
+        "table": {
+          "widths": [80, "*"],
+          "body": [
+            [
+              {
+                "image": "{{ulbLogo}}",
+                "width": 80,
+                "margin": [12, 0, 0, 0]
+              },
+              {
+                "stack": [
+                  {
+                    "text": "{{corporation_name}}",
+                    "style": "receipt-logo-header",
+                    "margin": [0, 0, 0, 0]
+                  },
+                  {
+                    "text": "{{corporation_address}}",
+                    "style": "receipt-logo-sub-text",
+                    "margin": [0, 5, 0, 0]
+                  }
+                ],
+                "alignment": "center",
+                "margin": [-20, 0, 0, 0]
+              }
+            ]
+          ]
+        },
+        "margin": [0, -25, 0, 0],
+        "layout": "noBorders"
+      },
+      {
+        "table": {
+          "widths": ["80%", "20%"],
+          "body": [
+            [
+              {
+                "stack": [
+                 
+                  {
+                    "style": "nulm-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 200,
+                        "text": "Application No"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{applicationId}}"
+                      }
+                    ]
+                  },
+                  {
+                    "style": "nulm-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 200,
+                        "text": "Name Of ALF"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{name}}"
+                      }
+                    ]
+                  },
+                  {
+                    "style": "nulm-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 200,
+                        "text": "Date Of Formation"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{date_of_formation}}"
+                      }
+                    ]
+                  },
+                  {
+                    "style": "nulm-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 200,
+                        "text": "Address"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{address}}"
+                      }
+                    ]
+                  },
+                  {
+                    "style": "nulm-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 200,
+                        "text": "Contact Number"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{contact_number}}"
+                      }
+                    ]
+                  },
+				  {
+					"style": "nulm-certificate-data-2",
+					"columns": [
+					  {
+						"width": 200,
+						"text": "Bank Name"
+					  },
+					  {
+						"width": "*",
+						"text": "{{bank_name}}"
+					  }
+					]
+				  },
+				  {
+					"style": "nulm-certificate-data-2",
+					"columns": [
+					  {
+						"width": 200,
+						"text": "Branch Name"
+					  },
+					  {
+						"width": "*",
+						"text": "{{branch_name}}"
+					  }
+					]
+				  },
+				  {
+					"style": "nulm-certificate-data-2",
+					"columns": [
+					  {
+						"width": 200,
+						"text": "Account Number"
+					  },
+					  {
+						"width": "*",
+						"text": "{{account_number}}"
+					  }
+					]
+				  },
+				  {
+					"style": "nulm-certificate-data-2",
+					"columns": [
+					  {
+						"width": 200,
+						"text": "Registeration Number"
+					  },
+					  {
+						"width": "*",
+						"text": "{{applicationId}}"
+					  }
+					]
+				  },
+				  {
+					"style": "nulm-certificate-data-2",
+					"columns": [
+					  {
+						"width": 200,
+						"text": "ALF formatted Through"
+					  },
+					  {
+						"width": "*",
+						"text": "{{alf_formated_through}}"
+					  }
+					]
+				  },
+				  {
+					"style": "nulm-certificate-data-2",
+					"columns": [
+					  {
+						"width": 200,
+						"text": "Aadhaar number"
+					  },
+					  {
+						"width": "*",
+						"text": "{{adhaar_number}}"
+					  }
+					]
+				  },
+				  {
+					"style": "nulm-certificate-data-2",
+					"columns": [
+					  {
+						"width": 200,
+						"text": "Account Opening Date"
+					  },
+					  {
+						"width": "*",
+						"text": "{{date_of_opening_account}}"
+					  }
+					]
+				  }
+                ]
+              }
+            ]
+          ]
+        },
+        "margin": [10,0,0,0],
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "nulm-certificate-data-2": {
+        "margin": [10, 8, 0, 0]
+      },
+      "receipt-logo-header": {
+        "color": "#1E1E1E",
+        "fontSize": 18,
+        "bold": true,
+        "letterSpacing": 0.74
+      },
+      "receipt-logo-sub-text": {
+        "color": "#656565",
+        "fontSize": 14,
+        "letterSpacing": 0.74
+      }
+    }
+  }
+}

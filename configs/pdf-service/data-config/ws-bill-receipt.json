@@ -35,6 +35,12 @@
                         "value": {
                              "path":"$.applicationNumber"                              
                         }
+                     }, 					 
+                     {
+                        "variable": "connectionNumber",
+                        "value": {
+                             "path":"$.connectionNumber"                              
+                        }
                      }, 
                      {
                         "variable": "receiptNumber",
@@ -46,7 +52,7 @@
                         "variable": "activityType",
                         "value": {
                              "path":"$.activityType"                              
-                        }
+                        } 
                      },  
                      {
                         "variable": "gstNumber",

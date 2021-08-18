@@ -1,0 +1,203 @@
+{
+    "key": "nulm-certificate-susv",
+    "DataConfigs": {
+      "serviceName": "rainmaker-nulm",
+      "version": "1.0.0",
+      "baseKeyPath": "$.SmidCitizenApplication.*",
+    "entityIdPath": "$.applicationId",
+      "isCommonTableBorderRequired": true,
+      "mappings": [
+        {
+          "mappings": [
+            {
+              "direct": [
+               {
+                "variable": "ulbLogo",                        
+                "url":"https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
+                "type":"image"
+                },
+                 {
+                    "variable": "corporation_name",
+                    "value": {
+                        "path": "$.corporationName"
+                    }
+                },
+                 {
+                    "variable": "corporation_address",
+                    "value": {
+                        "path": "$.corporationAddress"
+                    }
+                },
+                   {
+                "variable": "applicationId",
+                "value": {
+                  "path": "$.applicationId"
+                }
+              },
+			  {
+                "variable": "applicationStatus",
+                "value": {
+                  "path": "$.applicationStatus"
+                }
+              },
+			  {
+                "variable": "nameOfApplicant",
+                "value": {
+                  "path": "$.nameOfApplicant"
+                }
+              },
+			  {
+                "variable": "fatherName",
+                "value": {
+                  "path": "$.fatherOrHusbandName"
+                }
+              },
+                 {
+                "variable": "motherName",
+                "value": {
+                  "path": "$.motherName"
+                }
+              },
+			  {
+                "variable": "age",
+                "value": {
+                  "path": "$.age"
+                }
+              },{
+                "variable": "dob",
+                "value": {
+                  "path": "$.dob"
+                }
+              },
+			  {
+                "variable": "casteofApplicant",
+                "value": {
+                  "path": "$.category"
+                }
+              },
+			  {
+                "variable": "gender",
+                "value": {
+                  "path": "$.gender"
+                }
+              },
+			   {
+                "variable": "presentAddressofStreetVendor",
+                "value": {
+                  "path": "$.presentAddress"
+                }
+              }, {
+                "variable": "permanentAddressofStreetVendor",
+                "value": {
+                  "path": "$.permanentAddress"
+                }
+              },
+			  {
+                "variable": "mobileNumber",
+                "value": {
+                  "path": "$.mobileNo"
+                }
+              },
+			   {
+                "variable": "qualification",
+                "value": {
+                  "path": "$.qualification"
+                }
+              },
+			   {
+                "variable": "adharNo",
+                "value": {
+                  "path": "$.adharNo"
+                }
+              },
+			  {
+                "variable": "isDisable",
+                "value": {
+                  "path": "$.isDisability"
+                }
+              },
+			  {
+                "variable": "bloodGroup",
+                "value": {
+                  "path": "$.bloodGroup"
+                }
+              },
+			  {
+                "variable": "proposedCategoryofVending",
+                "value": {
+                  "path": "$.categoryOfVending"
+                }
+              }, {
+                "variable": "proposedZone",
+                "value": {
+                  "path": "$.proposedLocationOfVending"
+                }
+              },
+			  {
+                "variable": "proposedTimeofVending",
+                "value": {
+                  "path": "$.proposedTimeOfVending"
+                }
+              },
+			  {
+                "variable": "governmentScheme",
+                "value": {
+                  "path": "$.govermentScheme"
+                }
+              },
+			  {
+                "variable": "nameofNomineeofStreetVendor",
+                "value": {
+                  "path": "$.nameOfNominee"
+                }
+              },
+			  {
+                "variable": "undertakingText",
+                "value": {
+                  "path": "$.undertakingText"
+                }
+              },
+			  {
+                "variable": "place",
+                "value": {
+                  "path": "$.place"
+                }
+              },
+			  {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+			  {
+                "variable": "variable1",
+                "value": {
+                  "path": "$.susvApplicationFamilyDetails.*"
+                },
+                "type": "array",
+                "format": {
+                  "type": "string",
+                  "scema": [
+                    {
+                      "variable": "nominee_name",
+                      "value": "name"
+                    },
+					{
+                      "variable": "nominee_age",
+                      "value": "age"
+                    },
+					{
+                      "variable": "nominee_relation",
+                      "value": "relation"
+                    }
+                  ]
+                }
+              }
+			  
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }

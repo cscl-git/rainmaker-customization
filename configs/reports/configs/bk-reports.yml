@@ -22,17 +22,17 @@ ReportDefinitions:
     total: true
   searchParams:
   - name: fromDate
-    label: reports.bb.bk_date_created
+    label: reports.bb.bk_from_date
     type: epoch
     source: bb
     isMandatory: false
-    searchClause: WHERE bb.bk_date_created >= to_date(to_char(to_timestamp($fromDate/1000)+ interval '5:30','YYYY-MM-DD'),'YYYY-MM-DD')
+    searchClause: WHERE bb.bk_date_created >= to_date(to_char(to_timestamp($fromDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
   - name: toDate
-    label: reports.bb.bk_date_created
+    label: reports.bb.bk_to_date
     type: epoch
     source: bb
     isMandatory: false
-    searchClause: AND bb.bk_date_created <= to_date(to_char(to_timestamp($toDate/1000)+ interval '5:30','YYYY-MM-DD'),'YYYY-MM-DD')
+    searchClause: AND bb.bk_date_created <= to_date(to_char(to_timestamp($toDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
   query: select MAX(message) as status, count(bb.bk_application_status) as total from bk_bookings bb LEFT OUTER JOIN message ON message.code = concat('RPT_BK_WF_', bb.bk_application_status) AND message.locale = 'en_IN' 
   groupby: GROUP BY bb.bk_application_status
   orderby: ORDER BY case bb.bk_application_status when 'INITIATED' then 1 when 'PENDINGASSIGNMENTDRIVER' then 2 when 'DELIVERED' then 3 when 'PENDINGUPDATE' then 4 when 'NOTDELIVERED' then 5 when 'APPLIED' then 6 when 'PENDINGPAYMENT' then 7 when 'PENDINGAPPROVAL' then 8 when 'APPROVED' then 9 when 'REJECTED' then 10 when 'OFFLINE_INITIATED' then 11 when 'OFFLINE_APPLIED' then 12 when 'RE_INITIATED' then 13 when 'PENDING_FOR_APPROVAL_CLEARK_DEO' then 14 when 'PENDING_FOR_APPROVAL_SENIOR_ASSISTANT' then 15 when 'PENDING_FOR_APPROVAL_AUDIT_DEPARTMENT' then 16 when 'PENDING_FOR_APPROVAL_CAO' then 17 when 'PENDING_FOR_DISBURSEMENT' then 18 when 'PAYMENT_DISBURSED' then 19 when 'PENDING_FOR_APPROVAL_SUPERVISOR' then 20 when 'PENDING_FOR_APPROVAL_OSD' then 21 when 'OFFLINE_RE_INITIATED' then 22 when 'OFFLINE_MODIFIED' then 23 else 24 end
@@ -60,13 +60,13 @@ ReportDefinitions:
     total: true
   searchParams:
   - name: fromDate
-    label: reports.bb.bk_date_created
+    label: reports.bb.bk_from_date
     type: epoch
     source: bb
     isMandatory: false
     searchClause: AND payment.createdtime >= $fromDate
   - name: toDate
-    label: reports.bb.bk_date_created
+    label: reports.bb.bk_to_date
     type: epoch
     source: bb
     isMandatory: false
@@ -138,13 +138,13 @@ ReportDefinitions:
     total: true
   searchParams:
   - name: fromDate
-    label: reports.bb.bk_date_created
+    label: reports.bb.bk_from_date
     type: epoch
     source: bb
     isMandatory: false
     searchClause: AND payment.createdtime >= $fromDate
   - name: toDate
-    label: reports.bb.bk_date_created
+    label: reports.bb.bk_to_date
     type: epoch
     source: bb
     isMandatory: false
@@ -152,11 +152,11 @@ ReportDefinitions:
   - name: bookingType
     label: reports.bb.bk_booking_type
     type: singlevaluelist
-    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=BookingType|$.MdmsRes.Booking.BookingType.*.code|$.MdmsRes.Booking.BookingType.*.name
+    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=BookingModuleType|$.MdmsRes.Booking.BookingModuleType.*.code|$.MdmsRes.Booking.BookingModuleType.*.name
     source: bb 
     wrapper: true
     isMandatory: false
-    searchClause: AND CASE WHEN ($bookingType IS NOT NULL AND $bookingType = 'Parks and Community Center') THEN (bb.bk_booking_type = 'Parks' OR bb.bk_booking_type = 'Community Center') WHEN ($bookingType IS NOT NULL AND $bookingType != 'Parks and Community Center') THEN bb.bk_booking_type LIKE $bookingType END
+    searchClause: AND bb.bk_booking_type = $bookingType
   - name: applicationStatus
     label: reports.bb.bk_application_status
     type: singlevaluelist
@@ -186,9 +186,694 @@ ReportDefinitions:
       totalamountpaid
     FROM bk_bookings bb
     INNER JOIN  message msg ON  msg.code = bb.business_service AND msg.locale = 'en_IN'
-    LEFT OUTER JOIN egcl_bill bill ON bill.consumercode = bb.bk_application_number 
-    LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
-    LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
+    INNER JOIN egcl_bill bill ON bill.consumercode = bb.bk_application_number 
+    INNER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
+    INNER JOIN egcl_payment as payment ON pd.paymentid = payment.id
     WHERE bb.bk_application_status IN ('APPROVED','PENDINGASSIGNMENTDRIVER','PENDINGUPDATE','REJECTED','DELIVERED','NOTDELIVERED','APPLIED','OFFLINE_APPLIED','RE_INITIATED',
     'MODIFIED','PENDING_FOR_APPROVAL_CLEARK_DEO','PENDING_FOR_APPROVAL_SUPERVISOR','PENDING_FOR_APPROVAL_SENIOR_ASSISTANT','REJECTED','PENDING_FOR_APPROVAL_AUDIT_DEPARTMENT',
     'PENDING_FOR_APPROVAL_CAO','PENDING_FOR_DISBURSEMENT','PAYMENT_DISBURSED','PENDING_FOR_APPROVAL_OSD','OFFLINE_RE_INITIATED','OFFLINE_MODIFIED')
+    
+    
+- reportName: AllBookingsReport
+  summary: All Bookings Report
+  version: 1.0.0
+  moduleName: rainmaker-services
+  sourceColumns:
+  - name: bookingVenueType
+    label: report.bb.bk_booking_type
+    type: string
+    source: bb
+    total: false
+  - name: bookingStartDate
+    label: report.bb.bk_from_Date
+    type: string
+    source: bb
+    total: false
+  - name: bookingEndDate
+    label: report.bb.bk_to_date
+    type: string
+    source: bb
+    total: false
+  - name: sector
+    label: report.bb.bk_sector
+    type: string
+    source: bb
+    total: false
+  - name: venueName
+    label: report.bb.venueName
+    type: string
+    source: bb
+    total: false
+  - name: applicantName
+    label: report.bb.bk_applicant_name
+    type: string
+    source: bb
+    total: false
+  - name: applicationNumber
+    label: report.bb.bk_application_number
+    type: string
+    source: bb
+    total: false
+  - name: bookingAmount
+    label: report.bb.bookingAmount
+    type: string
+    source: bb
+    total: false
+  - name: bookingMadeThrough
+    label: report.bb.bookingMadeThrough
+    type: string
+    source: bb
+    total: false
+  - name: status
+    label: report.bb.bk_application_status
+    type: string
+    source: bb
+    total: false
+  searchParams:
+  - name: applicationNumber
+    label: reports.bb.bk_application_number
+    type: string
+    source: bb
+    isMandatory: false
+    searchClause: AND bb.bk_application_number >= $applicationNumber
+  - name: fromDate
+    label: reports.bb.bk_from_date
+    type: epoch
+    source: bb
+    isMandatory: false
+    searchClause: AND bb.bk_date_created >= to_date(to_char(to_timestamp($fromDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
+  - name: toDate
+    label: reports.bb.bk_to_date
+    type: epoch
+    source: bb
+    isMandatory: false
+    searchClause: AND bb.bk_date_created <= to_date(to_char(to_timestamp($toDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
+  - name: bookingType
+    label: reports.bb.bk_booking_type
+    type: singlevaluelist
+    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=BookingModuleType|$.MdmsRes.Booking.BookingModuleType.*.code|$.MdmsRes.Booking.BookingModuleType.*.name
+    source: bb 
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bb.bk_booking_type = $bookingType
+  - name: gfcpVnueName
+    label: reports.bb.bk_gfcp_venue_name
+    type: singlevaluelist
+    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=Booking_Vanue|$.MdmsRes.Booking.Booking_Vanue.*.code|$.MdmsRes.Booking.Booking_Vanue.*.name
+    source: bb
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bb.bk_booking_venue LIKE $gfcpVnueName
+  - name: parksVenueName
+    label: reports.bb.bk_parks_venue_name
+    type: singlevaluelist
+    pattern: http://bookings:8080/bookings/master/report/park/venue/type/_fetch|$.data.*.id|$.data.*.name
+    source: bb
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bb.bk_booking_venue LIKE $parksVenueName
+  - name: communityCenterVenueName
+    label: reports.bb.bk_community_center_venue_name
+    type: singlevaluelist
+    pattern: http://bookings:8080/bookings/master/report/communitycenter/venue/type/_fetch|$.data.*.id|$.data.*.name
+    source: bb
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bb.bk_booking_venue LIKE $communityCenterVenueName
+  - name: locality
+    label: reports.bb.bk_sector
+    type: singlevaluelist
+    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=Sector|$.MdmsRes.Booking.Sector.*.code|$.MdmsRes.Booking.Sector.*.name
+    source: bb
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bb.bk_sector LIKE $locality
+  - name: bookingMadeThrough
+    label: reports.bb.bk_booking_made_through
+    type: singlevaluelist
+    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=BookingMadeThrough|$.MdmsRes.Booking.BookingMadeThrough.*.code|$.MdmsRes.Booking.BookingMadeThrough.*.name
+    source: bb
+    wrapper: true
+    isMandatory: false
+    searchClause: AND euv.role_code LIKE $bookingMadeThrough
+  query: |
+    SELECT DISTINCT
+      msg.message as bookingVenueType,
+      to_char(bb.bk_from_date, 'DD/MM/YYYY') as bookingStartDate,
+      to_char(bb.bk_to_date, 'DD/MM/YYYY') as bookingEndDate,
+      bb.bk_sector as sector,
+      bb.bk_booking_venue as venueName,
+      bb.bk_applicant_name as applicantName,
+      bb.bk_application_number as applicationNumber,
+      payment.totalamountpaid as bookingAmount,
+      eu.name as bookingMadeThrough,
+      booking_status(concat('RPT_BK_WF_', bb.bk_application_status)) as status   
+    FROM bk_bookings bb
+    INNER JOIN  message msg ON  msg.code = bb.business_service AND msg.locale = 'en_IN'
+    LEFT OUTER JOIN egcl_bill bill ON bill.consumercode = bb.bk_application_number 
+    LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
+    LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
+    INNER JOIN eg_user as eu on eu.uuid = bb.uuid
+    INNER JOIN eg_userrole_v1 as euv on euv.user_id = eu.id
+    WHERE bb.bk_application_number IS NOT NULL
+ 
+- reportName: DescriptionReport
+  summary: Description Report
+  version: 1.0.0
+  moduleName: rainmaker-services
+  sourceColumns:
+  - name: bookingVenueType
+    label: report.bb.bk_booking_type
+    type: string
+    source: bb
+    total: false
+  - name: bookingStartDate
+    label: report.bb.bk_from_Date
+    type: string
+    source: bb
+    total: false
+  - name: bookingEndDate
+    label: report.bb.bk_to_date
+    type: string
+    source: bb
+    total: false
+  - name: sector
+    label: report.bb.bk_sector
+    type: string
+    source: bb
+    total: false
+  - name: venueName
+    label: report.bb.venueName
+    type: string
+    source: bb
+    total: false
+  - name: applicantName
+    label: report.bb.bk_applicant_name
+    type: string
+    source: bb
+    total: false
+  - name: applicationNumber
+    label: report.bb.bk_application_number
+    type: string
+    source: bb
+    total: false
+  - name: address
+    label: report.bb.bk_complete_address
+    type: string
+    source: bb
+    total: false   
+  - name: bookingPurpose
+    label: report.bb.bk_booking_purpose
+    type: string
+    source: bb
+    total: false 
+  - name: rent
+    label: report.bb.bk_rent
+    type: string
+    source: bb
+    total: false
+  - name: bookingMadeThrough
+    label: report.bb.bookingMadeThrough
+    type: string
+    source: bb
+    total: false
+  - name: bookingAmount
+    label: report.bb.bookingAmount
+    type: string
+    source: bb
+    total: false
+  - name: status
+    label: report.bb.bk_application_status
+    type: string
+    source: bb
+    total: false
+  - name: gst
+    label: report.bb.bk_customer_gst_no
+    type: string
+    source: bb
+    total: false
+  - name: refundable_security_money
+    label: report.bb.refundable_security_money
+    type: string
+    source: bb
+    total: false
+  - name: bk_nominee_name
+    label: report.bb.bk_nominee_name
+    type: string
+    source: bb
+    total: false
+  - name: discount
+    label: report.bb.discount
+    type: string
+    source: bb
+    total: false
+  - name: bk_ifsc_code
+    label: report.bb.bk_ifsc_code
+    type: string
+    source: bb
+    total: false
+  - name: bk_bank_name
+    label: report.bb.bk_bank_name
+    type: string
+    source: bb
+    total: false
+  - name: bk_bank_account_number
+    label: report.bb.bk_bank_account_number
+    type: string
+    source: bb
+    total: false
+  - name: bk_bank_account_holder
+    label: report.bb.bk_bank_account_holder
+    type: string
+    source: bb
+    total: false
+  - name: bk_account_type
+    label: report.bb.bk_account_type
+    type: string
+    source: bb
+    total: false
+  - name: ugst
+    label: report.bb.ugst
+    type: string
+    source: bb
+    total: false
+  - name: bk_surcharge_rent
+    label: report.bb.bk_surcharge_rent
+    type: string
+    source: bb
+    total: false
+  - name: bk_residential_or_commercial
+    label: report.bb.bk_residential_or_commercial
+    type: string
+    source: bb
+    total: false
+  - name: bk_remarks
+    label: report.bb.bk_remarks
+    type: string
+    source: bb
+    total: false
+  - name: bk_payment_status
+    label: report.bb.bk_payment_status
+    type: string
+    source: bb
+    total: false
+  - name: bk_mobile_number
+    label: report.bb.bk_mobile_number
+    type: string
+    source: bb
+    total: false
+  - name: bk_house_no
+    label: report.bb.bk_house_no
+    type: string
+    source: bb
+    total: false
+  - name: bk_father_name
+    label: report.bb.bk_father_name
+    type: string
+    source: bb
+    total: false
+  - name: bk_email
+    label: report.bb.bk_email
+    type: string
+    source: bb
+    total: false
+  - name: bk_cgst
+    label: report.bb.bk_cgst
+    type: string
+    source: bb
+    total: false    
+  searchParams:
+  - name: applicationNumber
+    label: reports.bb.bk_application_number
+    type: string
+    source: bb
+    isMandatory: false
+    searchClause: AND bb.bk_application_number >= $applicationNumber
+  - name: fromDate
+    label: reports.bb.bk_from_date
+    type: epoch
+    source: bb
+    isMandatory: false
+    searchClause: AND bb.bk_date_created >= to_date(to_char(to_timestamp($fromDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
+  - name: toDate
+    label: reports.bb.bk_to_date
+    type: epoch
+    source: bb
+    isMandatory: false
+    searchClause: AND bb.bk_date_created <= to_date(to_char(to_timestamp($toDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
+  - name: bookingType
+    label: reports.bb.bk_booking_type
+    type: singlevaluelist
+    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=BookingModuleType|$.MdmsRes.Booking.BookingModuleType.*.code|$.MdmsRes.Booking.BookingModuleType.*.name
+    source: bb 
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bb.bk_booking_type = $bookingType
+  - name: gfcpVnueName
+    label: reports.bb.bk_gfcp_venue_name
+    type: singlevaluelist
+    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=Booking_Vanue|$.MdmsRes.Booking.Booking_Vanue.*.code|$.MdmsRes.Booking.Booking_Vanue.*.name
+    source: bb
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bb.bk_booking_venue LIKE $gfcpVnueName
+  - name: parksVenueName
+    label: reports.bb.bk_parks_venue_name
+    type: singlevaluelist
+    pattern: http://bookings:8080/bookings/master/report/park/venue/type/_fetch|$.data.*.id|$.data.*.name
+    source: bb
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bb.bk_booking_venue LIKE $parksVenueName
+  - name: communityCenterVenueName
+    label: reports.bb.bk_community_center_venue_name
+    type: singlevaluelist
+    pattern: http://bookings:8080/bookings/master/report/communitycenter/venue/type/_fetch|$.data.*.id|$.data.*.name
+    source: bb
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bb.bk_booking_venue LIKE $communityCenterVenueName
+  - name: locality
+    label: reports.bb.bk_sector
+    type: singlevaluelist
+    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=Sector|$.MdmsRes.Booking.Sector.*.code|$.MdmsRes.Booking.Sector.*.name
+    source: bb
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bb.bk_sector LIKE $locality
+  - name: bookingMadeThrough
+    label: reports.bb.bk_booking_made_through
+    type: singlevaluelist
+    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=BookingMadeThrough|$.MdmsRes.Booking.BookingMadeThrough.*.code|$.MdmsRes.Booking.BookingMadeThrough.*.name
+    source: bb
+    wrapper: true
+    isMandatory: false
+    searchClause: AND euv.role_code LIKE $bookingMadeThrough
+  query: |
+    SELECT DISTINCT
+      msg.message as bookingVenueType,
+      to_char(bb.bk_from_date, 'DD/MM/YYYY') as bookingStartDate,
+      to_char(bb.bk_to_date, 'DD/MM/YYYY') as bookingEndDate,
+      bb.bk_sector as sector,
+      bb.bk_booking_venue as venueName,
+      bb.bk_applicant_name as applicantName,
+      bb.bk_application_number as applicationNumber,
+      bb.bk_complete_address as address,
+      bb.bk_booking_purpose as bookingPurpose,
+      bb.bk_rent as rent,
+      eu.name as bookingMadeThrough,
+      payment.totalamountpaid as bookingAmount,
+      booking_status(concat('RPT_BK_WF_', bb.bk_application_status)) as status,
+      bb.bk_customer_gst_no as gst,
+      bb.refundable_security_money,
+      bb.bk_nominee_name,
+      bb.discount,
+      bb.bk_ifsc_code,
+      bb.bk_bank_name,
+      bb.bk_bank_account_number,
+      bb.bk_bank_account_holder,
+      bb.bk_account_type,
+      bb.bk_utgst as ugst,
+      bb.bk_surcharge_rent,
+      bb.bk_residential_or_commercial,
+      bb.bk_remarks,
+      bb.bk_payment_status,
+      bb.bk_mobile_number,
+      bb.bk_house_no,
+      bb.bk_father_name,
+      bb.bk_email,
+      bb.bk_cgst
+    FROM bk_bookings bb
+    INNER JOIN  message msg ON  msg.code = bb.business_service AND msg.locale = 'en_IN'
+    LEFT OUTER JOIN egcl_bill bill ON bill.consumercode = bb.bk_application_number 
+    LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
+    LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
+    INNER JOIN eg_user as eu on eu.uuid = bb.uuid
+    INNER JOIN eg_userrole_v1 as euv on euv.user_id = eu.id
+    WHERE bb.bk_application_number IS NOT NULL 
+    
+- reportName: PaymentReport
+  summary: Payment Report
+  version: 1.0.0
+  moduleName: rainmaker-services
+  sourceColumns:
+  - name: bookingVenueType
+    label: report.bb.bk_booking_type
+    type: string
+    source: bb
+    total: false
+  - name: bookingStartDate
+    label: report.bb.bk_from_Date
+    type: string
+    source: bb
+    total: false
+  - name: bookingEndDate
+    label: report.bb.bk_to_date
+    type: string
+    source: bb
+    total: false
+  - name: sector
+    label: report.bb.bk_sector
+    type: string
+    source: bb
+    total: false
+  - name: venueName
+    label: report.bb.venueName
+    type: string
+    source: bb
+    total: false
+  - name: applicantName
+    label: report.bb.bk_applicant_name
+    type: string
+    source: bb
+    total: false
+  - name: applicationNumber
+    label: report.bb.bk_application_number
+    type: string
+    source: bb
+    total: false
+  - name: address
+    label: report.bb.bk_complete_address
+    type: string
+    source: bb
+    total: false   
+  - name: bookingPurpose
+    label: report.bb.bk_booking_purpose
+    type: string
+    source: bb
+    total: false 
+  - name: rent
+    label: report.bb.bk_rent
+    type: string
+    source: bb
+    total: false
+  - name: bookingMadeThrough
+    label: report.bb.bookingMadeThrough
+    type: string
+    source: bb
+    total: false
+  - name: bookingAmount
+    label: report.bb.bookingAmount
+    type: string
+    source: bb
+    total: false
+  - name: status
+    label: report.bb.bk_application_status
+    type: string
+    source: bb
+    total: false
+  - name: gst
+    label: report.bb.bk_customer_gst_no
+    type: string
+    source: bb
+    total: false      
+  searchParams:
+  - name: fromDate
+    label: reports.bb.bk_from_date
+    type: epoch
+    source: bb
+    isMandatory: false
+    searchClause: AND bb.bk_date_created >= to_date(to_char(to_timestamp($fromDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
+  - name: toDate
+    label: reports.bb.bk_to_date
+    type: epoch
+    source: bb
+    isMandatory: false
+    searchClause: AND bb.bk_date_created <= to_date(to_char(to_timestamp($toDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
+  - name: bookingType
+    label: reports.bb.bk_booking_type
+    type: singlevaluelist
+    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=BookingModuleType|$.MdmsRes.Booking.BookingModuleType.*.code|$.MdmsRes.Booking.BookingModuleType.*.name
+    source: bb 
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bb.bk_booking_type = $bookingType
+  - name: gfcpVnueName
+    label: reports.bb.bk_gfcp_venue_name
+    type: singlevaluelist
+    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=Booking_Vanue|$.MdmsRes.Booking.Booking_Vanue.*.code|$.MdmsRes.Booking.Booking_Vanue.*.name
+    source: bb
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bb.bk_booking_venue LIKE $gfcpVnueName
+  - name: parksVenueName
+    label: reports.bb.bk_parks_venue_name
+    type: singlevaluelist
+    pattern: http://bookings:8080/bookings/master/report/park/venue/type/_fetch|$.data.*.id|$.data.*.name
+    source: bb
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bb.bk_booking_venue LIKE $parksVenueName
+  - name: communityCenterVenueName
+    label: reports.bb.bk_community_center_venue_name
+    type: singlevaluelist
+    pattern: http://bookings:8080/bookings/master/report/communitycenter/venue/type/_fetch|$.data.*.id|$.data.*.name
+    source: bb
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bb.bk_booking_venue LIKE $communityCenterVenueName
+  - name: locality
+    label: reports.bb.bk_sector
+    type: singlevaluelist
+    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=Sector|$.MdmsRes.Booking.Sector.*.code|$.MdmsRes.Booking.Sector.*.name
+    source: bb
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bb.bk_sector LIKE $locality
+  - name: bookingMadeThrough
+    label: reports.bb.bk_booking_made_through
+    type: singlevaluelist
+    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=BookingMadeThrough|$.MdmsRes.Booking.BookingMadeThrough.*.code|$.MdmsRes.Booking.BookingMadeThrough.*.name
+    source: bb
+    wrapper: true
+    isMandatory: false
+    searchClause: AND euv.role_code LIKE $bookingMadeThrough
+  query: |
+    SELECT DISTINCT
+      msg.message as bookingVenueType,
+      to_char(bb.bk_from_date, 'DD/MM/YYYY') as bookingStartDate,
+      to_char(bb.bk_to_date, 'DD/MM/YYYY') as bookingEndDate,
+      bb.bk_sector as sector,
+      bb.bk_booking_venue as venueName,
+      bb.bk_applicant_name as applicantName,
+      bb.bk_application_number as applicationNumber,
+      bb.bk_complete_address as address,
+      bb.bk_booking_purpose as bookingPurpose,
+      bb.bk_rent as rent,
+      eu.name as bookingMadeThrough,
+      payment.totalamountpaid as bookingAmount,
+      booking_status(concat('RPT_BK_WF_', bb.bk_application_status)) as status,
+      bb.bk_customer_gst_no as gst
+    FROM bk_bookings bb
+    INNER JOIN  message msg ON  msg.code = bb.business_service AND msg.locale = 'en_IN'
+    INNER JOIN egcl_bill bill ON bill.consumercode = bb.bk_application_number 
+    INNER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
+    INNER JOIN egcl_payment as payment ON pd.paymentid = payment.id
+    INNER JOIN eg_user as eu on eu.uuid = bb.uuid
+    INNER JOIN eg_userrole_v1 as euv on euv.user_id = eu.id
+    WHERE bb.bk_application_number IS NOT NULL 
+    
+- reportName: BlockingVenueReport
+  summary: Report on Blocking of Venue 
+  version: 1.0.0
+  moduleName: rainmaker-services
+  sourceColumns:
+  - name: bookingVenueType
+    label: report.bcgal.booking_type
+    type: string
+    source: bcgal
+    total: false
+  - name: bookingStartDate
+    label: report.bcgal.from_Date
+    type: string
+    source: bcgal
+    total: false
+  - name: bookingEndDate
+    label: report.bcgal.to_date
+    type: string
+    source: bcgal
+    total: false
+  - name: sector
+    label: report.bcgal.sector
+    type: string
+    source: bcgal
+    total: false
+  - name: venueName
+    label: report.bcgal.venueName
+    type: string
+    source: bcgal
+    total: false
+  - name: blockingDate
+    label: report.bcgal.blockingDate
+    type: string
+    source: bcgal
+    total: false
+  - name: reasonOfBlockingBooking
+    label: report.bcgal.reasonOfBlockingBooking
+    type: string
+    source: bcgal
+    total: false
+  searchParams:
+  - name: fromDate
+    label: reports.bcgal.bk_from_date
+    type: epoch
+    source: bcgal
+    isMandatory: false
+    searchClause: AND bcgal.created_date >= to_date(to_char(to_timestamp($fromDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
+  - name: toDate
+    label: reports.bcgal.bk_to_date
+    type: epoch
+    source: bcgal
+    isMandatory: false
+    searchClause: AND bcgal.created_date <= to_date(to_char(to_timestamp($toDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
+  - name: bookingType
+    label: reports.bb.bk_booking_type
+    type: singlevaluelist
+    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=BookingModuleType|$.MdmsRes.Booking.BookingModuleType.*.code|$.MdmsRes.Booking.BookingModuleType.*.name
+    source: bcgal 
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bcgal.venue_type = $bookingType
+  - name: gfcpVnueName
+    label: reports.bcgal.gfcp_venue_name
+    type: singlevaluelist
+    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=Booking_Vanue|$.MdmsRes.Booking.Booking_Vanue.*.code|$.MdmsRes.Booking.Booking_Vanue.*.name
+    source: bcgal
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bcgal.booking_venue LIKE $gfcpVnueName
+  - name: parksVenueName
+    label: reports.bcgal.parks_venue_name
+    type: singlevaluelist
+    pattern: http://bookings:8080/bookings/master/report/park/venue/type/_fetch|$.data.*.id|$.data.*.name
+    source: bcgal
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bcgal.booking_venue LIKE $parksVenueName
+  - name: communityCenterVenueName
+    label: reports.bcgal.community_center_venue_name
+    type: singlevaluelist
+    pattern: http://bookings:8080/bookings/master/report/communitycenter/venue/type/_fetch|$.data.*.id|$.data.*.name
+    source: bcgal
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bcgal.booking_venue LIKE $communityCenterVenueName
+  - name: locality
+    label: reports.bcgal.sector
+    type: singlevaluelist
+    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=Sector|$.MdmsRes.Booking.Sector.*.code|$.MdmsRes.Booking.Sector.*.name
+    source: bcgal
+    wrapper: true
+    isMandatory: false
+    searchClause: AND bcgal.sector LIKE $locality
+  query: |
+    SELECT
+      bcgal.venue_type as bookingVenueType,
+      to_char(bcgal.from_date, 'DD/MM/YYYY') as bookingStartDate,
+      to_char(bcgal.to_date, 'DD/MM/YYYY') as bookingEndDate,
+      bcgal.sector,
+      bcgal.booking_venue as venueName,
+      bcgal.created_date as blockingDate,
+      bcgal.reason_for_hold as reasonOfBlockingBooking
+    FROM bk_commercial_ground_availability_lock bcgal
+    WHERE bcgal.booking_venue IS NOT NULL 

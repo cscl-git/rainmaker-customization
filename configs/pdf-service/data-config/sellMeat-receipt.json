@@ -1,0 +1,78 @@
+{
+
+   "key":"sellMeat-receipt",
+   "DataConfigs": {
+      "serviceName": "pm-services",
+      "version": "1.0.0",
+      "baseKeyPath": "$.nocApplicationDetail.*",
+      "entityIdPath":"$.applicationId",
+      "isCommonTableBorderRequired":true,
+      "mappings": [
+         {
+            "mappings": [
+               {
+                  "direct": [
+				   {
+                        "variable": "variable33",                        
+                        "url":"https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
+                        "type":"image"
+                     },
+                     {
+                        "variable": "variable1",
+                        "value": {
+                             "path":"$.amountinword"                              
+                        }
+                     },            
+                     {
+                        "variable":"variable2",
+                        "value":{
+                           "path":"$.Amount"                            
+                        }  
+                     },
+                     {
+                        "variable": "variable3",
+                        "value":{
+                             "path":"$.dateofpayment"                           
+                         } 
+                     },
+                     {
+                       "variable": "variable4",
+                       "value":{
+                            "path":"$.applicantName"                           
+                        } 
+                     },
+                     {
+                        "variable": "variable5",
+                        "value":{
+                             "path":"$.applicationId"                           
+                         } 
+                     },
+                     {
+                       "variable": "variable6",
+                       "value":{
+                            "path":"$.applicationDate"                           
+                        } 
+                     },
+                     {
+                       "variable": "variable7",
+                       "value":{
+                            "path":"$.applicantHousenumber"                           
+                        } 
+                     },
+                     {
+                       "variable": "variable8",
+                       "value":{
+                            "path":"$.applicantSector"                           
+                        },
+						"localisation":{
+                           "required":true,
+                           "module":"rainmaker-pm"
+                        }
+					}
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}

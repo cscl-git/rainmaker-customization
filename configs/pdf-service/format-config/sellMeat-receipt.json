@@ -1,0 +1,187 @@
+{
+  "key":"sellMeat-receipt",
+  "config":{
+    
+  "content":[
+   {
+          "style": "tl-head",
+          "table": {
+            "widths": [
+              50,
+              "*",
+              100
+            ],
+            "body": [
+              [
+                {
+                  "image": "{{variable33}}",
+                  "width": 65,
+                  "margin": [
+                    30,
+                    20,
+                    10,
+                    10
+                  ]
+                },
+                {
+                  "stack": [
+                    {
+                      "text": "RECEIPT",
+                     "alignment": "center",
+					  "color": "#484848",
+					  "fontSize": 15,
+					  "bold": true,
+					  "underline": true,
+					  "margin": [0,0,0,0]
+                    },
+                    {
+                      "text":"MUNICIPAL CORPORATION CHANDIGARH",
+                      "alignment": "center",
+					  "color": "#484848",
+					  "fontSize": 12,
+					  "bold": true,
+					  "underline": true,
+					  "margin": [0,20,0,0]
+                    }
+                  ],
+                  "alignment": "center",
+				   "color": "#484848",
+				  "fontSize": 15,
+				  "bold": true,
+                  "margin": [
+                    56,
+                    23,
+                    0,
+                    0
+                  ]
+                }
+              ]
+            ]
+          },
+          "layout": "noBorders"
+        },
+    
+	{
+      "text": "The amount mentioned below has this day been received",
+      "alignment": "center",
+	  "margin": [0,20,0,0]
+    },
+	{
+      "text": "Administrative charges for NOC to sell meat in Chandigarh Municipality Area",
+      "alignment": "center",
+	  "margin": [0,20,0,0]
+    },
+	{
+      "text": "From - {{variable4}}",
+      "alignment": "left",
+	  "margin": [0,30,0,0]
+    },
+	{
+      "text": "Address - {{variable7}},{{variable8}}",
+      "alignment": "left",
+	  "margin": [0,20,0,20]
+    },
+	{
+		"style": "tableExample",
+			"table": {
+				"body": [
+					["Reference to Application Number", "Total Amount received"],
+					["{{variable5}}", "{{variable2}}"]
+				]
+		}
+	},
+	{
+      "text": "In words Rs.: {{variable1}}",
+      "alignment": "left",
+	  "margin": [0,20,0,0]
+    },
+	{
+      "text": "Date of payment : {{variable3}}",
+      "alignment": "left",
+	  "margin": [0,10,0,0]
+    },
+	{
+      "text": "This receipt is electronically generated, and no signature is required.",
+	  "style" : "receipt-footer"
+    }
+	],
+  "styles": {
+    "pt-reciept-citizen-subheader": {
+      "fontSize": 10,
+      "bold": true,
+      "margin": [
+        0,
+        16,
+        0,
+        8
+      ],
+      "color": "#484848"
+    },
+    "pt-reciept-citizen-table": {
+      "fontSize": 10,
+      "color": "#484848"
+    },
+    "receipt-assess-table": {
+      "fontSize": 10,
+      "color": "#484848",
+      "margin": [
+        0,
+        8,
+        0,
+        0
+      ]
+    },
+    "receipt-assess-table-header": {
+      "bold": true,
+      "fillColor": "#D8D8D8",
+      "color": "#484848"
+    },
+    "receipt-header-details": {
+      "fontSize": 9,
+      "margin": [
+        0,
+        0,
+        0,
+        8
+      ],
+      "color": "#484848"
+    },
+    "receipt-table-key": {
+      "color": "#484848",
+      "bold": true
+    },
+    "receipt-table-value": {
+      "color": "#484848"
+    },
+    "receipt-logo-header": {
+      "color": "#484848",
+      "fontSize": 16,
+      "bold": true,
+      "decoration": "underline",
+      "decorationColor": "#484848"
+    },
+    "receipt-logo-sub-header": {
+      "color": "#484848",
+      "fontSize": 13,
+      "decoration": "underline",
+      "decorationColor": "#484848"
+    },
+	"tableExample": {
+			"margin": [0, 5, 0, 5],
+			"fontSize": 12,
+			"align":"center"
+		},
+    "receipt-footer": {
+	  "align":"bottom",
+      "color": "#484848",
+      "fontSize": 10,
+      "margin": [
+        0,
+        50,
+        0,
+        5
+      ]
+    }
+  }
+  }
+}

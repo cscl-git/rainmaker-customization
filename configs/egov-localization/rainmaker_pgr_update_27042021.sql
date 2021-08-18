@@ -1,0 +1,3 @@
+UPDATE public.message set message='The field should not more them 100 character and should not contain special characters like(;?# etc)' WHERE  module='rainmaker-pgr' and code='CS_HOUSE_NO_ERROR_MESSAGE_VALIDATION';
+UPDATE public.message set message='The field should not more them 100 character and should not contain special characters like(;?# etc)' WHERE  module='rainmaker-pgr' and code='CS_ADDCOMPLAINT_LANDMARK_VALIDATION';
+UPDATE public.message set message='The field should not more them 500 character and should not contain special characters like(;?# etc)' WHERE  module='rainmaker-pgr' and code='CS_ADDCOMPLAINT_COMPLAINT_DETAILS_VALIDATION';

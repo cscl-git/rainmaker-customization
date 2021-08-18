@@ -1,0 +1,470 @@
+{
+      "key": "nulm-certificate-susv",
+    "config": {
+    "defaultStyle": {
+      "font": "Cambay"
+     },
+    "content": [
+      {
+        "table": {
+          "widths": [80, "*"],
+          "body": [
+            [
+              {
+                "image": "{{ulbLogo}}",
+                "width": 80,
+                "margin": [-6, 0, 0, 0]
+              },
+              {
+                "stack": [
+                  {
+                    "text": "{{corporation_name}}",
+                    "style": "receipt-logo-header",
+                    "margin": [0, 0, 0, 0]
+                  },
+                  {
+                    "text": "{{corporation_address}}",
+                    "style": "receipt-logo-sub-text",
+                    "margin": [0, 5, 0, 0]
+                  }
+                ],
+                "alignment": "center",
+                "margin": [-20, 0, 0, 0]
+              }
+            ]
+          ]
+        },
+        "margin": [0, -25, 0, 0],
+        "layout": "noBorders"
+      },
+      
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Application No"
+          },
+          {
+            "width": 200,
+			"text": "{{applicationId}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Application Status"
+          },
+          {
+            "width": 100,
+			"text": "{{applicationStatus}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text": "Name of Applicant"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{nameOfApplicant}}"
+          }
+        ]
+      },
+	   {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Father/Spouse Name"
+          },
+          {
+            "width": 100,
+			"text":"{{fatherName}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Mother Name"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{motherName}}"
+          }
+        ]
+      },
+	   {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Age" 
+          },
+          {
+            "width": 100,
+			"text":"{{age}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Date of Birth"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{dob}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Caste of Applicant"
+          },
+          {
+            "width": 100,
+			"text": "{{casteofApplicant}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text": "Gender"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{gender}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Present Address of Street Vendor"
+          },
+          {
+            "width": 100,
+            "text": "{{presentAddressofStreetVendor}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text": "Permanent Address of Street Vendor"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{permanentAddressofStreetVendor}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Mobile Number"
+          },
+          {
+            "width": 100,
+            "text": "{{mobileNumber}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text": "Qualification"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{qualification}}"
+          }
+        ]
+      },
+      {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Aadhar Number (Last Four Digits Only)"
+          },
+          {
+            "width": 100,
+            "text": "{{adharNo}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text": "Disable"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{isDisable}}"
+          }
+        ]
+      },
+	  
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Blood Group"
+          },
+          {
+            "width": 100,
+            "text": "{{bloodGroup}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 100,
+            "text": "Proposed Category of Vending"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{proposedCategoryofVending}}"
+          }
+        ]
+      },
+ 	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+		  {
+            "width": 200,
+            "text": "Proposed Zone/Ward/Location"
+          },
+          {
+            "width": 100,
+            "text": "{{proposedZone}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 100,
+            "text": "Proposed Time of Vending"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{proposedTimeofVending}}"
+          }
+        ]
+      },
+ 	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+		  {
+            "width": 200,
+            "text": "Government Scheme(Applicable if Beneficiary/Poor)"
+          },
+          {
+            "width": 100,
+            "text": "{{governmentScheme}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 100,
+            "text": "Name of Nominee of Street Vendor"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{nameofNomineeofStreetVendor}}"
+          }
+        ]
+      },
+	   {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+		  {
+            "width": 200,
+			 "style": "header",
+            "text": "Nominee Details"
+          }
+        ]
+      },
+	  {
+        "style": "payslip-table1",
+        "table": {
+          "widths": [
+            "100%"
+          ],
+          "body": [
+            [
+              {
+                "table": {
+                  "headerRows": 1,
+                  "widths": [
+                  "40%",
+                  "20%",
+				  "30.5%"
+                  ],
+                  "body": [
+				  [ "{ \"text\":\"Name\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Age\", \"border\":[  false, false, false, false ] ,\"style\": \"tm-sub-table\"},   { \"text\":\"Relation\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-sub-table\"}" ],
+				 "{{#variable1}}[ \"{ \"text\":\"{{nominee_name}}\", \"border\":[  false, false, false, false] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{nominee_age}}\", \"border\":[  false, false, false, false], \"style\": \"tm-sub-table-value\" }, { \"text\":\"{{nominee_relation}}\", \"border\":[  false, false, false, false ] ,\"style\": \"tm-sub-table-value\"}\" ]{{/variable1}}"
+                  ]
+                },
+                "border": [
+                  false,
+                  false,
+                  false,
+                  false
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": {}
+      },
+	  {
+	  },
+     {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+		  {
+            "width": 200,
+			"bold": true,
+            "text": "Undertaking"
+          }
+          
+        ]
+      },
+	    {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+		
+          {
+            "width": 500,
+            "text": "I undertake that in the event of any of the information furnished above being found to be false or incorrect in any respect,the certificate is liable to be cancelled."
+          }
+          
+        ]
+      },
+	  {
+	  
+        "style": "nulm-certificate-data-2",
+        "columns": [
+		  {
+            "width": 200,
+            "text": "Place"
+          },
+		   {
+            "width": 100,
+            "text": "{{place}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+         
+          {
+            "width": 100,
+            "text": "Date"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{date}}"
+          }
+        ]
+      }
+    ],
+ 	 
+
+    "styles": {
+      "nulm-certificate-data-2": {
+        "margin": [0, 8, 0, 0]
+      },
+
+      "receipt-logo-header": {
+        "color": "#1E1E1E",
+        "fontSize": 18,
+        "bold": true,
+        "letterSpacing": 0.74
+      },
+	  "header": {
+        "color": "#1E1E1E",
+        "fontSize": 14,
+        "bold": true,
+        "letterSpacing": 0.74
+      },
+      "receipt-logo-sub-text": {
+        "color": "#656565",
+        "fontSize": 14,
+        "letterSpacing": 0.74
+      }
+    }
+  }
+}

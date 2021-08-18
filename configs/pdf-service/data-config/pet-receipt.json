@@ -12,6 +12,11 @@
             "mappings": [
                {
                   "direct": [
+				   {
+                        "variable": "variable33",                        
+                        "url":"http://mcchandigarh.gov.in/sites/default/files/mc-chandigardh-logo.png",
+                        "type":"image"
+                     },
                      {
                         "variable": "variable1",
                         "value": {

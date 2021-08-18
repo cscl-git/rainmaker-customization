@@ -26,12 +26,13 @@ serviceMaps:
       fromTopic: integration-services-save-fireData
       isTransaction: true
       queryMaps:
-      -  query: INSERT INTO public.fire_noc_dump(uuid, data, is_active, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?::jsonb, ?, ?, ?, ?, ?);      
+      -  query: INSERT INTO public.fire_noc_dump(uuid, data, is_active, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?);      
          basePath: $.fireNocRequest
          jsonMaps:
          -  jsonPath: $.fireNocRequest.uuid
          -  jsonPath: $.fireNocRequest.data
-            dbType: JSONB 
+            type: JSON
+            dbType: JSONB
          -  jsonPath: $.fireNocRequest.isActive
          -  jsonPath: $.fireNocRequest.auditDetails.createdBy
          -  jsonPath: $.fireNocRequest.auditDetails.createdTime

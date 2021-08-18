@@ -4,23 +4,62 @@
     
   "content":[
     {
-      "text": "RECEIPT",
-      "alignment": "center",
-	  "color": "#484848",
-      "fontSize": 15,
-      "bold": true,
-	  "underline": true,
-	  "margin": [0,20,0,0]
-    },
-	{
-      "text": "MUNICIPAL CORPORATION CHANDIGARH",
-      "alignment": "center",
-	  "color": "#484848",
-      "fontSize": 12,
-      "bold": true,
-	  "underline": true,
-	  "margin": [0,20,0,0]
-    },
+          "style": "tl-head",
+          "table": {
+            "widths": [
+              50,
+              "*",
+              100
+            ],
+            "body": [
+              [
+                {
+                  "image": "{{variable33}}",
+                  "width": 65,
+                  "margin": [
+                    30,
+                    20,
+                    10,
+                    0
+                  ]
+                },
+                {
+                  "stack": [
+                    {
+                      "text": "RECEIPT",
+                     "alignment": "center",
+					  "color": "#484848",
+					  "fontSize": 15,
+					  "bold": true,
+					  "underline": true,
+					  "margin": [0,0,0,0]
+                    },
+                    {
+                      "text":"MUNICIPAL CORPORATION CHANDIGARH",
+                      "alignment": "center",
+					  "color": "#484848",
+					  "fontSize": 12,
+					  "bold": true,
+					  "underline": true,
+					  "margin": [0,20,0,0]
+                    }
+                  ],
+                  "alignment": "center",
+				   "color": "#484848",
+				  "fontSize": 15,
+				  "bold": true,
+                  "margin": [
+                    56,
+                    23,
+                    0,
+                    0
+                  ]
+                }
+              ]
+            ]
+          },
+          "layout": "noBorders"
+        },
 	{
       "text": "Form (G-8)",
       "alignment": "center",

@@ -288,9 +288,9 @@ serviceMaps:
    isTransaction: true
    queryMaps:
 
-    - query: INSERT INTO public.eg_pgr_discription_report(   lastassignedto, servicecode, locality, complaintno, date, name,   phone, landmark, address, description, complaintraisedby, slahours,   lastactiondate, status, autoescalated, createdtime,department,servicerequestid,tenantid,slaendtime,source)     VALUES (?, ?, ?, ?, ?, ?,   ?, ?, ?, ?, ?, ?,   ?, ?, ?, ?,?,?,?,?,?)
+    - query: INSERT INTO public.eg_pgr_discription_report(   lastassignedto, servicecode, locality, complaintno, date, name,   phone, landmark, address, description, complaintraisedby, slahours,   lastactiondate, status, autoescalated, createdtime,department,servicerequestid,tenantid,slaendtime,source,feedback,rating,comments)     VALUES (?, ?, ?, ?, ?, ?,   ?, ?, ?, ?, ?, ?,   ?, ?, ?, ?,?,?,?,?,?,?,?,?)
               ON CONFLICT (servicerequestid,tenantid) DO UPDATE SET lastassignedto=?, servicecode=?, locality=?, complaintno=?, date=?, name=?, phone=?, landmark=?, address=?, description=?, complaintraisedby=?, slahours=?, lastactiondate=?, status=?, autoescalated=?, department=?, 
-       servicerequestid=?, tenantid=?, createdtime=? ,slaendtime=?,source=?
+       servicerequestid=?, tenantid=?, createdtime=? ,slaendtime=?,source=?,feedback=?,rating=?,comments=?
 
       basePath: discriptionReport
       jsonMaps:
@@ -315,7 +315,10 @@ serviceMaps:
        - jsonPath: $.discriptionReport.servicerequestid       
        - jsonPath: $.discriptionReport.tenantid   
        - jsonPath: $.discriptionReport.slaendtime
-       - jsonPath: $.discriptionReport.source      
+       - jsonPath: $.discriptionReport.source
+       - jsonPath: $.discriptionReport.feedback
+       - jsonPath: $.discriptionReport.rating
+       - jsonPath: $.discriptionReport.comments      
        - jsonPath: $.discriptionReport.lastassignedto
        - jsonPath: $.discriptionReport.servicecode
        - jsonPath: $.discriptionReport.locality       
@@ -337,4 +340,6 @@ serviceMaps:
        - jsonPath: $.discriptionReport.createdtime
        - jsonPath: $.discriptionReport.slaendtime
        - jsonPath: $.discriptionReport.source
-   
+       - jsonPath: $.discriptionReport.feedback
+       - jsonPath: $.discriptionReport.rating
+       - jsonPath: $.discriptionReport.comments

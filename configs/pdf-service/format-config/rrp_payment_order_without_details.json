@@ -1,0 +1,350 @@
+{
+  "key":"rrp_payment_order_without_details",
+  
+
+  "config":{
+      "content": [
+	  
+        {
+          "style": "pt-reciept-citizen-header",
+          "text": "OFFICE OF COMMISSIONER, MUNICIPAL CORPORATION, CHANDIGARH",
+                  "bold": true,
+				  "alignment":"center"
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "No. {{application_number}}",
+                  "bold": false,
+				  "alignment":"left"
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Dated: {{date_today}}",
+                  "bold": false,
+				  "alignment":"right"
+        },
+        {
+          "style": "pt-reciept-citizen-header",
+          "text": "To",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "{{employee_name}}",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "{{permanent_address}}, {{permanent_city}}, {{permanent_pincode}}",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Pension Payment Order No. {{payment_order_number}}",
+                  "bold": true,
+				  "alignment":"center"
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Pension Payment Order in respect of {{employee_name}} S/o {{father_name}}, Ex-{{designation}}, Retired on: {{dor}}",
+                  "bold": true,
+				  "alignment":"center"
+        },
+		
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "The date of birth as per office record of {{employee_name}} was {{dob}} and date of joining {{service_start_date}}. The qualifying period of service of {{employee_name}} has been approved for {{nqs_year}} years {{nqs_month}} months {{nqs_day}} days and the amount of DCRG not exceeding Rs.{{FINAL_CALCULATED_GRATUITY_amount}}/- on the basis of last pay drawn Rs.{{lpd}}/- and the amount of pension not exceeding to Rs.{{FINAL_CALCULATED_PENSION_amount}}/- are admissible under the Punjab revised pension rule 2009.",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Pension and all dues are/will be disbursed to Bank Account No. {{acc_number}} of {{bank_details}}.",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "P.P.O No. ____________________ may be referred in the future correspondence.",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Life pension certificate, employment/Non employment certificate may be submitted every year in the month of November.",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Account's Officer (P&PF)",
+                  "bold": true,
+				  "alignment": "right"
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Municipal Corporation",
+                  "bold": true,
+				  "alignment": "right"
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Chandigarh",
+                  "bold": true,
+				  "alignment": "right"
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Subject: Pension case of Shri/Smt. {{employee_name}} S/o {{father_name}} Designation: Ex-{{designation}} retired on {{dor}} from the {{department}} M.C. Chandigarh.",
+                  "bold": true
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "The following computation of pension has been made as per calculation sheet placed below on the basis of Fifth pay commission notifications issued by Punjab Government revised pension rule's 2009 and further adopted by Chandigarh Administration and Municipal Corporation Chandigarh which is as under",
+                  "bold": false
+        },	
+		
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Date of Birth: {{dob}}",
+                  "bold": false
+				  
+				  
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Date of Joining: {{service_start_date}}",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Date of Retirement: {{dor}} ({{reason_for_retirement}})",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Gross Qualifying Service: {{gqs_year}}-{{gqs_month}}-{{gqs_day}}",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Non Qualifying Service: {{nonqs_year}}-{{nonqs_month}}-{{nonqs_day}}",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Net Qualifying Service: {{nqs_year}}-{{nqs_month}}-{{nqs_day}}",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Last Pay Drawn: Rs.{{lpd}}+{{IR_amount}} IR/-",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Basic Pension: Rs.{{BASIC_PENSION_amount}}/-",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Commutation (if opted): Rs.{{COMMUTED_PENSION_amount}}/-",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Final Calculated Pension: Rs.{{FINAL_CALCULATED_PENSION_amount}}/-",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Provisional Pension (in case of ongoing Judicial cases): Rs.{{PROVISIONAL_PENSION_amount}}/-",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Compassionate Pension (in case of misconduct): Rs.{{COMPASSIONATE_PENSION_amount}}/-",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Compensation Pension (in case of Abolition of post - if opted): Rs.{{COMPENSATION_PENSION_amount}}/-",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Invalid Pension (in case of disability): Rs.{{INVALID_PENSION_amount}}/-",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Wound or Extraordinary Pension (in case of disability): Rs.{{WOUND_EXTRAORDINARY_PENSION_amount}}/-",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Attendant Allowance (in case of disability): Rs.{{ATTENDANT_ALLOWANCE_amount}}/-",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Commutation Value (if opted): Rs.{{COMMUTATION_VALUE_amount}}/-",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "(Restoration after 15 years)",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Death-cum-retirement-gratuity: Rs.{{FINAL_CALCULATED_GRATUITY_amount}}/-",
+                  "bold": false
+        },		
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Terminal Benefit (in case of Abolition of post - if opted): Rs.{{TERMINAL_BENEFIT_amount}}/-",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Ex-gratia (in case of disability): Rs.{{EX_GRATIA_amount}}/-",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Through Bank Details: {{bank_details}}, IFSC: {{bank_ifsc}}, A/c. No. {{acc_number}}",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "In view of the facts explained above the Additional Commissioner - III, MC may be requested to accord sanction to draw and disburse pension Rs.{{FINAL_CALCULATED_PENSION_amount}}/- from {{doc}}, Commutation (if opted) Rs.{{COMMUTATION_VALUE_amount}}/- and DCRG amounting Rs.{{FINAL_CALCULATED_GRATUITY_amount}}/- paid to {{employee_name}} & issue PPO order.",
+                  "bold": false
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Submitted for approval please.",
+                  "bold": false
+        }
+      ],
+      "footer": [
+        {
+          "text": " ",
+          "style": "receipt-footer"
+        }
+      ],
+      "styles": {
+        "tl-head": {
+          "fillColor": "#F2F2F2",
+          "margin": [
+            -41,
+            -41,
+            -41,
+            0
+          ]
+        },
+        "pt-reciept-citizen-header": {
+          "fontSize": 12,
+          "bold": true,
+          "margin": [
+            0,
+            8,
+            0,
+            0
+          ],
+          "color": "#484848"
+        },
+        "pt-reciept-citizen-subheader": {
+          "fontSize": 10,
+          "bold": true,
+          "margin": [
+            0,
+            16,
+            0,
+            8
+          ],
+          "color": "#484848"
+        },
+        "pt-reciept-citizen-table": {
+          "fontSize": 10,
+          "color": "#484848"
+        },
+        "receipt-assess-table": {
+          "fontSize": 10,
+          "color": "#484848",
+          "margin": [
+            0,
+            8,
+            0,
+            0
+          ]
+        },
+        "receipt-assess-table-header": {
+          "bold": true,
+          "fillColor": "#D8D8D8",
+          "color": "#484848"
+        },
+        "receipt-header-details": {
+          "fontSize": 9,
+          "margin": [
+            0,
+            0,
+            0,
+            8
+          ],
+          "color": "#484848"
+        },
+        "receipt-table-key": {
+          "color": "#484848",
+          "bold": true
+        },
+        "receipt-table-value": {
+          "color": "#484848"
+        },
+        "receipt-logo-header": {
+          "color": "#484848",
+          "fontFamily": "Roboto",
+          "fontSize": 16,
+          "bold": true,
+          "letterSpacing": 0.74
+        },
+        "receipt-logo-sub-header": {
+          "color": "#484848",
+          "fontFamily": "Roboto",
+          "fontSize": 13,
+          "letterSpacing": 1.6,
+          "margin": [
+            0,
+            6,
+            0,
+            0
+          ]
+        },
+		"tableExample": {
+			"margin": [0, 5, 0, 5],
+			"fontSize": 12
+		},
+        "receipt-footer": {
+          "color": "#484848",
+          "fontSize": 8,
+          "margin": [
+            30,
+            -20,
+            0,
+            0
+          ]
+        },
+        "receipt-no": {
+          "color": "#484848",
+          "fontSize": 10
+        },
+        "receipt-approver": {
+          "fontSize": 10,
+          "bold": true,
+          "margin": [
+            0,
+            60,
+            0,
+            8
+          ],
+          "color": "#484848"
+        }
+      }
+    }
+}

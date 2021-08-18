@@ -13,7 +13,7 @@
               "direct": [
                {
                 "variable": "ulbLogo",                        
-                "url":"https://egov.transerve.com/media/logo.png",
+                "url":"https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
                 "type":"image"
                 },
                {
@@ -48,9 +48,9 @@
                 }
               },
                  {
-                "variable": "nameOfApplicant",
+                "variable": "name",
                 "value": {
-                  "path": "$.nameOfApplicant"
+                  "path": "$.name"
                 }
               },
 			  {
@@ -62,6 +62,12 @@
                 "variable": "dob",
                 "value": {
                   "path": "$.dob"
+                }
+              },
+			  {
+                "variable": "age",
+                "value": {
+                  "path": "$.age"
                 }
               },
 			  {

@@ -1,0 +1,246 @@
+{
+  "key":"ws-bill-receipt-no-due",
+  "config":{
+    
+  "content":[
+   {
+          "style": "tl-head",
+          "table": {
+            "widths": [
+              50,
+              "*",
+              100
+            ],
+            "body": [
+              [
+                {
+                  "image": "{{variable33}}",
+                  "width": 65,
+                  "margin": [
+                    30,
+                    30,
+                    10,
+                    10
+                  ]
+                },
+                {
+                  "stack": [
+                    
+                    {
+                      "text":"Municipal Corporation Chandigarh",
+                      "alignment": "center",
+					  "color": "#484848",
+					  "fontSize": 16,
+					  "bold": true,
+					  "underline": true,
+					  "margin": [0,20,0,0]
+                    },
+					{
+                      "text":"NO DUE CERTIFICATE IN RESPECT OF WATER CHARGES BILL",
+                      "alignment": "center",
+					  "color": "#484848",
+					  "fontSize": 10,
+					  "bold": true,
+					  "underline": true,
+					  "margin": [0,20,0,15]
+                    }
+                  ],
+                  "alignment": "center",
+				   "color": "#484848",
+				  "fontSize": 15,
+				  "bold": true,
+                  "margin": [
+                    56,
+                    23,
+                    0,
+                    0
+                  ]
+                }
+              ]
+            ]
+          },
+          "layout": "noBorders"
+        },
+   {
+        "style": "payslip-table",
+        "table": {
+          "widths": [
+            "100%"
+          ],
+          "body": [
+            [
+              {
+                "table": {
+                  "headerRows": 1,
+                  "widths": [
+                    "70.08%",
+                      "50.08%"
+                  ],
+                  "body": [
+                    [
+                      "{ \"text\":\"Application Number - {{applicationNo}}\", \"border\":[ false, false, false, false ] ,\"style\": \"payslip-data-3\"},{ \"text\":\"               Dated - {{dated}}\", \"border\":[ false, false, false, false ] ,\"style\": \"payslip-data-4\"}"
+                    ]
+                  ]
+                },
+                "border": [
+                  false,
+                  false,
+                  false,
+                  false
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": {}
+      },
+	{
+      "text": "Nothing is out standing against Smt./ Sh. {{applicantName}} Ex-Occupant of House no. {{houseNo}} , Plot no. {{plotNo}} , Sector/ Locality {{sector}} Chandigarh (UT) up to {{upto}} , Final payment of A/C No. {{accountNo}} Rs {{rs}} , vide Receipt No. {{receiptNo}} .Date {{date}} ",
+      "alignment": "left",
+	   "color": "#484848",
+	   "fontSize": 11,
+	  "margin": [0,10,0,0]
+    },
+	
+	{
+      "text": "Superintendent,",
+	  "color": "#484848",
+	   "fontSize": 11,
+      "alignment": "right",
+	  "margin": [0,20,0,0]
+    },
+	{
+     "text": "Water Billing Sub-Division {{division}}",
+	 "color": "#484848",
+	   "fontSize": 11,
+      "alignment": "right"
+	 
+    },
+	{
+      "text": "Chandigarh",
+	  "color": "#484848",
+	   "fontSize": 11,
+	  "alignment": "right"
+    },
+		{
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["100%"],
+            "body": [
+              [
+                {
+                  "text": "Note :",
+                  "border": [
+                    false,
+                    false,
+                    false,
+                    false
+                  ],
+				    "fontSize": 13,
+                  "style": "receipt-table-key"
+                }
+              ]
+            ]
+          },
+          "layout": {}
+        }  
+		,{
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["100%"],
+            "body": [
+              [
+                {
+                  "text": "1.This is computerized generated Receipt and need no signature.",
+                  "border": [
+                    false,
+                    false,
+                    false,
+                    false
+                  ],
+				    "fontSize": 11,
+					"bold": false,
+                  "style": "receipt-table-key"
+                }
+              ]
+            ]
+          },
+          "layout": {}
+        } 
+	],
+  "styles": {
+    "pt-reciept-citizen-subheader": {
+      "fontSize": 10,
+      "bold": true,
+      "margin": [
+        0,
+        16,
+        0,
+        8
+      ],
+      "color": "#484848"
+    },
+    "pt-reciept-citizen-table": {
+      "fontSize": 10,
+      "color": "#484848"
+    },
+    "receipt-assess-table": {
+      "fontSize": 10,
+      "color": "#484848",
+      "margin": [
+        0,
+        8,
+        0,
+        0
+      ]
+    },
+    "receipt-assess-table-header": {
+      "bold": true,
+      "fillColor": "#D8D8D8",
+      "color": "#484848"
+    },
+    "receipt-header-details": {
+      "fontSize": 9,
+      "margin": [
+        0,
+        0,
+        0,
+        8
+      ],
+      "color": "#484848"
+    },
+    "receipt-table-key": {
+      "color": "#484848",
+      "bold": true
+    },
+    "receipt-table-value": {
+      "color": "#484848"
+    },
+    "receipt-logo-header": {
+      "color": "#484848",
+      "fontSize": 16,
+      "bold": true,
+      "decoration": "underline",
+      "decorationColor": "#484848"
+    },
+    "receipt-logo-sub-header": {
+      "color": "#484848",
+      "fontSize": 13,
+      "decoration": "underline",
+      "decorationColor": "#484848"
+    },
+	
+    "receipt-footer": {
+	  "align":"bottom",
+      "color": "#484848",
+      "fontSize": 10,
+      "margin": [
+        0,
+        50,
+        0,
+        5
+      ]
+    }
+  }
+  }
+}

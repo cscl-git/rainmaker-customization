@@ -56,6 +56,12 @@
                                 }
                             },
                             {
+                                "variable": "NomName",
+                                "value": {
+                                    "path": "$.bankInfo.nomName"
+                                }
+                            },
+                            {
                                 "variable": "pdfLogo",
                                 "url": "https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
                                 "type": "image"
@@ -263,6 +269,32 @@
                                 "value": {
                                     "path": "$.tenantInfo.webSite"
                                 }
+                            },
+                            {
+                               "variable": "currentDate",
+                               "value": {
+                                  "path": "$.paymentInfo.currentDate"
+                               }
+                            }, {
+                               "variable": "chequeNo",
+                               "value": {
+                                  "path": "$.paymentInfo.chequeNo"
+                               }
+                            }, {
+                               "variable": "chequeDate",
+                               "value": {
+                                  "path": "$.paymentInfo.chequeDate"
+                               }
+                            }, {
+                               "variable": "demandDraftNo",
+                               "value": {
+                                  "path": "$.paymentInfo.demandDraftNo"
+                               }
+                            }, {
+                               "variable": "demandDraftDate",
+                               "value": {
+                                  "path": "$.paymentInfo.demandDraftDate"
+                               }
                             }
                         ]
                     }

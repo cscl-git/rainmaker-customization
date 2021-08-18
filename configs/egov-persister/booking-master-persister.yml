@@ -190,7 +190,7 @@ serviceMaps:
    isTransaction: true
    queryMaps:
 
-       - query: INSERT INTO public.bk_commercial_ground_fee (id, booking_venue, category, rate_per_day, created_date, last_modified_date, from_date) VALUES(?, ?, ?, ?, ?::timestamp, ?::timestamp, ?::timestamp);
+       - query: INSERT INTO public.bk_commercial_ground_fee (id, booking_venue, category, rate_per_day, refundabel_security, created_date, last_modified_date, from_date) VALUES(?, ?, ?, ?, ?, ?::timestamp, ?::timestamp, ?::timestamp);
          basePath: GfcpFeeDetails.*
          jsonMaps:
          
@@ -201,6 +201,8 @@ serviceMaps:
           - jsonPath: $.GfcpFeeDetails.*.category
              
           - jsonPath: $.GfcpFeeDetails.*.ratePerDay
+          
+          - jsonPath: $.PaccFeeDetails.*.refundabelSecurity
           
           - jsonPath: $.GfcpFeeDetails.*.createdDate
           
@@ -220,7 +222,7 @@ serviceMaps:
    isTransaction: true
    queryMaps:
        
-       - query: UPDATE public.bk_commercial_ground_fee SET booking_venue=?, category=?, rate_per_day=?, last_modified_date=?::timestamp, to_date=?::timestamp WHERE id=?;
+       - query: UPDATE public.bk_commercial_ground_fee SET booking_venue=?, category=?, rate_per_day=?, refundabel_security = ?, last_modified_date=?::timestamp, to_date=?::timestamp WHERE id=?;
          basePath: GfcpFeeDetails.*
          jsonMaps:
              
@@ -228,7 +230,9 @@ serviceMaps:
              
           - jsonPath: $.GfcpFeeDetails.*.category
              
-          - jsonPath: $.GfcpFeeDetails.*.ratePerDay      
+          - jsonPath: $.GfcpFeeDetails.*.ratePerDay  
+
+          - jsonPath: $.PaccFeeDetails.*.refundabelSecurity
           
           - jsonPath: $.OsujmFeeDetails.*.lastModifiedDate
           
@@ -375,4 +379,78 @@ serviceMaps:
           
           - jsonPath: $.PaccFeeDetails.*.toDate
           
-          - jsonPath: $.PaccFeeDetails.*.id
+          - jsonPath: $.PaccFeeDetails.*.id 
+          
+          
+          
+ - version: 1.0
+   description: Persists the Community Center Room fee details into db
+   fromTopic: save-community-center-room-fee-details-topic
+   isTransaction: true
+   queryMaps:
+
+       - query: INSERT INTO public.bk_room_master (id, community_center_name, total_number_of_rooms, type_of_room, rent_for_one_day, rent_for_3_hrs, rent_for_6_hrs, rent_for_9_hrs, sector_name, created_date, last_modified_date, from_date) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?::timestamp, ?::timestamp, ?::timestamp);
+         basePath: CommunityCenterRoomFeeDetails.*
+         jsonMaps:
+         
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.id 
+          
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.communityCenterName
+             
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.totalNumberOfRooms
+             
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.typeOfRoom
+             
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.rentForOneDay
+             
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.rentFor3Hrs
+          
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.rentFor6Hrs 
+             
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.rentFor9Hrs
+             
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.sector
+          
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.createdDate
+          
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.lastModifiedDate
+          
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.fromDate
+          
+          
+          
+          
+ - version: 1.0
+   name: bookings
+   description: Persists the Cmmunity Center Room fee details into db
+   fromTopic: update-community-center-room-fee-details-topic
+   isTransaction: true
+   queryMaps:
+       
+       - query: UPDATE public.bk_room_master SET community_center_name=?, total_number_of_rooms=?, type_of_room=?, rent_for_one_day=?, rent_for_3_hrs=?, rent_for_6_hrs=?, rent_for_9_hrs=?, sector_name=?, last_modified_date=?::timestamp, to_date=?::timestamp WHERE id=?;
+         basePath: CommunityCenterRoomFeeDetails.*
+         jsonMaps:
+             
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.communityCenterName  
+           
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.totalNumberOfRooms
+             
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.typeOfRoom
+             
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.rentForOneDay
+             
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.rentFor3Hrs
+          
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.rentFor6Hrs 
+             
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.rentFor9Hrs
+             
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.sector
+          
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.lastModifiedDate
+          
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.toDate
+          
+          - jsonPath: $.CommunityCenterRoomFeeDetails.*.id 
+                    
+          

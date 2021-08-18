@@ -110,6 +110,11 @@ ReportDefinitions:
     type: string
     source: ot
     total: false
+  - name: colony
+    label: report.rp.colony
+    type: string
+    source: ot
+    total: false
   - name: allotmen_number
     label: report.rp.allotmentnumber
     type: string
@@ -142,6 +147,11 @@ ReportDefinitions:
     total: false
   - name: applicationtype
     label: report.rp.applicationtype
+    type: string
+    source: ot
+    total: false
+  - name: paymenttype
+    label: report.rp.paymenttype
     type: string
     source: ot
     total: false
@@ -174,14 +184,19 @@ ReportDefinitions:
       od.name as name,
       od.phone as mobileno,
       payment.transactionnumber as transactionnumber,
-      payment.totalamountpaid as totalamount
+      payment.totalamountpaid as totalamount,
+      CASE WHEN payment.paymentmode = 'OFFLINE_NEFT' THEN 'DIRECT BANK - Vikas Nagar' WHEN payment.paymentmode = 'OFFLINE_RTGS' THEN 'DIRECT BANK - Sec. 52-53'  ELSE payment.paymentmode END as paymenttype,
+      colonymsg.message as colony
     FROM cs_pt_ownership_v1 ot 
     INNER JOIN cs_pt_ownershipdetails_v1 od ON od.owner_id = ot.id 
     INNER JOIN  message msg ON  msg.code = ot.application_state AND msg.locale = 'en_IN'
     LEFT OUTER JOIN egcl_bill bill ON bill.consumercode = od.application_number 
     LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
     LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
-    WHERE ot.application_state in ('OT_APPROVED', 'OT_PAID', 'OT_REJECTEDPAID','OT_PENDINGCLAPPROVAL','OT_PENDINGSAREJECTION') AND ot.application_state != 'null' AND ot.tenantId LIKE $tenantid
+    LEFT OUTER JOIN cs_pt_property_v1 as pt ON pt.id = ot.property_id
+    INNER JOIN  message colonymsg ON  colonymsg.code = pt.colony AND colonymsg.locale = 'en_IN'
+    WHERE ot.application_state in ('OT_APPROVED', 'OT_PAID', 'OT_REJECTEDPAID','OT_PENDINGCLAPPROVAL','OT_PENDINGSAREJECTION') AND ot.application_state != 'null' 
+    AND ot.tenantId LIKE $tenantid
   
 - reportName: DCRegistryReport
   summary: Duplicate Copy Registry Report
@@ -195,6 +210,11 @@ ReportDefinitions:
     total: false
   - name: receiptIssueDate
     label: report.rp.receiptissuedate
+    type: string
+    source: dc
+    total: false
+  - name: colony
+    label: report.rp.colony
     type: string
     source: dc
     total: false
@@ -233,6 +253,11 @@ ReportDefinitions:
     type: string
     source: dc
     total: false
+  - name: paymenttype
+    label: report.rp.paymenttype
+    type: string
+    source: dc
+    total: false
   - name: totalamount
     label: report.rp.receipt.totalamount
     type: string
@@ -262,7 +287,9 @@ ReportDefinitions:
       da.name as name,
       da.mobileno as mobileno,
       payment.transactionnumber as transactionnumber,
-      payment.totalamountpaid as totalamount
+      payment.totalamountpaid as totalamount,
+      CASE WHEN payment.paymentmode = 'OFFLINE_NEFT' THEN 'DIRECT BANK - Vikas Nagar' WHEN payment.paymentmode = 'OFFLINE_RTGS' THEN 'DIRECT BANK - Sec. 52-53'  ELSE payment.paymentmode END as paymenttype,
+      colonymsg.message as colony
     FROM cs_pt_duplicate_ownership_application dc 
     INNER JOIN cs_pt_duplicatecopy_applicant da ON da.application_id = dc.id 
     INNER JOIN  message msg ON  msg.code = dc.state AND msg.locale = 'en_IN'
@@ -271,6 +298,8 @@ ReportDefinitions:
     LEFT OUTER JOIN egcl_bill bill ON bill.consumercode = dc.application_number
     LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
     LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
+    LEFT OUTER JOIN cs_pt_property_v1 as pt ON pt.id = dc.property_id
+    INNER JOIN  message colonymsg ON  colonymsg.code = pt.colony AND colonymsg.locale = 'en_IN'
     WHERE dc.State in ('DC_APPROVED', 'DC_PAID', 'DC_REJECTEDPAID','DC_PENDINGCLAPPROVAL','DC_PENDINGSAREJECTION') AND dc.tenantId LIKE $tenantid
     
 
@@ -291,6 +320,11 @@ ReportDefinitions:
     total: false
   - name: transit_number
     label: report.rp.transitnumber
+    type: string
+    source: rent
+    total: false
+  - name: colony
+    label: report.rp.colony
     type: string
     source: rent
     total: false
@@ -341,20 +375,22 @@ ReportDefinitions:
   query: |
     SELECT 
       rent.transit_number,
+      colonymsg.message as colony,
       to_char(To_timestamp(pd.receiptdate / 1000), 'DD/MM/YYYY') as receiptIssueDate , 
       pd.receiptnumber,
       od.name as name,
       od.phone as mobileno,
       payment.transactionnumber as transactionnumber,
       payment.totalamountpaid as totalamount,
-      payment.paymentmode as paymenttype
-    FROM cs_pt_property_v1 rent 
+      CASE WHEN payment.paymentmode = 'OFFLINE_NEFT' THEN 'DIRECT BANK - Vikas Nagar' WHEN payment.paymentmode = 'OFFLINE_RTGS' THEN 'DIRECT BANK - Sec. 52-53'  ELSE payment.paymentmode END as paymenttype
+    FROM cs_pt_property_v1 rent
+    INNER JOIN  message colonymsg ON  colonymsg.code = rent.colony AND colonymsg.locale = 'en_IN'
     LEFT OUTER JOIN cs_pt_ownership_v1 ot ON rent.id = ot.property_id and ot.active_state = true
     LEFT OUTER JOIN cs_pt_ownershipdetails_v1 od ON ot.id = od.owner_id
     LEFT OUTER JOIN egcl_bill bill ON bill.consumercode like concat(FORMAT('SITE-%s',rent.transit_number), '%')
     LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
     LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id 
-    WHERE rent.tenantId LIKE $tenantid and payment.transactionnumber != 'null' 
+    WHERE rent.tenantId LIKE $tenantid and payment.transactionnumber != 'null'  
     
 - reportName: OTCollectionReport
   summary: Ownership transfer Collection Report
@@ -371,6 +407,16 @@ ReportDefinitions:
     type: string
     source: ot
     total: false
+  - name: online
+    label: report.rp.online.collection
+    type: string
+    source: rp
+    total: true
+  - name: offline
+    label: report.rp.offline.collection
+    type: string
+    source: rp
+    total: true
   - name: total
     label: report.rp.totalCollection
     type: string
@@ -393,12 +439,16 @@ ReportDefinitions:
     SELECT 
       COUNT(bill.consumercode) as transactionCount,
       CASE WHEN split_part(ot.application_state,'_',1) = 'OT' THEN 'Ownership Transfer' ELSE '' END as applicationtype,
-      SUM(payment.totalamountpaid) as total 
+      SUM(onl.totalamountpaid) as online,
+      SUM(offl.totalamountpaid) as offline,
+      COALESCE(SUM(onl.totalamountpaid),0)+ COALESCE(SUM(offl.totalamountpaid),0) as total
     FROM cs_pt_ownership_v1 ot 
     INNER JOIN cs_pt_ownershipdetails_v1 od ON od.owner_id = ot.id
     LEFT OUTER JOIN egcl_bill bill ON bill.consumercode = od.application_number 
     LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
     LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
+    LEFT OUTER JOIN (SELECT * FROM egcl_payment WHERE paymentmode = 'ONLINE') AS onl ON  pd.paymentid = onl.id 
+    LEFT OUTER JOIN (SELECT * FROM egcl_payment WHERE paymentmode IN ('CASH','CHEQUE','DD','OFFLINE_NEFT','OFFLINE_RTGS')) AS offl ON pd.paymentid = offl.id
     WHERE ot.application_state in ('OT_APPROVED', 'OT_PAID', 'OT_REJECTEDPAID','OT_PENDINGCLAPPROVAL','OT_PENDINGSAREJECTION') AND ot.application_state != 'null' AND ot.tenantId LIKE $tenantid
   groupby: GROUP BY applicationtype
   
@@ -417,6 +467,16 @@ ReportDefinitions:
     type: string
     source: dc
     total: false
+  - name: online
+    label: report.rp.online.collection
+    type: string
+    source: rp
+    total: true
+  - name: offline
+    label: report.rp.offline.collection
+    type: string
+    source: rp
+    total: true
   - name: total
     label: report.rp.totalCollection
     type: string
@@ -439,11 +499,15 @@ ReportDefinitions:
     SELECT 
       COUNT(bill.consumercode) as transactionCount,
       CASE WHEN split_part(dc.state,'_',1) = 'DC' THEN 'Duplicate Copy' ELSE '' END as applicationtype,
-      SUM(payment.totalamountpaid) as total 
+      SUM(onl.totalamountpaid) as online,
+      SUM(offl.totalamountpaid) as offline,
+      COALESCE(SUM(onl.totalamountpaid),0)+ COALESCE(SUM(offl.totalamountpaid),0) as total 
     FROM cs_pt_duplicate_ownership_application dc 
     LEFT OUTER JOIN egcl_bill bill ON bill.consumercode = dc.application_number 
     LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
     LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
+    LEFT OUTER JOIN (SELECT * FROM egcl_payment WHERE paymentmode = 'ONLINE') AS onl ON  pd.paymentid = onl.id 
+    LEFT OUTER JOIN (SELECT * FROM egcl_payment WHERE paymentmode IN ('CASH','CHEQUE','DD','OFFLINE_NEFT','OFFLINE_RTGS')) AS offl ON pd.paymentid = offl.id
     WHERE dc.State in ('DC_APPROVED', 'DC_PAID', 'DC_REJECTEDPAID','DC_PENDINGCLAPPROVAL','DC_PENDINGSAREJECTION') AND dc.tenantId LIKE $tenantid
   groupby: GROUP BY applicationtype
   
@@ -502,7 +566,7 @@ ReportDefinitions:
      LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
      LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id 
      LEFT OUTER JOIN (SELECT * FROM egcl_payment WHERE paymentmode = 'ONLINE') AS onl ON  pd.paymentid = onl.id 
-     LEFT OUTER JOIN (SELECT * FROM egcl_payment WHERE paymentmode = 'CASH') AS offl ON pd.paymentid = offl.id
+     LEFT OUTER JOIN (SELECT * FROM egcl_payment WHERE paymentmode IN ('CASH','CHEQUE','DD','OFFLINE_NEFT','OFFLINE_RTGS')) AS offl ON pd.paymentid = offl.id
      WHERE rp.tenantId LIKE $tenantid and payment.transactionnumber != 'null' 
   groupby: GROUP BY rp.transit_number
   
@@ -574,6 +638,5 @@ ReportDefinitions:
      FROM cs_pt_dueamount due
      WHERE due.tenantId LIKE $tenantid
   groupby: GROUP BY due.transit_number,due.colony,name,mobileno, due.remaining_principal,due.balance_interest,due.balance_amount
-
 
 

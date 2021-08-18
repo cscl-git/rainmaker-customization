@@ -65,18 +65,31 @@
                 "bold": true
             },
             {
-                "text": "To,",
                 "margin": [
                     0,
                     20,
                     0,
                     0
+                ],
+                "columns": [
+                    {
+                        "text": "To,",
+                        "width": 350
+                    },
+                    {
+                        "text": "Date : ",
+                        "width": "auto"
+                    },
+                    {
+                        "text": "{{paymentDate}}",
+                        "width": "auto"
+                    }
                 ]
             },
             {
                 "margin": [
                     20,
-                    10,
+                    0,
                     0,
                     10
                 ],
@@ -399,7 +412,16 @@
                     {
                         "text": "{{rIFSCCode}}",
                         "width": "auto"
-                    }
+                    },
+                    {
+                       "text": "     Nominee Name : ",
+                       "width": "auto",
+                       "bold": true
+                   },
+                   {
+                       "text": "{{NomName}}",
+                       "width": "auto"
+                   }
                 ]
             },
             {

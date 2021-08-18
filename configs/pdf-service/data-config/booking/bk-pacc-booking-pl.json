@@ -1,140 +1,152 @@
 {
     "key": "bk-pacc-booking-pl",
     "DataConfigs": {
-        "serviceName": "rainmaker-bk",
-        "version": "1.0.0",
-        "baseKeyPath": "$.BookingInfo.*",
-        "entityIdPath": "$.bookingDetail.applicationNumber",
-        "isCommonTableBorderRequired": true,
-        "mappings": [
-            {
-                "topic": "bk-pdf-generation",
-                "mappings": [
-                    {
-                        "direct": [
-                            {
-                                "variable": "variable1",
-                                "value": {
-                                    "path": "$.applicantDetail.name"
-                                }
-                            },
-                            {
-                                "variable": "variable2",
-                                "value": {
-                                    "path": "$.applicantDetail.mobileNumber"
-                                }
-                            },
-                            {
-                                "variable": "variable4",
-                                "value": {
-                                    "path": "$.applicantDetail.permanentAddress"
-                                }
-                            },
-                            {
-                                "variable": "variable5",
-                                "value": {
-                                    "path": "$.applicantDetail.sector"
-                                }
-                            },
-                            {
-                                "variable": "variable6",
-                                "value": {
-                                    "path": "$.applicantDetail.permanentCity"
-                                }
-                            },
-                            {
-                                "variable": "variable7",
-                                "value": {
-                                    "path": "$.bookingDetail.applicationNumber"
-                                }
-                            },
-                            {
-                                "variable": "variable8",
-                                "value": {
-                                    "path": "$.bookingDetail.applicationDate"
-                                }
-                            },
-                            {
-                                "variable": "variable9",
-                                "value": {
-                                    "path": "$.bookingDetail.bookingPeriod"
-                                }
-                            },
-                            {
-                                "variable": "variable10",
-                                "value": {
-                                    "path": "$.bookingDetail.venueName"
-                                }
-                            },
-                            {
-                                "variable": "variable11",
-                                "value": {
-                                    "path": "$.bookingDetail.bookingPupose"
-                                }
-                            },
-                            {
-                                "variable": "variable12",
-                                "value": {
-                                    "path": "$.bookingDetail.sector"
-                                }
-                            },
-                            {
-                                "variable": "bookingType",
-                                "value": {
-                                    "path": "$.bookingDetail.bookingType"
-                                }
-                            },
-                            {
-                                "variable": "generatedBy",
-                                "value": {
-                                    "path": "$.generatedBy.generatedBy"
-                                }
-                            },
-                            {
-                                "variable": "pdfLogo",
-                                "url": "https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
-                                "type": "image"
-                            },
-                            {
-                                "variable": "approvedBy",
-                                "value": {
-                                    "path": "$.approvedBy.approvedBy"
-                                }
-                            },
-                            {
-                                "variable": "approvedByRole",
-                                "value": {
-                                    "path": "$.approvedBy.role"
-                                }
-                            },
-                            {
-                                "variable": "municipalityName",
-                                "value": {
-                                    "path": "$.tenantInfo.municipalityName"
-                                }
-                            },
-                            {
-                                "variable": "municipalityAddress",
-                                "value": {
-                                    "path": "$.tenantInfo.address"
-                                }
-                            },
-                            {
-                                "variable": "municipalityContact",
-                                "value": {
-                                    "path": "$.tenantInfo.contactNumber"
-                                }
-                            },
-                            {
-                                "variable": "municipalityWebSite",
-                                "value": {
-                                    "path": "$.tenantInfo.webSite"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
+       "serviceName": "rainmaker-bk",
+       "version": "1.0.0",
+       "baseKeyPath": "$.BookingInfo.*",
+       "entityIdPath": "$.bookingDetail.applicationNumber",
+       "isCommonTableBorderRequired": true,
+       "mappings": [
+          {
+             "topic": "bk-pdf-generation",
+             "mappings": [
+                {
+                   "direct": [
+                      {
+                         "variable": "dateVenueChangeCharges",
+                         "value": {
+                            "path": "$.paymentInfo.dateVenueChangeCharges"
+                         }
+                      },
+                      {
+                         "variable": "cardNumberLast4",
+                         "value": {
+                            "path": "$.paymentInfo.cardNumberLast4"
+                         }
+                      },
+                      {
+                         "variable": "variable1",
+                         "value": {
+                            "path": "$.applicantDetail.name"
+                         }
+                      },
+                      {
+                         "variable": "variable2",
+                         "value": {
+                            "path": "$.applicantDetail.mobileNumber"
+                         }
+                      },
+                      {
+                         "variable": "variable4",
+                         "value": {
+                            "path": "$.applicantDetail.permanentAddress"
+                         }
+                      },
+                      {
+                         "variable": "variable5",
+                         "value": {
+                            "path": "$.applicantDetail.sector"
+                         }
+                      },
+                      {
+                         "variable": "variable6",
+                         "value": {
+                            "path": "$.applicantDetail.permanentCity"
+                         }
+                      },
+                      {
+                         "variable": "variable7",
+                         "value": {
+                            "path": "$.bookingDetail.applicationNumber"
+                         }
+                      },
+                      {
+                         "variable": "variable8",
+                         "value": {
+                            "path": "$.bookingDetail.applicationDate"
+                         }
+                      },
+                      {
+                         "variable": "variable9",
+                         "value": {
+                            "path": "$.bookingDetail.bookingPeriod"
+                         }
+                      },
+                      {
+                         "variable": "variable10",
+                         "value": {
+                            "path": "$.bookingDetail.venueName"
+                         }
+                      },
+                      {
+                         "variable": "variable11",
+                         "value": {
+                            "path": "$.bookingDetail.bookingPupose"
+                         }
+                      },
+                      {
+                         "variable": "variable12",
+                         "value": {
+                            "path": "$.bookingDetail.sector"
+                         }
+                      },
+                      {
+                         "variable": "bookingType",
+                         "value": {
+                            "path": "$.bookingDetail.bookingType"
+                         }
+                      },
+                      {
+                         "variable": "generatedBy",
+                         "value": {
+                            "path": "$.generatedBy.generatedBy"
+                         }
+                      },
+                      {
+                         "variable": "pdfLogo",
+                         "url": "https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
+                         "type": "image"
+                      },
+                      {
+                         "variable": "approvedBy",
+                         "value": {
+                            "path": "$.approvedBy.approvedBy"
+                         }
+                      },
+                      {
+                         "variable": "approvedByRole",
+                         "value": {
+                            "path": "$.approvedBy.role"
+                         }
+                      },
+                      {
+                         "variable": "municipalityName",
+                         "value": {
+                            "path": "$.tenantInfo.municipalityName"
+                         }
+                      },
+                      {
+                         "variable": "municipalityAddress",
+                         "value": {
+                            "path": "$.tenantInfo.address"
+                         }
+                      },
+                      {
+                         "variable": "municipalityContact",
+                         "value": {
+                            "path": "$.tenantInfo.contactNumber"
+                         }
+                      },
+                      {
+                         "variable": "municipalityWebSite",
+                         "value": {
+                            "path": "$.tenantInfo.webSite"
+                         }
+                      }
+                   ]
+                }
+             ]
+          }
+       ]
     }
-}
+ }
