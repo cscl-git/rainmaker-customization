@@ -1567,4 +1567,6 @@ INSERT INTO public.message
 ,('2ecbf4df-ce7c-4c24-b550-99384757e289', 'en_IN','NULM_PRINT_ALF','Print ALF','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('81ea2c29-cd42-4227-9a50-3d38c2cca9c3', 'en_IN','NULM_SEP_APPLICANT_NAME','Name of Applicant','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
 ('7c7fb9dc-8468-4dcb-866a-386ed3980831', 'en_IN','NULM_SEP_APPLICANT_NAME_PLACEHOLDER','Enter Name of Applicant','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
-('369f5b79-040b-45e1-ae91-765d973fadbf', 'en_IN','WRR_WORKFLOW_EMPTY_DATA_ERROR','Workflow data not found','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
+('369f5b79-040b-45e1-ae91-765d973fadbf', 'en_IN','WRR_WORKFLOW_EMPTY_DATA_ERROR','Workflow data not found','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('ae2ad308-6b82-4153-aa7c-4569edab2ccd', 'en_IN','NULM_COV_NUMBER','COV Number','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('6355e1ed-aae3-47f8-b4bc-2751abb4581e', 'en_IN','NULM_COV_NUMBER_PLACEHOLDER','Enter COV Number','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
