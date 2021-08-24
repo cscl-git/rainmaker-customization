@@ -1370,4 +1370,7 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 ,('5fed0458-09d6-4fe1-a9b4-21ca09322a1d','en_IN','SELLMEAT_MONILENO_NOC','Mobile Number','ch','rainmaker-pm', '94')
 ,('a0b17b28-8802-4981-82e9-9c173dc5fd3e','en_IN','SELLMEAT_MOBILENO_PLACEHOLDER','Enter Mobile Number','ch','rainmaker-pm', '94')
 ,('e5c5ae1d-1890-4cfa-b838-3808daa443c3','en_IN','ERR_NOC_SELLMEAT_MOBILENO','Please enter a valid Mobile Number','ch','rainmaker-pm', '94')
-,('e4f012d1-4bb0-4f11-9e14-67324857dbe2','en_IN','NOC_MOBILE_NO_LABEL','Mobile Number','ch','rainmaker-pm', '94');
+,('e4f012d1-4bb0-4f11-9e14-67324857dbe2','en_IN','NOC_MOBILE_NO_LABEL','Mobile Number','ch','rainmaker-pm', '94')
+,('28bc0192-099e-46ed-b310-a9bf16d110f9','en_IN','NOC_PAYMENT_COLLECTION_SUCCESS_MESSAGE_MAIN','Payment has been collected successfully!','ch','rainmaker-pm','94')
+,('cdb59b54-7a7d-4486-a35e-f509614c518d','en_IN','NOC_PMT_RCPT_NO','Payment Receipt No.','ch','rainmaker-pm','94')
+,('b391020b-ffbd-4e74-94cb-8e2182fbfd9b','en_IN','NOC_CONFIRMATION_BUTTON_DOWNLOAD_RECEIPT','Download Receipt','ch','rainmaker-pm','94');
