@@ -1561,7 +1561,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5998-ac6f-2bc063b75064e','en_IN','WF_WS_METER_TESTING_CANCEL_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5999-ac6f-2bc063b75064e','en_IN','WF_WS_METER_TESTING_EDIT','Edit','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6000-ac6f-2bc063b75064e','en_IN','WF_WS_METER_TESTING_VERIFY_AND_FORWARD_TO_SDE','Verify and Forword to SDE','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1wns-6001-ac6f-2bc063b75064e','en_IN','WF_WS_METER_TESTING_REJECT','Reject','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6001-ac6f-2bc063b75064e','en_IN','WF_WS_METER_TESTING_REJECTED','Reject','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6002-ac6f-2bc063b75064e','en_IN','WF_WS_METER_TESTING_SEND_BACK_TO_CITIZEN','Send Back to Citizen','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6003-ac6f-2bc063b75064e','en_IN','WF_WS_METER_TESTING_RESUBMIT_APPLICATION','Re-Submit','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6004-ac6f-2bc063b75064e','en_IN','WF_WS_METER_TESTING_VERIFY_AND_SEND_BACK_TO_JE','Send Back to JE','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -1573,4 +1573,11 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1wns-6010-ac6f-2bc063b75064e','en_IN','METER_TEST_APPLICATION_SUBDIV','Application Addressed to concerned sub-division','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6011-ac6f-2bc063b75064e','en_IN','METER_TEST_METER_PURCHASE_BILL','Latest Water bill copy','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6012-ac6f-2bc063b75064e','en_IN','METER_TEST_LASTPAID_BILL','Copy of last paid bill','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1wns-6013-ac6f-2bc063b75064e','en_IN','METER_TEST_IDPROOF','ID Proof of all the owners - self attested','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1wns-6013-ac6f-2bc063b75064e','en_IN','METER_TEST_IDPROOF','ID Proof of all the owners - self attested','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6014-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION__CANCEL_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6015-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_SEND_BACK_TO_JE','Send Back to JE','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6016-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_SEND_BACK_TO_SDE','Send Back to SDE','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6017-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_SEND_BACK_TO_HDM','Send Back to HDM','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6018-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_FORWARD_TO_HDM','Verify and Forword to HDM','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6019-ac6f-2bc063b75064e','en_IN','WS_SELECT_CONNECTION_VALIDATION_MESSAGE','Please select Consumer No','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6020-ac6f-2bc063b75064e','en_IN','WS_SUBACTIVITY_VALIDATION_MESSAGE','Already one activity is in process','ch','rainmaker-ws',24226,now(),NULL,NULL);
