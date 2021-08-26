@@ -403,6 +403,8 @@ DELETE FROM public.message WHERE code ='WF_WS_METER_TESTING_PENDING_FOR_METER_TE
 DELETE FROM public.message WHERE code ='WF_WS_METER_TESTING_METER_TESTED'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WF_REGULARWSCONNECTION_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_JE_STATE'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WF_REGULARWSCONNECTION_PENDING_FOR_HDM_APPROVAL_AFTER_EE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_REGULARWSCONNECTION_PENDING_FOR_CONNECTION_VERIFICATION_BY_JE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_REGULARWSCONNECTION_PENDING_FOR_CONNECTION_ACTIVATION_BY_SUPERINTENDENT'and tenantId='ch';
 --insert
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 ('4d3b6355-1abb-6000-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_REGULARWSCONNECTION','Regular Water Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -689,7 +691,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6282-ac6f-2bc063b75064e','en_IN','RENEWAL_CHARGES_PHD2','Renewal Charges','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6283-ac6f-2bc063b75064e','en_IN','SEWERAGE_CONNECTION_FEE_PHD2','Sewarage Connection Fee','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6284-ac6f-2bc063b75064e','en_IN','SEWERAGE_CESS_PHD2','Sewarage CESS','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6285-ac6f-2bc063b75064e','en_IN','SECURITY_DEPOSIT_WATER_METER_PHD2','Security Depp - Water Meter','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6285-ac6f-2bc063b75064e','en_IN','SECURITY_DEPOSIT_WATER_METER_PHD2','Security Charges - Water Meter','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6286-ac6f-2bc063b75064e','en_IN','OTHER_CHARGES_PHD2','Other Charges','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6287-ac6f-2bc063b75064e','en_IN','TESTING_CHARGES_PHD2','Water/Meter Testing Charges','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6288-ac6f-2bc063b75064e','en_IN','WATER_CHARGES_PHD2','Water Charges','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -709,7 +711,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6302-ac6f-2bc063b75064e','en_IN','RENEWAL_CHARGES_PHD4','Renewal Charges','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6303-ac6f-2bc063b75064e','en_IN','SEWERAGE_CONNECTION_FEE_PHD4','Sewarage Connection Fee','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6304-ac6f-2bc063b75064e','en_IN','SEWERAGE_CESS_PHD4',' Sewarage CESS','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6305-ac6f-2bc063b75064e','en_IN','SECURITY_DEPOSIT_WATER_METER_PHD4','Security Depp - Water Meter','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6305-ac6f-2bc063b75064e','en_IN','SECURITY_DEPOSIT_WATER_METER_PHD4','Security Charges - Water Meter','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6306-ac6f-2bc063b75064e','en_IN','OTHER_CHARGES_PHD4','Other Charges','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6307-ac6f-2bc063b75064e','en_IN','TESTING_CHARGES_PHD4','Water/Meter Testing Charges','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6308-ac6f-2bc063b75064e','en_IN','WATER_CHARGES_PHD4','Water Charges','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -781,4 +783,6 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6373-ac6f-2bc063b75064e','en_IN','WF_WS_METER_TESTING_PENDING_FOR_METER_TESTING_BY_JE','Pending for Meter Testing by JE','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6374-ac6f-2bc063b75064e','en_IN','WF_WS_METER_TESTING_METER_TESTED','Meter Tested','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6375-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_JE_STATE','Pending for Superintendent Approval after JE','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6376-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_PENDING_FOR_HDM_APPROVAL_AFTER_EE','Pending for HDM Approval','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6376-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_PENDING_FOR_HDM_APPROVAL_AFTER_EE','Pending for HDM Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6377-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_PENDING_FOR_CONNECTION_VERIFICATION_BY_JE','Pending for Connection Verification by JE','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6378-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_PENDING_FOR_CONNECTION_ACTIVATION_BY_SUPERINTENDENT','Pending for Connection Activation','ch','rainmaker-common',24226,now(),NULL,NULL);
