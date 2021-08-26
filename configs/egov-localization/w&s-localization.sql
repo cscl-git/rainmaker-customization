@@ -1580,4 +1580,16 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1wns-6017-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_SEND_BACK_TO_HDM','Send Back to HDM','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6018-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_FORWARD_TO_HDM','Verify and Forword to HDM','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6019-ac6f-2bc063b75064e','en_IN','WS_SELECT_CONNECTION_VALIDATION_MESSAGE','Please select Consumer No','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1wns-6020-ac6f-2bc063b75064e','en_IN','WS_SUBACTIVITY_VALIDATION_MESSAGE','Already one activity is in process','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1wns-6020-ac6f-2bc063b75064e','en_IN','WS_SUBACTIVITY_VALIDATION_MESSAGE','Already one activity is in process','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6021-ac6f-2bc063b75064e','en_IN','WS_PROPUSGTYPE_PUBLIC_PUBLICPARKS','Public / Semi- Public Buildings','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6023-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_PUBLIC_PUBLICPARKS','Public Parks','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6024-ac6f-2bc063b75064e','en_IN','WS_PROPUSGTYPE_COMMERCIAL_VIOLATIONRESIDENTIAL','Commercial','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6025-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_VIOLATIONRESIDENTIAL','Violation from Residential','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6026-ac6f-2bc063b75064e','en_IN','VIOLATIONRESIDENTIAL_TRIPLICATE_FORM','Application Form duly filled in triplicate (on prescribed form)','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6027-ac6f-2bc063b75064e','en_IN','VIOLATIONRESIDENTIAL_OWNERSHIP_PROOF','Copy for proof of ownership (Self attested)','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6028-ac6f-2bc063b75064e','en_IN','VIOLATIONRESIDENTIAL_COPY_OF_GPA','Copy of Registered GPA (In case of GPA Holder)','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6029-ac6f-2bc063b75064e','en_IN','VIOLATIONRESIDENTIAL_PLUMBING_LISCENSE','Certificate from Licensed Plumber for separate plumbing system on application form','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6030-ac6f-2bc063b75064e','en_IN','VIOLATIONRESIDENTIAL_ROADCUT_RECEIPT','Receipt of Payment of Road Cut restoration charges, if involved','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6031-ac6f-2bc063b75064e','en_IN','VIOLATIONRESIDENTIAL_AFFIDAVIT_FLOOR','If house on share percentage basis then an affidavit duly attested by Magistrate is required for Floor clarification','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6032-ac6f-2bc063b75064e','en_IN','VIOLATIONRESIDENTIAL_WATER_BILL','Copy of the last water bill paid','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6033-ac6f-2bc063b75064e','en_IN','VIOLATIONRESIDENTIAL_IDPROOF','ID proof of all the owners','ch','rainmaker-ws',24226,now(),NULL,NULL);
