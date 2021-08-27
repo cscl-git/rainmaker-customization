@@ -959,7 +959,7 @@ serviceMaps:
       -  query: UPDATE public.nulm_susv_application_detail SET application_status=?, name_of_applicant=?, gender=?, age=?, adhar_no=?, mother_name=?, father_or_husband_name=?, permanent_address=?,present_address=?, mobile_no=?, is_disability=?, category=?, qualification=?, blood_group=?, category_of_vending=?, proposed_location_of_vending=?, proposed_time_of_vending=?, goverment_scheme=?, name_of_nominee=?,remark=?,is_undertaking=?, place=?,date=?::timestamp, last_modified_by=?, last_modified_time=?,dob=?::timestamp WHERE  application_uuid=? and tenant_id=? and is_active=?;
          basePath: $.NulmSusvRequest
          jsonMaps:
-         -  jsonPath: $.NulmSusvRequest.action
+         -  jsonPath: $.NulmSusvRequest.applicationStatus
          -  jsonPath: $.NulmSusvRequest.nameOfApplicant
          -  jsonPath: $.NulmSusvRequest.gender
          -  jsonPath: $.NulmSusvRequest.age   
