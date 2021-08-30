@@ -840,7 +840,7 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 	 ('ffd71afe-6ae0-4f49-b767-e324e65061c5','en_IN','PET_NOC_APPLICATION_Detail','Apply New Permission to Keep Pet Dog','ch','rainmaker-pm',24226,'2019-03-25 13:55:25.827',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324e65069e33','en_IN','NOC_SUBMIT_SELLMEAT','SUBMIT','ch','rainmaker-pm',93,'2020-03-16 19:04:46.145833',NULL,NULL),
-	 ('ffd71afe-6ae0-4f49-b767-e324rd65069h111','en_IN','ROADCUTNOC_FEE','Permission for Road Cut Fees','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
+	 ('ffd71afe-6ae0-4f49-b767-e324rd65069h111','en_IN','ROADCUTNOC_FEE','Charges (Permission for Road Cut Fees)','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324rd65069h113','en_IN','TL_REASSIGN_DOCUMENT','Document','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324rd65069h114','en_IN','TL_REVIEWOFEE_DOCUMENT','Document','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324rd65069h115','en_IN','ROADCUT_LENGTH_NOC','Length','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
@@ -1074,14 +1074,14 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 	 ('ffd71afe-6ae0-4f49-b767-e324pe65167','en_IN','PM_SEARCH_ONE_FIELDS','Please fill at least one field to start search ','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324pe65168','en_IN','PM_SEARCH_ERR_NO_RECORDS_FOUND','No Records Found ','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324pe65169','en_IN','ROADCUTNOC_TAX_RD1','GST','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
-	 ('ffd71afe-6ae0-4f49-b767-e324pe65170','en_IN','ROADCUTNOC_FEE_RD1','Permission for Road Cut Fees','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
+	 ('ffd71afe-6ae0-4f49-b767-e324pe65170','en_IN','ROADCUTNOC_FEE_RD1','Charges (Permission for Road Cut Fees)','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324pe65171','en_IN','ROADCUTNOC_FEE_BANK_RD1','Performance Bank Guarantee Charges','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL);
 INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 	 ('ffd71afe-6ae0-4f49-b767-e324pe65172','en_IN','ROADCUTNOC_TAX_RD2','GST','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
-	 ('ffd71afe-6ae0-4f49-b767-e324pe65173','en_IN','ROADCUTNOC_FEE_RD2','Permission for Road Cut Fees','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
+	 ('ffd71afe-6ae0-4f49-b767-e324pe65173','en_IN','ROADCUTNOC_FEE_RD2','Charges (Permission for Road Cut Fees)','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324pe65174','en_IN','ROADCUTNOC_FEE_BANK_RD2','Performance Bank Guarantee Charges','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324pe65175','en_IN','ROADCUTNOC_TAX_RD3','GST','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
-	 ('ffd71afe-6ae0-4f49-b767-e324pe65176','en_IN','ROADCUTNOC_FEE_RD3','Permission for Road Cut Fees','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
+	 ('ffd71afe-6ae0-4f49-b767-e324pe65176','en_IN','ROADCUTNOC_FEE_RD3','Charges (Permission for Road Cut Fees)','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324pe65177','en_IN','ROADCUTNOC_FEE_BANK_RD3','Performance Bank Guarantee Charges','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
 	 ('4b52e35c-e93a-42b7-bf4d-24bc461f9554','en_IN','TL_REVIEWOFSCFORWITHDRAW_DOCUMENT','Document','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
 	 ('4b52e35c-e93a-42b7-bf4d-24bc461f9552','en_IN','TL_REVIEWOFJCFORWITHDRAW_DOCUMENT','Document','ch','rainmaker-pm',93,'2020-09-02 07:52:03.892756',NULL,NULL),
@@ -1183,6 +1183,8 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e10007','en_IN', 'PM_APPLICATION_HEADER','Online Permission','ch','rainmaker-pm', '94');INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e10008','en_IN', 'PM_FORWARD_SUCCESS_MESSAGE_MAIN','Application Forwarded Successfully','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( 'fed242f5-a462-404e-bb3c-fb63e8aeb534','en_IN', 'NOC_APPLICATION_SUCCESS_MESSAGE_MAIN','Application Submitted Successfully','ch','rainmaker-pm', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e10009','en_IN', 'PM_APP_NO_LABEL','Application ID','ch','rainmaker-pm', '94');INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e10010','en_IN', 'PM_REASSIGN_SUCCESS_MESSAGE_MAIN','Application Reassigned Successfully','ch','rainmaker-pm', '94');
