@@ -182,7 +182,7 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00062','en_IN', 'WF_ROADCUTNOC_VERIFY_AFTER_APPROVAL_L2','Verification After Approval L2','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
-( '42e17862-dbd8-4pm6-95f6-382ec3e00063','en_IN', 'WF_ROADCUTNOC_VERIFY_AFTER_APPROVAL_L3','Verification After Approval L3','ch','rainmaker-common', '94');
+( '42e17862-dbd8-4pm6-95f6-382ec3e00063','en_IN', 'WF_ROADCUTNOC_VERIFY_AFTER_APPROVAL_L3','Pending for Payment','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00064','en_IN', 'WF_ROADCUTNOC_VERIFY_FOR_COMPLETION','Verification For Completion','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
