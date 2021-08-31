@@ -153,6 +153,91 @@ and pr.effective_end_year is null and pr.effective_end_month is null)) order by 
         source: eg_pension_revision
         total: true
         type: string
+  - 
+    
+    moduleName: rainmaker-pension
+    query: "select pp.pensioner_number as pensioner_number , pe.name as name
+, final_calculated_pension,
+(case when pd.name is null or pd.name = '' then ppad.bank_address else pd.bank_details end) as bank_details,
+(case when pd.name is null or pd.name = '' then ppad.bank_code else pd.bank_code end) as bank_code,
+(case when pd.name is null or pd.name = '' then ppad.bank_ifsc else pd.bank_ifsc end) as bank_ifsc,
+(case when pd.name is null or pd.name = '' then ppad.account_number else pd.bank_account_number end) as bank_account_number
+from eg_pension_revision pr join eg_pension_pensioner pp on pr.pensioner_id=pp.uuid join eg_pension_employee pe on pp.pension_employee_id=pe.uuid  
+join eg_pension_pensioner_application_details ppad 
+on ppad.pensioner_id = pp.uuid 
+left join eg_pension_dependent pd on pd.pension_employee_id = pp.pension_employee_id
+AND pp.active=true AND pr.active=true where 1=1"
+    reportName: MonthlyPensionDrawn
+    searchParams: 
+      - 
+        isMandatory: true
+        label: Year
+        name: Year
+        pattern: "list://2020:2020,2021:2021,2022:2022,2023:2023,2024:2024,2025:2025"
+        searchClause: "and cast(concat($Year, lpad($Month,2,'0')) as integer)>=
+cast(concat(cast(pr.effective_start_year as varchar), lpad(cast(pr.effective_start_month as varchar),2,'0')) as integer)"
+        source: eg_pension_revision
+        type: singlevaluelist
+        wrapper: true
+      - 
+        isMandatory: true
+        label: Month
+        name: Month
+        pattern: "list://1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9,10:10,11:11,12:12"
+        searchClause: "and (
+pr.effective_end_year is not null and pr.effective_end_month is not null
+and cast(concat($Year, lpad($Month,2,'0')) as integer)<
+cast(concat(cast(pr.effective_end_year as varchar), lpad(cast(pr.effective_end_month as varchar),2,'0')) as integer)
+or
+(pr.effective_end_year is null and pr.effective_end_month is null)
+)"
+        source: eg_pension_revision
+        type: singlevaluelist
+        wrapper: true
+    sourceColumns: 
+      - 
+        label: "Pensioner Number"
+        name: pensioner_number
+        source: eg_pension_pensioner
+        total: false
+        type: string
+      - 
+        label: "Pensioner Name"
+        name: name
+        source: eg_pension_employee
+        total: false
+        type: string
+      - 
+        label: "Net Pension"
+        name: final_calculated_pension
+        source: eg_pension_revision
+        total: true
+        type: string
+      - 
+        label: "Bank Name"
+        name: bank_details
+        source: eg_pension_revision
+        total: false
+        type: string
+      - 
+        label: "Bank IFSC"
+        name: bank_ifsc
+        source: eg_pension_revision
+        total: false
+        type: string
+      - 
+        label: "Bank Code"
+        name: bank_code
+        source: eg_pension_revision
+        total: false
+        type: string
+      - 
+        label: "Bank Account Number"
+        name: bank_account_number
+        source: eg_pension_revision
+        total: false
+        type: string
+
 
   - 
     moduleName: rainmaker-pension
@@ -286,3 +371,180 @@ and pr.effective_end_year is null and pr.effective_end_month is null)) order by 
         source: eg_hrms_employee
         total: false
         type: epoch
+
+		
+  - 
+    
+    moduleName: rainmaker-pension
+    query: "select pp.pensioner_number as pensioner_number , pe.name as name
+, final_calculated_pension,
+(case when pd.name is null or pd.name = '' then ppad.bank_address else pd.bank_details end) as bank_details,
+(case when pd.name is null or pd.name = '' then ppad.bank_code else pd.bank_code end) as bank_code,
+(case when pd.name is null or pd.name = '' then ppad.bank_ifsc else pd.bank_ifsc end) as bank_ifsc,
+(case when pd.name is null or pd.name = '' then ppad.account_number else pd.bank_account_number end) as bank_account_number
+from eg_pension_revision pr join eg_pension_pensioner pp on pr.pensioner_id=pp.uuid join eg_pension_employee pe on pp.pension_employee_id=pe.uuid  
+join eg_pension_pensioner_application_details ppad 
+on ppad.pensioner_id = pp.uuid 
+left join eg_pension_dependent pd on pd.pension_employee_id = pp.pension_employee_id
+AND pp.active=true AND pr.active=true where 1=1"
+    reportName: PNBBankReport
+    searchParams: 
+      - 
+        isMandatory: true
+        label: Year
+        name: Year
+        pattern: "list://2020:2020,2021:2021,2022:2022,2023:2023,2024:2024,2025:2025"
+        searchClause: "and cast(concat($Year, lpad($Month,2,'0')) as integer)>=
+cast(concat(cast(pr.effective_start_year as varchar), lpad(cast(pr.effective_start_month as varchar),2,'0')) as integer)"
+        source: eg_pension_revision
+        type: singlevaluelist
+        wrapper: true
+      - 
+        isMandatory: true
+        label: Month
+        name: Month
+        pattern: "list://1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9,10:10,11:11,12:12"
+        searchClause: "and (
+pr.effective_end_year is not null and pr.effective_end_month is not null
+and cast(concat($Year, lpad($Month,2,'0')) as integer)<
+cast(concat(cast(pr.effective_end_year as varchar), lpad(cast(pr.effective_end_month as varchar),2,'0')) as integer)
+or
+(pr.effective_end_year is null and pr.effective_end_month is null)
+)"
+        source: eg_pension_revision
+        type: singlevaluelist
+        wrapper: true
+    sourceColumns: 
+      - 
+        label: "ACCOUNT NO"
+        name: account_number
+        source: eg_pension_pensioner
+        total: false
+        type: string
+      - 
+        label: "CURRENCY"
+        name: currency
+        source: eg_pension_employee
+        total: false
+        type: string
+      - 
+        label: "SOLID"
+        name: solid
+        source: eg_pension_revision
+        total: false
+        type: string
+      - 
+        label: "NAME"
+        name: name
+        source: eg_pension_revision
+        total: false
+        type: string
+      - 
+        label: "AMOUNT"
+        name: amount
+        source: eg_pension_revision
+        total: true
+        type: string
+      - 
+        label: "PARTY"
+        name: party
+        source: eg_pension_revision
+        total: false
+        type: string
+      - 
+        label: "DATE"
+        name: date
+        source: eg_pension_revision
+        total: false
+        type: string
+
+  - 
+    
+    moduleName: rainmaker-pension
+    query: "select pp.pensioner_number as pensioner_number , pe.name as name
+, final_calculated_pension,
+(case when pd.name is null or pd.name = '' then ppad.bank_address else pd.bank_details end) as bank_details,
+(case when pd.name is null or pd.name = '' then ppad.bank_code else pd.bank_code end) as bank_code,
+(case when pd.name is null or pd.name = '' then ppad.bank_ifsc else pd.bank_ifsc end) as bank_ifsc,
+(case when pd.name is null or pd.name = '' then ppad.account_number else pd.bank_account_number end) as bank_account_number
+from eg_pension_revision pr join eg_pension_pensioner pp on pr.pensioner_id=pp.uuid join eg_pension_employee pe on pp.pension_employee_id=pe.uuid  
+join eg_pension_pensioner_application_details ppad 
+on ppad.pensioner_id = pp.uuid 
+left join eg_pension_dependent pd on pd.pension_employee_id = pp.pension_employee_id
+AND pp.active=true AND pr.active=true where 1=1"
+    reportName: OtherBankReport
+    searchParams: 
+      - 
+        isMandatory: true
+        label: Year
+        name: Year
+        pattern: "list://2020:2020,2021:2021,2022:2022,2023:2023,2024:2024,2025:2025"
+        searchClause: "and cast(concat($Year, lpad($Month,2,'0')) as integer)>=
+cast(concat(cast(pr.effective_start_year as varchar), lpad(cast(pr.effective_start_month as varchar),2,'0')) as integer)"
+        source: eg_pension_revision
+        type: singlevaluelist
+        wrapper: true
+      - 
+        isMandatory: true
+        label: Month
+        name: Month
+        pattern: "list://1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9,10:10,11:11,12:12"
+        searchClause: "and (
+pr.effective_end_year is not null and pr.effective_end_month is not null
+and cast(concat($Year, lpad($Month,2,'0')) as integer)<
+cast(concat(cast(pr.effective_end_year as varchar), lpad(cast(pr.effective_end_month as varchar),2,'0')) as integer)
+or
+(pr.effective_end_year is null and pr.effective_end_month is null)
+)"
+        source: eg_pension_revision
+        type: singlevaluelist
+        wrapper: true
+    sourceColumns: 
+      - 
+        label: ""
+        name: report_code
+        source: eg_pension_pensioner
+        total: false
+        type: string
+      - 
+        label: "Amount"
+        name: amount
+        source: eg_pension_employee
+        total: true
+        type: string
+      - 
+        label: "Tran Particular"
+        name: tran_particular
+        source: eg_pension_revision
+        total: false
+        type: string
+      - 
+        label: "IFSC Code"
+        name: ifsc_code
+        source: eg_pension_revision
+        total: false
+        type: string
+      - 
+        label: "Beneficiary Account No"
+        name: beneficiary_account_no
+        source: eg_pension_revision
+        total: true
+        type: string
+      - 
+        label: "Name"
+        name: name
+        source: eg_pension_revision
+        total: false
+        type: string
+      - 
+        label: "Bank Name"
+        name: bank_name
+        source: eg_pension_revision
+        total: false
+        type: string
+      - 
+        label: "Address"
+        name: address
+        source: eg_pension_revision
+        total: false
+        type: string
