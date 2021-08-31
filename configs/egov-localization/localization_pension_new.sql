@@ -10,6 +10,8 @@ DELETE FROM public.message WHERE code = 'PENSION_NOTIFICATION'and module='rainma
 DELETE FROM public.message WHERE code = 'PENSION_NOTIFICATION_SUCCESS'and module='rainmaker-pension' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'PENSION_FILL_REQUIRED_FIELDS'and module='rainmaker-pension' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'ACTION_TEST_PENSION_NOTOFICATION'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_PNB_BANK_REPORT'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_OTHER_BANK_REPORT'and module='rainmaker-common' and tenantId='ch';
 
 
 
@@ -27,4 +29,6 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 ,('4d3b6355-1pms-0011-ac6f-2bc063b75064e','en_IN','PENSION_FILL_REQUIRED_FIELDS','Please fill Required details','ch','rainmaker-pension',24226,now(),NULL,NULL);
 
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
-('4d3b6355-1coo-6000-ac6f-2bc063b75064e','en_IN','ACTION_TEST_PENSION_NOTOFICATION','Pension Notification','ch','rainmaker-common',24226,now(),NULL,NULL);
+('4d3b6355-1coo-6000-ac6f-2bc063b75064e','en_IN','ACTION_TEST_PENSION_NOTOFICATION','Pension Notification','ch','rainmaker-common',24226,now(),NULL,NULL)
+('4d3b6355-1coo-6001-ac6f-2bc063b75064e','en_IN','ACTION_TEST_PNB_BANK_REPORT','PNB Bank Report','ch','rainmaker-common',24226,now(),NULL,NULL)
+('4d3b6355-1coo-6002-ac6f-2bc063b75064e','en_IN','ACTION_TEST_OTHER_BANK_REPORT','Other Bank Report','ch','rainmaker-common',24226,now(),NULL,NULL);
