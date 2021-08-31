@@ -68,7 +68,7 @@
         },
 		{
           "style": "pt-reciept-citizen-header",
-          "text": "P.P.O No. {{payment_order_number}} may be referred in the future correspondence.",
+          "text": "P.P.O No. ____________________ may be referred in the future correspondence.",
                   "bold": false
         },
 		{

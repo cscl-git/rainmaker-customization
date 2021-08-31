@@ -1564,4 +1564,16 @@ INSERT INTO public.message
 ,('5895c1f1-c6a5-4fb4-a384-81d3f526294a', 'en_IN','NULM_APPLICATION_FOR_SMID_ALF_PROGRAM','Application for SMID ALF Program','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('9341b204-fb86-4bcd-8ce2-a5c7a30c29f6', 'en_IN','NULM_ALF_DOCUMENT','ALF Document','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('fe53a75f-5d56-448d-b9c3-874c5e050260', 'en_IN','ERR_NULM_ALF_REQUIRED_VALIDATION','Please fill all mandatory fields!','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
-,('2ecbf4df-ce7c-4c24-b550-99384757e289', 'en_IN','NULM_PRINT_ALF','Print ALF','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
+,('2ecbf4df-ce7c-4c24-b550-99384757e289', 'en_IN','NULM_PRINT_ALF','Print ALF','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('81ea2c29-cd42-4227-9a50-3d38c2cca9c3', 'en_IN','NULM_SEP_APPLICANT_NAME','Name of Applicant','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('7c7fb9dc-8468-4dcb-866a-386ed3980831', 'en_IN','NULM_SEP_APPLICANT_NAME_PLACEHOLDER','Enter Name of Applicant','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('369f5b79-040b-45e1-ae91-765d973fadbf', 'en_IN','WRR_WORKFLOW_EMPTY_DATA_ERROR','Workflow data not found','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('ae2ad308-6b82-4153-aa7c-4569edab2ccd', 'en_IN','NULM_COV_NUMBER','COV Number','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('6355e1ed-aae3-47f8-b4bc-2751abb4581e', 'en_IN','NULM_COV_NUMBER_PLACEHOLDER','Enter COV Number','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('7b73d71f-9d71-4282-839a-1c4f35b913e9', 'en_IN', 'WF_NULM_Forwarded To SDO', 'Forward To SDO', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('70f45636-ba4c-4fc5-b044-ad64876320e8', 'en_IN', 'WF_NULM_Forwarded To ACMC', 'Forward To ACMC', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('adf012ea-e8b8-41f7-874a-920bb8985e78', 'en_IN', 'WF_NULM_Forwarded To JA', 'Forward To JA', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('bc4b5b3e-8591-41e4-9745-c7a0238912e5', 'en_IN', 'WF_Reassign To Citizen_APPLICATION', 'Reassign To Citizen Application', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('26043b2c-be04-4bbf-8ea5-295ae81d37ba', 'en_IN', 'WF_Reject_APPLICATION', 'Reject Application', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('2008be16-7520-449e-83d2-3c799b59b1d3', 'en_IN', 'WF_Approve_APPLICATION', 'Approve Application', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('1594d17f-5231-47a5-8f7e-fa32b2d5befa', 'en_IN', 'NULM_DOCUMENT_DETAILS_SUBTEXT_POPUP', 'Only one file can be uploaded for one document (file size less than 2 MB). If multiple files need to be uploaded then please combine all files in a pdf and then upload.Please attach pet dog photo along with doctor stamp in the veterinary card.', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);

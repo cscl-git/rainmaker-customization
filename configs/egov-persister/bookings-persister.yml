@@ -216,7 +216,7 @@ serviceMaps:
    isTransaction: true
    queryMaps:  
    
-       - query: UPDATE public.bk_bookings SET bk_action=?, bk_actual_delivery_time=?, bk_add_special_request_details=?, bk_address=?, bk_amount=?, bk_applicant_contact=?, bk_applicant_name=?, bk_application_status=?, bk_approved_by=?, bk_area_required=?, bk_booking_duration=?, bk_booking_purpose=?, bk_booking_time=?, bk_booking_type=?, bk_booking_venue=?, bk_category=?, bk_cgst=?, bk_cleansing_charges=?, bk_complete_address=?, bk_construction_type=?, bk_contact_no=?, bk_created_by=?, bk_current_charges=?, bk_customer_gst_no=?, bk_date=?::date, bk_dimension=?, bk_document_uploaded_url=?, bk_driver_name=?, bk_duration=?, bk_email=?, bk_ending_date=?::date, bk_estimated_delivery_time=?, bk_facilitation_charges=?, bk_father_name=?, bk_from_date=?::date, bk_house_no=?, bk_id_proof=?, bk_landmark=?, bk_location=?, bk_location_change_amount=?, bk_location_pictures=?, bk_material_storage_area=?, bk_mobile_number=?, bk_module_type=?, bk_normal_water_failure_request=?, bk_open_space_location=?, bk_park_or_community_center=?, bk_payment_status=?, bk_plot_sketch=?, bk_property_owner_name=?, bk_refund_amount=?, bk_rent=?, bk_requirement_area=?, bk_residence_proof=?, bk_residential_or_commercial=?, bk_sector=?, bk_starting_date=?::date, bk_status=?, bk_status_update_request=?, bk_surcharge_rent=?, bk_time=?, bk_to_date=?::date, bk_type=?, bk_update_status_option=?, bk_utgst=?, bk_vehicle_number=?, bk_venue=?, bk_vill_city=?, bk_village=?, bk_wf_status=?, business_service=?, tenant_id=?, approver_name=?, financial_year=?, bk_remarks=?, bk_bank_account_number=?,bk_bank_name=?,bk_ifsc_code=?,bk_account_type=?,bk_bank_account_holder=?, last_modified_date=?, bk_nominee_name=?, refundable_security_money=? WHERE bk_application_number=?; 
+       - query: UPDATE public.bk_bookings SET bk_action=?, bk_actual_delivery_time=?, bk_add_special_request_details=?, bk_address=?, bk_amount=?, bk_applicant_contact=?, bk_applicant_name=?, bk_application_status=?, bk_approved_by=?, bk_area_required=?, bk_booking_duration=?, bk_booking_purpose=?, bk_booking_time=?, bk_booking_type=?, bk_booking_venue=?, bk_category=?, bk_cgst=?, bk_cleansing_charges=?, bk_complete_address=?, bk_construction_type=?, bk_contact_no=?, bk_created_by=?, bk_current_charges=?, bk_customer_gst_no=?, bk_date=?::date, bk_dimension=?, bk_document_uploaded_url=?, bk_driver_name=?, bk_duration=?, bk_email=?, bk_ending_date=?::date, bk_estimated_delivery_time=?, bk_facilitation_charges=?, bk_father_name=?, bk_from_date=?::date, bk_house_no=?, bk_id_proof=?, bk_landmark=?, bk_location=?, bk_location_change_amount=?, bk_location_pictures=?, bk_material_storage_area=?, bk_mobile_number=?, bk_module_type=?, bk_normal_water_failure_request=?, bk_open_space_location=?, bk_park_or_community_center=?, bk_payment_status=?, bk_plot_sketch=?, bk_property_owner_name=?, bk_refund_amount=?, bk_rent=?, bk_requirement_area=?, bk_residence_proof=?, bk_residential_or_commercial=?, bk_sector=?, bk_starting_date=?::date, bk_status=?, bk_status_update_request=?, bk_surcharge_rent=?, bk_time=?, bk_to_date=?::date, bk_type=?, bk_update_status_option=?, bk_utgst=?, bk_vehicle_number=?, bk_venue=?, bk_vill_city=?, bk_village=?, bk_wf_status=?, business_service=?, tenant_id=?, approver_name=?, financial_year=?, bk_remarks=?, bk_bank_account_number=?,bk_bank_name=?,bk_ifsc_code=?,bk_account_type=?,bk_bank_account_holder=?, last_modified_date=?, bk_nominee_name=?, refundable_security_money=?, quantity=? WHERE bk_application_number=?; 
          basePath: Booking.*
          jsonMaps:
   
@@ -383,9 +383,11 @@ serviceMaps:
            - jsonPath: $.Booking.*.lastModifiedDate
            
            - jsonPath: $.Booking.*.bkNomineeName
-           
+
            - jsonPath: $.Booking.*.refundableSecurityMoney
-         
+
+           - jsonPath: $.Booking.*.quantity
+
            - jsonPath: $.Booking.*.bkApplicationNumber
        
            
@@ -778,3 +780,6 @@ serviceMaps:
            - jsonPath: $.BookingLock.*.fromDate
            
            - jsonPath: $.BookingLock.*.toDate
+          
+          
+           
