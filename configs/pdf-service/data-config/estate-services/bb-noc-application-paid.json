@@ -37,7 +37,46 @@
                       {
                         "variable": "gstLabel",
                         "value": {
-                          "path": "APPLICATION_TAX"
+                          "path": "APPLICATION_DEVELOPMENT_CHARGES"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "module": "rainmaker-es",
+                          "required": true,
+                          "prefix": "ES"
+                        }
+          
+                      },
+                      {
+                        "variable": "allotmentcharges",
+                        "value": {
+                          "path": "APPLICATION_ALLOTMENT_CHARGES"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "module": "rainmaker-es",
+                          "required": true,
+                          "prefix": "ES"
+                        }
+          
+                      },
+                      {
+                        "variable": "transfercharges",
+                        "value": {
+                          "path": "APPLICATION_TRANSFRE_CHARGES"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "module": "rainmaker-es",
+                          "required": true,
+                          "prefix": "ES"
+                        }
+          
+                      },
+                      {
+                        "variable": "conversioncharges",
+                        "value": {
+                          "path": "APPLICATION_CONVERSION_CHARGES"
                         },
                         "type": "label",
                         "localisation": {
@@ -71,7 +110,24 @@
                             "path": "$.feeEstimate[1].value"
                         }
                     },
-                    
+                    {
+                        "variable": "applicationallotmentcharges",
+                        "value": {
+                            "path": "$.feeEstimate[2].value"
+                        }
+                    },
+                    {
+                        "variable": "applicationtransfercharges",
+                        "value": {
+                            "path": "$.feeEstimate[3].value"
+                        }
+                    },
+                      {
+                        "variable": "applicationconversioncharges",
+                        "value": {
+                            "path": "$.feeEstimate[4].value"
+                        }
+                    },
                     {
                         "variable": "application_label",
                         "value": {
