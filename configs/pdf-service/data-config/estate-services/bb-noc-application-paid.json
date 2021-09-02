@@ -582,7 +582,7 @@
             {
                 "derived": [{
                   "variable": "total",
-                  "formula": "({{applicationCharges}}+{{gstValue}}).toFixed(2)"
+                  "formula": "({{applicationCharges}}+{{gstValue}}+{{applicationallotmentcharges}}+{{applicationtransfercharges}}+{{applicationconversioncharges}}).toFixed(2)"
                 }]
             }]
         }]
