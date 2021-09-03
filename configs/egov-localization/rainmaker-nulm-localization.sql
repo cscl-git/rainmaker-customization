@@ -1037,6 +1037,9 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66724e', 'en_IN', 'NULM_DISABILITY_PROOF', 'Disability Proof', 'ch', 'rainmaker-nulm', 24226, '2020-09-10 14:04:59.661', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('9c595858-e906-44cf-bbfd-82f2c5d57fb6', 'en_IN', 'NULM_NOC_PHOTO_OF_VENDOR', 'Photo of Vendor', 'ch', 'rainmaker-nulm', 24226, '2020-09-10 14:04:59.661', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66725e', 'en_IN', 'NULM_SUSV_TRANSACTION_HEADER', 'Support to Urban Street Vendors(SUSV) Transaction', 'ch', 'rainmaker-nulm', 24226, '2020-09-10 14:04:59.661', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
@@ -1576,4 +1579,4 @@ INSERT INTO public.message
 ('bc4b5b3e-8591-41e4-9745-c7a0238912e5', 'en_IN', 'WF_Reassign To Citizen_APPLICATION', 'Reassign To Citizen Application', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
 ('26043b2c-be04-4bbf-8ea5-295ae81d37ba', 'en_IN', 'WF_Reject_APPLICATION', 'Reject Application', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
 ('2008be16-7520-449e-83d2-3c799b59b1d3', 'en_IN', 'WF_Approve_APPLICATION', 'Approve Application', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
-('1594d17f-5231-47a5-8f7e-fa32b2d5befa', 'en_IN', 'NULM_DOCUMENT_DETAILS_SUBTEXT_POPUP', 'Only one file can be uploaded for one document (file size less than 2 MB). If multiple files need to be uploaded then please combine all files in a pdf and then upload.Please attach pet dog photo along with doctor stamp in the veterinary card.', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
+('1594d17f-5231-47a5-8f7e-fa32b2d5befa', 'en_IN', 'NULM_DOCUMENT_DETAILS_SUBTEXT_POPUP', 'Only one file can be uploaded for one document. If multiple files need to be uploaded then please combine all files in a pdf and then upload.Please attach pet dog photo along with doctor stamp in the veterinary card.', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
