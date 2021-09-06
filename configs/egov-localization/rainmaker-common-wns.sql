@@ -406,6 +406,7 @@ DELETE FROM public.message WHERE code ='WF_REGULARWSCONNECTION_PENDING_FOR_SUPER
 DELETE FROM public.message WHERE code ='WF_REGULARWSCONNECTION_PENDING_FOR_HDM_APPROVAL_AFTER_EE'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WF_REGULARWSCONNECTION_PENDING_FOR_CONNECTION_VERIFICATION_BY_JE'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WF_REGULARWSCONNECTION_PENDING_FOR_CONNECTION_ACTIVATION_BY_SUPERINTENDENT'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_REGULARWSCONNECTION_CANCELLED'and tenantId='ch';
 --insert
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 ('4d3b6355-1abb-6000-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_REGULARWSCONNECTION','Regular Water Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -788,3 +789,4 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6377-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_PENDING_FOR_CONNECTION_VERIFICATION_BY_JE','Pending for Connection Verification by JE','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6378-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_PENDING_FOR_CONNECTION_ACTIVATION_BY_SUPERINTENDENT','Pending for Connection Activation','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6379-ac6f-2bc063b75064e','en_IN','WF_INBOX_HEADER_CURRENT_OWNER','Assigned By','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6380-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_CANCELLED','Cancelled Application','ch','rainmaker-common',24226,now(),NULL,NULL);
