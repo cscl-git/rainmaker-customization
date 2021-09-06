@@ -1605,5 +1605,5 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1wns-6043-ac6f-2bc063b75064e','en_IN','WS_LINK_CONNECTION_MESSAGE','Link your existing water connection with My Connections for further application processes','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6044-ac6f-2bc063b75064e','en_IN','WS_CONNECTION_VALIDATION_MESSAGE','can be process for water connection only','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6045-ac6f-2bc063b75064e','en_IN','WS_CONNECTION_VALIDATION_MESSAGE_SUFF','No subactivity for sewarage','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1wns-6046-ac6f-2bc063b75064e','en_IN','SW_SEWERAGE_SUBMIT_ROADCUT_NOC','Submit Road NOC','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6046-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_SUBMIT_ROADCUT_NOC','Submit Road NOC','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6047-ac6f-2bc063b75064e','en_IN','SW_SEWERAGE_ROADCUT_NOC','Road cut NOC document','ch','rainmaker-ws',24226,now(),NULL,NULL);
