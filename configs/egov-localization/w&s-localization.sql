@@ -1155,7 +1155,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5485-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_ACTIVATE_REGULAR_CONNECTION','Activate Regular Connection','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5486-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_CONNECTION_ACTIVATED','Regular Connection Activated','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5487-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_CONNECTION_ACTIVATED','Temporary Connection Activated','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5488-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_CONNECTION_CONVERSION','Apply for change in Tariff Type','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5488-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_CONNECTION_CONVERSION','Apply for Tariff Change - flat rate to billed, temporary billed to regular ,7 to 1 or other cases','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5489-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_UPDATE_CONNECTION_HOLDER_INFO','Apply for change in Consumer Name in Water Bill','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5490-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_TEMPORARY_DISCONNECTION','Apply for temporary disconnection/ NDC of Government houses','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5491-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_PERMANENT_DISCONNECTION','Apply for permanent disconnection','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -1292,7 +1292,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5725-ac6f-2bc063b75064e','en_IN','WS_PROPUSGTYPE_INTEGRATEDPROJECTS_COMMERCIAL','Integrated projects','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5726-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_ACTIVATE_REGULAR_CONNECTION','Activate Regular Connection','ch','rainmaker-ws',24226,now(),NULL,NULL)
 
-,('4d3b6355-1abb-5729-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_CONNECTION_CONVERSION','Apply for change in Tariff Type','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5729-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_CONNECTION_CONVERSION','Apply for Tariff Change - flat rate to billed, temporary billed to regular ,7 to 1 or other cases','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5730-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_UPDATE_CONNECTION_HOLDER_INFO','Apply for change in Consumer Name in Water Bill','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5731-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_TEMPORARY_DISCONNECTION','Apply for temporary disconnection/ NDC of Government houses','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5732-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_PERMANENT_DISCONNECTION','Apply for permanent disconnection','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -1580,7 +1580,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1wns-6017-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_SEND_BACK_TO_HDM','Send Back to HDM','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6018-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_FORWARD_TO_HDM','Verify and Forword to HDM','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6019-ac6f-2bc063b75064e','en_IN','WS_SELECT_CONNECTION_VALIDATION_MESSAGE','Please select Consumer No','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1wns-6020-ac6f-2bc063b75064e','en_IN','WS_SUBACTIVITY_VALIDATION_MESSAGE','Already one activity is in process','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6020-ac6f-2bc063b75064e','en_IN','WS_SUBACTIVITY_VALIDATION_MESSAGE','The Water Connection number selected is already under approval process. Please selcet other connection no or click on ''My Applications'' for details','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6021-ac6f-2bc063b75064e','en_IN','WS_PROPUSGTYPE_PUBLIC_PUBLICPARKS','Public / Semi- Public Buildings','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6023-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_PUBLIC_PUBLICPARKS','Public Parks','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6024-ac6f-2bc063b75064e','en_IN','WS_PROPUSGTYPE_COMMERCIAL_VIOLATIONRESIDENTIAL','Commercial','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -1604,6 +1604,14 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1wns-6042-ac6f-2bc063b75064e','en_IN','WS_TUBEWELL_DETAIL_HEADER_APPLY','Apply for New Tubewell Connection','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6043-ac6f-2bc063b75064e','en_IN','WS_LINK_CONNECTION_MESSAGE','Link your existing water connection with My Connections for further application processes','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6044-ac6f-2bc063b75064e','en_IN','WS_CONNECTION_VALIDATION_MESSAGE','can be process for water connection only','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1wns-6045-ac6f-2bc063b75064e','en_IN','WS_CONNECTION_VALIDATION_MESSAGE_SUFF','No subactivity for sewarage','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6045-ac6f-2bc063b75064e','en_IN','WS_CONNECTION_VALIDATION_MESSAGE_SUFF','No subactivity for','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6046-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_SUBMIT_ROADCUT_NOC','Submit Road NOC','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1wns-6047-ac6f-2bc063b75064e','en_IN','SW_SEWERAGE_ROADCUT_NOC','Road cut NOC document','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1wns-6047-ac6f-2bc063b75064e','en_IN','SW_SEWERAGE_ROADCUT_NOC','Road cut NOC document','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6048-ac6f-2bc063b75064e','en_IN','WS_NO_SUBACTIVITY_VALIDATION_MESSAGE','No subactivity for selected Water connection consumer number','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6049-ac6f-2bc063b75064e','en_IN','WS_COMMON_APPL_LINK_CONNECTION_HOME','Link your existing water connection','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6050-ac6f-2bc063b75064e','en_IN','WS_COMMON_NO_APPL_LINK_CONNECTION','There is no water connection linked with this account. Please link your existing water connection for further process','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6051-ac6f-2bc063b75064e','en_IN','WS_HOME_SEARCH_RESULTS_CONSUMER_NO_LABEL_HOME','Water connection consumer number','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6052-ac6f-2bc063b75064e','en_IN','WS_HOME_SEARCH_RESULTS_CONSUMER_NO_LABEL_HOME_SELECT','Please Select Your Water Consumer No. To Avail Bellow Services','ch','rainmaker-ws',24226,now(),NULL,NULL);
+
+
+ 
