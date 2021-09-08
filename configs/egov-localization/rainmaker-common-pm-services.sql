@@ -62,6 +62,9 @@ DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFY_AFTER_APPROVAL_L2'
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFY_AFTER_APPROVAL_L3' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFY_FOR_COMPLETION' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REVIEWOFCE_L1' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_INITIATED_TELECOM' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REVIEWOFEE_L1' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REASSIGNTOADM' and module='rainmaker-common' and tenantId='ch';
 
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00001','en_IN', 'WF_ROADCUTNOC_REVIEWSDE L2','Review Of SDE L2','ch','rainmaker-common', '94');
@@ -185,10 +188,16 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00062','en_IN', 'WF_ROADCUTNOC_VERIFY_AFTER_APPROVAL_L2','Verification After Approval L2','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
-( '42e17862-dbd8-4pm6-95f6-382ec3e00063','en_IN', 'WF_ROADCUTNOC_VERIFY_AFTER_APPROVAL_L3','Pending for Payment','ch','rainmaker-common', '94');
+( '42e17862-dbd8-4pm6-95f6-382ec3e00063','en_IN', 'WF_ROADCUTNOC_VERIFY_AFTER_APPROVAL_L3','Pending Citizen Payment','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00064','en_IN', 'WF_ROADCUTNOC_VERIFY_FOR_COMPLETION','Verification For Completion','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00065','en_IN', 'WF_ROADCUTNOC_REVIEWOFCE_L1','Review Of CE','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00066','en_IN', 'WF_ROADCUTNOC_REVIEWOFSE_L2','Review Approval Of SE','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( 'e5b71f08-6584-419a-9418-bb23b70a3754','en_IN', 'WF_ROADCUTNOC_INITIATED_TELECOM','Initiated','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '77f6fb2f-ce92-47f5-ab2c-56048d911a5a','en_IN', 'WF_ROADCUTNOC_REVIEWOFEE_L1','Review of EE L1','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '2dbd087b-3431-4967-bb8e-305c5e00f9c2','en_IN', 'WF_ROADCUTNOC_REASSIGNTOADM','Reassign to ADM','ch','rainmaker-common', '94');
