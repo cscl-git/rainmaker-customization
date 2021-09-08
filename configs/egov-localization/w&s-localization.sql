@@ -1611,7 +1611,11 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1wns-6049-ac6f-2bc063b75064e','en_IN','WS_COMMON_APPL_LINK_CONNECTION_HOME','Link your existing water connection','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6050-ac6f-2bc063b75064e','en_IN','WS_COMMON_NO_APPL_LINK_CONNECTION','There is no water connection linked with this account. Please link your existing water connection for further process','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6051-ac6f-2bc063b75064e','en_IN','WS_HOME_SEARCH_RESULTS_CONSUMER_NO_LABEL_HOME','Water connection consumer number','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1wns-6052-ac6f-2bc063b75064e','en_IN','WS_HOME_SEARCH_RESULTS_CONSUMER_NO_LABEL_HOME_SELECT','Please Select Your Water Consumer No. To Avail Bellow Services','ch','rainmaker-ws',24226,now(),NULL,NULL);
-
+,('4d3b6355-1wns-6052-ac6f-2bc063b75064e','en_IN','WS_HOME_SEARCH_RESULTS_CONSUMER_NO_LABEL_HOME_SELECT','Please Select Your Water Consumer No. To Avail Bellow Services','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6053-ac6f-2bc063b75064e','en_IN','WF_WS_REACTIVATE_SEND_BACK_TO_SUPERINTEDENT','Send Back to Superintendent','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6054-ac6f-2bc063b75064e','en_IN','WF_WS_REACTIVATE_SEND_BACK_TO_JE_FROM_SDE','Send Back to JE','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6055-ac6f-2bc063b75064e','en_IN','WF_WS_REACTIVATE_CANCEL_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6056-ac6f-2bc063b75064e','en_IN','WF_WS_REACTIVATE_PENDING_FOR_PAYMENT_VERIFICATION_BY_JE','Verify and Forword','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6057-ac6f-2bc063b75064e','en_IN','WF_PENDING_FOR_PAYMENT_VERIFICATION_BY_JE_APPLICATION','Verify and Forword Application','ch','rainmaker-ws',24226,now(),NULL,NULL);
 
  
