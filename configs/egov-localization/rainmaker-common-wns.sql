@@ -792,5 +792,5 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6380-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_CANCELLED','Cancelled Application','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6381-ac6f-2bc063b75064e','en_IN','WF_WS_REACTIVATE_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_JE_FOR_REACTIVATION','Pending for Superintendent Approval after JE ','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6382-ac6f-2bc063b75064e','en_IN','WF_WS_REACTIVATE_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_JE_STATE','Pending for Superintendent Approval after JE','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6383-ac6f-2bc063b75064e','en_IN','WF_WS_REACTIVATE_PENDING_FOR_PAYMENT_VERIFICATION_BY_JE_FOR_REACTIVATION','Pending for Payment Vefifucation by JE','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6383-ac6f-2bc063b75064e','en_IN','WF_WS_REACTIVATE_PENDING_FOR_PAYMENT_VERIFICATION_BY_JE_FOR_REACTIVATION','Pending for Payment Verification by JE','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6384-ac6f-2bc063b75064e','en_IN','WF_WS_REACTIVATE_VERIFY_AND_FORWARD_TO_SUPERINTENDENT_AFTER_PAYMENT_FOR_REACTIVATION','Pending for Superintendent Approval after payment','ch','rainmaker-common',24226,now(),NULL,NULL);
