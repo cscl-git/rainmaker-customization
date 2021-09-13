@@ -406,8 +406,29 @@ DELETE FROM public.message WHERE code ='WF_REGULARWSCONNECTION_PENDING_FOR_SUPER
 DELETE FROM public.message WHERE code ='WF_REGULARWSCONNECTION_PENDING_FOR_HDM_APPROVAL_AFTER_EE'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WF_REGULARWSCONNECTION_PENDING_FOR_CONNECTION_VERIFICATION_BY_JE'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WF_REGULARWSCONNECTION_PENDING_FOR_CONNECTION_ACTIVATION_BY_SUPERINTENDENT'and tenantId='ch';
-DELETE FROM public.message WHERE code ='WF_REGULARWSCONNECTION_CANCELLED'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_REGULARWSCONNECTION_CANCELLED' and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_REACTIVATE_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_JE_FOR_REACTIVATION'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_REACTIVATE_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_JE_STATE' and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_REACTIVATE_PENDING_FOR_PAYMENT_VERIFICATION_BY_JE_FOR_REACTIVATION' and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_REACTIVATE_VERIFY_AND_FORWARD_TO_SUPERINTENDENT_AFTER_PAYMENT_FOR_REACTIVATION' and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_DISCONNECTION_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_JE_STATE' and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_DISCONNECTION_PENDING_FOR_CONNECTION_CLOSE_BY_SUPERINTENDENT' and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_HDM_APPROVAL_AFTER_SDE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_JE_STATE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_CANCELLED' and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_SE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_CE_APPROVAL'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_EE_APPROVAL_AFTER_CE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_SDE_APPROVAL_AFTER_EE2'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_EE_APPROVAL_AFTER_SDE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_CE_APPROVAL_AFTER_EE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_SE_APPROVAL_AFTER_CE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_EE_APPROVAL_AFTER_SE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_HDM_APPROVAL_AFTER_EE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_EE_APPROVAL_AFTER_HDM'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_SDE_REVIEW_AFTER_EE'and tenantId='ch';
 --insert
+
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 ('4d3b6355-1abb-6000-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_REGULARWSCONNECTION','Regular Water Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6001-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_TEMPORARY_WSCONNECTION','Temporary Water Connection Construction','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -793,4 +814,20 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6381-ac6f-2bc063b75064e','en_IN','WF_WS_REACTIVATE_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_JE_FOR_REACTIVATION','Pending for Superintendent Approval after JE ','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6382-ac6f-2bc063b75064e','en_IN','WF_WS_REACTIVATE_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_JE_STATE','Pending for Superintendent Approval after JE','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6383-ac6f-2bc063b75064e','en_IN','WF_WS_REACTIVATE_PENDING_FOR_PAYMENT_VERIFICATION_BY_JE_FOR_REACTIVATION','Pending for Payment Vefifucation by JE','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6384-ac6f-2bc063b75064e','en_IN','WF_WS_REACTIVATE_VERIFY_AND_FORWARD_TO_SUPERINTENDENT_AFTER_PAYMENT_FOR_REACTIVATION','Pending for Superintendent Approval after payment','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6384-ac6f-2bc063b75064e','en_IN','WF_WS_REACTIVATE_VERIFY_AND_FORWARD_TO_SUPERINTENDENT_AFTER_PAYMENT_FOR_REACTIVATION','Pending for Superintendent Approval after payment','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6385-ac6f-2bc063b75064e','en_IN','WF_WS_DISCONNECTION_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_JE_STATE','Pending for Superintendent Approval after JE',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6386-ac6f-2bc063b75064e','en_IN','WF_WS_DISCONNECTION_PENDING_FOR_CONNECTION_CLOSE_BY_SUPERINTENDENT','Pending for Connection Close',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6387-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_HDM_APPROVAL_AFTER_SDE','Pending for HDM Approval after SDE','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6388-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_JE_STATE','Pending for Superintendent Approval after JE','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6389-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_CANCELLED','Cancelled Application','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6390-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_SUPERINTENDENT_APPROVAL_AFTER_SE','Pending for Superintendent Approval after SE','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6391-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_CE_APPROVAL','Pending for CE Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6392-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_EE_APPROVAL_AFTER_CE','Pending for EE Approval after CE','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6393-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_SDE_APPROVAL_AFTER_EE2','Pending for SDE Approval after EE','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6394-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_EE_APPROVAL_AFTER_SDE','Pending for EE Approval after SDE','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6395-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_CE_APPROVAL_AFTER_EE','Pending for CE Approval after EE','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6396-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_SE_APPROVAL_AFTER_CE','Pending for SE Approval after CE','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6397-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_EE_APPROVAL_AFTER_SE','Pending for EE Approval after SE','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6398-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_HDM_APPROVAL_AFTER_EE','Pending for HDM Approval after EE','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6399-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_EE_APPROVAL_AFTER_HDM','Pending for EE Approval after HDM','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6400-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_SDE_REVIEW_AFTER_EE','Pending for SDE Review after EE','ch','rainmaker-common',24226,now(),NULL,NULL); 
