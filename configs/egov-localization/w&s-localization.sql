@@ -1630,4 +1630,12 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1wns-6068-ac6f-2bc063b75064e','en_IN','WF_SEND_BACK_TO_SE_APPLICATION','Send Back Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6069-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_VERIFY_AND_FORWARD_TO_CE','Verify and Forword','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6070-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_TO_CE_APPLICATION','Verify and Forword Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1wns-6071-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_VERIFY_AND_FORWARD_TO_EE','Verify and Forword','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1wns-6071-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_VERIFY_AND_FORWARD_TO_EE','Verify and Forword','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6072-ac6f-2bc063b75064e','en_IN','WF_SEND_BACK_TO_SUPERINTEDENT_APPLICATION','Send Back Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6073-ac6f-2bc063b75064e','en_IN','WF_SEND_BACK_TO_JE_FROM_SDE_APPLICATION','Send Back Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6074-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_VERIFY_AND_FORWARD_TO_SUPERINTENDENT_APPLICATION','Verify and Forword Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6075-ac6f-2bc063b75064e','en_IN','WF_WS_RENAME_SEND_BACK_TO_SUPERINTEDENT','Send Back to Superintendent ','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6076-ac6f-2bc063b75064e','en_IN','WF_SEND_BACK_TO_SUPERINTEDENT_APPLICATION','Send Back Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6077-ac6f-2bc063b75064e','en_IN','WF_WS_RENAME_SEND_BACK_TO_JE_FROM_SDE','Send Back to JE','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6078-ac6f-2bc063b75064e','en_IN','WF_SEND_BACK_TO_JE_FROM_SDE_APPLICATION','Send Back Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6079-ac6f-2bc063b75064e','en_IN','WF_WS_RENAME_CANCEL_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL);
