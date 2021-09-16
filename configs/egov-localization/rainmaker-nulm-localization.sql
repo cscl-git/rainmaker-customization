@@ -1579,4 +1579,12 @@ INSERT INTO public.message
 ('bc4b5b3e-8591-41e4-9745-c7a0238912e5', 'en_IN', 'WF_Reassign To Citizen_APPLICATION', 'Reassign To Citizen Application', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
 ('26043b2c-be04-4bbf-8ea5-295ae81d37ba', 'en_IN', 'WF_Reject_APPLICATION', 'Reject Application', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
 ('2008be16-7520-449e-83d2-3c799b59b1d3', 'en_IN', 'WF_Approve_APPLICATION', 'Approve Application', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
-('1594d17f-5231-47a5-8f7e-fa32b2d5befa', 'en_IN', 'NULM_DOCUMENT_DETAILS_SUBTEXT_POPUP', 'Only one file can be uploaded for one document. If multiple files need to be uploaded then please combine all files in a pdf and then upload.Please attach pet dog photo along with doctor stamp in the veterinary card.', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
+('1594d17f-5231-47a5-8f7e-fa32b2d5befa', 'en_IN', 'NULM_DOCUMENT_DETAILS_SUBTEXT_POPUP', 'Only one file can be uploaded for one document. If multiple files need to be uploaded then please combine all files in a pdf and then upload.Please attach pet dog photo along with doctor stamp in the veterinary card.', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('32b2acdf-7ff3-4456-a0b9-638cca7775f6', 'en_IN', 'NULM_APPLICATION_SUCCESS_SUSV_FORWARD', 'Approve Application', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('f84c982a-6b2a-44ec-8106-a6d80649ef70', 'en_IN', 'NULM_APPLICATION_FORWARD_MESSAGE_SUB', 'Approve Application', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('718fcf5a-258a-4615-afc3-59a20f9af346', 'en_IN', 'NULM_APPLICATION_SUCCESS_SUSV_APPROVE', 'Approve', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('b030c7aa-08a4-4e57-b613-ff4d1262d0bf', 'en_IN', 'NULM_APPLICATION_APPROVE_MESSAGE_SUB', 'Approve', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('f3cc03d2-b7c4-42d3-8b83-fb8bdecadde5', 'en_IN', 'NULM_APPLICATION_SUCCESS_SUSV_REJECT', 'Approve', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('000a2d2a-0855-4990-8913-d3df9adcd9b0', 'en_IN', 'NULM_APPLICATION_REJECT_MESSAGE_SUB', 'Approve', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('91625914-92ca-459f-8156-6b9c45b9c215', 'en_IN', 'NULM_APPLICATION_SUCCESS_SUSV_REASSIGN', 'Approve', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL),
+('fe6e2a15-9ebc-418f-9a85-dd6476af96ea', 'en_IN', 'NULM_APPLICATION_REASSIGN_MESSAGE_SUB', 'Approve', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
