@@ -115,6 +115,8 @@ DELETE FROM public.message WHERE code = 'REASSIGNTOCHDSE_DOCUMENT' and module='r
 DELETE FROM public.message WHERE code = 'VERIFYDMSE_DOCUMENT' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'VERIFYCHDSE L2_DOCUMENT' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'REVIEWOFSDEHQ_DOCUMENT' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_RESENTTOADM' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REVIEWOFEE L1' and module='rainmaker-common' and tenantId='ch';
 
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00001','en_IN', 'WF_ROADCUTNOC_REVIEWSDE L2','Review Of SDE L2','ch','rainmaker-common', '94');
@@ -301,3 +303,5 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES ( 'a780deb1-b20d-4716-af64-3e6aa00ee455','en_IN', 'REVIEWOFEE L1_DOCUMENT','Document','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES ( 'bc4e4dbc-dc97-449c-836c-5e66aa572a44','en_IN', 'INITIATED_TELECOM_DOCUMENT','Document','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES ( '5f9d56c0-53e8-40bb-8418-714e4454e4af','en_IN', 'INITIATED_DOCUMENT','Document','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES ( '371fd4a2-f27c-49c9-a04e-937acf8b007a','en_IN', 'WF_ROADCUTNOC_RESENTTOADM','Resent to ADM','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES ( 'e0ae86eb-4308-4c56-8f8b-15f1d5ebb475','en_IN', 'WF_ROADCUTNOC_REVIEWOFEE L1','Review of EE L1','ch','rainmaker-common', '94');
