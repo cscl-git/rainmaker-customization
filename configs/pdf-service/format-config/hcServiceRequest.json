@@ -337,7 +337,7 @@
               "body": [
                 [
                   {
-                    "text": "Owner Details",
+                    "text": "Applicant Details",
                     "border": [
                       true,
                       true,
@@ -359,7 +359,7 @@
                       "body": [
                         [
                           {
-                            "text": "Name of Owner",
+                            "text": "Applicant Name",
                             "border": [
                               false,
                               false,
@@ -369,7 +369,7 @@
                             "style": "receipt-table-value-cont"
                           },
                           {
-                            "text": "Contact Number",
+                            "text": "Mobile No.",
                             "border": [
                               false,
                               false,
