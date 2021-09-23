@@ -285,7 +285,7 @@ serviceMaps:
       jsonMaps:
       - jsonPath: $.WaterConnection.id
 
-    - query: UPDATE eg_ws_service SET connectionCategory=?,connectionType=?,waterSource=?,meterId=?,meterInstallationDate=?,pipeSize=?,noOfTaps=?,proposedPipeSize=?,proposedTaps=?, initialmeterreading = ?,lastmeterreading=?, connectionexecutiondate = ?, detailsprovidedby = ?, estimationfileStoreId = ?, sanctionfileStoreId = ?, estimationLetterDate = ?, meterCount =  ?, meterRentCode =  ?, mfrCode =  ?, meterDigits =  ?, meterUnit =  ?, sanctionedCapacity =  ?,proposed_meterid = ?,proposed_meterinstallationdate=?,proposed_initialmeterreading=?,proposed_lastmeterreading=?, proposed_metercount=?,proposed_meterrentcode= ?, proposed_mfrcode=?, proposed_meterdigits = ?, proposed_sanctionedcapacity= ?, proposed_meterunit=?, no_of_meter=?,lastModifiedBy=?, lastModifiedTime=? WHERE connection_id=?;
+    - query: UPDATE eg_ws_service SET connectionCategory=?,connectionType=?,waterSource=?,meterId=?,meterInstallationDate=?,pipeSize=?,noOfTaps=?,proposedPipeSize=?,proposedTaps=?, initialmeterreading = ?,lastmeterreading=?, connectionexecutiondate = ?, detailsprovidedby = ?, estimationfileStoreId = ?, sanctionfileStoreId = ?, estimationLetterDate = ?, meterCount =  ?, meterRentCode =  ?, mfrCode =  ?, meterDigits =  ?, meterUnit =  ?, sanctionedCapacity =  ?,proposed_meterid = ?,proposed_meterinstallationdate=?,proposed_initialmeterreading=?,proposed_lastmeterreading=?, proposed_metercount=?,proposed_meterrentcode= ?, proposed_mfrcode=?, proposed_meterdigits = ?, proposed_sanctionedcapacity= ?, proposed_meterunit=?,lastModifiedBy=?, lastModifiedTime=? WHERE connection_id=?;
       basePath: $.WaterConnection
       jsonMaps:
        
@@ -352,8 +352,6 @@ serviceMaps:
        - jsonPath: $.WaterConnection.proposedSanctionedCapacity
        
        - jsonPath: $.WaterConnection.proposedMeterUnit
-
-       - jsonPath: $.WaterConnection.noOfMeter
        
        - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
 
@@ -680,7 +678,7 @@ serviceMaps:
       jsonMaps:
       - jsonPath: $.WaterConnection.id
 
-    - query: UPDATE eg_ws_service SET connectionCategory=?,connectionType=?,waterSource=?,meterId=?,meterInstallationDate=?,pipeSize=?,noOfTaps=?,proposedPipeSize=?,proposedTaps=?, initialmeterreading = ?, lastmeterreading = ?, connectionexecutiondate = ?, detailsprovidedby = ?, estimationfileStoreId = ?, sanctionfileStoreId = ?, estimationLetterDate = ?, meterCount =  ?, meterRentCode =  ?, mfrCode =  ?, meterDigits =  ?, meterUnit =  ?, sanctionedCapacity =  ?,proposed_meterid = ?,proposed_meterinstallationdate=?,proposed_initialmeterreading=?,proposed_lastmeterreading=?,proposed_metercount=?,proposed_meterrentcode= ?, proposed_mfrcode=?, proposed_meterdigits = ?, proposed_sanctionedcapacity= ?, proposed_meterunit=?, no_of_meter=?,lastModifiedBy=?, lastModifiedTime=? WHERE connection_id=?;
+    - query: UPDATE eg_ws_service SET connectionCategory=?,connectionType=?,waterSource=?,meterId=?,meterInstallationDate=?,pipeSize=?,noOfTaps=?,proposedPipeSize=?,proposedTaps=?, initialmeterreading = ?, lastmeterreading = ?, connectionexecutiondate = ?, detailsprovidedby = ?, estimationfileStoreId = ?, sanctionfileStoreId = ?, estimationLetterDate = ?, meterCount =  ?, meterRentCode =  ?, mfrCode =  ?, meterDigits =  ?, meterUnit =  ?, sanctionedCapacity =  ?,proposed_meterid = ?,proposed_meterinstallationdate=?,proposed_initialmeterreading=?,proposed_lastmeterreading=?,proposed_metercount=?,proposed_meterrentcode= ?, proposed_mfrcode=?, proposed_meterdigits = ?, proposed_sanctionedcapacity= ?, proposed_meterunit=?, lastModifiedBy=?, lastModifiedTime=? WHERE connection_id=?;
       basePath: $.WaterConnection
       jsonMaps:
        
@@ -748,8 +746,6 @@ serviceMaps:
        
        - jsonPath: $.WaterConnection.proposedMeterUnit
 
-       - jsonPath: $.WaterConnection.noOfMeter
-       
        - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
 
        - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
