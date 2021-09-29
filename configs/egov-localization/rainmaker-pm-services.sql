@@ -1376,4 +1376,6 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 ,('e4f012d1-4bb0-4f11-9e14-67324857dbe2','en_IN','NOC_MOBILE_NO_LABEL','Mobile Number','ch','rainmaker-pm', '94')
 ,('28bc0192-099e-46ed-b310-a9bf16d110f9','en_IN','NOC_PAYMENT_COLLECTION_SUCCESS_MESSAGE_MAIN','Payment has been collected successfully!','ch','rainmaker-pm','94')
 ,('cdb59b54-7a7d-4486-a35e-f509614c518d','en_IN','NOC_PMT_RCPT_NO','Payment Receipt No.','ch','rainmaker-pm','94')
-,('b391020b-ffbd-4e74-94cb-8e2182fbfd9b','en_IN','NOC_CONFIRMATION_BUTTON_DOWNLOAD_RECEIPT','Download Receipt','ch','rainmaker-pm','94');
+,('b391020b-ffbd-4e74-94cb-8e2182fbfd9b','en_IN','NOC_CONFIRMATION_BUTTON_DOWNLOAD_RECEIPT','Download Receipt','ch','rainmaker-pm','94')
+,('2e38b5ac-2013-4d63-a2db-5bc918a30772','en_IN','PM_CHARGES_EDITED_MESSAGE_MAIN','Application Charges Edited Successfully','ch','rainmaker-pm','94')
+,('6813475e-45a6-4715-8ba5-1889759dd279','en_IN','NOC_EDIT_SUCCESS_MESSAGE_MAIN','Application Edited Successfully','ch','rainmaker-pm','94');
