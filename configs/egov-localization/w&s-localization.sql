@@ -1,4 +1,7 @@
 delete from public.message  WHERE  module='rainmaker-ws';
+delete FROM public.message WHERE code = 'WF_SUBMIT_APPLICATION_APPLICATION';
+delete FROM public.message WHERE code = 'WF_SEND_BACK_TO_SUPERINTEDENT_APPLICATION';
+
 INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 	 ('5f98910d-52c2-400c-b8a4-0e1e05efcacf','en_IN','WS_OWNER.ADDRESSPROOF','Owner Address Proof','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
 	 ('92c8bcef-fbf5-4b33-979c-74fb498ca1fd','en_IN','WS_PROPSUBUSGTYPE_NONRESIDENTIAL_COMMERCIAL_FOODJOINTS_ACRESTAURANT','AC Restaurant','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
@@ -1635,9 +1638,9 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1wns-6073-ac6f-2bc063b75064e','en_IN','WF_SEND_BACK_TO_JE_FROM_SDE_APPLICATION','Send Back Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6074-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_VERIFY_AND_FORWARD_TO_SUPERINTENDENT_APPLICATION','Verify and Forword Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6075-ac6f-2bc063b75064e','en_IN','WF_WS_RENAME_SEND_BACK_TO_SUPERINTEDENT','Send Back to Superintendent ','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1wns-6076-ac6f-2bc063b75064e','en_IN','WF_SEND_BACK_TO_SUPERINTEDENT_APPLICATION','Send Back Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+--,('4d3b6355-1wns-6076-ac6f-2bc063b75064e','en_IN','WF_SEND_BACK_TO_SUPERINTEDENT_APPLICATION','Send Back Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6077-ac6f-2bc063b75064e','en_IN','WF_WS_RENAME_SEND_BACK_TO_JE_FROM_SDE','Send Back to JE','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1wns-6078-ac6f-2bc063b75064e','en_IN','WF_SEND_BACK_TO_JE_FROM_SDE_APPLICATION','Send Back Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+--,('4d3b6355-1wns-6078-ac6f-2bc063b75064e','en_IN','WF_SEND_BACK_TO_JE_FROM_SDE_APPLICATION','Send Back Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6079-ac6f-2bc063b75064e','en_IN','WF_WS_RENAME_CANCEL_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6080-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_CANCEL_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6081-ac6f-2bc063b75064e','en_IN','WF_WS_METER_TESTING_REJECT','Reject','ch','rainmaker-ws',24226,now(),NULL,NULL)
