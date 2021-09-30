@@ -1378,4 +1378,13 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 ,('cdb59b54-7a7d-4486-a35e-f509614c518d','en_IN','NOC_PMT_RCPT_NO','Payment Receipt No.','ch','rainmaker-pm','94')
 ,('b391020b-ffbd-4e74-94cb-8e2182fbfd9b','en_IN','NOC_CONFIRMATION_BUTTON_DOWNLOAD_RECEIPT','Download Receipt','ch','rainmaker-pm','94')
 ,('2e38b5ac-2013-4d63-a2db-5bc918a30772','en_IN','PM_CHARGES_EDITED_MESSAGE_MAIN','Application Charges Edited Successfully','ch','rainmaker-pm','94')
-,('6813475e-45a6-4715-8ba5-1889759dd279','en_IN','NOC_EDIT_SUCCESS_MESSAGE_MAIN','Application Edited Successfully','ch','rainmaker-pm','94');
+,('6813475e-45a6-4715-8ba5-1889759dd279','en_IN','NOC_EDIT_SUCCESS_MESSAGE_MAIN','Application Edited Successfully','ch','rainmaker-pm','94')
+,('cde3d24c-ef68-428f-b75a-53f7b8c147b7','en_IN','V3_V4_V5_ROAD','V-3,V-4,V-5 Road','ch','rainmaker-pm','94')
+,('392270b4-bd07-4b49-be5c-f53df9d82fdb','en_IN','V5_PARKING_AND_INTERNAL_ROAD','V-5,Parking and Internal Road','ch','rainmaker-pm','94')
+,('b9e5f2bb-61ab-4a94-b8c4-7cf3e2135441','en_IN','KATCHA_BERM','Katcha Berm','ch','rainmaker-pm','94')
+,('3f18da32-fad9-4f51-8b6a-f9f7d8af1a84','en_IN','MAN_HOLE_OR_CHAMBER','Man Hole/Chamber','ch','rainmaker-pm','94')
+,('06506711-88aa-419f-801c-4b0a177834f8','en_IN','PAVER_BLOCK','Paver Block','ch','rainmaker-pm','94')
+,('ea094684-f4f0-474c-be09-e46c4c583980','en_IN','PIT_ON_KALCHA','Pit And Kacha','ch','rainmaker-pm','94')
+,('a3c80994-4738-43e8-93a6-a4f2859deeca','en_IN','PIT_ON_PAVER','Pit on Paver','ch','rainmaker-pm','94')
+,('1e6aca56-d3b4-4890-babc-0fb719309bdb','en_IN','PIT_ON_V3_V4_V5_ROAD_MAIN_ROAD','Pit on  V-3,V-4,V-5 Road And Main Road','ch','rainmaker-pm','94')
+,('593a9f32-ec34-484a-92cd-486521d2140c','en_IN','RD_TYPE_OTHER','Other','ch','rainmaker-pm','94');
