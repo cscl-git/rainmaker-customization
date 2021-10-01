@@ -285,7 +285,7 @@ serviceMaps:
       jsonMaps:
       - jsonPath: $.WaterConnection.id
 
-    - query: UPDATE eg_ws_service SET connectionCategory=?,connectionType=?,waterSource=?,meterId=?,meterInstallationDate=?,pipeSize=?,noOfTaps=?,proposedPipeSize=?,proposedTaps=?, initialmeterreading = ?,lastmeterreading=?, connectionexecutiondate = ?, detailsprovidedby = ?, estimationfileStoreId = ?, sanctionfileStoreId = ?, estimationLetterDate = ?, meterCount =  ?, meterRentCode =  ?, mfrCode =  ?, meterDigits =  ?, meterUnit =  ?, sanctionedCapacity =  ?,proposed_meterid = ?,proposed_meterinstallationdate=?,proposed_initialmeterreading=?,proposed_lastmeterreading=?, proposed_metercount=?,proposed_meterrentcode= ?, proposed_mfrcode=?, proposed_meterdigits = ?, proposed_sanctionedcapacity= ?, proposed_meterunit=?, lastModifiedBy=?, lastModifiedTime=? WHERE connection_id=?;
+    - query: UPDATE eg_ws_service SET connectionCategory=?,connectionType=?,waterSource=?,meterId=?,meterInstallationDate=?,pipeSize=?,noOfTaps=?,proposedPipeSize=?,proposedTaps=?, initialmeterreading = ?,lastmeterreading=?, connectionexecutiondate = ?, detailsprovidedby = ?, estimationfileStoreId = ?, sanctionfileStoreId = ?, estimationLetterDate = ?, meterCount =  ?, meterRentCode =  ?, mfrCode =  ?, meterDigits =  ?, meterUnit =  ?, sanctionedCapacity =  ?,proposed_meterid = ?,proposed_meterinstallationdate=?,proposed_initialmeterreading=?,proposed_lastmeterreading=?, proposed_metercount=?,proposed_meterrentcode= ?, proposed_mfrcode=?, proposed_meterdigits = ?, proposed_sanctionedcapacity= ?, proposed_meterunit=?,lastModifiedBy=?, lastModifiedTime=? WHERE connection_id=?;
       basePath: $.WaterConnection
       jsonMaps:
        
@@ -529,7 +529,7 @@ serviceMaps:
 
        - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
           
-    - query: INSERT INTO eg_ws_application(id, tenantId, wsid, applicationno, activitytype, applicationstatus, action, comments, is_ferrule_applicable, security_charges, additionalcharges, constructioncharges,ismeterstolen, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET activitytype = ?, applicationstatus =?, action =?, comments =?,is_ferrule_applicable=?, security_charges=?, additionalcharges=?, constructioncharges=?, ismeterstolen=?, lastmodifiedby =?, lastmodifiedtime =?;
+    - query: INSERT INTO eg_ws_application(id, tenantId, wsid, applicationno, activitytype, applicationstatus, action, comments, is_ferrule_applicable, security_charges, additionalcharges, constructioncharges,ismeterstolen,application_code, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET activitytype = ?, applicationstatus =?, action =?, comments =?,is_ferrule_applicable=?, security_charges=?, additionalcharges=?, constructioncharges=?, ismeterstolen=?, application_code=?,lastmodifiedby =?, lastmodifiedtime =?;
       basePath: $.WaterConnection.waterApplication
       jsonMaps:
          
@@ -559,6 +559,8 @@ serviceMaps:
           
           - jsonPath: $.WaterConnection.waterApplication.isMeterStolen
 
+          - jsonPath: $.WaterConnection.waterApplication.application_code
+
           - jsonPath: $.WaterConnection.waterApplication.auditDetails.createdBy
 
           - jsonPath: $.WaterConnection.waterApplication.auditDetails.lastModifiedBy
@@ -584,6 +586,8 @@ serviceMaps:
           - jsonPath: $.WaterConnection.waterApplication.constructionCharges 
           
           - jsonPath: $.WaterConnection.waterApplication.isMeterStolen 
+
+          - jsonPath: $.WaterConnection.waterApplication.application_code
 
           - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
 
@@ -741,7 +745,7 @@ serviceMaps:
        - jsonPath: $.WaterConnection.proposedSanctionedCapacity
        
        - jsonPath: $.WaterConnection.proposedMeterUnit
-       
+
        - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
 
        - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime

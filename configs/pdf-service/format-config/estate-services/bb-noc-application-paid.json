@@ -170,6 +170,141 @@
                           ],
                           [
                             {
+                              "color": "#484848",
+                              "text":"{{allotmentcharges}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "color": "#484848",
+                              "text":"{{applicationallotmentcharges}}",
+                              "alignment": "right",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            }
+                          ],
+                          [
+                            {
+                              "color": "#484848",
+                              "text":"{{transfercharges}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "color": "#484848",
+                              "text":"{{applicationtransfercharges}}",
+                              "alignment": "right",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            }
+                          ],
+                          [
+                            {
+                              "color": "#484848",
+                              "text":"{{conversioncharges}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "color": "#484848",
+                              "text":"{{applicationconversioncharges}}",
+                              "alignment": "right",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            }
+                          ],
+                          [
+                            {
                               "text":"",
                               "border":[
                                 false,

@@ -305,41 +305,6 @@
         }
       },
       {
-        "text": "Approved by",
-        "alignment": "left",
-        "fontSize": "10",
-        "bold": true,
-        "margin": [
-          0,
-          50,
-          0,
-          5
-        ]
-      },
-      {
-        "text": "{{approvedBy}}",
-        "alignment": "left",
-        "fontSize": "10",
-        "margin": [
-          0,
-          0,
-          0,
-          0
-        ]
-      },
-      {
-        "text": "{{approvedByRole}}",
-        "alignment": "left",
-        "fontSize": "10",
-        "bold": true,
-        "margin": [
-          0,
-          0,
-          0,
-          0
-        ]
-      },
-      {
         "text": [
           {
             "text": "Note: ",
@@ -356,7 +321,7 @@
     ],
     "footer": [
       {
-          "text": "The receipt and permission letter are electronically generated and need no official signature or stamp",
+          "text": "The receipt and permission letter are electronically generated and need no official signature or stamp.",
           "style": "footerstyle"
       }
   ],
