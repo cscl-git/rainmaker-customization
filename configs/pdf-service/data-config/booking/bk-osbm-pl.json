@@ -1,102 +1,102 @@
 {
-    "key": "bk-osbm-pl",
-    "DataConfigs": {
-       "serviceName": "rainmaker-bk",
-       "version": "1.0.0",
-       "baseKeyPath": "$.BookingInfo.*",
-       "entityIdPath": "$.bookingDetail.applicationNumber",
-       "isCommonTableBorderRequired": true,
-       "mappings": [
-          {
-             "topic": "bk-pdf-generation",
-             "mappings": [
-                {
-                   "direct": [
-                      {
-                         "variable": "variable15",
-                         "value": {
-                            "path": "$.applicantDetail.name"
-                         }
-                      },
-                      {
-                         "variable": "variable16",
-                         "value": {
-                            "path": "$.applicantDetail.mobileNumber"
-                         }
-                      },
-                      {
-                         "variable": "variable17",
-                         "value": {
-                            "path": "$.applicantDetail.houseNo"
-                         }
-                      },
-                      {
-                         "variable": "variable18",
-                         "value": {
-                            "path": "$.applicantDetail.permanentAddress"
-                         }
-                      },
-                      {
-                         "variable": "variable19",
-                         "value": {
-                            "path": "$.applicantDetail.sector"
-                         }
-                      },
-                      {
-                         "variable": "variable20",
-                         "value": {
-                            "path": "$.bookingDetail.applicationNumber"
-                         }
-                      },
-                      {
-                         "variable": "variable21",
-                         "value": {
-                            "path": "$.bookingDetail.applicationDate"
-                         }
-                      },
-                      {
-                         "variable": "variable22",
-                         "value": {
-                            "path": "$.bookingDetail.villageOrCity"
-                         }
-                      },
-                      {
-                         "variable": "variable23",
-                         "value": {
-                            "path": "$.bookingDetail.residentialOrCommercial"
-                         }
-                      },
-                      {
-                         "variable": "variable24",
-                         "value": {
-                            "path": "$.bookingDetail.areaRequired"
-                         }
-                      },
-                      {
-                         "variable": "variable25",
-                         "value": {
-                            "path": "$.bookingDetail.category"
-                         }
-                      },
-                      {
-                         "variable": "variable26",
-                         "value": {
-                            "path": "$.bookingDetail.typeOfConstruction"
-                         }
-                      },
-                      {
-                         "variable": "variable27",
-                         "value": {
-                            "path": "$.bookingDetail.permissionPeriod"
-                         }
-                      },
-                      {
-                         "variable": "variable28",
-                         "value": {
-                            "path": "$.bookingDetail.duration"
-                         }
-                      },
-                      {
+   "key": "bk-osbm-pl",
+   "DataConfigs": {
+      "serviceName": "rainmaker-bk",
+      "version": "1.0.0",
+      "baseKeyPath": "$.BookingInfo.*",
+      "entityIdPath": "$.bookingDetail.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [
+         {
+            "topic": "bk-pdf-generation",
+            "mappings": [
+               {
+                  "direct": [
+                     {
+                        "variable": "variable15",
+                        "value": {
+                           "path": "$.applicantDetail.name"
+                        }
+                     },
+                     {
+                        "variable": "variable16",
+                        "value": {
+                           "path": "$.applicantDetail.mobileNumber"
+                        }
+                     },
+                     {
+                        "variable": "variable17",
+                        "value": {
+                           "path": "$.applicantDetail.houseNo"
+                        }
+                     },
+                     {
+                        "variable": "variable18",
+                        "value": {
+                           "path": "$.applicantDetail.permanentAddress"
+                        }
+                     },
+                     {
+                        "variable": "variable19",
+                        "value": {
+                           "path": "$.applicantDetail.sector"
+                        }
+                     },
+                     {
+                        "variable": "variable20",
+                        "value": {
+                           "path": "$.bookingDetail.applicationNumber"
+                        }
+                     },
+                     {
+                        "variable": "variable21",
+                        "value": {
+                           "path": "$.bookingDetail.applicationDate"
+                        }
+                     },
+                     {
+                        "variable": "variable22",
+                        "value": {
+                           "path": "$.bookingDetail.villageOrCity"
+                        }
+                     },
+                     {
+                        "variable": "variable23",
+                        "value": {
+                           "path": "$.bookingDetail.residentialOrCommercial"
+                        }
+                     },
+                     {
+                        "variable": "variable24",
+                        "value": {
+                           "path": "$.bookingDetail.areaRequired"
+                        }
+                     },
+                     {
+                        "variable": "variable25",
+                        "value": {
+                           "path": "$.bookingDetail.category"
+                        }
+                     },
+                     {
+                        "variable": "variable26",
+                        "value": {
+                           "path": "$.bookingDetail.typeOfConstruction"
+                        }
+                     },
+                     {
+                        "variable": "variable27",
+                        "value": {
+                           "path": "$.bookingDetail.permissionPeriod"
+                        }
+                     },
+                     {
+                        "variable": "variable28",
+                        "value": {
+                           "path": "$.bookingDetail.duration"
+                        }
+                     },
+                     {
                         "variable": "generatedBy",
                         "value": {
                            "path": "$.generatedBy.generatedBy"
@@ -104,8 +104,8 @@
                      },
                      {
                         "variable": "pdfLogo",
-                        "url":"https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
-                        "type":"image"
+                        "url": "https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
+                        "type": "image"
                      },
                      {
                         "variable": "approvedBy",
@@ -132,23 +132,21 @@
                         }
                      },
                      {
-                       "variable": "municipalityContact",
-                       "value": {
-                          "path": "$.tenantInfo.contactNumber"
-                       }
-                    },
-                       {
-                       "variable": "municipalityWebSite",
-                       "value": {
-                          "path": "$.tenantInfo.webSite"
-                       }
-                    }
-                   ]
-                }
-
-             ]
-          }
-       ]
-    }
- }
-
+                        "variable": "municipalityContact",
+                        "value": {
+                           "path": "$.tenantInfo.contactNumber"
+                        }
+                     },
+                     {
+                        "variable": "municipalityWebSite",
+                        "value": {
+                           "path": "$.tenantInfo.webSite"
+                        }
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}
