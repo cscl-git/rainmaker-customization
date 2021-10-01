@@ -1582,8 +1582,8 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1wns-6016-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_SEND_BACK_TO_SDE','Send Back to SDE','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6017-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_SEND_BACK_TO_HDM','Send Back to HDM','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6018-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_FORWARD_TO_HDM','Verify and Forword to HDM','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1wns-6019-ac6f-2bc063b75064e','en_IN','WS_SELECT_CONNECTION_VALIDATION_MESSAGE','Please select Consumer No','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1wns-6020-ac6f-2bc063b75064e','en_IN','WS_SUBACTIVITY_VALIDATION_MESSAGE','The Water Connection number selected is already under approval process. Please selcet other connection no or click on ''My Applications'' for details','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6019-ac6f-2bc063b75064e','en_IN','WS_SELECT_CONNECTION_VALIDATION_MESSAGE','Please select consumer no.','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6020-ac6f-2bc063b75064e','en_IN','WS_SUBACTIVITY_VALIDATION_MESSAGE','The water connection number selected is already under approval process. Please selcet other connection no or click on ''My Applications'' for details','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6021-ac6f-2bc063b75064e','en_IN','WS_PROPUSGTYPE_PUBLIC_PUBLICPARKS','Public / Semi- Public Buildings','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6023-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_PUBLIC_PUBLICPARKS','Public Parks','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6024-ac6f-2bc063b75064e','en_IN','WS_PROPUSGTYPE_COMMERCIAL_VIOLATIONRESIDENTIAL','Commercial','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -1659,4 +1659,5 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1wns-6094-ac6f-2bc063b75064e','en_IN','WS_FILL_NOM_VALIDATION_FIELDS','Please enter No. of meters','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6095-ac6f-2bc063b75064e','en_IN','ERR_NOM_VALIDATION_FIELDS_MSG','Please enter valid no. of meters','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6096-ac6f-2bc063b75064e','en_IN','ERR_NOF_VALIDATION_FIELDS_MSG','Please enter valid floor number','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1wns-6097-ac6f-2bc063b75064e','en_IN','ERR_HOUSE_NO_VALIDATION_FIELDS_MSG','Please enter valid house no','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1wns-6097-ac6f-2bc063b75064e','en_IN','ERR_HOUSE_NO_VALIDATION_FIELDS_MSG','Please enter valid house no','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6098-ac6f-2bc063b75064e','en_IN','WS_COMMON_PAID_LABEL','PAID','ch','rainmaker-ws',24226,now(),NULL,NULL);
