@@ -49,7 +49,7 @@
                     0,
                     10,
                     0,
-                    10
+                    30
                 ],
                 "bold": true
             },
@@ -80,29 +80,34 @@
                         "style": "app-table-value"
                     },
                     {
-                        "text": "Subject: Permission of ground for commercial purpose in {{variable10}}.",
+                        "text": "Subject: Booking of  {{variable10}} {{sector}} , {{variable6}}.",
                         "style": "app-table-value"
                     }
+                ],
+                "margin": [
+                    0,
+                    15,
+                    5,
+                    15
                 ]
             },
             {
+                "text": "Reference: Your letter dated {{variable8}} on the above noted subject.",
+                "style": "app-table-value"
+            },
+            {
                 "text": [
-                    "You are here by granted a permission to use ground for commercial purpose in ",
+                    "The permission for use of {{variable10}}, {{sector}} , {{variable6}} for {{bookingDays}} day i.e {{variable9}} for {{bookingPurpose}} is hereby granted on deposit of Rs.",
                     {
-                        "text": "{{variable10}}, {{variable6}} ",
+                        "text": " {{depositAmount}} /- ",
                         "bold": true
                     },
-                    "on dated ",
-                    {
-                        "text": "{{variable9}} ",
-                        "bold": true
-                    },
-                    "on following conditions:"
+                    "(as Ground Rent & GST @ 18%) vide Gr. No 2864/38 dated {{variable8}} on the following terms and conditions:- "
                 ],
                 "style": "app-table-label",
                 "margin": [
-                    5,
                     20,
+                    15,
                     5,
                     5
                 ]
@@ -110,7 +115,7 @@
             {
                 "ol": [
                     {
-                        "text": "Area shall be used for the purposes for which the permission is being granted above and shall not be used for any other purpose.",
+                        "text": "Ground shall be used for the purpose for which the permission is being granted above and shall not be used for any purpose.",
                         "style": "app-table-label",
                         "margin": [
                             20,
@@ -120,7 +125,7 @@
                         ]
                     },
                     {
-                        "text": "No Banner/Hoardings shall be allowed. ",
+                        "text": "No subletting of the ground to any other agency is permitted.",
                         "style": "app-table-label",
                         "margin": [
                             20,
@@ -130,7 +135,7 @@
                         ]
                     },
                     {
-                        "text": "No damage shall be caused to the M.C. property / flooring / parkings etc. In case of any damage of Municipal property the recovery shall be made from the applicant.",
+                        "text": "In case of any damage to Municipal property, the recovery shall be made from you.",
                         "style": "app-table-label",
                         "margin": [
                             20,
@@ -140,7 +145,7 @@
                         ]
                     },
                     {
-                        "text": "No inconvenience is to be caused to the General Public on account of this permission.",
+                        "text": "After the completion of function the site in question should be properly cleaned.",
                         "style": "app-table-label",
                         "margin": [
                             20,
@@ -150,7 +155,7 @@
                         ]
                     },
                     {
-                        "text": "Erection of tentage / erection of poles are allowed without holes.",
+                        "text": "Permission from the District Magistrate and Police Authority of UT Chandigarh for Law and Order, Chief Fire Officer for ensuring fire safety norms will be sought separately.",
                         "style": "app-table-label",
                         "margin": [
                             20,
@@ -160,7 +165,7 @@
                         ]
                     },
                     {
-                        "text": "Advertisement fee shall be charged as per Chandigarh Advertisement Control Order1954 for displaying of banner(s) and any kind of display of advertisement, if any.",
+                        "text": "The Municipal Corporation, Chandigarh reserves the right to cancel the booking of ground in Public interest.",
                         "style": "app-table-label",
                         "margin": [
                             20,
@@ -170,7 +175,47 @@
                         ]
                     },
                     {
-                        "text": "The Commissioner, Municipal Corporation, Chd, reserve the right to the cancel the permission without assigning any reason in public interest. ",
+                        "text": "No cancellation/Change of date of booking is permissible in any case once the booking is made to you for the specific period.",
+                        "style": "app-table-label",
+                        "margin": [
+                            20,
+                            10,
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "text": "Event/proposed activity/demolition and vacation of ground arrangements are to be carried out within the permitted period.",
+                        "style": "app-table-label",
+                        "margin": [
+                            20,
+                            10,
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "text": "The organizer would require to start removing the hangers well in time, so that the ground is vacant in all respect by 10:00 pm on the last day of booking, failing which the same will be removed by the municipal corporation at the cost of organizer and exemplary penalty will be imposed.",
+                        "style": "app-table-label",
+                        "margin": [
+                            20,
+                            10,
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "text": "Any commercial advertisement/logo will not be allowed without the permission of the competent authority.",
+                        "style": "app-table-label",
+                        "margin": [
+                            20,
+                            10,
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "text": "Advertisement fees will be charged as per Chd. Advt. Control order-1954 for the display of advertisement banner, if any.",
                         "style": "app-table-label",
                         "margin": [
                             20,
