@@ -47,7 +47,7 @@
               "style": "pt-reciept-citizen-header",
               "columns": [
                 {
-                  "width":65,
+                  "width":"auto",
                   "text": [
                     {
                       "text": "MCC/JICMC/SDE (6)12010/ ",
@@ -62,10 +62,10 @@
                 },
                 {
                   "text": "",
-                  "width":10
+                  "width":"*"
                 },
                 {
-                  "width":25,
+                  "width":"auto",
                   "text": [
                     {
                       "text": "Dated ",
