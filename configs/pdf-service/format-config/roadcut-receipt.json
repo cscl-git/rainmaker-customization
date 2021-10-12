@@ -80,7 +80,7 @@
 		"style": "tableExample",
 			"table": {
 				"body": [
-					["Reference to Application Number", "Charges", "GST Amount (UTGST+CGST)/IGST","Total Amount"],
+					["Reference to Application Number", "Charges (Permission for Road Cut Fees)", "GST Amount (UTGST+CGST)/IGST","Total Amount"],
 					["{{variable6}}", "{{variable9}}", "{{variable7}}","{{variable1}}"]
 				]
 		}

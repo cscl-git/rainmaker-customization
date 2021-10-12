@@ -1,4 +1,7 @@
 delete from public.message  WHERE  module='rainmaker-ws';
+delete FROM public.message WHERE code = 'WF_SUBMIT_APPLICATION_APPLICATION';
+delete FROM public.message WHERE code = 'WF_SEND_BACK_TO_SUPERINTEDENT_APPLICATION';
+
 INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 	 ('5f98910d-52c2-400c-b8a4-0e1e05efcacf','en_IN','WS_OWNER.ADDRESSPROOF','Owner Address Proof','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
 	 ('92c8bcef-fbf5-4b33-979c-74fb498ca1fd','en_IN','WS_PROPSUBUSGTYPE_NONRESIDENTIAL_COMMERCIAL_FOODJOINTS_ACRESTAURANT','AC Restaurant','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
@@ -465,8 +468,8 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 	 ('201fae45-3b14-4c36-9f8c-60f50f27c91b','en_IN','SW_EDIT_PENDING_FOR_FIELD_INSPECTION_SMS_MESSAGE','Dear <Owner Name>, Your Application <Application number>  for a New <Service> Connection has been edited. For more details, please log in to <mseva URL> or download <mseva app link>.','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
 	 ('2ad73e0f-d671-45b8-80a4-a076fb217311','en_IN','SW_EDIT_PENDING_FOR_DOCUMENT_VERIFICATION_APP_MESSAGE','Dear <Owner Name>, Your Application <Application number>  for a New <Service> Connection has been edited. Click here for more details <View History Link>','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
 	 ('7c4f5477-c343-4a75-8070-341d52e07c4c','en_IN','SW_EDIT_PENDING_FOR_DOCUMENT_VERIFICATION_SMS_MESSAGE','Dear <Owner Name>, Your Application <Application number>  for a New <Service> Connection has been edited. For more details, please log in to <mseva URL> or download <mseva app link>.','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
-	 ('a7521a1f-892b-47b1-8fc4-c16d5225ab81','en_IN','SW_VERIFY_AND_FORWORD_PENDING_FOR_FIELD_INSPECTION_APP_MESSAGE','Dear <Owner Name>, Status of your application <Application number> for a New <Service> Connection has changed to Pending for field inspection'' from ''Pending for document verification. To track your application, click on <View History Link>','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
-	 ('4543de8d-e9dc-4483-98ca-4996d503310c','en_IN','SW_VERIFY_AND_FORWORD_PENDING_FOR_FIELD_INSPECTION_SMS_MESSAGE','Dear <Owner Name>, Status of your application <Application number> for a New <Service> Connection has changed to Pending for field inspection'' from ''Pending for document verification. For more details, please log in to <mseva URL> or download <mseva app link>.','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
+	 ('a7521a1f-892b-47b1-8fc4-c16d5225ab81','en_IN','SW_VERIFY_AND_FORWORD_PENDING_FOR_FIELD_INSPECTION_APP_MESSAGE','Dear <Owner Name>, Status of your application <Application number> for a New <Service> Connection has changed to ‘Pending for field inspection'' from ''Pending for document verification’. To track your application, click on <View History Link>','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
+	 ('4543de8d-e9dc-4483-98ca-4996d503310c','en_IN','SW_VERIFY_AND_FORWORD_PENDING_FOR_FIELD_INSPECTION_SMS_MESSAGE','Dear <Owner Name>, Status of your application <Application number> for a New <Service> Connection has changed to ‘Pending for field inspection'' from ''Pending for document verification’. For more details, please log in to <mseva URL> or download <mseva app link>.','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
 	 ('ca4aad37-d4e5-45cc-9f3f-17de8316eef4','en_IN','SW_SEND_BACK_PENDING_FOR_FIELD_INSPECTION_APP_MESSAGE','Dear <Owner Name>, Your Application <Application number>  for a New <Service> Connection has been sent back. Click here for more details <View History Link>','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
 	 ('d2e372da-b6e3-4fde-babd-9b1c4b7c626e','en_IN','SW_SEND_BACK_PENDING_FOR_FIELD_INSPECTION_SMS_MESSAGE','Dear <Owner Name>, Your Application <Application number>  for a New <Service> Connection has been sent back. For more details, please log in to <mseva URL> or download <mseva app link>.','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
 	 ('cc2eaea1-303a-4a1e-9a5b-2fc22cfcf596','en_IN','SW_SEND_BACK_FOR_DO_PENDING_FOR_DOCUMENT_VERIFICATION_APP_MESSAGE','Dear <Owner Name>, Your Application <Application number>  for a New <Service> Connection has been sent back. Click here for more details <View History Link>','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
@@ -480,8 +483,8 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 	 ('223054b2-d982-457b-a76e-1a913675b619','en_IN','WS_EDIT_PENDING_FOR_FIELD_INSPECTION_SMS_MESSAGE','Dear <Owner Name>, Your Application <Application number>  for a New <Service> Connection has been edited. For more details, please log in to <mseva URL> or download <mseva app link>.','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
 	 ('13baa70d-7288-48ff-9c3a-889e1c504c26','en_IN','WS_EDIT_PENDING_FOR_DOCUMENT_VERIFICATION_APP_MESSAGE','Dear <Owner Name>, Your Application <Application number>  for a New <Service> Connection has been edited. Click here for more details <View History Link>','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
 	 ('40e30504-5f77-4391-a483-eb9dce70a45c','en_IN','WS_EDIT_PENDING_FOR_DOCUMENT_VERIFICATION_SMS_MESSAGE','Dear <Owner Name>, Your Application <Application number>  for a New <Service> Connection has been edited. For more details, please log in to <mseva URL> or download <mseva app link>.','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
-	 ('5de4d5a0-5f44-4831-bd06-444dea50a2a8','en_IN','WS_VERIFY_AND_FORWORD_PENDING_FOR_FIELD_INSPECTION_APP_MESSAGE','Dear <Owner Name>, Status of your application <Application number> for a New <Service> Connection has changed to Pending for field inspection'' from ''Pending for document verification. To track your application, click on <View History Link>','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
-	 ('d9330f73-a05d-4fec-8576-0f604d283eee','en_IN','WS_VERIFY_AND_FORWORD_PENDING_FOR_FIELD_INSPECTION_SMS_MESSAGE','Dear <Owner Name>, Status of your application <Application number> for a New <Service> Connection has changed to Pending for field inspection'' from ''Pending for document verification. For more details, please log in to <mseva URL> or download <mseva app link>.','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18');
+	 ('5de4d5a0-5f44-4831-bd06-444dea50a2a8','en_IN','WS_VERIFY_AND_FORWORD_PENDING_FOR_FIELD_INSPECTION_APP_MESSAGE','Dear <Owner Name>, Status of your application <Application number> for a New <Service> Connection has changed to ‘Pending for field inspection'' from ''Pending for document verification’. To track your application, click on <View History Link>','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
+	 ('d9330f73-a05d-4fec-8576-0f604d283eee','en_IN','WS_VERIFY_AND_FORWORD_PENDING_FOR_FIELD_INSPECTION_SMS_MESSAGE','Dear <Owner Name>, Status of your application <Application number> for a New <Service> Connection has changed to ‘Pending for field inspection'' from ''Pending for document verification’. For more details, please log in to <mseva URL> or download <mseva app link>.','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18');
 INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 	 ('d2d0a859-a03a-4a06-9df3-a827e70b7bf5','en_IN','WS_SEND_BACK_PENDING_FOR_FIELD_INSPECTION_APP_MESSAGE','Dear <Owner Name>, Your Application <Application number>  for a New <Service> Connection has been sent back. Click here for more details <View History Link>','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
 	 ('0a1926d8-2dc9-4a09-9e69-ce4b8b43b276','en_IN','WS_SEND_BACK_PENDING_FOR_FIELD_INSPECTION_SMS_MESSAGE','Dear <Owner Name>, Your Application <Application number>  for a New <Service> Connection has been sent back. For more details, please log in to <mseva URL> or download <mseva app link>.','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
@@ -785,8 +788,8 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75015e','en_IN','WS_SERV_DETAIL_CC_CODE_PLACEHOLDER','Enter CC Code','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75060e','en_IN','WS_SERV_DETAIL_LEDGER_GROUP','Ledger Group','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75061e','en_IN','WS_SERV_DETAIL_LEDGER_GROUP_PLACEHOLDER','Enter Ledger Group','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-4591-ac6f-2bc063b75016e','en_IN','WS_ADDN_DETAILS_INITIAL_METER_COUNT','Meter Count','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-4591-ac6f-2bc063b75017e','en_IN','WS_ADDN_DETAILS_INITIAL_METER_COUNT_PLACEHOLDER','Enter Meter Count','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b75016e','en_IN','WS_ADDN_DETAILS_INITIAL_METER_COUNT','No. of meters','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b75017e','en_IN','WS_ADDN_DETAILS_INITIAL_METER_COUNT_PLACEHOLDER','Enter No. of meters','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75018e','en_IN','WS_SERV_DETAIL_MFRCODE','MFR Code','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75019e','en_IN','WS_SERV_DETAIL_MFRCODE_PLACEHOLDER','Select MFR Code','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75020e','en_IN','WS_SERV_DETAIL_METER_DIGIT','Meter Digits','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -1323,8 +1326,8 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5758-ac6f-2bc063b75064e','en_IN','WS_PROP_ADDN_DETAIL_METER_INSTALL_DATE','Proposed Meter Installation Date','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5759-ac6f-2bc063b75064e','en_IN','WS_PROP_ADDN_DETAILS_INITIAL_METER_READING','Proposed Initial Meter Reading (KL)','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5760-ac6f-2bc063b75064e','en_IN','WS_PROP_ADDN_DETAILS_INITIAL_METER_READING_PLACEHOLDER','Enter Proposed Initial Meter Reading (KL)','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5761-ac6f-2bc063b75064e','en_IN','WS_PROP_ADDN_DETAILS_INITIAL_METER_COUNT','Proposed Meter Count','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5762-ac6f-2bc063b75064e','en_IN','WS_PROP_ADDN_DETAILS_INITIAL_METER_COUNT_PLACEHOLDER','Enter Proposed Meter Count','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5761-ac6f-2bc063b75064e','en_IN','WS_PROP_ADDN_DETAILS_INITIAL_METER_COUNT','Proposed No. of meters','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5762-ac6f-2bc063b75064e','en_IN','WS_PROP_ADDN_DETAILS_INITIAL_METER_COUNT_PLACEHOLDER','Enter Proposed No. of meters','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5763-ac6f-2bc063b75064e','en_IN','WS_PROP_SERV_DETAIL_MFRCODE','Proposed MFR Code','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5764-ac6f-2bc063b75064e','en_IN','WS_PROP_SERV_DETAIL_MFRCODE_PLACEHOLDER','Enter Proposed MFR Code','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5765-ac6f-2bc063b75064e','en_IN','WS_PROP_SERV_DETAIL_METER_DIGIT','Proposed Meter Digits','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -1535,7 +1538,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5972-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_TO_EE_APPLICATION','Verify And Forward Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5973-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_BILLING_SUBMIT_ROADCUT_NOC','Submit Roadcut for NOC','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5974-ac6f-2bc063b75064e','en_IN','WS_COMMON_COMMENTS_SUB_HEADER_TEMP','Note: In case of NDC for Government house select, ''Government Houses'' in property sub usage type','ch','rainmaker-ws',24226,now(),NULL,NULL)
---,('4d3b6355-1abb-5975-ac6f-2bc063b75064e','en_IN','WF_SUBMIT_APPLICATION_APPLICATION','Submit Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5975-ac6f-2bc063b75064e','en_IN','WF_SUBMIT_APPLICATION_APPLICATION','Submit Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5976-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_CANCEL_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5977-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_SEND_BACK_TO_SUPERINTENDENT','Send Back to Superintendent','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5978-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_SEND_BACK_TO_JE','Send Back to JE','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -1579,8 +1582,8 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1wns-6016-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_SEND_BACK_TO_SDE','Send Back to SDE','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6017-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_SEND_BACK_TO_HDM','Send Back to HDM','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6018-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_FORWARD_TO_HDM','Verify and Forword to HDM','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1wns-6019-ac6f-2bc063b75064e','en_IN','WS_SELECT_CONNECTION_VALIDATION_MESSAGE','Please select Consumer No','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1wns-6020-ac6f-2bc063b75064e','en_IN','WS_SUBACTIVITY_VALIDATION_MESSAGE','The Water Connection number selected is already under approval process. Please selcet other connection no or click on ''My Applications'' for details','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6019-ac6f-2bc063b75064e','en_IN','WS_SELECT_CONNECTION_VALIDATION_MESSAGE','Please select consumer no.','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6020-ac6f-2bc063b75064e','en_IN','WS_SUBACTIVITY_VALIDATION_MESSAGE','The water connection number selected is already under approval process. Please selcet other connection no or click on ''My Applications'' for details','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6021-ac6f-2bc063b75064e','en_IN','WS_PROPUSGTYPE_PUBLIC_PUBLICPARKS','Public / Semi- Public Buildings','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6023-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_PUBLIC_PUBLICPARKS','Public Parks','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6024-ac6f-2bc063b75064e','en_IN','WS_PROPUSGTYPE_COMMERCIAL_VIOLATIONRESIDENTIAL','Commercial','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -1635,7 +1638,26 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1wns-6073-ac6f-2bc063b75064e','en_IN','WF_SEND_BACK_TO_JE_FROM_SDE_APPLICATION','Send Back Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6074-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_VERIFY_AND_FORWARD_TO_SUPERINTENDENT_APPLICATION','Verify and Forword Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6075-ac6f-2bc063b75064e','en_IN','WF_WS_RENAME_SEND_BACK_TO_SUPERINTEDENT','Send Back to Superintendent ','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1wns-6076-ac6f-2bc063b75064e','en_IN','WF_SEND_BACK_TO_SUPERINTEDENT_APPLICATION','Send Back Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+--,('4d3b6355-1wns-6076-ac6f-2bc063b75064e','en_IN','WF_SEND_BACK_TO_SUPERINTEDENT_APPLICATION','Send Back Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1wns-6077-ac6f-2bc063b75064e','en_IN','WF_WS_RENAME_SEND_BACK_TO_JE_FROM_SDE','Send Back to JE','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1wns-6078-ac6f-2bc063b75064e','en_IN','WF_SEND_BACK_TO_JE_FROM_SDE_APPLICATION','Send Back Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1wns-6079-ac6f-2bc063b75064e','en_IN','WF_WS_RENAME_CANCEL_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL);
+--,('4d3b6355-1wns-6078-ac6f-2bc063b75064e','en_IN','WF_SEND_BACK_TO_JE_FROM_SDE_APPLICATION','Send Back Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6079-ac6f-2bc063b75064e','en_IN','WF_WS_RENAME_CANCEL_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6080-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_CANCEL_APPLICATION','Cancel Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6081-ac6f-2bc063b75064e','en_IN','WF_WS_METER_TESTING_REJECT','Reject','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6082-ac6f-2bc063b75064e','en_IN','WS_COMMON_SMS_NOTIFICATION_HEADER','Message Notification','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6083-ac6f-2bc063b75064e','en_IN','WS_SI_USER_LABLE','Site Inspector User','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6084-ac6f-2bc063b75064e','en_IN','WS_SI_USER_PLACEHOLDER','Select Site Inspector User','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6085-ac6f-2bc063b75064e','en_IN','WS_SMS_NOTIFICATION','Send Message','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6086-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_TO_SUPERINTENDENT_FOR_ACTIVATION_APPLICATION','Verify and Forword Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6087-ac6f-2bc063b75064e','en_IN','WS_CONNECTION_NUMBER_DETAILS','Consumer number/Account number Details','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6088-ac6f-2bc063b75064e','en_IN','WS_FOUR_DIGIT_CONNECTION_LABEL','House No/8-11 Place /0000000 -XXXX-00','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6089-ac6f-2bc063b75064e','en_IN','WS_TWO_DIGIT_CONNECTION_LABEL','Floor number/12 Place /0000000 -0000-X0','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6090-ac6f-2bc063b75064e','en_IN','WS_NOM_DIGIT_CONNECTION_LABEL','No. of meters/13 Place /0000000 -0000-0X','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6091-ac6f-2bc063b75064e','en_IN','WS_SET_CONNECTION_NUMBER_BUTTON','Set Connection Number','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6092-ac6f-2bc063b75064e','en_IN','WS_FILL_HOUSE_NO_VALIDATION_FIELDS','Please enter valid house no','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6093-ac6f-2bc063b75064e','en_IN','WS_FILL_NOF_VALIDATION_FIELDS','Please enter floor number','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6094-ac6f-2bc063b75064e','en_IN','WS_FILL_NOM_VALIDATION_FIELDS','Please enter No. of meters','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6095-ac6f-2bc063b75064e','en_IN','ERR_NOM_VALIDATION_FIELDS_MSG','Please enter valid no. of meters','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6096-ac6f-2bc063b75064e','en_IN','ERR_NOF_VALIDATION_FIELDS_MSG','Please enter valid floor number','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6097-ac6f-2bc063b75064e','en_IN','ERR_HOUSE_NO_VALIDATION_FIELDS_MSG','Please enter valid house no','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1wns-6098-ac6f-2bc063b75064e','en_IN','WS_COMMON_PAID_LABEL','PAID','ch','rainmaker-ws',24226,now(),NULL,NULL);
