@@ -24,7 +24,7 @@
                       {
                         "variable": "charges_due_label",
                         "value": {
-                            "path": "APPLICATION_FEE"
+                            "path": "APPLICATION_FEE_CHARGES"
                         },
                         "type": "label",
                         "localisation": {
@@ -476,7 +476,11 @@
                         "variable": "village",
                         "value": {
                             "path": "$.Applications[0].property.propertyDetails.village"
-                        }
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }
                     },
                     {
                         "variable": "mohalla",

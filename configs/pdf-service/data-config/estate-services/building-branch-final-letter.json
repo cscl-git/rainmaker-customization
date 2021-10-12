@@ -48,6 +48,10 @@
             "variable": "village",
             "value": {
               "path": "$.property.propertyDetails.village"
+            },
+            "localisation": {
+              "required": true,
+              "module": "rainmaker-es"
             }
           },
           {
